@@ -14,8 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-var idx = Math.floor((new Date().getHours()));
-var body = document.getElementsByTagName("body")[0];
-body.className = "heaven-" + idx;
-
