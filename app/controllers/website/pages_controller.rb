@@ -12,7 +12,10 @@ module Website
     def price_list
     end
 
-    def schedule_appointment
+    def schedule_appointment_primary
+    end
+
+    def schedule_appointment_secondary
     end
 
     def the_team

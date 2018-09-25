@@ -27,7 +27,8 @@ Rails.application.routes.draw do
       get 'about-us'
       get 'contact-us'
       get 'price-list'
-      get 'schedule-appointment'
+      get 'schedule-appointment-primary'
+      get 'schedule-appointment-secondary'
       get 'the-team'
       get 'virtual-tour'
     end
