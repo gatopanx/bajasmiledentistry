@@ -34,7 +34,7 @@ Rails.application.routes.draw do
       get 'virtual-tour'
     end
 
-    resources :pictures, only: [:index, :show]
+    resources :pictures, only: [:index]
     resources :posts, only: [:index, :show]
     resources :treatments, only: [:index, :show]
   end
