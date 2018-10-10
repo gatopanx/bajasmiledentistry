@@ -1,0 +1,234 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+$breath-size: 75px;
+
+body {
+  h1 {
+    color: red;
+    background-color: gray;
+  }
+  h2 {
+    color: blue;
+    background-color: gray;
+  }
+  h3 {
+    color: green;
+    background-color: gray;
+  }
+  h4 {
+    color: cyan;
+    background-color: gray;
+  }
+  h5 {
+    color: brown;
+    background-color: gray;
+  }
+  h6 {
+    color: purple;
+    background-color:  gray;
+  }
+}
+
+.we-are-waiting-for-you {
+  margin-top: $breath-size;
+  margin-bottom: $breath-size;
+
+  .title {
+    margin: $breath-size/3 0px $breath-size/3 0px;
+  }
+  .image {
+    width: 100%;
+  }
+}
+
+.schedule-now {
+  margin-top: $breath-size;
+  margin-bottom: $breath-size;
+
+  .title {
+    margin: $breath-size/3 0px $breath-size/3 0px;
+  }
+  form {
+    .name {
+    }
+    .email {
+    }
+    .date {
+    }
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+.working-hours {
+  ul {
+    padding-left: 0px;
+  }
+
+  .title {
+  }
+  .days-time-ranges-wrapper {
+    margin-left: 0px;
+
+
+    .days {
+      text-align: right;
+
+      .day {
+        direction: rtl;
+
+        list-style: none;
+      }
+    }
+    .time-ranges {
+      .time-range {
+        list-style: none;
+      }
+    }
+  }
+  .phone-numbers {
+    .phone-number {
+      margin: 10px;
+      list-style: none;
+    }
+    .flag {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .email-addresses {
+    .email-address {
+      list-style: none;
+    }
+  }
+}
+
+.talk-with-us {
+}
+
+.pages {
+  .home {
+    .billboard {
+      margin-bottom: $breath-size;
+
+      .explainer-video {
+        width: 100%;
+        height: 100%;
+      }
+      .talk-with-us {
+        form {
+          label {
+          }
+          input {
+          }
+        }
+      }
+    }
+    .featured-in {
+      margin-top: $breath-size;
+      margin-bottom: $breath-size;
+
+      .title {
+        margin: $breath-size/3 0px $breath-size/3 0px;
+      }
+      .image {
+      }
+    }
+    .clients {
+      margin-top: $breath-size;
+      margin-bottom: $breath-size;
+
+      .title {
+        margin: $breath-size/3 0px $breath-size/3 0px;
+      }
+      .client {
+        padding: $breath-size/4;
+
+        .image {
+          width: 100%;
+        }
+      }
+    }
+    .before-and-after-sets {
+      margin-top: $breath-size;
+      margin-bottom: $breath-size;
+
+      .title {
+        margin: $breath-size/3 0px $breath-size/3 0px;
+      }
+      .before-and-after-set {
+        .before, .after {
+          .image {
+            width: 100%;
+          }
+          .caption {
+            background-color: cyan;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  .about-us {
+    background-color: green;
+  }
+  .contact-us {
+    background-color: yellow;
+  }
+  .price-list {
+    background-color: blue;
+  }
+  .schedule-appointment-primary {
+    background-color: purple;
+  }
+  .schedule-appointment-secondary {
+    background-color: pink;
+  }
+  .the-team {
+    background-color: white;
+  }
+  .virtual-tour {
+    background-color: brown;
+  }
+}
+
+.pictures {
+  .index {
+    background-color: cyan;
+  }
+}
+
+.posts {
+  .index {
+    background-color: orange;
+  }
+  .show {
+    background-color: black;
+  }
+}
+
+.treatments {
+  .index {
+    background-color: orange;
+  }
+  .show {
+    background-color: black;
+  }
+}

@@ -1,63 +1,60 @@
-<div class="row">
+<div class="row billboard">
   <div class="col-7">
-    <iframe src="https://www.youtube.com/embed/UQZGz7HSD7M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+    <!-- <iframe -->
+    <!--   class='explainer&#45;video' -->
+    <!--   src="https://www.youtube.com/embed/UQZGz7HSD7M" -->
+    <!--   frameborder="0" -->
+    <!--   allow="autoplay; encrypted&#45;media" -->
+    <!--   allowfullscreen="allowfullscreen" -->
+    <!-- ></iframe> -->
   </div>
-  <div class="col-5">
+  <div class="col-5 talk-with-us">
     <%= render 'website/partials/talk_with_us' %>
   </div>
 </div>
 
-<div class="row">
+<div class="row featured-in">
   <div class="col-12">
-      <h2>Featured in</h2>
-      <img class="mb-2" src="./assets/featured.png" alt="" width="600" height="142">
-      <h2>Our Clients</h2>
+    <h2 class='title text-center'>Featured in</h2>
+    <img class="mb-2 d-block mx-auto" src="./assets/featured.png" alt="" width="600" height="142">
   </div>
 </div>
 
-<div class="row">
-  <div class="col-3">
-    <img src="./assets/person1.png" alt="" width="220" height="220">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<div class="row clients">
+  <div class="col-12">
+    <h2 class='title text-center'>Our Clients</h2>
   </div>
-  <div class="col-3">
-    <img src="./assets/person2.png" alt="" width="220" height="220">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
-  <div class="col-3">
-    <img src="./assets/person3.png" alt="" width="220" height="220">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
-  <div class="col-3">
-    <img src="./assets/person4.png" alt="" width="220" height="220">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
+  <% @clients.each do |client| %>
+    <div class="col-3 client">
+      <img class='image' src="<%= client.photo%>" alt="<%= client.name %>">
+      <p class='text-center'><%= client.testimonial %></p>
+    </div>
+  <% end %>
 </div>
 
-<div class="row">
+<div class="row before-and-after-sets">
   <div class="col-12">
-    <h2>Before and After</h2>
+    <h2 class='title text-center'>Before and After</h2>
   </div>
-</div>
-
-<div class="row">
-  <div class="col-12">
-    <div class="row">
-      <div class="col-6">
-        <img src="https://placehold.it/400x300" alt="">
-        <p>Before</p>
-      </div>
-      <div class="col-6">
-        <img src="https://placehold.it/400x300" alt="">
-        <p>After</p>
+  <% @before_and_after_sets.each do |before_and_after_set| %>
+    <div class="col-12 before-and-after-set">
+      <div class="row">
+        <div class="col-6 before">
+          <img class='image' src="<%= before_and_after_set.before %>" alt="">
+          <p class='caption text-center'>Before</p>
+        </div>
+        <div class="col-6 after">
+          <img class='image' src="<%= before_and_after_set.after %>" alt="">
+          <p class='caption text-center'>After</p>
+        </div>
       </div>
     </div>
-  </div>
+  <% end %>
 </div>
 
 <%= render 'website/partials/schedule_now' %>
 
-<div class="form-row">
+<div class="row">
   <div class="col-8">
     <%= render 'website/partials/talk_with_us' %>
   </div>
