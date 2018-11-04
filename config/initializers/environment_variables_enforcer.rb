@@ -25,5 +25,6 @@ missing_environment_variables = ENFORCED_ENVIRONMENT_VARIABLES.select do |enviro
 end
 
 if missing_environment_variables.length > 0
-  raise StandardError.new("Missing enforced environment variables: #{missing_environment_variables.join(', ')}.")
+  # TODO: Disabled temporary
+  # raise StandardError.new("Missing enforced environment variables: #{missing_environment_variables.join(', ')}.")
 end
