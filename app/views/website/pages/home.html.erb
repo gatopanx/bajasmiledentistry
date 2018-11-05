@@ -1,66 +1,71 @@
-<div class="row billboard">
-  <div class="col-7">
-    <!-- <iframe -->
-    <!--   class='explainer&#45;video' -->
-    <!--   src="https://www.youtube.com/embed/UQZGz7HSD7M" -->
-    <!--   frameborder="0" -->
-    <!--   allow="autoplay; encrypted&#45;media" -->
-    <!--   allowfullscreen="allowfullscreen" -->
-    <!-- ></iframe> -->
-  </div>
-  <div class="col-5 talk-with-us">
-    <%= render 'website/partials/talk_with_us' %>
-  </div>
-</div>
-
-<div class="row featured-in">
-  <div class="col-12">
-    <h2 class='title text-center'>Featured in</h2>
-    <img class="mb-2 d-block mx-auto" src="./assets/featured.png" alt="" width="600" height="142">
-  </div>
-</div>
-
-<div class="row clients">
-  <div class="col-12">
-    <h2 class='title text-center'>Our Clients</h2>
-  </div>
-  <% @clients.each do |client| %>
-    <div class="col-3 client">
-      <img class='image' src="<%= client.photo%>" alt="<%= client.name %>">
-      <p class='text-center'><%= client.testimonial %></p>
+<div class="container-fluid">
+  <div class='row'>
+    <div class='col-12 text-center announcements'>
+      <p>
+        Give us a call, we want to see you smile
+        <!-- <img class="mb&#45;2" src="/assets/usa.svg" alt=""> -->
+        <a class="text-muted" href="tel:+16194673765">+1 (619) 452-2823</a>
+        <!-- <img class="mb&#45;2" src="/assets/mexico.svg" alt=""> -->
+        <a class="text-muted" href="tel:+526642071561">+52 (664) 685-3862</a>
+      </p>
     </div>
-  <% end %>
-</div>
-
-<div class="row before-and-after-sets">
-  <div class="col-12">
-    <h2 class='title text-center'>Before and After</h2>
   </div>
-  <% @before_and_after_sets.each do |before_and_after_set| %>
-    <div class="col-12 before-and-after-set">
-      <div class="row">
-        <div class="col-6 before">
-          <img class='image' src="<%= before_and_after_set.before %>" alt="">
-          <p class='caption text-center'>Before</p>
+  <div class="row menu">
+    <div class='container'>
+      <%= render 'website/partials/primary_header' %>
+    </div>
+  </div>
+
+  <div class="row billboard">
+    <div class='container'>
+      <div class='row'>
+        <div class="col-6">
+          <!-- <iframe -->
+          <!--   class='explainer&#45;video' -->
+          <!--   src="https://www.youtube.com/embed/UQZGz7HSD7M" -->
+          <!--   frameborder="0" -->
+          <!--   allow="autoplay; encrypted&#45;media" -->
+          <!--   allowfullscreen="allowfullscreen" -->
+          <!-- ></iframe> -->
         </div>
-        <div class="col-6 after">
-          <img class='image' src="<%= before_and_after_set.after %>" alt="">
-          <p class='caption text-center'>After</p>
+        <div class="col-6 talk-with-us">
+          <%= render 'website/partials/talk_with_us' %>
         </div>
       </div>
     </div>
-  <% end %>
-</div>
-
-<%= render 'website/partials/schedule_now' %>
-
-<div class="row">
-  <div class="col-8">
-    <%= render 'website/partials/talk_with_us' %>
-  </div>
-  <div class="col-4">
-    <%= render 'website/partials/working_hours' %>
   </div>
 </div>
 
-<%= render 'website/partials/we_are_waiting_for_you' %>
+<div class="container">
+  <%= render 'website/partials/featured_in' %>
+
+  <%= render 'website/partials/primary_testimonials', testimonials: @testimonials %>
+</div>
+
+<div class="container-fluid">
+  <div class='row'>
+    <div class='container'>
+      <div class='row'>
+        <%= render 'website/partials/schedule_now' %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <%= render 'website/partials/before_and_after', before_and_after_sets: @before_and_after_sets %>
+
+
+  <div class="row">
+    <div class="col-8">
+      <%= render 'website/partials/talk_with_us' %>
+    </div>
+    <div class="col-4">
+      <%= render 'website/partials/working_hours' %>
+    </div>
+  </div>
+
+  <%= render 'website/partials/we_are_waiting_for_you' %>
+
+  <%= render 'website/partials/primary_footer' %>
+</div>

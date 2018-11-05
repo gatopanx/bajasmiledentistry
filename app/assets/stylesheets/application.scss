@@ -1,48 +1,48 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:300,300i,400,400i|Source+Sans+Pro:400,400i,600,600i,700,700i');
 
 $breath-size: 75px;
 
+$primary-blue: #0092FF;
+$secondary-blue: cyan;
+
 body {
   h1 {
-    color: red;
-    background-color: gray;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    font-size: 46pt;
   }
   h2 {
-    color: blue;
-    background-color: gray;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    font-size: 40pt;
   }
   h3 {
-    color: green;
-    background-color: gray;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 34pt;
   }
   h4 {
-    color: cyan;
-    background-color: gray;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 28pt;
   }
   h5 {
-    color: brown;
-    background-color: gray;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 300;
+    font-size: 18pt;
   }
-  h6 {
-    color: purple;
-    background-color:  gray;
+  p {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 300;
+    font-size: 22pt;
   }
+}
+
+.attention-helper {
+  max-width: 125px;
+  border-color: $primary-blue;
+  border-width: 5px;
 }
 
 .we-are-waiting-for-you {
@@ -73,6 +73,28 @@ body {
     }
     .btn {
       width: 100%;
+    }
+  }
+}
+
+.before-and-after-sets {
+  margin-top: $breath-size;
+  margin-bottom: $breath-size;
+
+  .title, .suggester {
+    margin: $breath-size/3 0px $breath-size/3 0px;
+  }
+
+  .primary-before-and-after-set {
+    .image {
+      width: 100%;
+    }
+  }
+  .secondary-before-and-after-sets {
+    .secondary-before-and-after-set {
+      .image {
+        width: 100%;
+      }
     }
   }
 }
@@ -163,25 +185,6 @@ body {
 
         .image {
           width: 100%;
-        }
-      }
-    }
-    .before-and-after-sets {
-      margin-top: $breath-size;
-      margin-bottom: $breath-size;
-
-      .title {
-        margin: $breath-size/3 0px $breath-size/3 0px;
-      }
-      .before-and-after-set {
-        .before, .after {
-          .image {
-            width: 100%;
-          }
-          .caption {
-            background-color: cyan;
-            color: white;
-          }
         }
       }
     }

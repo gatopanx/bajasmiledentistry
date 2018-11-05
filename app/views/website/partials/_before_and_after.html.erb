@@ -1,0 +1,31 @@
+<div class="row before-and-after-sets">
+  <div class="col-12">
+    <hr class="attention-helper">
+    <h2 class='title text-center'>See It For Yourself: 100+ Of Success Stories</h2>
+    <h4 class='suggester text-center'>Our Clients Have Trusted Us With Their Smile</h4>
+  </div>
+
+
+  <% before_and_after_sets.each_with_index do |before_and_after_set, index| %>
+    <% next unless index == 0 %>
+
+    <div class='col-12 primary-before-and-after-set'>
+      <img class='image' data-src='<%= before_and_after_set.before %>' alt="<%= before_and_after_set.small_description %>" />
+      <p class='caption text-center'><%= before_and_after_set.small_description %></p>
+    </div>
+  <% end %>
+
+  <% if before_and_after_sets.length > 1 %>
+    <div class="col-12 secondary-before-and-after-sets">
+      <div class='row'>
+        <% before_and_after_sets.each_with_index do |before_and_after_set, index| %>
+          <% next if index == 0 %>
+          <div class='col-3 secondary-before-and-after-set'>
+            <img class='image' data-src='<%= before_and_after_set.before %>' alt="<%= before_and_after_set.small_description %>" />
+            <!-- <p class='caption text&#45;center'><%= before_and_after_set.small_description %></p> -->
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

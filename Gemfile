@@ -13,9 +13,11 @@ gem 'turbolinks', '5'
 gem 'jbuilder', '2.7.0'
 gem 'bcrypt', '3.1.7'
 gem 'passenger', '5.2.3'
-gem 'therubyracer', '0.12.3'
+gem 'mini_racer'
 gem 'date_validator'
 gem 'phonelib'
+gem 'bootstrap', '~> 4.1.3'
+
 
 group :development, :test do
   gem 'listen'

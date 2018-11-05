@@ -3,8 +3,70 @@ module Website
     def home
       @before_and_after_sets = [
         {
-          before: 'https://placehold.it/400x300',
-          after: 'https://placehold.it/400x300',
+          before: 'holder.js/1280x720?auto=yes',
+          after: 'holder.js/1280x720?auto=yes',
+          small_description: 'Ellen W. visits us from Arizona to get a Teeth Whitening on August 2018, this is the  before and after more info.',
+          big_description: 'Ellen W. visits us from Arizona to get a Teeth Whitening on August 2018, this is the  before and after more info.'
+        },
+        {
+          before: 'holder.js/1280x720?auto=yes',
+          after: 'holder.js/1280x720?auto=yes',
+          small_description: 'Ellen W. visits us from Arizona to get a Teeth Whitening on August 2018, this is the  before and after more info.',
+          big_description: 'Ellen W. visits us from Arizona to get a Teeth Whitening on August 2018, this is the  before and after more info.'
+        },
+        {
+          before: 'holder.js/1280x720?auto=yes',
+          after: 'holder.js/1280x720?auto=yes',
+          small_description: 'Ellen W. visits us from Arizona to get a Teeth Whitening on August 2018, this is the  before and after more info.',
+          big_description: 'Ellen W. visits us from Arizona to get a Teeth Whitening on August 2018, this is the  before and after more info.'
+        },
+        {
+          before: 'holder.js/1280x720?auto=yes',
+          after: 'holder.js/1280x720?auto=yes',
+          small_description: 'Ellen W. visits us from Arizona to get a Teeth Whitening on August 2018, this is the  before and after more info.',
+          big_description: 'Ellen W. visits us from Arizona to get a Teeth Whitening on August 2018, this is the  before and after more info.'
+        },
+        {
+          before: 'holder.js/1280x720?auto=yes',
+          after: 'holder.js/1280x720?auto=yes',
+          small_description: 'Ellen W. visits us from Arizona to get a Teeth Whitening on August 2018, this is the  before and after more info.',
+          big_description: 'Ellen W. visits us from Arizona to get a Teeth Whitening on August 2018, this is the  before and after more info.'
+        },
+        {
+          before: 'holder.js/1280x720?auto=yes',
+          after: 'holder.js/1280x720?auto=yes',
+          small_description: 'Ellen W. visits us from Arizona to get a Teeth Whitening on August 2018, this is the  before and after more info.',
+          big_description: 'Ellen W. visits us from Arizona to get a Teeth Whitening on August 2018, this is the  before and after more info.'
+        },
+        {
+          before: 'holder.js/1280x720?auto=yes',
+          after: 'holder.js/1280x720?auto=yes',
+          small_description: 'Ellen W. visits us from Arizona to get a Teeth Whitening on August 2018, this is the  before and after more info.',
+          big_description: 'Ellen W. visits us from Arizona to get a Teeth Whitening on August 2018, this is the  before and after more info.'
+        },
+        {
+          before: 'holder.js/1280x720?auto=yes',
+          after: 'holder.js/1280x720?auto=yes',
+          small_description: 'Ellen W. visits us from Arizona to get a Teeth Whitening on August 2018, this is the  before and after more info.',
+          big_description: 'Ellen W. visits us from Arizona to get a Teeth Whitening on August 2018, this is the  before and after more info.'
+        },
+        {
+          before: 'holder.js/1280x720?auto=yes',
+          after: 'holder.js/1280x720?auto=yes',
+          small_description: 'Ellen W. visits us from Arizona to get a Teeth Whitening on August 2018, this is the  before and after more info.',
+          big_description: 'Ellen W. visits us from Arizona to get a Teeth Whitening on August 2018, this is the  before and after more info.'
+        },
+        {
+          before: 'holder.js/1280x720?auto=yes',
+          after: 'holder.js/1280x720?auto=yes',
+          small_description: 'Ellen W. visits us from Arizona to get a Teeth Whitening on August 2018, this is the  before and after more info.',
+          big_description: 'Ellen W. visits us from Arizona to get a Teeth Whitening on August 2018, this is the  before and after more info.'
+        },
+        {
+          before: 'holder.js/1280x720?auto=yes',
+          after: 'holder.js/1280x720?auto=yes',
+          small_description: 'Ellen W. visits us from Arizona to get a Teeth Whitening on August 2018, this is the  before and after more info.',
+          big_description: 'Ellen W. visits us from Arizona to get a Teeth Whitening on August 2018, this is the  before and after more info.'
         },
       ].map do |attribute_set|
         OpenStruct.new(attribute_set)
