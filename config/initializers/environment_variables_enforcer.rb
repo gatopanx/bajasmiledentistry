@@ -1,7 +1,8 @@
 ENFORCED_ENVIRONMENT_VARIABLES = [
-  # 'AWS_ID',
-  # 'AWS_KEY',
-  # 'AWS_UPLOADS_BUCKET_NAME',
+  'AWS_ID',
+  'AWS_KEY',
+  'AWS_REGION',
+  'AWS_UPLOADS_BUCKET_NAME',
   'DATABASE_TYPE',
   'DATABASE_HOST',
   'DATABASE_PORT',
@@ -25,6 +26,5 @@ missing_environment_variables = ENFORCED_ENVIRONMENT_VARIABLES.select do |enviro
 end
 
 if missing_environment_variables.length > 0
-  # TODO: Disabled temporary
   # raise StandardError.new("Missing enforced environment variables: #{missing_environment_variables.join(', ')}.")
 end

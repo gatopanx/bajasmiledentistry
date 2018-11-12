@@ -1,6 +1,7 @@
 tmp
 log
 notes.txt
+public/uploads
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
