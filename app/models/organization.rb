@@ -50,4 +50,9 @@ class Organization < ApplicationRecord
       message: "%{value} is reserved for internal use."
     }
   }
+  # convert to video context enum and video content
+  validates :url, {
+    url: true,
+    allow_nil: true
+  }
 end

@@ -57,4 +57,21 @@ class Address < ApplicationRecord
       in: 2..15
     }
   }
+
+  def calculated_full_address
+    [
+      line_1,
+      line_2,
+      line_3,
+      state_province_county,
+      IsoCountryCodes.find(self.country_code).name
+    ].compact.join(' ')
+  end
+
+  def calculated_partial_address
+    [
+      state_province_county,
+      IsoCountryCodes.find(self.country_code).name
+    ].compact.join(', ')
+  end
 end

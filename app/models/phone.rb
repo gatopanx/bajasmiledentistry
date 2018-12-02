@@ -76,4 +76,8 @@ class Phone < ApplicationRecord
       super(extension.split(//).map {|x| x[/\d+/]}.compact.join(""))
     end
   end
+
+  def calculated_calling_country_code
+    IsoCountryCodes.find(self.country_code).calling.split(//).map {|x| x[/\d+/]}.compact.join("")
+  end
 end

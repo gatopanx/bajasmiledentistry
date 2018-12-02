@@ -9,6 +9,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.integer :external_price_in_cents, default: 0
       t.integer :form
       t.integer :internal_price_in_cents, default: 0
+      t.string :key
       t.string :name
       t.text :long_description
       t.integer :position

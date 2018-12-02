@@ -1,34 +1,18 @@
 <div class="container-fluid">
-  <div class='row'>
-    <div class='col-12 text-center announcements'>
-      <p>
-        Give us a call, we want to see you smile
-        <!-- <img class="mb&#45;2" src="/assets/usa.svg" alt=""> -->
-        <a class="text-muted" href="tel:+16194673765">+1 (619) 452-2823</a>
-        <!-- <img class="mb&#45;2" src="/assets/mexico.svg" alt=""> -->
-        <a class="text-muted" href="tel:+526642071561">+52 (664) 685-3862</a>
-      </p>
-    </div>
-  </div>
+  <%= render 'website/partials/announcements', phones: @phones %>
+</div>
+
+<div class="container-fluid billboard-wrapper">
   <div class="row menu">
     <div class='container'>
-      <%= render 'website/partials/primary_header' %>
+      <%= render 'website/partials/primary_header', current_organization: @current_organization, treatments: @treatments %>
     </div>
   </div>
 
-  <div class="row billboard">
-    <div class='container'>
+  <div class="row billboard d-flex">
+    <div class='container align-self-center'>
       <div class='row'>
-        <div class="col-6">
-          <!-- <iframe -->
-          <!--   class='explainer&#45;video' -->
-          <!--   src="https://www.youtube.com/embed/UQZGz7HSD7M" -->
-          <!--   frameborder="0" -->
-          <!--   allow="autoplay; encrypted&#45;media" -->
-          <!--   allowfullscreen="allowfullscreen" -->
-          <!-- ></iframe> -->
-        </div>
-        <div class="col-6 talk-with-us">
+        <div class="col-5 offset-7 talk-with-us-wrapper">
           <%= render 'website/partials/talk_with_us' %>
         </div>
       </div>
@@ -37,12 +21,12 @@
 </div>
 
 <div class="container">
-  <%= render 'website/partials/featured_in' %>
+  <%= render 'website/partials/social_proofs', social_proofs: @social_proofs %>
 
-  <%= render 'website/partials/primary_testimonials', testimonials: @testimonials %>
+  <%= render 'website/partials/external_testimonials', external_testimonials: @external_testimonials %>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid schedule-now-wrapper">
   <div class='row'>
     <div class='container'>
       <div class='row'>
@@ -53,19 +37,28 @@
 </div>
 
 <div class="container">
-  <%= render 'website/partials/before_and_after', before_and_after_sets: @before_and_after_sets %>
+  <%= render 'website/partials/internal_testimonials', internal_testimonials: @internal_testimonials %>
+</div>
 
-
-  <div class="row">
-    <div class="col-8">
-      <%= render 'website/partials/talk_with_us' %>
-    </div>
-    <div class="col-4">
-      <%= render 'website/partials/working_hours' %>
+<div class="container-fluid working-hours-wrapper">
+  <div class='row'>
+    <div class='container'>
+      <div class="row">
+        <div class="col-7">
+          <%= render 'website/partials/talk_with_us' %>
+        </div>
+        <div class="col-4 offset-1">
+          <%= render 'website/partials/working_hours' %>
+        </div>
+      </div>
     </div>
   </div>
+</div>
 
+<div class="container">
   <%= render 'website/partials/we_are_waiting_for_you' %>
+</div>
 
+<div class="container-fluid primary-footer-wrapper">
   <%= render 'website/partials/primary_footer' %>
 </div>

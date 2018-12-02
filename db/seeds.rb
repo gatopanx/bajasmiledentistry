@@ -1,13 +1,20 @@
 # RESOURCES
 
-png = ChunkyPNG::Image.new(200, 100, ChunkyPNG::Color::rgba(211, 211, 211, 100))
-payload =  "data:image/png;base64,#{Base64.encode64(png.to_datastream.to_s)}"
+png_object = ChunkyPNG::Image.new(200, 100, ChunkyPNG::Color::rgba(211, 211, 211, 100))
+png = png_object.to_datastream.to_s
+
+logo = File.read('./app/assets/images/logo-small.png')
+
+def payload(file)
+  "data:image/png;base64,#{Base64.encode64(file)}"
+end
 
 # ORGANIZATION
 organization = Organization.new(
   name: 'Tijuana Smile Dentistry',
   status: :ACTIVE,
-  subdomain: 'tijuanasmiledentistry'
+  subdomain: 'tijuanasmiledentistry',
+  url: 'https://www.youtube.com/watch?v=FH6wpO66J4k'
 )
 
 organization.save || binding.pry
@@ -48,7 +55,7 @@ end
     organization: organization,
     description: 'Tijuana Smile Dentistry Logo',
     title: 'Tijuana Smile Dentistry',
-    payload: payload,
+    payload: payload(logo),
   }
 ].each do |attribute_set|
   image = Image.new(attribute_set)
@@ -94,7 +101,7 @@ organization.save || binding.pry
     description: Faker::Lorem.paragraph(3),
     title: Faker::Lorem.paragraph(1),
     url: 'https://placehold.it/200x100',
-    payload: payload,
+    payload: payload(png)
   }
 end.each do |attribute_set|
   social_proof = SocialProof.new(attribute_set.except(:payload))
@@ -121,10 +128,10 @@ end
 5.times.map do
   {
     organization: organization,
-    name: Faker::Lorem.paragraphs(1),
-    long_description: Faker::Lorem.paragraphs(5),
-    payload: payload,
-    short_description: Faker::Lorem.paragraphs(1),
+    name: Faker::Lorem.paragraphs(1).join(' '),
+    long_description: Faker::Lorem.paragraphs(5).join(' '),
+    payload: payload(png),
+    short_description: Faker::Lorem.paragraphs(1).join(' '),
     status: :ACTIVE
   }
 end.each do |attribute_set|
@@ -148,18 +155,19 @@ end.each do |attribute_set|
 end
 
 # ABSTRACT ITEMS
-5.times.map do
+5.times.map do |i|
   {
     category: nil,
     organization: organization,
     external_price_in_cents: nil,
     form: :ABSTRACT,
     internal_price_in_cents: nil,
-    name: Faker::Lorem.paragraphs(1),
-    long_description: Faker::Lorem.paragraphs(10),
+    key: "TREATMENT_#{i}",
+    name: Faker::Lorem.paragraphs(1).join(' '),
+    long_description: Faker::Lorem.paragraphs(10).join(' '),
     primary_kind: :SERVICE,
     secondary_kind: :SERVICE_TREATMENT,
-    short_description: Faker::Lorem.paragraphs(1),
+    short_description: Faker::Lorem.paragraphs(1).join(' '),
     status: :ACTIVE,
     url: 'https://www.youtube.com/watch?v=FH6wpO66J4k'
   }
@@ -174,7 +182,7 @@ end.each do |attribute_set|
       ).merge({
         imageable: item,
         description: attribute_set.fetch(:short_description),
-        payload: payload,
+        payload: payload(png),
         title: attribute_set.fetch(:name),
       })
     )
@@ -188,18 +196,19 @@ end
 # CONCRETE ITEMS
 
 Category.all.each do |category|
-  10.times.map do
+  10.times.map do |i|
     {
       category: category,
       organization: organization,
       external_price_in_cents: rand(500..1000)*100,
       form: :CONCRETE,
       internal_price_in_cents: rand(100..500)*100,
-      name: Faker::Lorem.paragraphs(1),
-      long_description: Faker::Lorem.paragraphs(5),
+      key: "ITEM_#{i}",
+      name: Faker::Lorem.paragraphs(1).join(' '),
+      long_description: Faker::Lorem.paragraphs(5).join(' '),
       primary_kind: :SERVICE,
       secondary_kind: :SERVICE_TREATMENT,
-      short_description: Faker::Lorem.paragraphs(1),
+      short_description: Faker::Lorem.paragraphs(1).join(' '),
       status: :ACTIVE
     }
   end.each do |attribute_set|
@@ -213,7 +222,7 @@ Category.all.each do |category|
         ).merge({
           imageable: item,
           description: attribute_set.fetch(:short_description),
-          payload: payload,
+          payload: payload(png),
           title: attribute_set.fetch(:name),
         })
       )
@@ -234,7 +243,7 @@ end
     first_name: Faker::Name.first_name,
     middle_name: Faker::Name.middle_name,
     last_name: Faker::Name.middle_name,
-    payload: payload,
+    payload: payload(png),
     primary_kind: :PRODUCER,
     secondary_kind: :PRODUCER_DOCTOR,
     status: :ACTIVE
@@ -277,7 +286,7 @@ end
     line_2: Faker::Address.secondary_address,
     line_3: nil,
     address: Faker::Internet.email,
-    payload: payload,
+    payload: payload(png),
     primary_kind: :CONSUMER,
     secondary_kind: :CONSUMER_PATIENT,
     state_province_county: Faker::Address.state,
@@ -376,9 +385,9 @@ Person.where(
     organization: organization,
     person: consumer,
     date: rand(1..48).months.ago,
-    long_text: Faker::Lorem.paragraphs(10),
+    long_text: Faker::Lorem.paragraphs(10).join(' '),
     rating: nil,
-    short_text: Faker::Lorem.paragraphs(1),
+    short_text: Faker::Lorem.paragraphs(1).join(' '),
     source: :INTERNAL,
     status: :ACCEPTED,
     url: ((rand() >= 0.5) ? nil : Faker::Internet.url)
@@ -401,8 +410,8 @@ Person.where(
     image = Image.new({
       imageable: testimonial,
       organization: organization,
-      description: Faker::Lorem.paragraphs(1),
-      payload: payload,
+      description: Faker::Lorem.paragraphs(1).join(' '),
+      payload: payload(png),
       title: "#{consumer.calculated_full_name} Testimonial"
     })
     image.save || binding.pry
@@ -425,12 +434,12 @@ Person.where(
     organization: organization,
     person: consumer,
     date: rand(1..48).months.ago,
-    long_text: Faker::Lorem.paragraphs(10),
+    long_text: Faker::Lorem.paragraphs(10).join(' '),
     rating: rand(0..5),
-    short_text: Faker::Lorem.paragraphs(1),
+    short_text: Faker::Lorem.paragraphs(1).join(' '),
     source: :EXTERNAL,
     status: :ACCEPTED,
-    url: ((rand() >= 0.5) ? nil : Faker::Internet.url)
+    url: ((rand() >= 0.5) ? nil : 'https://www.youtube.com/embed/oudZlLxMunw')
   })
   testimonial.save || binding.pry
 
@@ -450,8 +459,8 @@ Person.where(
     image = Image.new({
       imageable: testimonial,
       organization: organization,
-      description: Faker::Lorem.paragraphs(1),
-      payload: payload,
+      description: Faker::Lorem.paragraphs(1).join(' '),
+      payload: payload(png),
       title: "#{consumer.calculated_full_name} Testimonial"
     })
     image.save || binding.pry

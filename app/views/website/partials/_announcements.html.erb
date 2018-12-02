@@ -1,0 +1,13 @@
+<div class='row'>
+  <div class='col-12 text-center announcements'>
+    <p>
+      Give us a call, we want to see you smile
+      <% phones.each do |phone| %>
+        <span class='phone'>
+          <img class="flag" src="/assets/<%= phone.country_code %>.svg" alt="<%= phone.country_code %> Flag">
+          <a class="number" href="tel:<%= number_to_phone(phone.number, country_code: phone.calculated_calling_country_code, area_code: true, extension: phone.extension).sub('-', ' ') %>"><%= number_to_phone(phone.number, country_code: phone.calculated_calling_country_code, area_code: true, extension: phone.extension).sub('-', ' ') %></a>
+        </span>
+      <% end %>
+    </p>
+  </div>
+</div>

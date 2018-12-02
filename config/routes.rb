@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     }
   } do
 
-    root 'pages#home', as: :home
+    root 'pages#home'
 
     controller :pages do
       get 'about-us'

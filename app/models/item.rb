@@ -68,6 +68,34 @@ class Item < ApplicationRecord
     allow_nil: true,
     if: proc { |i| i.form == 'ABSTRACT' }
   }
+  validates :key, {
+    presence: true,
+    length: {
+      in: 1..255
+    },
+    format: {
+      with: /\A(?!_)\w*(?<!_)\z/,
+      messages: "%{value} must consists numbers, letter or underscores, but cannot begin nor end with underscore."
+    },
+    uniqueness: {
+      scope: %i[organization_id]
+    },
+    if: proc { |i| i.form == 'ABSTRACT' }
+  }
+  validates :key, {
+    presence: true,
+    length: {
+      in: 1..255
+    },
+    format: {
+      with: /\A(?!_)\w*(?<!_)\z/,
+      messages: "%{value} must consists numbers, letter or underscores, but cannot begin nor end with underscore."
+    },
+    uniqueness: {
+      scope: %i[organization_id category_id]
+    },
+    if: proc { |i| i.form == 'CONCRETE' }
+  }
   validates :name, {
     presence: true,
     length: {

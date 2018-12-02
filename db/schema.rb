@@ -134,6 +134,7 @@ ActiveRecord::Schema.define(version: 2018_11_11_011614) do
     t.integer "external_price_in_cents", default: 0
     t.integer "form"
     t.integer "internal_price_in_cents", default: 0
+    t.string "key"
     t.string "name"
     t.text "long_description"
     t.integer "position"
@@ -169,6 +170,7 @@ ActiveRecord::Schema.define(version: 2018_11_11_011614) do
     t.string "name"
     t.string "subdomain"
     t.integer "status"
+    t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "primary_address_id"
