@@ -5,21 +5,20 @@ Rails.application.routes.draw do
         subdomain: ['', 'www']
     }
   } do
-
     root 'pages#home', as: :home
 
     controller :pages do
-      get 'about-us'
+      get 'get-a-quote'
       get 'contact-us'
-      get 'price-list'
-      get 'schedule-appointment-primary'
-      get 'schedule-appointment-secondary'
-      get 'the-team'
-      get 'virtual-tour'
     end
 
-    resources :pictures, only: [:index]
-    resources :posts, only: [:index, :show]
+    resources :countries, only: [:index, :show] do
+      resources :states, only: [:index, :show] do
+        resources :cities, only: [:show]
+      end
+    end
+
     resources :treatments, only: [:index, :show]
+    resources :organizations, only: [:index, :show]
   end
 end

@@ -1,5 +1,5 @@
 module Website
-  class PostsController < WebsiteController
+  class OrganizationsController < WebsiteController
     def index
     end
 
