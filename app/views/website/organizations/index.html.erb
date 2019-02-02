@@ -1,62 +1,111 @@
-<div class="row">
-  <div class="col-8">
-    <div class="row">
-      <div class="col-12">
-        <img data-src="holder.js/600x400" alt="">
-        <h3>10 Tips for Your Next Mexican Dental Vacation</h3>
-        <p>July 9th, 2018</p>
-        <p>
-          High season in Los Algodones it´s about to begin, this means that it´s time to start planning your dental vacation.
-          Today, we would like to share with you some useful tips that every traveler will find extremely necessary, especially if this is their first time traveling to sunny Mexico.
-          Before starting, we would like to give you an extra (and very important advice) don´t be nervous! Traveling outside your city of residence in order to undergo any kind of dental or medical treatment is very popular nowadays, and the results will be better than what you´re expecting, especially if you choose the right place. <a href="/posts/1">Read More</a>
-        </p>
-      </div>
-      <div class="col-12">
-        <img data-src="holder.js/600x400" alt="">
-        <h3>5 Habits That Cause Crooked Teeth</h3>
-        <p>July 04th, 2018</p>
-        <p>
-          Have you ever looked at someone and noticed that their smile is perfect just for the fact that their teeth are perfectly aligned?
-          People with crooked teeth tend to compare their smiles to other people´s, and it´s ok.
-          Who wouldn´t want a perfect smile, right? <a href="/posts/1">Read More</a>
-        </p>
-      </div>
-      <div class="col-12">
-        <img data-src="holder.js/600x400" alt="">
-        <h3>10 Reasons to Get Dental Work in Tijuana</h3>
-        <p>July 1st, 2018</p>
-        <p>
-          Getting dental work outside of your country of residence can be a little overwhelming sometimes, especially if you don’t know where to go.
-          We’re sure you’ve heard of Los Algodones, Mexico also known as Molar City, the capital of dental tourism.
-          But you might not know why it is the best place to get dental work done, right? We invite you to keep reading, we’ll give you some reasons to visit Los Algodones.<a href="/posts/1">Read More</a>
-        </p>
-      </div>
+<div class="container">
+  <div class="row">
+    <div class='container'>
+      <%= render 'website/partials/primary_header' %>
     </div>
   </div>
-  <div class="col-4">
-    <div class="row">
-      <div class="col-12">
-        <%= render 'website/partials/talk_with_us' %>
+  <div class="row">
+    <div clas="col-10">
+      <p>
+        dentists, Tijuana, Baja California, Mexico</p>
+    </div>
+  </div>
+  <form>
+    <div class="form-row">
+      <div class="col">
+        <div class="dropbown">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Country
+            <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Bali</a></li>
+            <li><a href="#">Colombia</a></li>
+            <li><a href="#">Mexico</a></li>
+          </ul>
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">State
+            <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Baja California</a></li>
+            <li><a href="#">Baja California Sur</a></li>
+            <li><a href="#">Chihuahua</a></li>
+          </ul>
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">City
+            <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Ensenada</a></li>
+            <li><a href="#">Mexicali</a></li>
+            <li><a href="#">Tijuana</a></li>
+          </ul>
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Optional Name
+            <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="http://localhost:3000/organizations/show">Clinic Name</a></li>
+            <li><a href="http://localhost:3000/organizations/show">Clinic Name</a></li>
+            <li><a href="http://localhost:3000/organizations/show">Clinic Name</a></li>
+          </ul>
+        </div>
+        <label><input type="checkbox">Free Transportation</label>
+        <label><input type="checkbox">Open Now</label>
       </div>
-      <div class="col-12">
-        <h5>Blog Archive</h5>
-        <p>2018(28)</p>
-        <p>July(6)</p>
-        <p>June(12)</p>
-        <p>May(5)</p>
-        <p>April(5)</p>
+    </div>
+  </form>
+  <div class="row">
+    <div clas="col-10">
+      <p>Filter by treatments:</p>
+      <form>
+        <div class="form-row">
+          <div class="col">
+            <label><input type="checkbox">Crowns</label>
+            <label><input type="checkbox">Dental Implants</label>
+            <label><input type="checkbox">Dentures</label>
+            <label><input type="checkbox">Orthodontics</label>
+            <label><input type="checkbox">Veneers</label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-7">
+      <div class="row">
+        <div class="col-3">
+          <img data-src="holder.js/250x250">
+        </div>
+        <div class="col-4">
+          <p>Clinic</p>
+          <p>Location</p>
+          <p>*****</p>
+          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua...”
+          </p>
+          <a href="http://localhost:3000/organizations/show">More</a>
+        </div>
       </div>
-      <div class="col-12">
-        <h5>Popular Posts</h5>
-        <img data-src="holder.js/300x100" alt="">
-        <p>10 Reasons to Get Dental Work in Tijuana</p>
-        <img data-src="holder.js/300x100" alt="">
-        <p>10 Tips for Your Next Dental Mexican Vacation</p>
-        <img data-src="holder.js/300x100" alt="">
-        <p>5 Habits That Cause Crooked Teeth</p>
-      </div>
+    </div>
+    <div class="col-3">
+      <img data-src="holder.js/210x250">
+      <ul>Popular Destinations
+        <li><a href="">Bali</a></li>
+        <li><a href="">Costa Rica</a></li>
+        <li><a href="">Colombia</a></li>
+        <li><a href="">Hungary</a></li>
+        <li><a href="">Mexico</a></li>
+      </ul>
+      <ul>Popular Treatments
+        <li><a href="">Dental Implants</a></li>
+        <li><a href="">Dentures</a></li>
+        <li><a href="">Fillings</a></li>
+        <li><a href="">Root Canal</a></li>
+        <li><a href="">Veneers</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row menu">
+    <div class='container'>
+      <%= render 'website/partials/schedule_now' %>
+    </div>
+  <div class="row menu">
+    <div class='container'>
+      <%= render 'website/partials/primary_footer' %>
     </div>
   </div>
 </div>
-
-<%= render 'website/partials/schedule_now' %>
