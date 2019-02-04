@@ -67,19 +67,19 @@ end
     phoneable: organization,
     organization: organization,
     confirmed: true,
-    country_code: 'MX',
+    country_code: 'US',
     extension: nil,
-    label: 'Mexico',
-    number: 6642071561
+    label: 'United States',
+    number: 6194673765
   },
   {
     phoneable: organization,
     organization: organization,
     confirmed: true,
-    country_code: 'US',
+    country_code: 'MX',
     extension: nil,
-    label: 'United States',
-    number: 6194673765
+    label: 'Mexico',
+    number: 6642071561
   }
 ].each do |attribute_set|
   phone = Phone.new(attribute_set)

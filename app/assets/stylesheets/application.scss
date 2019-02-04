@@ -5,6 +5,8 @@
 $breath-size: 75px;
 $primary-blue: #0092FF;
 $secondary-blue: cyan;
+$dark-orange: #ff5d0e;
+$light-orange: #ff8b52;
 
 body {
   h1 {
@@ -93,7 +95,10 @@ body {
 }
 
 .external-testimonials {
-  margin-top: $breath-size/2;
+  .attention-helper {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
 
   .texts {
     margin-bottom: $breath-size/2;
@@ -101,7 +106,6 @@ body {
 
   .external-testimonial {
     margin-top: $breath-size/2;
-    margin-bottom: $breath-size;
 
     .video-wrapper {
       .video {
@@ -116,28 +120,28 @@ body {
     .texts {
       .name {
         margin-bottom: 0px;
+        font-weight: bold;
       }
       .address {
         margin-bottom: 0px;
-        font-size: 22px;
-        color: grey;
+        font-size: 18px;
+        color: #404040;
       }
       .rating {
         font-size: 18px;
 
         .date {
-          color: grey;
+          color: #404040;
         }
       }
       .text {
+        font-size: 18px;
       }
     }
   }
 }
 
 .we-are-waiting-for-you {
-  margin-top: $breath-size;
-
   .attention-helper {
     max-width: 700px;
   }
@@ -183,8 +187,10 @@ body {
 }
 
 .internal-testimonials {
-  margin-top: $breath-size;
-  margin-bottom: $breath-size;
+  .attention-helper {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
 
   .title, .suggester {
     margin: $breath-size/3 0px $breath-size/3 0px;
@@ -286,14 +292,50 @@ body {
     margin-top: $breath-size/5;
     margin-bottom: $breath-size/4;
   }
-  button {
+  .orange-btn {
     float: right;
     width: 33%;
+    background-color: $dark-orange;
+    border-color: $dark-orange;
+
+    // TODO: Remove important
+    &:focus, &:hover, &:active, &:target {
+      background-color: $light-orange !important;
+      border-color: $light-orange !important;
+      outline: none !important;
+      box-shadow: none !important;
+      outline: 0 !important;
+      -webkit-box-shadow: none !important;
+      box-shadow: none !important;
+    }
   }
 }
 
 .primary-header {
   margin-top: $breath-size/4;
+
+  .navbar-nav {
+    margin-top: 12px;
+
+    .nav-item {
+      .nav-link {
+        color: #404040;
+        font-weight: 600;
+
+        &:hover {
+          color: #757575;
+        }
+      }
+      .btn {
+        padding-right: 30px;
+        padding-left: 30px;
+        font-weight: 600;
+      }
+    }
+    .last-item {
+      margin-left: 20px;
+    }
+  }
 
   .brand {
     .logo {
@@ -317,10 +359,11 @@ body {
       background-image: url('header.jpg');
       background-repeat: no-repeat;
       background-position: top;
-      height: 853px;
+      background-position-x: -10px;
+      height: 756px;
 
       .billboard {
-        margin-top: 100px;
+        margin-top: 64px;
 
         .explainer-video {
           width: 100%;

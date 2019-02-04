@@ -2,15 +2,15 @@
   <div class='row external-testimonials'>
     <div class="col-12 texts">
       <hr class="attention-helper">
-      <h2 class='title text-center'>What Our Patients Are Saying</h2>
-      <h4 class='suggester text-center'>Quality Dental Care At Affordable Prices, See It To Believe It</h4>
+      <h4 class='title text-center'>What Our Patients Are Saying</h4>
+      <h5 class='suggester text-center'>Quality Dental Care At Affordable Prices, See It To Believe It</h5>
     </div>
 
     <% external_testimonials.each do |external_testimonial| %>
       <div class="col-12 external-testimonial">
         <div class="row">
           <% if external_testimonial.url %>
-            <div class="col-6 col-offset-1 video-wrapper">
+            <div class="col-6 video-wrapper">
               <iframe
                 class='video'
                 src="<%= external_testimonial.url %>"
@@ -20,7 +20,7 @@
               ></iframe>
             </div>
           <% elsif external_testimonial.images.any? %>
-            <div class="col-6 col-offset-1 carousel-wrapper">
+            <div class="col-6 carousel-wrapper">
               <% uuid = SecureRandom.uuid %>
               <div id="<%= uuid %>" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -57,9 +57,9 @@
             </div>
           <% end %>
           <div class="col-6 texts">
-            <h4 class='name'>
+            <h5 class='name'>
               <%= external_testimonial.person.calculated_full_name %>
-            </h4>
+            </h5>
             <p class='address'>
               <%= external_testimonial.person.primary_address&.calculated_partial_address %>
             </p>
@@ -76,7 +76,7 @@
               </span>
             </p>
             <p class='text'>
-              <%= external_testimonial.short_text %>
+              <%= external_testimonial.long_text[0..400] %>...
             </p>
           </div>
         </div>
