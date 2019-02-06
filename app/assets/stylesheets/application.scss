@@ -34,10 +34,15 @@ body {
     font-weight: 300;
     font-size: 18pt;
   }
+  h6 {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 300;
+    font-size: 16pt;
+  }
   p {
     font-family: 'Libre Franklin', sans-serif;
     font-weight: 300;
-    font-size: 22pt;
+    font-size: 16pt;
   }
 }
 
@@ -97,7 +102,7 @@ body {
 .external-testimonials {
   .attention-helper {
     margin-top: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
   .texts {
@@ -142,11 +147,13 @@ body {
 }
 
 .we-are-waiting-for-you {
+  margin-top: 50px;
+
   .attention-helper {
     max-width: 700px;
   }
   .title {
-    margin: $breath-size/3 0px $breath-size/3 0px;
+    margin: $breath-size/3 20px $breath-size/3 0px;
   }
   .suggester {
   }
@@ -156,7 +163,7 @@ body {
 }
 
 .schedule-now-wrapper {
-  background-image: linear-gradient(to right, rgba(44, 162, 250, 0.8), rgba(44, 204, 252, 0.8));//, url('schedule.jpg');
+  background-image: linear-gradient(to right, rgba(44, 162, 250, 0.8), rgba(44, 204, 252, 0.8)), url('schedule.jpg');
   background-repeat: no-repeat;
   background-position: top;
 
@@ -181,6 +188,8 @@ body {
       }
       .btn {
         width: 100%;
+        background-color: $dark-orange;
+        border: $dark-orange;
       }
     }
   }
@@ -213,7 +222,7 @@ body {
 }
 
 .working-hours-wrapper {
-  background-image: linear-gradient(to right, rgba(44, 162, 250, 0.8), rgba(44, 204, 252, 0.8));//, url('working-hours-wrapper.jpg');
+  background-image: linear-gradient(to right, rgba(44, 162, 250, 0.8), rgba(44, 204, 252, 0.8)), url('tools.jpg');
   background-repeat: no-repeat;
   background-position: top;
   padding-top: $breath-size;
@@ -268,6 +277,7 @@ body {
     .phone-number {
       margin: 10px;
       list-style: none;
+
     }
     .flag {
       position: relative;
@@ -295,19 +305,6 @@ body {
   .orange-btn {
     float: right;
     width: 33%;
-    background-color: $dark-orange;
-    border-color: $dark-orange;
-
-    // TODO: Remove important
-    &:focus, &:hover, &:active, &:target {
-      background-color: $light-orange !important;
-      border-color: $light-orange !important;
-      outline: none !important;
-      box-shadow: none !important;
-      outline: 0 !important;
-      -webkit-box-shadow: none !important;
-      box-shadow: none !important;
-    }
   }
 }
 
@@ -352,6 +349,45 @@ body {
     }
   }
 }
+
+.primary-footer {
+  p,
+  li {
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 13pt;
+  }
+  background-color: #404040;
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 12px;
+  border-top: 5px solid $primary-blue;
+
+    .nav-bar {
+      width: 100%;
+      text-align: center;
+      color: white;
+
+
+      .nav-link {
+        color: white;
+
+        &:hover {
+          color: #757575;
+          font-weight: 600;
+
+        }
+      }
+    }
+    .tijuanasmiledentistry {
+      width: 100%;
+      background-color: black;
+      text-align:center;
+      color:red;
+    }
+  }
 
 .pages {
   .home {
@@ -405,48 +441,124 @@ body {
     }
   }
   .about-us {
-    background-color: green;
+    .billboard-wrapper {
+      background-image: url('we-are-waiting-for-you.jpg');
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-position-x: -10px;
+      height: 786px;
+    }
+    .attention-helper {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
   }
   .contact-us {
-    background-color: yellow;
+    background-color: white;
   }
   .price-list {
-    background-color: blue;
+    background-color: white;
+
+    table {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 300;
+      font-size: 13pt;
+
+      tr {
+        background-color: #DBDBDB;
+        color: black;
+      }
+
+      th {
+        background-color: #0085E8;
+        color: white;
+      }
+    }
+
+    .item-list {
+
+    }
+    .shopping-cart {
+      button {
+        background-color: $dark-orange;
+        border-color: $dark-orange;
+
+        // TODO: Remove important
+        &:focus, &:hover, &:active, &:target {
+          background-color: $light-orange !important;
+          border-color: $light-orange !important;
+          outline: none !important;
+          box-shadow: none !important;
+          outline: 0 !important;
+          -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+        }
+      }
+    }
   }
   .schedule-appointment-primary {
-    background-color: purple;
+    background-color: white;
   }
   .schedule-appointment-secondary {
-    background-color: pink;
+    background-color: white;
   }
   .the-team {
     background-color: white;
   }
   .virtual-tour {
-    background-color: brown;
+    ul{
+      list-style: none;
+      text-align: center;
+      }
+    }
+    .map {
+      margin-bottom: $breath-size;
+    }
+    .billboard-wrapper {
+      background-image: url('header.jpg');
+      background-repeat: no-repeat;
+      background-position: top;
+      background-position-x: -10px;
+      height: 756px;
+
+      .billboard {
+        margin-top: 64px;
+
+        .explainer-video {
+          width: 100%;
+          height: 100%;
+        }
+
+        .talk-with-us-wrapper {
+          padding: 20px;
+          border-width: 2px;
+          border-radius: 10px;;
+          background-color: rgba(255, 255, 255, 1);
+        }
+      }
+    }
   }
-}
 
 .pictures {
   .index {
-    background-color: cyan;
+    background-color: white;
   }
 }
 
 .posts {
   .index {
-    background-color: orange;
+    background-color: white;
   }
   .show {
-    background-color: black;
+    background-color: white;
   }
 }
 
 .treatments {
   .index {
-    background-color: orange;
+    background-color: white;
   }
   .show {
-    background-color: black;
+    background-color: white;
   }
 }
