@@ -1,86 +1,149 @@
-<div class="row">
-  <div class="col-7">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/UQZGz7HSD7M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
-  </div>
-  <div class="col-5">
-    <%= render 'website/partials/talk_with_us' %>
-  </div>
+<div class="container-fluid">
+  <%= render 'website/partials/announcements', phones: @phones %>
 </div>
+<div class="container-fluid billboard-wrapper">
+  <div class="row menu">
+    <div class='container'>
+      <%= render 'website/partials/primary_header', current_organization: @current_organization, treatments: @treatments %>
+    </div>
+  </div>
 
-<div class="row">
-  <div class="col-3">
-    <img src="/assets/person1.png" alt="" width="220" height="220">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
-  <div class="col-3">
-    <img src="/assets/person2.png" alt="" width="220" height="220">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
-  <div class="col-3">
-    <img src="/assets/person3.png" alt="" width="220" height="220">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
-  <div class="col-3">
-    <img src="/assets/person4.png" alt="" width="220" height="220">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-12">
-    <h3>Dental Implants</h3>
-    <p>Dental Implants are often the best treatment for missing teeth. When a damaged or decayed tooth is removed, both the visible part of the tooth, called the crown, and the root are lost.</p>
-    <p>A dental implant is placed in the jawbone so that it can fuse with your natural bone and become a strong and sturdy foundation for replacement teeth. Implants can be used to replace an individual tooth or for an implant-supported bridge or denture containing multiple teeth.</p>
-    <p>Dental Implants are the closest you can get to health, natural teeth. They will allow you to confidently eat, smile, laugh, talk and enjoy all of your regular activities of everyday life without thinking about your teeth.</p>
-    <p>A dental implant is placed in the jawbone so that it can fuse with your natural bone and become a strong and sturdy foundation for replacement teeth. Implants can be used to replace an individual tooth or for an implant-supported bridge or denture containing multiple teeth.</p>
-    <p>Dental Implants are the closest you can get to health, natural teeth. They will allow you to confidently eat, smile, laugh, talk and enjoy all of your regular activities of everyday life without thinking about your teeth.</p>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-12">
-    <h3>Dental Implant Procedure in Mexico</h3>
-    <p>This procedure is a team effort between you and your dentist at I love my dentist. Our Mexican dentist will consult with you to determine where and how your dental implant should be placed.</p>
-    <p>Depending on your specific condition and the type of implant chosen, we will create a treatment plan tailored to meet your needs.</p>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-sm">
-    <h2>Before and After</h2>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-12">
-    <div class="row">
-      <div class="col-6">
-        <img data-src="holder.js/400x300" alt="">
-        <p>Before</p>
-      </div>
-      <div class="col-6">
-        <img data-src="holder.js/400x300" alt="">
-        <p>After</p>
+  <div class="row billboard d-flex">
+    <div class='container align-self-center'>
+      <div class='row'>
+        <div class="col-6 video">
+          <iframe src="https://www.youtube.com/embed/otdy19AmdQI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+        </div>
+        <div class="col-6 talk-with-us-wrapper">
+          <%= render 'website/partials/talk_with_us' %>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="row">
-  <div class="col-12">
-    <div class="row">
-      <div class="col-6">
-        <img data-src="holder.js/400x300" alt="">
-        <p>Before</p>
+<hr class="attention-helper">
+
+<div class="container success stories">
+  <div class="row">
+    <div class="col-12">
+      <h4>100+ Success Stories</h4>
+      <h5>We have clients from the United States, Canada and Europe</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="row">
+        <div class="col-2">
+          <img data-src="holder.js/150x150" alt="">
+        </div>
+        <div class="col-4">
+          <p>Jamie O'Donnell</p>
+          <p>Cape Cañaveral, FL, USA</p>
+          <p>03 Sep 2016</p>
+          <p>*****</p>
+          <p>Very professional, experts in each area were consulted as needed. Very modern equipment and treatment.</p>
+        </div>
+        <div class="col-2">
+          <img data-src="holder.js/150x150" alt="">
+        </div>
+        <div class="col-4">
+          <p>Jamie O'Donnell</p>
+          <p>Cape Cañaveral, FL, USA</p>
+          <p>03 Sep 2016</p>
+          <p>*****</p>
+          <p>Very professional, experts in each area were consulted as needed. Very modern equipment and treatment.</p>
+        </div>
       </div>
-      <div class="col-6">
-        <img data-src="holder.js/400x300" alt="">
-        <p>After</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="row">
+        <div class="col-2">
+          <img data-src="holder.js/150x150" alt="">
+        </div>
+        <div class="col-4">
+          <p>Jamie O'Donnell</p>
+          <p>Cape Cañaveral, FL, USA</p>
+          <p>03 Sep 2016</p>
+          <p>*****</p>
+          <p>Very professional, experts in each area were consulted as needed. Very modern equipment and treatment.</p>
+        </div>
+        <div class="col-2">
+          <img data-src="holder.js/150x150" alt="">
+        </div>
+        <div class="col-4">
+          <p>Jamie O'Donnell</p>
+          <p>Cape Cañaveral, FL, USA</p>
+          <p>03 Sep 2016</p>
+          <p>*****</p>
+          <p>Very professional, experts in each area were consulted as needed. Very modern equipment and treatment.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <a href="#">View More</a>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<%= render 'website/partials/schedule_now' %>
+<hr class="attention-helper">
 
-<%= render 'website/partials/we_are_waiting_for_you' %>
+<div class="container treatment">
+  <div class="row">
+    <div class="col-12">
+      <h4>Dental Implants</h4>
+      <p>Dental Implants are often the best treatment for missing teeth. When a damaged or decayed tooth is removed, both the visible part of the tooth, called the crown, and the root are lost.</p>
+      <p>A dental implant is placed in the jawbone so that it can fuse with your natural bone and become a strong and sturdy foundation for replacement teeth. Implants can be used to replace an individual tooth or for an implant-supported bridge or denture containing multiple teeth.</p>
+      <p>Dental Implants are the closest you can get to health, natural teeth. They will allow you to confidently eat, smile, laugh, talk and enjoy all of your regular activities of everyday life without thinking about your teeth.</p>
+      <p>A dental implant is placed in the jawbone so that it can fuse with your natural bone and become a strong and sturdy foundation for replacement teeth. Implants can be used to replace an individual tooth or for an implant-supported bridge or denture containing multiple teeth.</p>
+      <p>Dental Implants are the closest you can get to health, natural teeth. They will allow you to confidently eat, smile, laugh, talk and enjoy all of your regular activities of everyday life without thinking about your teeth.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h4>Dental Implant Procedure in Mexico</h4>
+      <p>This procedure is a team effort between you and your dentist at I love my dentist. Our Mexican dentist will consult with you to determine where and how your dental implant should be placed.</p>
+      <p>Depending on your specific condition and the type of implant chosen, we will create a treatment plan tailored to meet your needs.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="attention-helper">
+
+<div class="container cases">
+  <div class="row">
+    <div class="col-sm">
+      <h4>Our Cases</h4>
+      <h5>Your Smile Is Our Priority</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <img data-src="holder.js/1200x600" alt="">
+      <p>Ellen W. visits us from Arizona to get a <a href="#">Teeth Whitening</a> on August 2018, this is the  before and after. <a href="#">More Info</a>.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid schedule-now-wrapper">
+  <div class='row'>
+    <div class='container'>
+      <div class='row'>
+        <%= render 'website/partials/schedule_now' %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <%= render 'website/partials/we_are_waiting_for_you' %>
+</div>
+
+<div class="container-fluid primary-footer-wrapper">
+  <%= render 'website/partials/primary_footer' %>
+</div>

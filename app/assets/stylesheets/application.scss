@@ -358,34 +358,39 @@ body {
     font-weight: 300;
     font-size: 13pt;
   }
+
   background-color: #404040;
   color: white;
   padding-top: 50px;
   padding-bottom: 50px;
   margin-bottom: 12px;
   border-top: 5px solid $primary-blue;
+  position: absolute;
+  width: 100%;
+  align-content: center;
 
     .nav-bar {
-      width: 100%;
-      text-align: center;
+      align-content: center;
       color: white;
-
+      margin-top: 40px;
+      margin-bottom: 40px;
 
       .nav-link {
         color: white;
+        display: inline-block;
+        text-align: center;
 
         &:hover {
           color: #757575;
           font-weight: 600;
-
         }
       }
     }
     .tijuanasmiledentistry {
+      position: absolute;
       width: 100%;
       background-color: black;
-      text-align:center;
-      color:red;
+      text-align: center;
     }
   }
 
@@ -393,10 +398,10 @@ body {
   .home {
     .billboard-wrapper {
       background-image: url('header.jpg');
+      height: 756px;
       background-repeat: no-repeat;
       background-position: top;
-      background-position-x: -10px;
-      height: 756px;
+      background-position: center;
 
       .billboard {
         margin-top: 64px;
@@ -447,6 +452,7 @@ body {
       background-position: bottom;
       background-position-x: -10px;
       height: 786px;
+      background-position: center;
     }
     .attention-helper {
       margin-top: 40px;
@@ -455,9 +461,17 @@ body {
   }
   .contact-us {
     background-color: white;
+
+    .picures{
+      margin-top: $breath-size;
+      margin-bottom: $breath-size;
+    }
   }
   .price-list {
-    background-color: white;
+    .prices {
+      margin-top: $breath-size;
+      margin-bottom: $breath-size;
+    }
 
     table {
       font-family: 'Source Sans Pro', sans-serif;
@@ -503,23 +517,36 @@ body {
     background-color: white;
   }
   .the-team {
-    background-color: white;
+    .dentist {
+      margin-top: $breath-size;
+    }
+    .attention-helper {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    .process,
+    .team {
+      margin-top: $breath-size;
+      margin-bottom: $breath-size;
+      text-align: center;
+    }
   }
+
   .virtual-tour {
     ul{
       list-style: none;
       text-align: center;
       }
-    }
     .map {
       margin-bottom: $breath-size;
+      position: center;
     }
     .billboard-wrapper {
       background-image: url('header.jpg');
+      height: 756px;
       background-repeat: no-repeat;
       background-position: top;
-      background-position-x: -10px;
-      height: 756px;
+      background-position: center;
 
       .billboard {
         margin-top: 64px;
@@ -535,30 +562,42 @@ body {
           border-radius: 10px;;
           background-color: rgba(255, 255, 255, 1);
         }
+        .video {
+          height: 100%;
+          width: 100%;
+        }
       }
     }
   }
 
-.pictures {
-  .index {
-    background-color: white;
+  .pictures {
+    .index {
+      background-color: white;
+    }
   }
-}
 
-.posts {
-  .index {
-    background-color: white;
+  .posts {
+    .index {
+      background-color: white;
+    }
+    .show {
+      background-color: white;
+    }
   }
-  .show {
-    background-color: white;
-  }
-}
 
-.treatments {
-  .index {
-    background-color: white;
-  }
-  .show {
-    background-color: white;
+  .treatments {
+    .index {
+      background-color: white;
+    }
+    .show {
+      p {
+        font-size: 12px;
+        color: red;
+      }
+      .success-stories {
+        margin-top: $breath-size;
+        margin-bottom: $breath-size;
+      }
+    }
   }
 }

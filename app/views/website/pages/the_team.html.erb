@@ -1,89 +1,126 @@
-<div class="row">
-  <div class="col-5">
-    <img data-src="holder.js/380x540" alt="">
-  </div>
-  <div class="col-7">
-    <h4>Dr. Happy Teeth</h4>
-    <h6>Senior Dental Doctor, 2005-Present</h6>
-    <h7>Maryland Dental Center, Silver Spring, MD</h7>
-    <hr />
-    <p>
-      My objetive is to apply my expertise as a dental doctor to the patients in the state of Maryland.
-      To be employed as a senior dental doctor at the respectable Piney Orchard Dental Clinic.
-      There are lots of dental doctors out there who are vying fort he job you want to have as well.
-    </p>
-    <p>
-      Extensive experience in diagnosing dental problems and conditions.
-      Expertise in correcting bite problems with use of Orthodontic devices.
-      Proficiency in reading and interpreting dental X-ray results.
-      Aptitude in creating dental appliances needed for denture fitting.
-      Expertise in giving anesthetics to patients prior to dental procedures.
-      Expertise in teeth whitening using the most recent dental innovations.
-      Expertise in filling teeth cavities and eliminating decay.
-      Proficiency in placing teeth sealants.
-      Expertise in prescribing antibiotics and pain medications to patients who underwent dental procedures.
-      Dedication to teach patients proper dental hygiene.
-      Ability to work under pressure.
-      Superb communication and interpersonal skills.
-    </p>
+<div class="container-fluid">
+  <%= render 'website/partials/announcements', phones: @phones %>
+</div>
+<div class='container'>
+  <%= render 'website/partials/primary_header', current_organization: @current_organization, treatments: @treatments %>
+</div>
+
+
+<div class="container dentist">
+  <div class="row">
+    <div class="col-6 image">
+      <img src="/assets/tijuana-smile-dentistry-013.jpg" alt="Tijuana Smile Dentistry" width="500" height="526">
+    </div>
+    <div class="col-6">
+      <h4>Dr. Irving Cota</h4>
+      <h5>Cirujano Dentista, 2005-Present</h5>
+      <h5>Maryland Dental Center, Silver Spring, MD</h5>
+      <hr />
+      <p>
+        My objetive is to apply my expertise as a dental doctor to the patients in the state of Maryland.
+        To be employed as a senior dental doctor at the respectable Piney Orchard Dental Clinic.
+        There are lots of dental doctors out there who are vying fort he job you want to have as well.
+      </p>
+      <p>
+        Extensive experience in diagnosing dental problems and conditions.
+        Expertise in correcting bite problems with use of Orthodontic devices.
+        Proficiency in reading and interpreting dental X-ray results.
+        Aptitude in creating dental appliances needed for denture fitting.
+        Expertise in giving anesthetics to patients prior to dental procedures.
+        Expertise in teeth whitening using the most recent dental innovations.
+        Expertise in filling teeth cavities and eliminating decay.
+        Proficiency in placing teeth sealants.
+        Expertise in prescribing antibiotics and pain medications to patients who underwent dental procedures.
+        Dedication to teach patients proper dental hygiene.
+        Ability to work under pressure.
+        Superb communication and interpersonal skills.
+      </p>
+    </div>
   </div>
 </div>
 
-<div class="row">
-  <div class="col-12">
-    <h3>Our Facilities</h3>
-  </div>
-  <div class="col-12">
-    <div class="row">
-      <div class="col-3">
-        <img data-src="holder.js/200x200" alt="">
-      </div>
-      <div class="col-3">
-        <img data-src="holder.js/200x200" alt="">
-      </div>
-      <div class="col-3">
-        <img data-src="holder.js/200x200" alt="">
-      </div>
-      <div class="col-3">
-        <img data-src="holder.js/200x200" alt="">
-      </div>
-      <div class="col-3">
-        <img data-src="holder.js/200x200" alt="">
-      </div>
-      <div class="col-3">
-        <img data-src="holder.js/200x200" alt="">
-      </div>
-      <div class="col-3">
-        <img data-src="holder.js/200x200" alt="">
-      </div>
-      <div class="col-3">
-        <img data-src="holder.js/200x200" alt="">
+<hr class="attention-helper">
+
+<div class="container process">
+  <div class="row">
+    <div class="col-12">
+      <h4>Our Process</h4>
+      <h5>Our Facilities Are Design To Make You Feel Safe and Happy</h5>
+    </div>
+    <div class="col-12">
+      <div class="row">
+        <div class="col-3">
+          <img src="/assets/tijuana-smile-dentistry-01.jpg" alt="Tijuana Smile Dentistry" width="200" height="200">
+        </div>
+        <div class="col-3">
+          <img src="/assets/tijuana-smile-dentistry-02.jpg" alt="Tijuana Smile Dentistry" width="200" height="200">
+        </div>
+        <div class="col-3">
+          <img src="/assets/tijuana-smile-dentistry-03.jpg" alt="Tijuana Smile Dentistry" width="200" height="200">
+        </div>
+        <div class="col-3">
+          <img src="/assets/tijuana-smile-dentistry-04.jpg" alt="Tijuana Smile Dentistry" width="200" height="200">
+        </div>
+        <div class="col-3">
+          <img src="/assets/tijuana-smile-dentistry-05.jpg" alt="Tijuana Smile Dentistry" width="200" height="200">
+        </div>
+        <div class="col-3">
+          <img src="/assets/tijuana-smile-dentistry-06.jpg" alt="Tijuana Smile Dentistry" width="200" height="200">
+        </div>
+        <div class="col-3">
+          <img src="/assets/tijuana-smile-dentistry-07.jpg" alt="Tijuana Smile Dentistry" width="200" height="200">
+        </div>
+        <div class="col-3">
+          <img src="/assets/tijuana-smile-dentistry-08.jpg" alt="Tijuana Smile Dentistry" width="200" height="200">
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="row">
-  <div class="col-3">
-    <img data-src="holder.js/150x150" alt="">
-    <p>Assistan A</p>
-  </div>
-  <div class="col-3">
-    <img data-src="holder.js/150x150" alt="">
-    <p>Assistan A</p>
-  </div>
-  <div class="col-3">
-    <img data-src="holder.js/150x150" alt="">
-    <p>Assistan A</p>
-  </div>
-  <div class="col-3">
-    <img data-src="holder.js/150x150" alt="">
-    <p>Assistan A</p>
+<div class="container-fluid schedule-now-wrapper">
+  <div class='row'>
+    <div class='container'>
+      <div class='row'>
+        <%= render 'website/partials/schedule_now' %>
+      </div>
+    </div>
   </div>
 </div>
 
-<%= render 'website/partials/testimonials' %>
+<hr class="attention-helper">
 
-<%= render 'website/partials/schedule_now' %>
+<div class="container team">
+  <div class="row">
+    <div class="col-12">
+      <h4>Our Team</h4>
+      <h5>We Are Here To Give Care To Your Smile</h5>
+    </div>
+    <div class="row image">
+      <div class="col-3">
+        <img src="/assets/tijuana-smile-dentistry-09.jpg" alt="Tijuana Smile Dentistry" width="250" height="250" class="rounded-circle">
+        <p>Jonathan Rodríguez</p>
+      </div>
+      <div class="col-3">
+        <img src="/assets/tijuana-smile-dentistry-010.jpg" alt="Tijuana Smile Dentistry" width="250" height="250" class="rounded-circle">
+        <p>Verenice Orduño</p>
+      </div>
+      <div class="col-3">
+        <img src="/assets/tijuana-smile-dentistry-011.jpg" alt="Tijuana Smile Dentistry" width="250" height="250" class="rounded-circle">
+        <p>Salvador Vizcaino</p>
+      </div>
+      <div class="col-3">
+        <img src="/assets/tijuana-smile-dentistry-012.jpg" alt="Tijuana Smile Dentistry" width="250" height="250" class="rounded-circle">
+        <p>Yván Rodríguez</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= render 'website/partials/we_are_waiting_for_you' %>
+<div class="container">
+  <%= render 'website/partials/external_testimonials', external_testimonials: @external_testimonials %>
+</div>
+
+<div class="container-fluid primary-footer-wrapper">
+  <%= render 'website/partials/primary_footer' %>
+</div>

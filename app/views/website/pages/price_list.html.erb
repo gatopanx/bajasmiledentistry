@@ -1,19 +1,17 @@
 <div class="container-fluid">
   <%= render 'website/partials/announcements', phones: @phones %>
 </div>
-
-<div class="container-fluid billboard-wrapper">
-  <div class="row menu">
-    <div class='container'>
-      <%= render 'website/partials/primary_header', current_organization: @current_organization, treatments: @treatments %>
-    </div>
+<div class="row menu">
+  <div class='container'>
+    <%= render 'website/partials/primary_header', current_organization: @current_organization, treatments: @treatments %>
   </div>
 </div>
 
-<div class="container">
+<div class="container prices">
   <div class="row">
     <div class="col-12 title">
       <h4>Price List</h4>
+      <h5>You Can Save Up To 70% With Our Prices </h5>
     </div>
     <div class="col-8 item-list">
       <table class="table">
