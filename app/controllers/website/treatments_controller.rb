@@ -1,31 +1,12 @@
 module Website
   class TreatmentsController < WebsiteController
+    before_action :load_phones
+    before_action :load_treatments
+
     def index
-      @phones = Phone.where(
-        organization: @current_organization,
-        phoneable: @current_organization
-      )
-      @treatments = Item.where(
-        organization: @current_organization,
-        status: :ACTIVE,
-        form: :ABSTRACT,
-        primary_kind: :SERVICE,
-        secondary_kind: :SERVICE_TREATMENT
-      )
     end
 
     def show
-      @phones = Phone.where(
-        organization: @current_organization,
-        phoneable: @current_organization
-      )
-      @treatments = Item.where(
-        organization: @current_organization,
-        status: :ACTIVE,
-        form: :ABSTRACT,
-        primary_kind: :SERVICE,
-        secondary_kind: :SERVICE_TREATMENT
-      )
       @social_proofs = SocialProof.where(
         organization: @current_organization
       )

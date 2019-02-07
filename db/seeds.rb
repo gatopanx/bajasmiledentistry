@@ -14,7 +14,7 @@ organization = Organization.new(
   name: 'Tijuana Smile Dentistry',
   status: :ACTIVE,
   subdomain: 'tijuanasmiledentistry',
-  url: 'https://www.youtube.com/watch?v=FH6wpO66J4k'
+  url: 'https://www.youtube.com/embed/Kn7gTevGx6s'
 )
 
 organization.save || binding.pry
@@ -169,7 +169,7 @@ end
     secondary_kind: :SERVICE_TREATMENT,
     short_description: Faker::Lorem.paragraphs(1).join(' '),
     status: :ACTIVE,
-    url: 'https://www.youtube.com/watch?v=FH6wpO66J4k'
+    url: 'https://www.youtube.com/embed/Kn7gTevGx6s'
   }
 end.each do |attribute_set|
   item = Item.new(attribute_set)

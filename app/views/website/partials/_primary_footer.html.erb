@@ -1,46 +1,94 @@
-<footer class="row primary-footer">
-  <div class=conteiner>
-    <div class="col-12">
-      <div class="row">
-        <div class="col-4 col-md">
-          <img class="mb-2" src="/assets/logo-small-white.png" alt="" width="175" height="36">
-          <small class="d-block mb-3 text-muted">© 2017-2018</small>
+<div class="container-fluid primary-footer-wrapper">
+  <div class='row'>
+    <div class='container'>
+      <footer class="primary-footer">
+        <div class='row'>
+          <div class="col-12">
+            <div class="row">
+              <div class="col-2 text-center logo">
+                <img class="mb-2" src="/assets/logo-small-white.png" alt="" width="175" height="36">
+              </div>
+              <div class="col-2 text-center menu">
+                <h6>Menu</h6>
+                <ul class="list-unstyled text-small">
+                  <li>
+                    <a href="/">Home</a>
+                  </li>
+                  <li>
+                    <a href="/treatments">Treatments</a>
+                  </li>
+                  <li>
+                    <a href="/price-list">Price List</a>
+                  </li>
+                  <li>
+                    <a href="/virtual-tour">Virtual Tour</a>
+                  </li>
+                  <li>
+                    <a href="/about-us">About Us</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-2 text-center phones">
+                <h6>Give Us A Call</h6>
+                <ul class="list-unstyled text-small">
+                  <% phones.each do |phone| %>
+                    <li class='phone'>
+                      <img class="flag" src="/assets/<%= phone.country_code %>.svg" alt="<%= phone.country_code %> Flag">
+                      <a class="number" href="tel:<%= number_to_phone(phone.number, country_code: phone.calculated_calling_country_code, area_code: true, extension: phone.extension).sub('-', ' ') %>"><%= number_to_phone(phone.number, country_code: phone.calculated_calling_country_code, area_code: true, extension: phone.extension).sub('-', ' ') %></a>
+                    </li>
+                  <% end %>
+                </ul>
+              </div>
+              <div class="col-3 text-center emails">
+                <h6>Shoot Us An Email</h6>
+                <a href="mailto:info@tijuanasmiledentistry.com">info@tijuanasmiledentistry.com</a>
+              </div>
+              <div class='col-3 text-left social-networks'>
+                <h6>Connect With Us</h6>
+                <ul class="list-unstyled text-small">
+                  <li>
+                    <a href="https://facebook.com/tijuanasmiledentistry">
+                      <img class='logo' src="/assets/facebook.png" alt="Facebook" width="20" height="20">
+                      Facebook
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://instagram.com/tijuanasmiledentistry">
+                      <img class='logo' src="/assets/instagram.png" alt="Facebook" width="20" height="20">
+                      Instagram
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/tijuanasmiledentistry">
+                      <img class='logo' src="/assets/twitter.png" alt="Facebook" width="20" height="20">
+                      Twitter
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://yelp.com">
+                      <img class='logo' src="/assets/yelp.png" alt="Facebook" width="20" height="20">
+                      Yelp
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-4 col-md">
-          <h6>Contact Us</h6>
-          <ul class="list-unstyled text-small">
-            <li><img src="/assets/US.svg" width="20" height="20"> +1 619.467.3765 (From USA)</li>
-            <li><img src="/assets/MX.svg" width="20" height="20"> +52 664.207.1561 (From MEX)</li>
-          </ul>
-        </div>
-        <div class="col-4 col-md">
-          <a class="" href="mailto:info@tijuanasmiledentistry.com">info@tijuanasmiledentistry.com</a>
-          <p>Juventud Oriente #8800 I-2204 Zona Rio, Tijuana, B.C. México, CP 22000</p>
-          <a href="https://facebook.com/tijuanasmiledentistry#"><img src="/assets/facebook.png" alt="Facebook" width="20" height="20">
-          <a href="https://instagram.com/tijuanasmiledentistry#"><img src="/assets/instagram.png" alt="Facebook" width="20" height="20">
-          <a href="https://twitter.com/tijuanasmiledentistry#"><img src="/assets/twitter.png" alt="Facebook" width="20" height="20">
-          <a href="https://yelp.com#"><img src="/assets/yelp.png" alt="Facebook" width="20" height="20">
-        </div>
-      </div>
-    </div>
 
-    <div class="container nav-bar">
-      <div class="row">
-        <div class="col-12">
-          <a class="nav-link" href="/home">Home</a> |
-          <a class="nav-link" href="/pictures">Pictures</a> |
-          <a class="nav-link" href="/traetments">Treatments</a> |
-          <a class="nav-link" href="/reviews">Reviews</a> |
-          <a class="nav-link" href="/about_us">About Us</a>
+        <div class="row address">
+          <div class="col-12">
+            <p class='text text-center'>Juventud Oriente #8800 Int. 22004, Zona Rio, Tijuana, B.C., Mexico, C.P. 22000</p>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="conteiner tijuanasmiledentistry">
-      <div class="row">
-        <div class="col-12">
-          <p>© 2018 Tijuana Smile Dentistry. All Rights Reserved.</p>
+
+
+        <div class="row disclaimer">
+          <div class="col-12">
+            <p class='text text-center'>© 2018 Tijuana Smile Dentistry. All Rights Reserved.</p>
+          </div>
         </div>
-      </div>
+      </footer>
     </div>
   </div>
-</footer>
+</div>

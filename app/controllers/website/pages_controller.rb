@@ -1,17 +1,9 @@
 module Website
   class PagesController < WebsiteController
+    before_action :load_phones
+    before_action :load_treatments
+
     def home
-      @phones = Phone.where(
-        organization: @current_organization,
-        phoneable: @current_organization
-      )
-      @treatments = Item.where(
-        organization: @current_organization,
-        status: :ACTIVE,
-        form: :ABSTRACT,
-        primary_kind: :SERVICE,
-        secondary_kind: :SERVICE_TREATMENT
-      )
       @social_proofs = SocialProof.where(
         organization: @current_organization
       )
@@ -32,17 +24,6 @@ module Website
     end
 
     def about_us
-      @phones = Phone.where(
-        organization: @current_organization,
-        phoneable: @current_organization
-      )
-      @treatments = Item.where(
-        organization: @current_organization,
-        status: :ACTIVE,
-        form: :ABSTRACT,
-        primary_kind: :SERVICE,
-        secondary_kind: :SERVICE_TREATMENT
-      )
       @social_proofs = SocialProof.where(
         organization: @current_organization
       )
@@ -63,17 +44,6 @@ module Website
     end
 
     def contact_us
-      @phones = Phone.where(
-        organization: @current_organization,
-        phoneable: @current_organization
-      )
-      @treatments = Item.where(
-        organization: @current_organization,
-        status: :ACTIVE,
-        form: :ABSTRACT,
-        primary_kind: :SERVICE,
-        secondary_kind: :SERVICE_TREATMENT
-      )
       @social_proofs = SocialProof.where(
         organization: @current_organization
       )
@@ -94,10 +64,6 @@ module Website
     end
 
     def price_list
-      @phones = Phone.where(
-        organization: @current_organization,
-        phoneable: @current_organization
-      )
       @treatments = Item.where(
         organization: @current_organization,
         status: :ACTIVE,
@@ -125,17 +91,6 @@ module Website
     end
 
     def schedule_appointment_primary
-      @phones = Phone.where(
-        organization: @current_organization,
-        phoneable: @current_organization
-      )
-      @treatments = Item.where(
-        organization: @current_organization,
-        status: :ACTIVE,
-        form: :ABSTRACT,
-        primary_kind: :SERVICE,
-        secondary_kind: :SERVICE_TREATMENT
-      )
       @social_proofs = SocialProof.where(
         organization: @current_organization
       )
@@ -156,17 +111,6 @@ module Website
     end
 
     def schedule_appointment_secondary
-      @phones = Phone.where(
-        organization: @current_organization,
-        phoneable: @current_organization
-      )
-      @treatments = Item.where(
-        organization: @current_organization,
-        status: :ACTIVE,
-        form: :ABSTRACT,
-        primary_kind: :SERVICE,
-        secondary_kind: :SERVICE_TREATMENT
-      )
       @social_proofs = SocialProof.where(
         organization: @current_organization
       )
@@ -187,10 +131,6 @@ module Website
     end
 
     def the_team
-      @phones = Phone.where(
-        organization: @current_organization,
-        phoneable: @current_organization
-      )
       @treatments = Item.where(
         organization: @current_organization,
         status: :ACTIVE,
@@ -218,17 +158,6 @@ module Website
     end
 
     def virtual_tour
-      @phones = Phone.where(
-        organization: @current_organization,
-        phoneable: @current_organization
-      )
-      @treatments = Item.where(
-        organization: @current_organization,
-        status: :ACTIVE,
-        form: :ABSTRACT,
-        primary_kind: :SERVICE,
-        secondary_kind: :SERVICE_TREATMENT
-      )
       @social_proofs = SocialProof.where(
         organization: @current_organization
       )

@@ -10,92 +10,27 @@
   </div>
 </div>
 
-<div class="container"
-  <div class="row">
-    <div class="col-12">
-      <div class="row">
+<div class="container">
+  <% @treatments.each_with_index do |treatment, index| %>
+    <div class="row">
+      <% if index % 2 == 0 %>
         <div class="col-5">
-          <iframe src="https://www.youtube.com/embed/Kn7gTevGx6s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe src="<%= treatment.url %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
-        <div class="col-7">
-        <h3>Implants</h3>
-        <p>
-          Dental Implants are often the best treatment for missing teeth.
-          When a damaged or decayed tooth is removed, both the visible part of the tooth, called the crown, and the root are lost.
-        </p>
-        <p>
-          A dental implant is placed in the jawbone so that it can fuse with your natural bone and become a strong and sturdy foundation for replacement teeth. <a href="/treatments/1">More Info</a>
-        </p>
-        </div>
+      <% end %>
+
+      <div class="col-7">
+        <h3><%= treatment.name %></h3>
+        <p><%= treatment.long_description %></p>
       </div>
-      <div class="row">
-        <div class="col-7">
-          <h3>Implants</h3>
-          <p>
-            Dental Implants are often the best treatment for missing teeth.
-            When a damaged or decayed tooth is removed, both the visible part of the tooth, called the crown, and the root are lost.<a href="/treatments/1">More Info</a>
-          </p>
-        </div>
+
+      <% if index % 2 == 1 %>
         <div class="col-5">
-          <iframe src="https://www.youtube.com/embed/Kn7gTevGx6s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe src="<%= treatment.url %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-5">
-          <iframe src="https://www.youtube.com/embed/Kn7gTevGx6s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="col-7">
-        <h3>Implants</h3>
-        <p>
-          Dental Implants are often the best treatment for missing teeth.
-          When a damaged or decayed tooth is removed, both the visible part of the tooth, called the crown, and the root are lost.
-        </p>
-        <p>
-          A dental implant is placed in the jawbone so that it can fuse with your natural bone and become a strong and sturdy foundation for replacement teeth. <a href="/treatments/1">More Info</a>
-        </p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-7">
-          <h3>Implants</h3>
-          <p>
-            Dental Implants are often the best treatment for missing teeth.
-            When a damaged or decayed tooth is removed, both the visible part of the tooth, called the crown, and the root are lost.<a href="/treatments/1">More Info</a>
-          </p>
-        </div>
-        <div class="col-5">
-          <iframe src="https://www.youtube.com/embed/Kn7gTevGx6s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-5">
-          <iframe src="https://www.youtube.com/embed/Kn7gTevGx6s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="col-7">
-        <h3>Implants</h3>
-        <p>
-          Dental Implants are often the best treatment for missing teeth.
-          When a damaged or decayed tooth is removed, both the visible part of the tooth, called the crown, and the root are lost.
-        </p>
-        <p>
-          A dental implant is placed in the jawbone so that it can fuse with your natural bone and become a strong and sturdy foundation for replacement teeth. <a href="/treatments/1">More Info</a>
-        </p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-7">
-          <h3>Implants</h3>
-          <p>
-            Dental Implants are often the best treatment for missing teeth.
-            When a damaged or decayed tooth is removed, both the visible part of the tooth, called the crown, and the root are lost.<a href="/treatments/1">More Info</a>
-          </p>
-        </div>
-        <div class="col-5">
-          <iframe src="https://www.youtube.com/embed/Kn7gTevGx6s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
+      <% end %>
     </div>
-  </div>
+  <% end %>
 </div>
 
 <div class="container-fluid schedule-now-wrapper">
@@ -108,6 +43,4 @@
   </div>
 </div>
 
-<div class="container-fluid primary-footer-wrapper">
-  <%= render 'website/partials/primary_footer' %>
-</div>
+<%= render 'website/partials/primary_footer', phones: @phones %>

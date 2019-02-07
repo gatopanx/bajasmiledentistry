@@ -36,7 +36,7 @@
         </div>
         <div class="col-12">
           <img data-src="holder.js/600x400" alt="">
-          <h4>10 Reasons to Get Dental Work in Tijuana</h4>
+          <h4>10 Reasons   to Get Dental Work in Tijuana</h4>
           <p>July 1st, 2018</p>
           <p>
             Getting dental work outside of your country of residence can be a little overwhelming sometimes, especially if you don’t know where to go.
@@ -51,15 +51,17 @@
         <div class="col-12">
           <%= render 'website/partials/talk_with_us' %>
         </div>
-        <div class="col-12">
+        <div class="col-12 blog-archive">
           <h5>Blog Archive</h5>
-          <p>2018(28)</p>
-          <p>July(6)</p>
-          <p>June(12)</p>
-          <p>May(5)</p>
-          <p>April(5)</p>
+          <details>
+            <summary>2018(28)</summary>
+            <li>July(6)</li>
+            <li>June(12)</li>
+            <li>May(5)</li>
+            <li>April(5)</li>
+          </details>
         </div>
-        <div class="col-12">
+        <div class="col-12 popular-posts">
           <h5>Popular Posts</h5>
           <img data-src="holder.js/300x100" alt="">
           <p>10 Reasons to Get Dental Work in Tijuana</p>
@@ -82,6 +84,5 @@
     </div>
   </div>
 </div>
-<div class="container-fluid primary-footer-wrapper">
-  <%= render 'website/partials/primary_footer' %>
-</div>
+
+<%= render 'website/partials/primary_footer', phones: @phones %>

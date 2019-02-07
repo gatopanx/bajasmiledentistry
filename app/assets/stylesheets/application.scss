@@ -350,49 +350,64 @@ body {
   }
 }
 
-.primary-footer {
-  p,
-  li {
-    color: white;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 300;
-    font-size: 13pt;
-  }
-
-  background-color: #404040;
-  color: white;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  margin-bottom: 12px;
+.primary-footer-wrapper {
   border-top: 5px solid $primary-blue;
-  position: absolute;
-  width: 100%;
-  align-content: center;
+  background-color: #404040;
+  padding: 0px;
 
-    .nav-bar {
-      align-content: center;
+  .primary-footer {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    padding: 50px 20px 0px;
+
+    a {
       color: white;
-      margin-top: 40px;
-      margin-bottom: 40px;
+    }
 
-      .nav-link {
-        color: white;
-        display: inline-block;
-        text-align: center;
+    li {
+      margin-top: 5px;
+    }
 
-        &:hover {
-          color: #757575;
-          font-weight: 600;
+    .logo {
+      img {
+        margin-left: 30px;
+        margin-top: 3px;
+      }
+    }
+    .phones {
+      .phone {
+        .flag {
+          width: 24px;
+          height: 18.75px;
+          position: relative;
+          top: -1px;
+        }
+        .number {
+          color: white;
         }
       }
     }
-    .tijuanasmiledentistry {
-      position: absolute;
-      width: 100%;
-      background-color: black;
-      text-align: center;
+    .social-networks {
+      .logo {
+        margin-right: 7px;
+      }
+
+    }
+    .address {
+      margin-top: 70px;
+
+      .text {
+        font-size: 12pt;
+      }
+    }
+    .disclaimer {
+      .text {
+        font-size: 10pt;
+      }
     }
   }
+}
+
 
 .pages {
   .home {
@@ -416,6 +431,21 @@ body {
           border-width: 2px;
           border-radius: 10px;;
           background-color: rgba(255, 255, 255, 1);
+        }
+        button {
+          background-color: $dark-orange;
+          border-color: $dark-orange;
+
+          // TODO: Remove important
+          &:focus, &:hover, &:active, &:target {
+            background-color: $light-orange !important;
+            border-color: $light-orange !important;
+            outline: none !important;
+            box-shadow: none !important;
+            outline: 0 !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+          }
         }
       }
     }
@@ -441,6 +471,23 @@ body {
 
         .image {
           width: 100%;
+        }
+      }
+    }
+    .talk-with-us {
+      button {
+        background-color: $dark-orange;
+        border-color: $dark-orange;
+
+        // TODO: Remove important
+        &:focus, &:hover, &:active, &:target {
+          background-color: $light-orange !important;
+          border-color: $light-orange !important;
+          outline: none !important;
+          box-shadow: none !important;
+          outline: 0 !important;
+          -webkit-box-shadow: none !important;
+          box-shadow: none !important;
         }
       }
     }
@@ -542,11 +589,12 @@ body {
       position: center;
     }
     .billboard-wrapper {
-      background-image: url('header.jpg');
-      height: 756px;
+      background-image: url('tools-5.jpg');
+      height: 720px;
       background-repeat: no-repeat;
       background-position: top;
       background-position: center;
+      background-color: #f1f4f8;
 
       .billboard {
         margin-top: 64px;
@@ -560,11 +608,26 @@ body {
           padding: 20px;
           border-width: 2px;
           border-radius: 10px;;
-          background-color: rgba(255, 255, 255, 1);
+          background-color: rgba(255, 255, 255, 0.75);
         }
         .video {
           height: 100%;
           width: 100%;
+        }
+        button {
+          background-color: $dark-orange;
+          border-color: $dark-orange;
+
+          // TODO: Remove important
+          &:focus, &:hover, &:active, &:target {
+            background-color: $light-orange !important;
+            border-color: $light-orange !important;
+            outline: none !important;
+            box-shadow: none !important;
+            outline: 0 !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+          }
         }
       }
     }

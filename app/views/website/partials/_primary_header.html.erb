@@ -16,21 +16,18 @@
     </ul>
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="/success-stories">Success Stories</a>
+        <a class="nav-link" href="/about-us">About Us</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="/treatments" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Treatments</a>
         <div class="dropdown-menu" aria-labelledby="dropdown04">
           <% treatments.each do |treatment| %>
-            <a class="dropdown-item" href="treatments/<%= treatment.key.downcase.sub('_', '-') %>"><%= treatment.name %></a>
+            <a class="dropdown-item" href="/treatments/<%= treatment.key.downcase.sub('_', '-') %>"><%= treatment.name %></a>
           <% end %>
         </div>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/price-list">Price List</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/about-us">About Us</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/virtual-tour">Virtual Tour</a>
