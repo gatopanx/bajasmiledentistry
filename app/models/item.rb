@@ -9,7 +9,7 @@ class Item < ApplicationRecord
   belongs_to :primary_attachment, class_name: 'Attachment', optional: true
   belongs_to :primary_image, class_name: 'Image', optional: true
 
-  acts_as_list(scope: %i[organization_id category_id])
+  acts_as_list(scope: %i[organization_id category_id form])
 
   enum form: {
     ABSTRACT: 0,
