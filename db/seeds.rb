@@ -226,7 +226,7 @@ end
     external_price_in_cents: nil,
     form: :ABSTRACT,
     internal_price_in_cents: nil,
-    key: "dental-implants", # Setear
+    key: "dental_implants", # Setear
     name: "Dental Implants", # Setear
     long_description: %{
     <h4>Dental Implants</h4>
@@ -409,7 +409,7 @@ end
     external_price_in_cents: nil,
     form: :ABSTRACT,
     internal_price_in_cents: nil,
-    key: "root-canal", # Setear
+    key: "root_canal", # Setear
     name: "Root Canal", # Setear
     long_description: %{
     <h4>Root Canal</h4>
@@ -451,7 +451,7 @@ end
     external_price_in_cents: nil,
     form: :ABSTRACT,
     internal_price_in_cents: nil,
-    key: "teeth-whitening", # Setear
+    key: "teeth_whitening", # Setear
     name: "Teeth Whitening", # Setear
     long_description: %{
     <h4>Teeth Whitening</h4>
