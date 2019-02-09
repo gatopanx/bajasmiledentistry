@@ -75,7 +75,7 @@ class Item < ApplicationRecord
     },
     format: {
       with: /\A(?!_)\w*(?<!_)\z/,
-      messages: "%{value} must consists numbers, letter or underscores, but cannot begin nor end with underscore."
+      messages: "%{value} must consists numbers, letter or underscores, but cannot begin nor end with underscores."
     },
     uniqueness: {
       scope: %i[organization_id]
@@ -89,7 +89,7 @@ class Item < ApplicationRecord
     },
     format: {
       with: /\A(?!_)\w*(?<!_)\z/,
-      messages: "%{value} must consists numbers, letter or underscores, but cannot begin nor end with underscore."
+      messages: "%{value} must consists numbers, letter or underscores, but cannot begin nor end with underscores."
     },
     uniqueness: {
       scope: %i[organization_id category_id]

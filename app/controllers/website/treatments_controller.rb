@@ -24,6 +24,8 @@ module Website
       ).order(
         date: :desc
       ).limit(9)
+
+      @treatment = Item.find_by!(key: params[:id].gsub('-', '_'))
     end
   end
 end
