@@ -1,6 +1,7 @@
 tmp
 log
 notes.txt
+config/database.yml
 public/uploads
 
 # Elastic Beanstalk Files
