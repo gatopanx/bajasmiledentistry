@@ -336,8 +336,8 @@ body {
 
   .brand {
     .logo {
-      width: 178.67px;
-      height: 35.89px;
+      width: 249.2px;
+      height: 49px;
 
       // NOTE: desktop only?
       position: relative;
@@ -415,16 +415,11 @@ body {
       background-image: url('header.jpg');
       height: 756px;
       background-repeat: no-repeat;
-      background-position: top;
-      background-position: center;
+      // background-position: top;
+      // background-position: center;
 
       .billboard {
         margin-top: 64px;
-
-        .explainer-video {
-          width: 100%;
-          height: 100%;
-        }
 
         .talk-with-us-wrapper {
           padding: 20px;
@@ -599,7 +594,7 @@ body {
       .billboard {
         margin-top: 64px;
 
-        .explainer-video {
+        .video iframe {
           width: 100%;
           height: 100%;
         }
@@ -609,10 +604,6 @@ body {
           border-width: 2px;
           border-radius: 10px;;
           background-color: rgba(255, 255, 255, 0.75);
-        }
-        .video {
-          height: 100%;
-          width: 100%;
         }
         button {
           background-color: $dark-orange;
@@ -632,35 +623,66 @@ body {
       }
     }
   }
+}
 
-  .pictures {
-    .index {
-      background-color: white;
-    }
+.pictures {
+  .index {
+    background-color: white;
   }
+}
 
-  .posts {
-    .index {
-      background-color: white;
-    }
-    .show {
-      background-color: white;
-    }
+.posts {
+  .index {
   }
+  .show {
+  }
+}
 
-  .treatments {
-    .index {
-      background-color: white;
+.treatments {
+  .index {
+  }
+  .show {
+    .billboard-wrapper {
+      background-image: url('tools-5.jpg');
+      height: 756px;
+      background-repeat: no-repeat;
+      // background-position: top;
+      // background-position: center;
+
+      .billboard {
+        margin-top: 64px;
+
+        .video iframe {
+          width: 100%;
+          height: 100%;
+        }
+
+        .talk-with-us-wrapper {
+          padding: 20px;
+          border-width: 2px;
+          border-radius: 10px;;
+          background-color: rgba(255, 255, 255, 1);
+        }
+        button {
+          background-color: $dark-orange;
+          border-color: $dark-orange;
+
+          // TODO: Remove important
+          &:focus, &:hover, &:active, &:target {
+            background-color: $light-orange !important;
+            border-color: $light-orange !important;
+            outline: none !important;
+            box-shadow: none !important;
+            outline: 0 !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+          }
+        }
+      }
     }
-    .show {
-      p {
-        font-size: 12px;
-        color: red;
-      }
-      .success-stories {
-        margin-top: $breath-size;
-        margin-bottom: $breath-size;
-      }
+    .success-stories {
+      margin-top: $breath-size;
+      margin-bottom: $breath-size;
     }
   }
 }

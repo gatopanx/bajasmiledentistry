@@ -166,7 +166,6 @@ end
     key: "crowns", # Setear
     name: "Crowns", # Setear
     long_description: %{
-    <h4>Crowns</h4>
     <h5>What is a Dental Crown?</h5>
     <p>
       A crown is a tooth-shaped cover or cap placed over a tooth that is badly damaged by decayed,
@@ -229,7 +228,6 @@ end
     key: "dental_implants", # Setear
     name: "Dental Implants", # Setear
     long_description: %{
-    <h4>Dental Implants</h4>
     <h5>What is a Dental Implant?</h5>
     <p>
       Dental implants are an effective way to replace missing teeth. Dental Implants are small posts,
@@ -305,7 +303,6 @@ end
     key: "dentures", # Setear
     name: "Dentures", # Setear
     long_description: %{
-    <h4>Dentures</h4>
     <h5>What are Dentures?</h5>
     <p>
       If you have lost some or all of your natural teeth, dentures can replace it and improve your quality of life.
@@ -354,7 +351,6 @@ end
     key: "orthodontics", # Setear
     name: "Orthodontics", # Setear
     long_description: %{
-    <h4>Orthodontics</h4>
     <h5>What is Orthodontics?</h5>
     <p>
       Orthodontics is the branch of dentistry that corrects teeth and jaws that are positioned improperly.
@@ -412,7 +408,6 @@ end
     key: "root_canal", # Setear
     name: "Root Canal", # Setear
     long_description: %{
-    <h4>Root Canal</h4>
     <h5>What is a Root Canal?</h5>
     <p>
       Endodontics deals with treating diseases or injuries to the dental pulp. Endodontics is the branch that specializes
@@ -454,7 +449,6 @@ end
     key: "teeth_whitening", # Setear
     name: "Teeth Whitening", # Setear
     long_description: %{
-    <h4>Teeth Whitening</h4>
     <h5>What Is Teeth Whitening?</h5>
     <p>
       Tooth whitening lightens teeth and helps to remove stains and discoloration. Whitening is among the most popular cosmetic dental procedures.
