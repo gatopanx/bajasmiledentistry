@@ -18,7 +18,11 @@ Rails.application.routes.draw do
       get 'virtual-tour'
     end
 
-    resources :pictures, only: [:index]
+    controller :operations do
+      post :schedule
+    end
+
+    # resources :pictures, only: [:index]
     resources :posts, only: [:index, :show]
     resources :treatments, only: [:index, :show]
   end
