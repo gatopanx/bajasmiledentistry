@@ -96,7 +96,6 @@ organization.save || binding.pry
 
 # CATEGORIES
 
-5.times.map do
 [
   {
     organization: organization,
@@ -105,9 +104,8 @@ organization.save || binding.pry
     payload: payload(png),
     short_description: Faker::Lorem.paragraphs(1).join(' '),
     status: :ACTIVE
-  },
-]
-end.each do |attribute_set|
+  }
+].each do |attribute_set|
   category = Category.new(attribute_set.except(:payload))
   category.save || binding.pry
 
