@@ -19,9 +19,6 @@ class Item < ApplicationRecord
     PRODUCT: 0,
     SERVICE: 10
   }
-  enum secondary_kind: {
-    SERVICE_TREATMENT: 0
-  }
   enum status: {
     ACTIVE: 0,
     INACTIVE: 10
@@ -109,9 +106,6 @@ class Item < ApplicationRecord
     }
   }
   validates :primary_kind, {
-    presence: true
-  }
-  validates :secondary_kind, {
     presence: true
   }
   validates :short_description, {

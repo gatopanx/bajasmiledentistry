@@ -9,8 +9,7 @@ module Website
         organization: @current_organization,
         status: :ACTIVE,
         form: :ABSTRACT,
-        primary_kind: :SERVICE,
-        secondary_kind: :SERVICE_TREATMENT
+        primary_kind: :SERVICE
       )
       @social_proofs = SocialProof.where(
         organization: @current_organization
@@ -40,8 +39,7 @@ module Website
         organization: @current_organization,
         status: :ACTIVE,
         form: :ABSTRACT,
-        primary_kind: :SERVICE,
-        secondary_kind: :SERVICE_TREATMENT
+        primary_kind: :SERVICE
       )
       @social_proofs = SocialProof.where(
         organization: @current_organization

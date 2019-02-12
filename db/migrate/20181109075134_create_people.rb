@@ -12,7 +12,6 @@ class CreatePeople < ActiveRecord::Migration[5.2]
       t.string :last_name
       t.string :middle_name
       t.integer :primary_kind
-      t.integer :secondary_kind
       t.integer :status
 
       t.timestamps

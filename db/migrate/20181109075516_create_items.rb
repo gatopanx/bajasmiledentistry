@@ -14,7 +14,6 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.text :long_description
       t.integer :position
       t.integer :primary_kind
-      t.integer :secondary_kind
       t.string :short_description
       t.integer :status
       t.string :url

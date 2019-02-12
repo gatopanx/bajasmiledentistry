@@ -25,27 +25,39 @@ class Lead < ApplicationRecord
     CANCELLED: 40
   }
 
+  validates :person, {
+    inclusion: {
+      in: proc do |l|
+        if l.person && l.organization
+          Person.where(
+            organization: l.organization,
+            primary_kind: :CONSUMER,
+            id: l.person.id
+          )
+        else
+          Person.none
+        end
+      end
+    }
+  }
+
   validates :desired_date, {
+    presence: true,
     date: {
       after: proc { Date.today }
     },
     on: :create
   }
   validates :desired_date, {
+    presence: true,
     date: true,
     on: :update
   }
-  validates :desired_time_range, {
-    presence: true
-  }
   validates :message, {
-    presence: true,
     length: {
       in: 1..2048
-    }
-  }
-  validates :preferred_conversation_channel, {
-    presence: true
+    },
+    allow_nil: true
   }
   validates :source, {
     presence: true

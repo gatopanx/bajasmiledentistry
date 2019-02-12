@@ -16,8 +16,7 @@ class WebsiteController < ApplicationController
       organization: @current_organization,
       status: :ACTIVE,
       form: :ABSTRACT,
-      primary_kind: :SERVICE,
-      secondary_kind: :SERVICE_TREATMENT
+      primary_kind: :SERVICE
     )
   end
 end

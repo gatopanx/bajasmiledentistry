@@ -26,7 +26,6 @@ class Testimonial < ApplicationRecord
           Person.where(
             organization: t.organization,
             primary_kind: :CONSUMER,
-            # TODO: Maybe add dynamic secondary consumer kinds discovery and filtering
             id: t.person.id
           )
         else

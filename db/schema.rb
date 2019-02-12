@@ -139,7 +139,6 @@ ActiveRecord::Schema.define(version: 2018_11_11_011614) do
     t.text "long_description"
     t.integer "position"
     t.integer "primary_kind"
-    t.integer "secondary_kind"
     t.string "short_description"
     t.integer "status"
     t.string "url"
@@ -197,7 +196,6 @@ ActiveRecord::Schema.define(version: 2018_11_11_011614) do
     t.string "last_name"
     t.string "middle_name"
     t.integer "primary_kind"
-    t.integer "secondary_kind"
     t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

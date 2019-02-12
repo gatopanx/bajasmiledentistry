@@ -93,39 +93,11 @@ organization.primary_phone = organization.phones.first || binding.pry
 
 organization.save || binding.pry
 
-# SOCIAL PROOFS
-
-5.times.map do
-  {
-    organization: organization,
-    description: Faker::Lorem.paragraph(3),
-    title: Faker::Lorem.paragraph(1),
-    url: 'https://placehold.it/200x100',
-    payload: payload(png)
-  }
-end.each do |attribute_set|
-  social_proof = SocialProof.new(attribute_set.except(:payload))
-  social_proof.save || binding.pry
-
-  image = Image.new(
-    attribute_set.slice(
-      :organization,
-      :description,
-      :title,
-      :payload
-    ).merge({
-      imageable: social_proof,
-    })
-  )
-  image.save || binding.pry
-
-  social_proof.primary_image = image
-  social_proof.save || binding.pry
-end
 
 # CATEGORIES
 
 5.times.map do
+[
   {
     organization: organization,
     name: Faker::Lorem.paragraphs(1).join(' '),
@@ -133,7 +105,8 @@ end
     payload: payload(png),
     short_description: Faker::Lorem.paragraphs(1).join(' '),
     status: :ACTIVE
-  }
+  },
+]
 end.each do |attribute_set|
   category = Category.new(attribute_set.except(:payload))
   category.save || binding.pry
@@ -214,7 +187,6 @@ end
     </p>
     }, # Setear
     primary_kind: :SERVICE,
-    secondary_kind: :SERVICE_TREATMENT,
     short_description: "A crown is a tooth-shaped cover or cap placed over a tooth that is badly damaged by decayed, as a result, a filling can’t replace enough of the tooth or make the tooth strong enough, crowns can be used to improve appearance as well.", # Setear
     status: :ACTIVE,
     url: 'https://www.youtube.com/embed/Kn7gTevGx6s'
@@ -289,7 +261,6 @@ end
     </p>
     }, # Setear
     primary_kind: :SERVICE,
-    secondary_kind: :SERVICE_TREATMENT,
     short_description: "Dental implants are an effective way to replace missing teeth. Dental Implants are small posts, usually made of titanium, that is surgically positioned into the jawbone beneath your gums.", # Setear
     status: :ACTIVE,
     url: 'https://www.youtube.com/embed/Kn7gTevGx6s'
@@ -337,7 +308,6 @@ end
     </ol>
     }, # Setear
     primary_kind: :SERVICE,
-    secondary_kind: :SERVICE_TREATMENT,
     short_description: "Dentures are replacements for missing teeth that can be taken out and put back into your mouth, today’s dentures are natural looking and more comfortable than ever.", # Setear
     status: :ACTIVE,
     url: 'https://www.youtube.com/embed/Kn7gTevGx6s'
@@ -394,7 +364,6 @@ end
     </p>
     }, # Setear
     primary_kind: :SERVICE,
-    secondary_kind: :SERVICE_TREATMENT,
     short_description: "Orthodontics is the branch of dentistry that corrects teeth and jaws that are positioned improperly. Crooked teeth and bite problems are solved with orthodontic treatment", # Setear
     status: :ACTIVE,
     url: 'https://www.youtube.com/embed/Kn7gTevGx6s'
@@ -435,7 +404,6 @@ end
     </p>
     }, # Setear
     primary_kind: :SERVICE,
-    secondary_kind: :SERVICE_TREATMENT,
     short_description: "Endodontics is the branch that specializes in the root canal and other endodontic treatments, millions of teeth are treated and save with root canal, relieving pain and making teeth healthy again.", # Setear
     status: :ACTIVE,
     url: 'https://www.youtube.com/embed/Kn7gTevGx6s'
@@ -469,7 +437,6 @@ end
     </p>
     }, # Setear
     primary_kind: :SERVICE,
-    secondary_kind: :SERVICE_TREATMENT,
     short_description: "Endodontics is the branch that specializes in the root canal and other endodontic treatments, millions of teeth are treated and save with root canal, relieving pain and making teeth healthy again.", # Setear
     status: :ACTIVE,
     url: 'https://www.youtube.com/embed/Kn7gTevGx6s'
@@ -512,7 +479,6 @@ Category.all.each do |category|
       name: Faker::Lorem.paragraphs(1).join(' '),
       long_description: Faker::Lorem.paragraphs(5).join(' '),
       primary_kind: :SERVICE,
-      secondary_kind: :SERVICE_TREATMENT,
       short_description: Faker::Lorem.paragraphs(1).join(' '),
       status: :ACTIVE
     }
@@ -550,7 +516,6 @@ end
     last_name: Faker::Name.middle_name,
     payload: payload(png),
     primary_kind: :PRODUCER,
-    secondary_kind: :PRODUCER_DOCTOR,
     status: :ACTIVE
   }
 end.each do |attribute_set|
@@ -593,7 +558,6 @@ end
     address: Faker::Internet.email,
     payload: payload(png),
     primary_kind: :CONSUMER,
-    secondary_kind: :CONSUMER_PATIENT,
     state_province_county: Faker::Address.state,
     status: :ACTIVE,
     zip_postal_code: Faker::Address.zip_code
@@ -683,8 +647,7 @@ end
 
 Person.where(
   organization: organization,
-  primary_kind: :CONSUMER,
-  secondary_kind: :CONSUMER_PATIENT
+  primary_kind: :CONSUMER
 ).each do |consumer|
   testimonial = Testimonial.new({
     organization: organization,
@@ -732,8 +695,7 @@ end
 
 Person.where(
   organization: organization,
-  primary_kind: :CONSUMER,
-  secondary_kind: :CONSUMER_PATIENT
+  primary_kind: :CONSUMER
 ).each do |consumer|
   testimonial = Testimonial.new({
     organization: organization,
@@ -778,8 +740,7 @@ end
 
 Person.where(
   organization: organization,
-  primary_kind: :CONSUMER,
-  secondary_kind: :CONSUMER_PATIENT
+  primary_kind: :CONSUMER
 ).each do |consumer|
   lead = Lead.new({
     organization: organization,

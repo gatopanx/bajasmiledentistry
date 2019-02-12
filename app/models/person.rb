@@ -15,21 +15,16 @@ class Person < ApplicationRecord
     PRODUCER: 0,
     CONSUMER: 10
   }
-  # TODO: Figure what to do with secondary kinds and kinds overall
-  enum secondary_kind: {
-    PRODUCER_DOCTOR: 0,
-    CONSUMER_PATIENT: 10
-  }
   enum status: {
     ACTIVE: 0,
     INACTIVE: 10
   }
 
   validates :date_of_birth, {
-    presence: true,
     date: {
       after: proc { 128.years.ago }
-    }
+    },
+    allow_nil: true
   }
   validates :first_name, {
     presence: true,
@@ -44,15 +39,12 @@ class Person < ApplicationRecord
     allow_nil: true
   }
   validates :last_name, {
-    presence: true,
     length: {
       in: 1..255
-    }
+    },
+    allow_nil: true
   }
   validates :primary_kind, {
-    presence: true
-  }
-  validates :secondary_kind, {
     presence: true
   }
   validates :status, {
