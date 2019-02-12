@@ -8,7 +8,7 @@ class SocialProof < ApplicationRecord
 
   validates :description, {
     length: {
-      in: 2..512
+      in: 0..512
     },
     allow_nil: true
   }

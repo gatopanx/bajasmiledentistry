@@ -55,7 +55,7 @@ class Lead < ApplicationRecord
   }
   validates :message, {
     length: {
-      in: 1..2048
+      in: 0..2048
     },
     allow_nil: true
   }

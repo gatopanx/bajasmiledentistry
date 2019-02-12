@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'activesupport', '5.2.0'
 gem 'acts_as_list'
+gem 'administrate'
 gem 'aws-sdk-rails'
 gem 'aws-sdk-rds', '~> 1'
 gem 'aws-sdk-s3', '~> 1'

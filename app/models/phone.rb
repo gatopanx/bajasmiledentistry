@@ -19,7 +19,7 @@ class Phone < ApplicationRecord
       only_integer: true
     },
     length: {
-      in: 1..32
+      in: 0..32
     },
     allow_nil: true
   }

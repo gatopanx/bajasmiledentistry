@@ -34,13 +34,13 @@ class Person < ApplicationRecord
   }
   validates :middle_name, {
     length: {
-      in: 1..255
+      in: 0..255
     },
     allow_nil: true
   }
   validates :last_name, {
     length: {
-      in: 1..255
+      in: 0..255
     },
     allow_nil: true
   }
