@@ -21,7 +21,7 @@
             </div>
           <% elsif external_testimonial.images.any? %>
             <div class="col-6 carousel-wrapper">
-              <% uuid = SecureRandom.uuid %>
+              <% uuid = "carousel-#{SecureRandom.uuid}" %>
               <div id="<%= uuid %>" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                   <% external_testimonial.images.each_with_index do |image, index| %>
