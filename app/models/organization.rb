@@ -17,7 +17,7 @@ class Organization < ApplicationRecord
   has_many :phoneable_phones, class_name: 'Phone', dependent: :destroy
   has_many :phones, as: :phoneable, dependent: :destroy
   has_many :social_proofs, dependent: :destroy
-  has_many :testimonial, dependent: :destroy
+  has_many :testimonials, dependent: :destroy
 
   belongs_to :primary_address, class_name: 'Address', optional: true
   belongs_to :primary_email, class_name: 'Email', optional: true
