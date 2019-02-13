@@ -12,6 +12,19 @@ class Category < ApplicationRecord
     INACTIVE: 10
   }
 
+  validates :key, {
+    presence: true,
+    length: {
+      in: 1..255
+    },
+    format: {
+      with: /\A(?!_)\w*(?<!_)\z/,
+      messages: "%{value} must consists numbers, letter or underscores, but cannot begin nor end with underscores."
+    },
+    uniqueness: {
+      scope: %i[organization_id]
+    }
+  }
   validates :name, {
     presence: true,
     length: {

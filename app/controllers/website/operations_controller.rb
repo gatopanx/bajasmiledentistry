@@ -17,7 +17,7 @@ module Website
         person = Person.create!(
           organization: current_organization,
           status: :ACTIVE,
-          first_name: params.fetch(:person_name),
+          name: params.fetch(:person_name),
           primary_kind: :CONSUMER,
         )
 

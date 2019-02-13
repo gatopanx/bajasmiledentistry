@@ -3,6 +3,7 @@ class CreateCategories < ActiveRecord::Migration[5.2]
     create_table :categories do |t|
       t.references :organization, foreign_key: true
       t.references :primary_image, foreign_key: { to_table: :images }
+      t.string :key, index: true
       t.integer :position
       t.integer :status
       t.string :name

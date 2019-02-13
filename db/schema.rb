@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 2018_11_11_011614) do
   create_table "categories", force: :cascade do |t|
     t.bigint "organization_id"
     t.bigint "primary_image_id"
+    t.string "key"
     t.integer "position"
     t.integer "status"
     t.string "name"
@@ -73,6 +74,7 @@ ActiveRecord::Schema.define(version: 2018_11_11_011614) do
     t.text "long_description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["key"], name: "index_categories_on_key"
     t.index ["organization_id"], name: "index_categories_on_organization_id"
     t.index ["primary_image_id"], name: "index_categories_on_primary_image_id"
   end
@@ -145,6 +147,7 @@ ActiveRecord::Schema.define(version: 2018_11_11_011614) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_items_on_category_id"
+    t.index ["key"], name: "index_items_on_key"
     t.index ["organization_id"], name: "index_items_on_organization_id"
     t.index ["primary_attachment_id"], name: "index_items_on_primary_attachment_id"
     t.index ["primary_image_id"], name: "index_items_on_primary_image_id"
@@ -192,9 +195,7 @@ ActiveRecord::Schema.define(version: 2018_11_11_011614) do
     t.bigint "primary_image_id"
     t.bigint "primary_phone_id"
     t.date "date_of_birth"
-    t.string "first_name"
-    t.string "last_name"
-    t.string "middle_name"
+    t.string "name"
     t.integer "primary_kind"
     t.integer "status"
     t.datetime "created_at", null: false

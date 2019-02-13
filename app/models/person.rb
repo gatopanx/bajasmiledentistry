@@ -28,23 +28,11 @@ class Person < ApplicationRecord
     },
     allow_nil: true
   }
-  validates :first_name, {
+  validates :name, {
     presence: true,
     length: {
       in: 1..255
     }
-  }
-  validates :middle_name, {
-    length: {
-      in: 0..255
-    },
-    allow_nil: true
-  }
-  validates :last_name, {
-    length: {
-      in: 0..255
-    },
-    allow_nil: true
   }
   validates :primary_kind, {
     presence: true
@@ -52,12 +40,4 @@ class Person < ApplicationRecord
   validates :status, {
     presence: true
   }
-
-  def calculated_full_name
-    [
-      first_name,
-      middle_name,
-      last_name
-    ].compact.join(' ')
-  end
 end

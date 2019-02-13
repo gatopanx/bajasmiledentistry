@@ -8,9 +8,7 @@ class CreatePeople < ActiveRecord::Migration[5.2]
       t.references :primary_phone, foreign_key: { to_table: :phones }
 
       t.date :date_of_birth
-      t.string :first_name
-      t.string :last_name
-      t.string :middle_name
+      t.string :name
       t.integer :primary_kind
       t.integer :status
 
