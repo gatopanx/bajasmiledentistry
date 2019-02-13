@@ -1,7 +1,16 @@
-# RESOURCES
+def png
+  random_color =
+    ChunkyPNG::Color::rgba(
+      rand(0..255),
+      rand(0..255),
+      rand(0..255),
+      100
+    )
+  width = 200
+  height = 100
 
-png_object = ChunkyPNG::Image.new(200, 100, ChunkyPNG::Color::rgba(211, 211, 211, 100))
-png = png_object.to_datastream.to_s
+  ChunkyPNG::Image.new(width, height, random_color).to_datastream.to_s
+end
 
 logo = File.read('./app/assets/images/logo-small.png')
 
