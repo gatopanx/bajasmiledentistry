@@ -1,3 +1,5 @@
+# TODO: Add multiple links (polymorphic) resource
+
 def png
   random_color =
     ChunkyPNG::Color::rgba(

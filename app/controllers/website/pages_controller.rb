@@ -24,9 +24,6 @@ module Website
     end
 
     def about_us
-      @social_proofs = SocialProof.where(
-        organization: @current_organization
-      )
       @external_testimonials = Testimonial.where(
         organization: @current_organization,
         status: :ACCEPTED,
@@ -34,111 +31,26 @@ module Website
       ).order(
         date: :desc
       ).limit(10)
-      @internal_testimonials = Testimonial.where(
-        organization: @current_organization,
-        status: :ACCEPTED,
-        source: :INTERNAL
-      ).order(
-        date: :desc
-      ).limit(9)
     end
 
     def contact_us
-      @social_proofs = SocialProof.where(
-        organization: @current_organization
-      )
-      @external_testimonials = Testimonial.where(
-        organization: @current_organization,
-        status: :ACCEPTED,
-        source: :EXTERNAL
-      ).order(
-        date: :desc
-      ).limit(10)
-      @internal_testimonials = Testimonial.where(
-        organization: @current_organization,
-        status: :ACCEPTED,
-        source: :INTERNAL
-      ).order(
-        date: :desc
-      ).limit(9)
     end
 
     def price_list
-      @treatments = Item.where(
-        organization: @current_organization,
-        status: :ACTIVE,
-        form: :ABSTRACT,
-        primary_kind: :SERVICE
-      )
-      @social_proofs = SocialProof.where(
-        organization: @current_organization
-      )
-      @external_testimonials = Testimonial.where(
-        organization: @current_organization,
-        status: :ACCEPTED,
-        source: :EXTERNAL
-      ).order(
-        date: :desc
-      ).limit(10)
-      @internal_testimonials = Testimonial.where(
-        organization: @current_organization,
-        status: :ACCEPTED,
-        source: :INTERNAL
-      ).order(
-        date: :desc
-      ).limit(9)
       @categories = Category.includes(:items).all
     end
 
     def schedule_appointment_primary
-      @social_proofs = SocialProof.where(
-        organization: @current_organization
-      )
-      @external_testimonials = Testimonial.where(
-        organization: @current_organization,
-        status: :ACCEPTED,
-        source: :EXTERNAL
-      ).order(
-        date: :desc
-      ).limit(10)
-      @internal_testimonials = Testimonial.where(
-        organization: @current_organization,
-        status: :ACCEPTED,
-        source: :INTERNAL
-      ).order(
-        date: :desc
-      ).limit(9)
     end
 
     def schedule_appointment_secondary
-      @social_proofs = SocialProof.where(
-        organization: @current_organization
-      )
-      @external_testimonials = Testimonial.where(
-        organization: @current_organization,
-        status: :ACCEPTED,
-        source: :EXTERNAL
-      ).order(
-        date: :desc
-      ).limit(10)
-      @internal_testimonials = Testimonial.where(
-        organization: @current_organization,
-        status: :ACCEPTED,
-        source: :INTERNAL
-      ).order(
-        date: :desc
-      ).limit(9)
     end
 
     def the_team
-      @treatments = Item.where(
+      @producers = Person.where(
         organization: @current_organization,
-        status: :ACTIVE,
-        form: :ABSTRACT,
-        primary_kind: :SERVICE
-      )
-      @social_proofs = SocialProof.where(
-        organization: @current_organization
+        status: :ACCEPTED,
+        primary_kind: :PRODUCER
       )
       @external_testimonials = Testimonial.where(
         organization: @current_organization,
@@ -147,13 +59,6 @@ module Website
       ).order(
         date: :desc
       ).limit(10)
-      @internal_testimonials = Testimonial.where(
-        organization: @current_organization,
-        status: :ACCEPTED,
-        source: :INTERNAL
-      ).order(
-        date: :desc
-      ).limit(9)
     end
 
     def virtual_tour
