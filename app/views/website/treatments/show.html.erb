@@ -12,78 +12,10 @@
     <div class='container align-self-center'>
       <div class='row'>
         <div class="col-6 video">
-          <iframe src="https://www.youtube.com/embed/otdy19AmdQI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+          <iframe src="<%= @treatment.url %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
         </div>
         <div class="col-6 talk-with-us-wrapper">
           <%= render 'website/partials/talk_with_us' %>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<hr class="attention-helper">
-
-<div class="container success stories">
-  <div class="row">
-    <div class="col-12">
-      <h4>100+ Success Stories</h4>
-      <h5>We have clients from the United States, Canada and Europe</h5>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12">
-      <div class="row">
-        <div class="col-2">
-          <img data-src="holder.js/150x150" alt="">
-        </div>
-        <div class="col-4">
-          <p>Jamie O'Donnell</p>
-          <p>Cape Cañaveral, FL, USA</p>
-          <p>03 Sep 2016</p>
-          <p>*****</p>
-          <p>Very professional, experts in each area were consulted as needed. Very modern equipment and treatment.</p>
-        </div>
-        <div class="col-2">
-          <img data-src="holder.js/150x150" alt="">
-        </div>
-        <div class="col-4">
-          <p>Jamie O'Donnell</p>
-          <p>Cape Cañaveral, FL, USA</p>
-          <p>03 Sep 2016</p>
-          <p>*****</p>
-          <p>Very professional, experts in each area were consulted as needed. Very modern equipment and treatment.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12">
-      <div class="row">
-        <div class="col-2">
-          <img data-src="holder.js/150x150" alt="">
-        </div>
-        <div class="col-4">
-          <p>Jamie O'Donnell</p>
-          <p>Cape Cañaveral, FL, USA</p>
-          <p>03 Sep 2016</p>
-          <p>*****</p>
-          <p>Very professional, experts in each area were consulted as needed. Very modern equipment and treatment.</p>
-        </div>
-        <div class="col-2">
-          <img data-src="holder.js/150x150" alt="">
-        </div>
-        <div class="col-4">
-          <p>Jamie O'Donnell</p>
-          <p>Cape Cañaveral, FL, USA</p>
-          <p>03 Sep 2016</p>
-          <p>*****</p>
-          <p>Very professional, experts in each area were consulted as needed. Very modern equipment and treatment.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <a href="#">View More</a>
         </div>
       </div>
     </div>
@@ -102,21 +34,9 @@
 </div>
 
 
-<hr class="attention-helper">
-
-<div class="container cases">
-  <div class="row">
-    <div class="col-sm">
-      <h4>Our Cases</h4>
-      <h5>Your Smile Is Our Priority</h5>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12">
-      <img data-src="holder.js/1200x600" alt="">
-      <p>Ellen W. visits us from Arizona to get a <a href="#">Teeth Whitening</a> on August 2018, this is the  before and after. <a href="#">More Info</a>.</p>
-    </div>
-  </div>
+<div class="container">
+  <%= render 'website/partials/internal_testimonials', internal_testimonials: @internal_testimonials %>
+  <%= render 'website/partials/external_testimonials', external_testimonials: @external_testimonials %>
 </div>
 
 <div class="container-fluid schedule-now-wrapper">

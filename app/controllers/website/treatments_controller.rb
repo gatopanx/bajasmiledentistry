@@ -7,25 +7,29 @@ module Website
     end
 
     def show
-      @social_proofs = SocialProof.where(
-        organization: @current_organization
-      )
-      @external_testimonials = Testimonial.where(
+      @treatment = Item.find_by!(
         organization: @current_organization,
-        status: :ACCEPTED,
+        key: params[:id].gsub('-', '_')
+      )
+      @item_testimonial_mappings = ItemTestimonialMapping.where(
+        organization: @current_organization,
+        item: @treatment
+      )
+      @testimonials = Testimonial.where(
+        organization: @current_organization,
+        id: @item_testimonial_mappings.pluck(:id),
+        status: :ACCEPTED
+      )
+      @external_testimonials = @testimonials.where(
         source: :EXTERNAL
       ).order(
         date: :desc
       ).limit(10)
-      @internal_testimonials = Testimonial.where(
-        organization: @current_organization,
-        status: :ACCEPTED,
+      @internal_testimonials = @testimonials.where(
         source: :INTERNAL
       ).order(
         date: :desc
       ).limit(9)
-
-      @treatment = Item.find_by!(key: params[:id].gsub('-', '_'))
     end
   end
 end

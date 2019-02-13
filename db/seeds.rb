@@ -101,6 +101,25 @@ organization.save || binding.pry
     organization: organization,
     name: Faker::Lorem.paragraphs(1).join(' '),
     long_description: Faker::Lorem.paragraphs(5).join(' '),
+    key: 'key1',
+    payload: payload(png),
+    short_description: Faker::Lorem.paragraphs(1).join(' '),
+    status: :ACTIVE
+  },
+  {
+    organization: organization,
+    name: Faker::Lorem.paragraphs(1).join(' '),
+    long_description: Faker::Lorem.paragraphs(5).join(' '),
+    key: 'key2',
+    payload: payload(png),
+    short_description: Faker::Lorem.paragraphs(1).join(' '),
+    status: :ACTIVE
+  },
+  {
+    organization: organization,
+    name: Faker::Lorem.paragraphs(1).join(' '),
+    long_description: Faker::Lorem.paragraphs(5).join(' '),
+    key: 'key3',
     payload: payload(png),
     short_description: Faker::Lorem.paragraphs(1).join(' '),
     status: :ACTIVE
@@ -509,9 +528,7 @@ end
   {
     organization: organization,
     date_of_birth: rand(18..75).years.ago,
-    first_name: Faker::Name.first_name,
-    middle_name: Faker::Name.middle_name,
-    last_name: Faker::Name.middle_name,
+    name: Faker::Name.first_name,
     payload: payload(png),
     primary_kind: :PRODUCER,
     status: :ACTIVE
@@ -526,8 +543,8 @@ end.each do |attribute_set|
       :payload
     ).merge({
       imageable: producer,
-      description: producer.calculated_full_name,
-      title: producer.calculated_full_name
+      description: producer.name,
+      title: producer.name
     })
   )
   image.save || binding.pry
@@ -545,11 +562,9 @@ end
     city: Faker::Address.city,
     country_code: 'US',
     extension: ((rand() >= 0.5) ? nil : Faker::PhoneNumber.extension),
-    first_name: Faker::Name.first_name,
+    name: Faker::Name.first_name,
     label: 'Home',
-    middle_name: Faker::Name.middle_name,
     number: Faker::PhoneNumber.phone_number.split(' x').first,
-    last_name: Faker::Name.middle_name,
     line_1: Faker::Address.street_address,
     line_2: Faker::Address.secondary_address,
     line_3: nil,
@@ -613,8 +628,8 @@ end.each do |attribute_set|
       :payload
     ).merge({
       imageable: consumer,
-      description: consumer.calculated_full_name,
-      title: consumer.calculated_full_name
+      description: consumer.name,
+      title: consumer.name
     })
   )
   image.save || binding.pry
@@ -664,7 +679,7 @@ Person.where(
     item_testimonial_mapping = ItemTestimonialMapping.new({
       item: Item.where(
         organization: organization,
-        form: :CONCRETE
+        form: :ABSTRACT,
       ).order("RANDOM()").first || binding.pry,
       organization: organization,
       testimonial: testimonial
@@ -678,7 +693,7 @@ Person.where(
       organization: organization,
       description: Faker::Lorem.paragraphs(1).join(' '),
       payload: payload(png),
-      title: "#{consumer.calculated_full_name} Testimonial"
+      title: "#{consumer.name} Testimonial"
     })
     image.save || binding.pry
   end
@@ -712,7 +727,7 @@ Person.where(
     item_testimonial_mapping = ItemTestimonialMapping.new({
       item: Item.where(
         organization: organization,
-        form: :CONCRETE
+        form: :ABSTRACT,
       ).order("RANDOM()").first || binding.pry,
       organization: organization,
       testimonial: testimonial
@@ -726,7 +741,7 @@ Person.where(
       organization: organization,
       description: Faker::Lorem.paragraphs(1).join(' '),
       payload: payload(png),
-      title: "#{consumer.calculated_full_name} Testimonial"
+      title: "#{consumer.name} Testimonial"
     })
     image.save || binding.pry
   end
