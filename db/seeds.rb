@@ -16,8 +16,8 @@ end
 
 logo = File.read('./app/assets/images/logo-small.png')
 
-def payload(file)
-  "data:image/png;base64,#{Base64.encode64(file)}"
+def payload(file_content)
+  "data:image/png;base64,#{Base64.encode64(file_content)}"
 end
 
 # ORGANIZATION
@@ -422,37 +422,7 @@ organization.save || binding.pry
 ].each do |attribute_set|
   item = Item.new(attribute_set)
   item.save || binding.pry
-
-  # 5.times do
-  #   image = Image.new(
-  #     attribute_set.slice(
-  #       :organization,
-  #     ).merge({
-  #       imageable: item,
-  #       description: attribute_set.fetch(:short_description),
-  #       payload: payload(png),
-  #       title: attribute_set.fetch(:name),
-  #     })
-  #   )
-  #   image.save || binding.pry
-  # end
-
-  # item.primary_image = item.images.first || binding.pry
-  # item.save || binding.pry
 end
-
-
-
-
-
-
-
-################################################################################
-
-
-
-
-
 
 # CATEGORIES
 
@@ -784,7 +754,7 @@ end
         internal_price_in_cents: 480*100,
         key: "ITEM_22",
         name: "Veneer",
-        long_description: "A veneer is a layer of material placed over a tooth, veneers improve the aesthetics of a smile and/or protect the tooth's surface from damage.",
+        long_description: "A veneer is a layer of material placed over a tooth, isabel-juarez-before improve the aesthetics of a smile and/or protect the tooth's surface from damage.",
         primary_kind: :SERVICE,
         short_description: "A veneer is a layer of material placed over a tooth.",
         status: :ACTIVE
@@ -796,9 +766,9 @@ end
         internal_price_in_cents: 150*100,
         key: "ITEM_23",
         name: "Resin Veneer",
-        long_description: "Resin Veneers involves very little removal of natural tooth. It, often times, can be done in conjunction with a restorative filling or replacement of old fillings.",
+        long_description: "Resin isabel-juarez-before involves very little removal of natural tooth. It, often times, can be done in conjunction with a restorative filling or replacement of old fillings.",
         primary_kind: :SERVICE,
-        short_description: "Resin Veneers involves very little removal of natural tooth. It can be done in conjunction with a restorative filling.",
+        short_description: "Resin isabel-juarez-before involves very little removal of natural tooth. It can be done in conjunction with a restorative filling.",
         status: :ACTIVE
       }
     ]
@@ -854,7 +824,7 @@ end
         internal_price_in_cents: 250*100,
         key: "ITEM_27",
         name: "Palatal Expander",
-        long_description: "Palatal expanders create more space in a child's mouth by gradually widening the upper jaw.",
+        long_description: "Palatal expanteders create more space in a child's mouth by gradually widening the upper jaw.",
         primary_kind: :SERVICE,
         short_description: "Palatal expanders create more space in a child's mouth by gradually widening the upper jaw.",
         status: :ACTIVE
@@ -887,7 +857,7 @@ end
         organization: organization,
         external_price_in_cents: 15*100,
         form: :CONCRETE,
-        internal_price_in_cents: 150*100,
+        internal_price_in_cents: 15*100,
         key: "ITEM_30",
         name: "Lost Bracket",
         long_description: "A broken braces bracket is the most common inconvenience orthodontic patients face but can easily be fix",
@@ -910,25 +880,74 @@ end
   end
 end
 
-################################################################################
-
-
-
-
-
-
 # PRODUCERS
 
-5.times.map do
+[
   {
     organization: organization,
-    date_of_birth: rand(18..75).years.ago,
-    name: Faker::Name.first_name,
-    payload: payload(png),
+    date_of_birth: Date.parse("01/01/1991"),
+    name: "Irving Cota",
+    payload: payload(File.read('./db/seeds/images/irving-cota.jpg')),
+    primary_kind: :PRODUCER,
+    status: :ACTIVE,
+    biography: %{
+      <h5>Cirujano Dentista, 2005-Present</h5>
+      <h5>Maryland Dental Center, Silver Spring, MD</h5>
+      <hr />
+      <p>
+        My objetive is to apply my expertise as a dental doctor to the patients in the state of Maryland.
+        To be employed as a senior dental doctor at the respectable Piney Orchard Dental Clinic.
+        There are lots of dental doctors out there who are vying fort he job you want to have as well.
+      </p>
+      <p>
+        Extensive experience in diagnosing dental problems and conditions.
+        Expertise in correcting bite problems with use of Orthodontic devices.
+        Proficiency in reading and interpreting dental X-ray results.
+        Aptitude in creating dental appliances needed for denture fitting.
+        Expertise in giving anesthetics to patients prior to dental procedures.
+        Expertise in teeth whitening using the most recent dental innovations.
+        Expertise in filling teeth cavities and eliminating decay.
+        Proficiency in placing teeth sealants.
+        Expertise in prescribing antibiotics and pain medications to patients who underwent dental procedures.
+        Dedication to teach patients proper dental hygiene.
+        Ability to work under pressure.
+        Superb communication and interpersonal skills.
+      </p>
+    }
+  },
+  {
+    organization: organization,
+    date_of_birth: Date.parse("01/01/1991"),
+    name: "Salvador Vizcaino",
+    payload: payload(File.read('./db/seeds/images/salvador-vizcaino.jpg')),
     primary_kind: :PRODUCER,
     status: :ACTIVE
-  }
-end.each do |attribute_set|
+  },
+  {
+    organization: organization,
+    date_of_birth: Date.parse("08/04/1985"),
+    name: "Verenice Orduno",
+    payload: payload(File.read('./db/seeds/images/verenice-orduno.jpg')),
+    primary_kind: :PRODUCER,
+    status: :ACTIVE
+  },
+  {
+    organization: organization,
+    date_of_birth: Date.parse("16/04/1964"),
+    name: "Yván Rodríguez",
+    payload: payload(File.read('./db/seeds/images/yvan-rodriguez.jpg')),
+    primary_kind: :PRODUCER,
+    status: :ACTIVE
+  },
+  {
+    organization: organization,
+    date_of_birth: Date.parse("01/01/1991"),
+    name: "Jonathan Rodríguez",
+    payload: payload(File.read('./db/seeds/images/jonathan-rodriguez.jpg')),
+    primary_kind: :PRODUCER,
+    status: :ACTIVE
+  },
+].each do |attribute_set|
   producer = Person.new(attribute_set.except(:payload))
   producer.save || binding.pry
 
@@ -948,29 +967,178 @@ end.each do |attribute_set|
   producer.save || binding.pry
 end
 
-# CONSUMERS
 
-50.times.map do
+
+
+
+
+
+################################################################################
+
+
+
+
+
+
+
+
+# External Testimonial
+
+# person
+#   primary_email
+#   primary_address
+#   primary_images
+#   primary_phone
+
+# Testimonial
+#   images
+#   item_testimonial_mappings
+#   before_image
+#   after_image
+
+
+
+
+
+
+
+
+# Internal Testimonial
+
+[
   {
     organization: organization,
-    date_of_birth: rand(18..75).years.ago,
-    city: Faker::Address.city,
-    country_code: 'US',
-    extension: ((rand() >= 0.5) ? nil : Faker::PhoneNumber.extension),
-    name: Faker::Name.first_name,
+    date_of_birth: Date.parse('01/01/2000'),
+    city: 'Tijuana',
+    country_code: 'MX',
+    extension: nil,
+    name: 'Juan',
     label: 'Home',
-    number: Faker::PhoneNumber.phone_number.split(' x').first,
-    line_1: Faker::Address.street_address,
-    line_2: Faker::Address.secondary_address,
+    number: '7602342345',
+    line_1: 'Street 123',
+    line_2: 'Apt b',
     line_3: nil,
-    address: Faker::Internet.email,
-    payload: payload(png),
+    address: 'bob1@microsoft.com',
+    payload: payload(File.read('./db/seeds/images/irving-cota.jpg')),
     primary_kind: :CONSUMER,
-    state_province_county: Faker::Address.state,
+    state_province_county: 'Baja California',
     status: :ACTIVE,
-    zip_postal_code: Faker::Address.zip_code
+    zip_postal_code: '22045',
+    testimonial: {
+      organization: organization,
+      date: Date.parse('01/01/2015'),
+      long_text: 'Crowns are the best',
+      rating: nil,
+      short_text: 'Crowns are the best',
+      source: :INTERNAL,
+      status: :ACCEPTED,
+      url: 'https://www.youtube.com/embed/yrhoz_7qcX4https://www.youtube.com/embed/yrhoz_7qcX4',
+      item_keys: [
+        'crowns'
+      ],
+      images: [
+        {
+          organization: organization,
+          description: 'description image',
+          payload: payload(File.read('./db/seeds/images/irving-cota.jpg')),
+          title: 'titulo imagen'
+        }
+      ]
+    }
+  },
+  {
+    organization: organization,
+    date_of_birth: Date.parse('01/01/2000'),
+    city: 'Long Beach',
+    country_code: 'US',
+    extension: nil,
+    name: 'Isabel Juarez',
+    label: 'Home',
+    number: '7602342345',
+    line_1: 'Street 423',
+    line_2: 'Apt b',
+    line_3: nil,
+    address: 'isabeljuarez0@microsoft.com',
+    payload: payload(File.read('./db/seeds/images/isabel-juarez-before.jpg')),
+    primary_kind: :CONSUMER,
+    state_province_county: 'California',
+    status: :ACTIVE,
+    zip_postal_code: '99000',
+    testimonial: {
+      organization: organization,
+      date: Date.parse('01/01/2015'),
+      long_text: 'I can smile again, I have a quality work done here, they’re very clean and very professional.I recommend them a 100% Clean, good work, I’m very happy ',
+      rating: nil,
+      short_text: 'I can smile again',
+      source: :INTERNAL,
+      status: :ACCEPTED,
+      url: 'https://youtu.be/yrhoz_7qcX4',
+      item_keys: [
+        'crowns'
+      ],
+      images: [
+        {
+          organization: organization,
+          description: 'description image',
+          payload: payload(File.read('./db/seeds/images/isabel-juarez-before.jpg')),
+          title: 'titulo imagen'
+        },
+        {
+          organization: organization,
+          description: 'description image',
+          payload: payload(File.read('./db/seeds/images/isabel-juarez-before.jpg')),
+          title: 'titulo imagen'
+        }
+      ]
+    }
+  },
+  {
+    organization: organization,
+    date_of_birth: Date.parse('01/01/2000'),
+    city: 'Long Beach',
+    country_code: 'US',
+    extension: nil,
+    name: 'Isabel Juarez',
+    label: 'Home',
+    number: '7602342345',
+    line_1: 'Street 423',
+    line_2: 'Apt b',
+    line_3: nil,
+    address: 'isabeljuarez1@microsoft.com',
+    payload: payload(File.read('./db/seeds/images/isabel-juarez-before.jpg')),
+    primary_kind: :CONSUMER,
+    state_province_county: 'California',
+    status: :ACTIVE,
+    zip_postal_code: '99000',
+    testimonial: {
+      organization: organization,
+      date: Date.parse('01/01/2015'),
+      long_text: 'I can smile again, I have a quality work done here, they’re very clean and very professional.I recommend them a 100% Clean, good work, I’m very happy ',
+      rating: nil,
+      short_text: 'I can smile again',
+      source: :INTERNAL,
+      status: :ACCEPTED,
+      url: 'https://youtu.be/yrhoz_7qcX4',
+      item_keys: [
+        'crowns'
+      ],
+      images: [
+        {
+          organization: organization,
+          description: 'description image',
+          payload: payload(File.read('./db/seeds/images/isabel-juarez-before.jpg')),
+          title: 'titulo imagen'
+        },
+        {
+          organization: organization,
+          description: 'description image',
+          payload: payload(File.read('./db/seeds/images/isabel-juarez-before.jpg')),
+          title: 'titulo imagen'
+        }
+      ]
+    }
   }
-end.each do |attribute_set|
+].each do |attribute_set|
   consumer = Person.new(
     attribute_set.except(
       :address,
@@ -984,7 +1152,8 @@ end.each do |attribute_set|
       :number,
       :payload,
       :state_province_county,
-      :zip_postal_code
+      :zip_postal_code,
+      :testimonial
     )
   )
 
@@ -1049,47 +1218,31 @@ end.each do |attribute_set|
   consumer.primary_phone = phone
 
   consumer.save || binding.pry
-end
 
-# INTERNAL TESTIMONIALS
-
-Person.where(
-  organization: organization,
-  primary_kind: :CONSUMER
-).each do |consumer|
-  testimonial = Testimonial.new({
-    organization: organization,
-    person: consumer,
-    date: rand(1..48).months.ago,
-    long_text: Faker::Lorem.paragraphs(10).join(' '),
-    rating: nil,
-    short_text: Faker::Lorem.paragraphs(1).join(' '),
-    source: :INTERNAL,
-    status: :ACCEPTED,
-    url: ((rand() >= 0.5) ? nil : Faker::Internet.url)
-  })
+  testimonial = Testimonial.new(
+    attribute_set
+      .fetch(:testimonial)
+      .except(:item_keys, :images)
+      .merge({person: consumer})
+  )
   testimonial.save || binding.pry
 
-  rand(1..5).times do
+  attribute_set.fetch(:testimonial).fetch(:item_keys).each do |item_key|
     item_testimonial_mapping = ItemTestimonialMapping.new({
-      item: Item.where(
-        organization: organization,
-        form: :ABSTRACT,
-      ).order("RANDOM()").first || binding.pry,
+      item: Item.find_by!(key: item_key),
       organization: organization,
       testimonial: testimonial
     })
     item_testimonial_mapping.save || binding.pry
   end
 
-  rand(2..5).times do
-    image = Image.new({
-      imageable: testimonial,
-      organization: organization,
-      description: Faker::Lorem.paragraphs(1).join(' '),
-      payload: payload(png),
-      title: "#{consumer.name} Testimonial"
-    })
+  attribute_set.fetch(:testimonial).fetch(:images).each do |image_attribute_set|
+    image = Image.new(
+      image_attribute_set
+        .merge({
+          imageable: testimonial
+        })
+    )
     image.save || binding.pry
   end
 
@@ -1099,77 +1252,253 @@ Person.where(
   testimonial.save || binding.pry
 end
 
-# EXTERNAL TESTIMONIALS
 
-Person.where(
-  organization: organization,
-  primary_kind: :CONSUMER
-).each do |consumer|
-  testimonial = Testimonial.new({
+# EXTERNAL TESTIMONIALS
+# Internal Testimonial
+
+[
+  {
     organization: organization,
-    person: consumer,
-    date: rand(1..48).months.ago,
-    long_text: Faker::Lorem.paragraphs(10).join(' '),
-    rating: rand(0..5),
-    short_text: Faker::Lorem.paragraphs(1).join(' '),
-    source: :EXTERNAL,
-    status: :ACCEPTED,
-    url: ((rand() >= 0.5) ? nil : 'https://www.youtube.com/embed/oudZlLxMunw')
-  })
+    date_of_birth: Date.parse('01/01/2000'),
+    city: 'Tijuana',
+    country_code: 'MX',
+    extension: nil,
+    name: 'Juan',
+    label: 'Home',
+    number: '7602342345',
+    line_1: 'Street 123',
+    line_2: 'Apt b',
+    line_3: nil,
+    address: 'bob2@microsoft.com',
+    payload: payload(File.read('./db/seeds/images/irving-cota.jpg')),
+    primary_kind: :CONSUMER,
+    state_province_county: 'Baja California',
+    status: :ACTIVE,
+    zip_postal_code: '22045',
+    testimonial: {
+      organization: organization,
+      date: Date.parse('01/01/2015'),
+      long_text: 'Crowns are the best',
+      rating: 5,
+      short_text: 'Crowns are the best',
+      source: :EXTERNAL,
+      status: :ACCEPTED,
+      url: 'https://www.youtube.com/embed/yrhoz_7qcX4https://www.youtube.com/embed/yrhoz_7qcX4',
+      item_keys: [
+        'crowns'
+      ],
+      images: [
+        {
+          organization: organization,
+          description: 'description image',
+          payload: payload(File.read('./db/seeds/images/irving-cota.jpg')),
+          title: 'titulo imagen'
+        }
+      ]
+    }
+  },
+  {
+    organization: organization,
+    date_of_birth: Date.parse('01/01/2000'),
+    city: 'Long Beach',
+    country_code: 'US',
+    extension: nil,
+    name: 'Isabel Juarez',
+    label: 'Home',
+    number: '7602342345',
+    line_1: 'Street 423',
+    line_2: 'Apt b',
+    line_3: nil,
+    address: 'isabeljuarez2@microsoft.com',
+    payload: payload(File.read('./db/seeds/images/isabel-juarez-before.jpg')),
+    primary_kind: :CONSUMER,
+    state_province_county: 'California',
+    status: :ACTIVE,
+    zip_postal_code: '99000',
+    testimonial: {
+      organization: organization,
+      date: Date.parse('01/01/2015'),
+      long_text: 'I can smile again, I have a quality work done here, they’re very clean and very professional.I recommend them a 100% Clean, good work, I’m very happy ',
+      rating: 4,
+      short_text: 'I can smile again',
+      source: :EXTERNAL,
+      status: :ACCEPTED,
+      url: 'https://youtu.be/yrhoz_7qcX4',
+      item_keys: [
+        'crowns'
+      ],
+      images: [
+        {
+          organization: organization,
+          description: 'description image',
+          payload: payload(File.read('./db/seeds/images/isabel-juarez-before.jpg')),
+          title: 'titulo imagen'
+        },
+        {
+          organization: organization,
+          description: 'description image',
+          payload: payload(File.read('./db/seeds/images/isabel-juarez-before.jpg')),
+          title: 'titulo imagen'
+        }
+      ]
+    }
+  },
+  {
+    organization: organization,
+    date_of_birth: Date.parse('01/01/2000'),
+    city: 'Long Beach',
+    country_code: 'US',
+    extension: nil,
+    name: 'Isabel Juarez',
+    label: 'Home',
+    number: '7602342345',
+    line_1: 'Street 423',
+    line_2: 'Apt b',
+    line_3: nil,
+    address: 'isabeljuarez3@microsoft.com',
+    payload: payload(File.read('./db/seeds/images/isabel-juarez-before.jpg')),
+    primary_kind: :CONSUMER,
+    state_province_county: 'California',
+    status: :ACTIVE,
+    zip_postal_code: '99000',
+    testimonial: {
+      organization: organization,
+      date: Date.parse('01/01/2015'),
+      long_text: 'I can smile again, I have a quality work done here, they’re very clean and very professional.I recommend them a 100% Clean, good work, I’m very happy ',
+      rating: 4,
+      short_text: 'I can smile again',
+      source: :EXTERNAL,
+      status: :ACCEPTED,
+      url: 'https://youtu.be/yrhoz_7qcX4',
+      item_keys: [
+        'crowns'
+      ],
+      images: [
+        {
+          organization: organization,
+          description: 'description image',
+          payload: payload(File.read('./db/seeds/images/isabel-juarez-before.jpg')),
+          title: 'titulo imagen'
+        },
+        {
+          organization: organization,
+          description: 'description image',
+          payload: payload(File.read('./db/seeds/images/isabel-juarez-before.jpg')),
+          title: 'titulo imagen'
+        }
+      ]
+    }
+  }
+].each do |attribute_set|
+  consumer = Person.new(
+    attribute_set.except(
+      :address,
+      :city,
+      :country_code,
+      :extension,
+      :label,
+      :line_1,
+      :line_2,
+      :line_3,
+      :number,
+      :payload,
+      :state_province_county,
+      :zip_postal_code,
+      :testimonial
+    )
+  )
+
+  consumer.save || binding.pry
+
+  address = Address.new(
+    attribute_set.slice(
+      :organization,
+      :city,
+      :country_code,
+      :label,
+      :line_1,
+      :line_2,
+      :line_3,
+      :state_province_county,
+      :zip_postal_code
+    ).merge({
+      addressable: consumer
+    })
+  )
+
+  email = Email.new(
+    attribute_set.slice(
+      :organization,
+      :address
+    ).merge({
+      emailable: consumer,
+      confirmed: true
+    })
+  )
+  email.save || binding.pry
+
+  image = Image.new(
+    attribute_set.slice(
+      :organization,
+      :payload
+    ).merge({
+      imageable: consumer,
+      description: consumer.name,
+      title: consumer.name
+    })
+  )
+  image.save || binding.pry
+
+  phone = Phone.new(
+    attribute_set.slice(
+      :organization,
+      :country_code,
+      :extension,
+      :label,
+      :number
+    ).merge({
+      phoneable: consumer,
+      confirmed: true
+    })
+  )
+  phone.save || binding.pry
+
+  consumer.primary_address = address
+  consumer.primary_email = email
+  consumer.primary_image = image
+  consumer.primary_phone = phone
+
+  consumer.save || binding.pry
+
+  testimonial = Testimonial.new(
+    attribute_set
+      .fetch(:testimonial)
+      .except(:item_keys, :images)
+      .merge({person: consumer})
+  )
   testimonial.save || binding.pry
 
-  rand(1..5).times do
+  attribute_set.fetch(:testimonial).fetch(:item_keys).each do |item_key|
     item_testimonial_mapping = ItemTestimonialMapping.new({
-      item: Item.where(
-        organization: organization,
-        form: :ABSTRACT,
-      ).order("RANDOM()").first || binding.pry,
+      item: Item.find_by!(key: item_key),
       organization: organization,
       testimonial: testimonial
     })
     item_testimonial_mapping.save || binding.pry
   end
 
-  rand(2..5).times do
-    image = Image.new({
-      imageable: testimonial,
-      organization: organization,
-      description: Faker::Lorem.paragraphs(1).join(' '),
-      payload: payload(png),
-      title: "#{consumer.name} Testimonial"
-    })
+  attribute_set.fetch(:testimonial).fetch(:images).each do |image_attribute_set|
+    image = Image.new(
+      image_attribute_set
+        .merge({
+          imageable: testimonial
+        })
+    )
     image.save || binding.pry
   end
 
+  testimonial.after_image = testimonial.images.first || binding.pry
+  testimonial.before_image = testimonial.images.last || binding.pry
+
   testimonial.save || binding.pry
-end
-
-# LEADS
-
-Person.where(
-  organization: organization,
-  primary_kind: :CONSUMER
-).each do |consumer|
-  lead = Lead.new({
-    organization: organization,
-    person: consumer,
-    desired_date: rand(1..365).days.from_now,
-    desired_time_range: Lead.desired_time_ranges.keys.sample,
-    message: Faker::Lorem.paragraphs(rand(1..10)),
-    preferred_conversation_channel: Lead.preferred_conversation_channels.keys.sample,
-    source: :WEBSITE,
-    status: :ACCEPTED
-  })
-  lead.save || binding.pry
-
-  rand(1..5).times do
-    item_lead_mapping = ItemLeadMapping.new({
-      item: Item.where(
-        organization: organization
-      ).order("RANDOM()").first || binding.pry,
-      lead: lead,
-      organization: organization
-    })
-    item_lead_mapping.save || binding.pry
-  end
 end

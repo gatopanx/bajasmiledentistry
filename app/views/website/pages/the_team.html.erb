@@ -9,32 +9,11 @@
 <div class="container dentist">
   <div class="row">
     <div class="col-6 image">
-      <img src="/assets/tijuana-smile-dentistry-013.jpg" alt="Tijuana Smile Dentistry" width="500" height="526">
+      <img src="<%= @primary_producer.primary_image.payload.url %>" alt="<%= @primary_producer.name %>" width="500" height="526">
     </div>
     <div class="col-6">
-      <h4>Dr. Irving Cota</h4>
-      <h5>Cirujano Dentista, 2005-Present</h5>
-      <h5>Maryland Dental Center, Silver Spring, MD</h5>
-      <hr />
-      <p>
-        My objetive is to apply my expertise as a dental doctor to the patients in the state of Maryland.
-        To be employed as a senior dental doctor at the respectable Piney Orchard Dental Clinic.
-        There are lots of dental doctors out there who are vying fort he job you want to have as well.
-      </p>
-      <p>
-        Extensive experience in diagnosing dental problems and conditions.
-        Expertise in correcting bite problems with use of Orthodontic devices.
-        Proficiency in reading and interpreting dental X-ray results.
-        Aptitude in creating dental appliances needed for denture fitting.
-        Expertise in giving anesthetics to patients prior to dental procedures.
-        Expertise in teeth whitening using the most recent dental innovations.
-        Expertise in filling teeth cavities and eliminating decay.
-        Proficiency in placing teeth sealants.
-        Expertise in prescribing antibiotics and pain medications to patients who underwent dental procedures.
-        Dedication to teach patients proper dental hygiene.
-        Ability to work under pressure.
-        Superb communication and interpersonal skills.
-      </p>
+      <h4><%= @primary_producer.name %></h4>
+      <%= raw(@primary_producer.biography) %>
     </div>
   </div>
 </div>
@@ -97,22 +76,12 @@
       <h5>We Are Here To Give Care To Your Smile</h5>
     </div>
     <div class="row image">
-      <div class="col-3">
-        <img src="/assets/tijuana-smile-dentistry-09.jpg" alt="Tijuana Smile Dentistry" width="250" height="250" class="rounded-circle">
-        <p>Jonathan Rodríguez</p>
-      </div>
-      <div class="col-3">
-        <img src="/assets/tijuana-smile-dentistry-010.jpg" alt="Tijuana Smile Dentistry" width="250" height="250" class="rounded-circle">
-        <p>Verenice Orduño</p>
-      </div>
-      <div class="col-3">
-        <img src="/assets/tijuana-smile-dentistry-011.jpg" alt="Tijuana Smile Dentistry" width="250" height="250" class="rounded-circle">
-        <p>Salvador Vizcaino</p>
-      </div>
-      <div class="col-3">
-        <img src="/assets/tijuana-smile-dentistry-012.jpg" alt="Tijuana Smile Dentistry" width="250" height="250" class="rounded-circle">
-        <p>Yván Rodríguez</p>
-      </div>
+      <% @secondary_producers.each do |producer| %>
+        <div class="col-3">
+          <img src="<%= producer.primary_image.payload.url %>" alt="<%= producer.name %>" width="250" height="250" class="rounded-circle">
+          <p><%= producer.name %></p>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

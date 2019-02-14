@@ -10,7 +10,7 @@
       <% next unless index == 0 %>
 
       <div class='col-12 primary-internal-testimonial'>
-        <img class='image' src='<%= internal_testimonial.before_image.payload.url  %>' alt="<%= internal_testimonial.short_text %>" />
+        <img class='image' src='<%= internal_testimonial.before_image.payload.url  %>' alt="<%= internal_testimonial.short_text %>" width="200" height="400"/>
         <p class='caption text-center'><%= internal_testimonial.short_text %></p>
       </div>
     <% end %>
@@ -22,6 +22,7 @@
             <% next if index == 0 %>
             <div class='col-3 secondary-internal-testimonial'>
               <img class='image' src='<%= internal_testimonial.before_image.payload.url  %>' alt="<%= internal_testimonial.short_text %>" />
+              <p class='caption text-center'><%= internal_testimonial.short_text %></p>
             </div>
           <% end %>
         </div>

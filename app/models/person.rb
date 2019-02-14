@@ -22,6 +22,12 @@ class Person < ApplicationRecord
     INACTIVE: 10
   }
 
+  validates :biography, {
+    length: {
+      in: 1..2048
+    },
+    allow_nil: true
+  }
   validates :date_of_birth, {
     date: {
       after: proc { 128.years.ago }

@@ -7,6 +7,7 @@ class CreatePeople < ActiveRecord::Migration[5.2]
       t.references :primary_image, foreign_key: { to_table: :images }
       t.references :primary_phone, foreign_key: { to_table: :phones }
 
+      t.text :biography
       t.date :date_of_birth
       t.string :name
       t.integer :primary_kind

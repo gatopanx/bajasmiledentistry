@@ -195,6 +195,7 @@ ActiveRecord::Schema.define(version: 2018_11_11_011614) do
     t.bigint "primary_email_id"
     t.bigint "primary_image_id"
     t.bigint "primary_phone_id"
+    t.text "biography"
     t.date "date_of_birth"
     t.string "name"
     t.integer "primary_kind"
