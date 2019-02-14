@@ -1,3 +1,5 @@
+# TODO Add status change timestamps
+#
 class Lead < ApplicationRecord
   has_many :item_lead_mappings, dependent: :destroy
 

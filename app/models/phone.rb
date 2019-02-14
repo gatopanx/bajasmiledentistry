@@ -1,4 +1,6 @@
 class Phone < ApplicationRecord
+  include ActionView::Helpers::NumberHelper
+
   belongs_to :phoneable, polymorphic: true
   belongs_to :organization
 
@@ -79,5 +81,14 @@ class Phone < ApplicationRecord
 
   def calculated_calling_country_code
     IsoCountryCodes.find(self.country_code).calling.split(//).map {|x| x[/\d+/]}.compact.join("")
+  end
+
+  def calculated_full_number
+    number_to_phone(
+      self.number,
+      country_code: self.calculated_calling_country_code,
+      area_code: true,
+      extension: self.extension
+    ).sub('-', ' ')
   end
 end

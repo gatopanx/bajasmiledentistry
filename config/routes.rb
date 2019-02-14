@@ -12,7 +12,9 @@ Rails.application.routes.draw do
     resources :item_testimonial_mappings
     resources :leads
     resources :organizations
+
     resources :people
+
     resources :phones
     resources :social_proofs
     resources :testimonials

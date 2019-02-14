@@ -13,6 +13,11 @@ class Address < ApplicationRecord
       in: 2..50
     }
   }
+  validates :confirmed, {
+    inclusion: {
+      in: [true, false]
+    }
+  }
   validates :country_code, {
     presence: true
   }

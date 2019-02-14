@@ -12,6 +12,7 @@ class CreateAddresses < ActiveRecord::Migration[5.2]
       t.string :zip_postal_code
       t.string :state_province_county
       t.integer :country_code
+      t.boolean :confirmed, default: false
 
       t.timestamps
     end

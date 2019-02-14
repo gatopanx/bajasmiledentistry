@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2018_11_11_011614) do
     t.string "zip_postal_code"
     t.string "state_province_county"
     t.integer "country_code"
+    t.boolean "confirmed", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["addressable_type", "addressable_id"], name: "index_addresses_on_addressable_type_and_addressable_id"
