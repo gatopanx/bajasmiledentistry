@@ -104,57 +104,6 @@ organization.primary_phone = organization.phones.first || binding.pry
 
 organization.save || binding.pry
 
-
-# CATEGORIES
-
-[
-  {
-    organization: organization,
-    name: Faker::Lorem.paragraphs(1).join(' '),
-    long_description: Faker::Lorem.paragraphs(5).join(' '),
-    key: 'key1',
-    payload: payload(png),
-    short_description: Faker::Lorem.paragraphs(1).join(' '),
-    status: :ACTIVE
-  },
-  {
-    organization: organization,
-    name: Faker::Lorem.paragraphs(1).join(' '),
-    long_description: Faker::Lorem.paragraphs(5).join(' '),
-    key: 'key2',
-    payload: payload(png),
-    short_description: Faker::Lorem.paragraphs(1).join(' '),
-    status: :ACTIVE
-  },
-  {
-    organization: organization,
-    name: Faker::Lorem.paragraphs(1).join(' '),
-    long_description: Faker::Lorem.paragraphs(5).join(' '),
-    key: 'key3',
-    payload: payload(png),
-    short_description: Faker::Lorem.paragraphs(1).join(' '),
-    status: :ACTIVE
-  }
-].each do |attribute_set|
-  category = Category.new(attribute_set.except(:payload))
-  category.save || binding.pry
-
-  image = Image.new(
-    attribute_set.slice(
-      :organization,
-      :payload
-    ).merge({
-      description: attribute_set.fetch(:short_description),
-      title: attribute_set.fetch(:name),
-      imageable: category
-    })
-  )
-  image.save || binding.pry
-
-  category.primary_image = image
-  category.save || binding.pry
-end
-
 # ABSTRACT ITEMS
 # Menu Items
 [
@@ -492,46 +441,481 @@ end
   # item.save || binding.pry
 end
 
-# CONCRETE ITEMS
-# Price List
 
-Category.all.each do |category|
-  10.times.map do |i|
-    {
-      category: category,
-      organization: organization,
-      external_price_in_cents: rand(500..1000)*100,
-      form: :CONCRETE,
-      internal_price_in_cents: rand(100..500)*100,
-      key: "ITEM_#{i}",
-      name: Faker::Lorem.paragraphs(1).join(' '),
-      long_description: Faker::Lorem.paragraphs(5).join(' '),
-      primary_kind: :SERVICE,
-      short_description: Faker::Lorem.paragraphs(1).join(' '),
-      status: :ACTIVE
-    }
-  end.each do |attribute_set|
-    item = Item.new(attribute_set.except(:payload))
-    item.save || binding.pry
 
-    5.times do
-      image = Image.new(
-        attribute_set.slice(
-          :organization,
-        ).merge({
-          imageable: item,
-          description: attribute_set.fetch(:short_description),
-          payload: payload(png),
-          title: attribute_set.fetch(:name),
-        })
-      )
-      image.save || binding.pry
-    end
 
-    item.primary_image = item.images.first || binding.pry
+
+
+
+################################################################################
+
+
+
+
+
+
+# CATEGORIES
+
+[
+  {
+    organization: organization,
+    name: "Cleaning",
+    long_description: "Teeth cleaning is part of oral hygiene and involves the removal of dental plaque from teeth with the intention of preventing cavities, gingivitis, and periodontal disease." ,
+    key: 'key1',
+    short_description: "Teeth cleaning is part of oral hygiene and involves the removal of dental plaque from teeth.",
+    status: :ACTIVE,
+    items: [
+      {
+        organization: organization,
+        external_price_in_cents: 150*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 70*100,
+        key: "ITEM_1",
+        name: "Cleaning",
+        long_description: "Teeth cleaning is part of oral hygiene and involves the removal of dental plaque from teeth with the intention of preventing cavities, gingivitis, and periodontal disease.",
+        primary_kind: :SERVICE,
+        short_description: "Teeth cleaning is part of oral hygiene and involves the removal of dental plaque from teeth.",
+        status: :ACTIVE
+      },
+      {
+        organization: organization,
+        external_price_in_cents: 350*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 110*100,
+        key: "ITEM_2",
+        name: "Cleaning By Quadrant",
+        long_description: "Is a procedure involving removal of dental plaque and calculus and then smoothing, or planing, of the surfaces of the roots, removing cementum or dentine.",
+        primary_kind: :SERVICE,
+        short_description: "Is a procedure involving removal of dental plaque and calculus and then smoothing.",
+        status: :ACTIVE
+      }
+    ]
+  },
+  {
+    organization: organization,
+    name: "Whitening",
+    long_description: "Tooth whitening lightens teeth and helps to remove stains and discoloration.",
+    key: 'key2',
+    short_description: "Tooth whitening lightens teeth.",
+    status: :ACTIVE,
+    items: [
+      {
+        organization: organization,
+        external_price_in_cents: 375*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 180*100,
+        key: "ITEM_3",
+        name: "Teeth Whitening",
+        long_description: "Tooth whitening lightens teeth and helps to remove stains and discoloration.",
+        primary_kind: :SERVICE,
+        short_description: "Tooth whitening lightens teeth.",
+        status: :ACTIVE
+      },
+      {
+        organization: organization,
+        external_price_in_cents: 650*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 230*100,
+        key: "ITEM_4",
+        name: "Whitening and Cleaning",
+        long_description: "Dental teeth cleaning before whitening helps to remove tartar, thus making whitening more effective.",
+        primary_kind: :SERVICE,
+        short_description: "Dental teeth cleaning before whitening helps to remove tartar.",
+        status: :ACTIVE
+      },
+      {
+        organization: organization,
+        external_price_in_cents: 400*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 220*100,
+        key: "ITEM_5",
+        name: "Whitening (Home Kit)",
+        long_description: "Tooth whitening lightens teeth and helps to remove stains and discoloration.",
+        primary_kind: :SERVICE,
+        short_description: "Tooth whitening lightens teeth and helps to remove stains and discoloration.",
+        status: :ACTIVE
+      }
+    ]
+  },
+  {
+    organization: organization,
+    name: "Extractions and Surgery",
+    long_description: "A dental extraction is the removal of teeth from the dental alveolus in the alveolar bone.",
+    key: 'key3',
+    short_description: "A dental extraction is the removal of teeth from the dental alveolus in the alveolar bone",
+    status: :ACTIVE,
+    items: [
+      {
+        organization: organization,
+        external_price_in_cents: 170*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 70*100,
+        key: "ITEM_6",
+        name: "Extraction Simple",
+        long_description: "A dental extraction is the removal of teeth from the dental alveolus in the alveolar bone.",
+        primary_kind: :SERVICE,
+        short_description: "A dental extraction is the removal of teeth from the dental alveolus in the alveolar bone.",
+        status: :ACTIVE
+      },
+      {
+        organization: organization,
+        external_price_in_cents: 400*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 150*100,
+        key: "ITEM_7",
+        name: "Surgical Extraction",
+        long_description: "Is a relatively quick outpatient procedure with either local, general, intravenous anesthesia, or a combination.",
+        primary_kind: :SERVICE,
+        short_description: "Is a quick removal of teeth  with either local, general, intravenous anesthesia, or a combination.",
+        status: :ACTIVE
+      },
+      {
+        organization: organization,
+        external_price_in_cents: 500*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 230*100,
+        key: "ITEM_8",
+        name: "Wisdom Teeth Extraction",
+        long_description: "Wisdom tooth extraction is a surgical procedure to remove one or more wisdom teeth — the four permanent adult teeth located at the back corners of your mouth on the top and bottom.",
+        primary_kind: :SERVICE,
+        short_description: "Wisdom tooth extraction is a surgical procedure to remove one or more wisdom teeth.",
+        status: :ACTIVE
+      },
+      {
+        organization: organization,
+        external_price_in_cents: 640*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 230*100,
+        key: "ITEM_9",
+        name: "Surgical Extraction",
+        long_description: "Wisdom tooth extraction is a surgical procedure to remove one or more wisdom teeth — the four permanent adult teeth located at the back corners of your mouth on the top and bottom.",
+        primary_kind: :SERVICE,
+        short_description: "Wisdom tooth extraction is a surgical procedure to remove one or more wisdom teeth.",
+        status: :ACTIVE
+      },
+      {
+        organization: organization,
+        external_price_in_cents: 940*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 230*100,
+        key: "ITEM_10",
+        name: "Surgical Extraction Wisdom Teeth",
+        long_description: "Wisdom tooth extraction is a surgical procedure to remove one or more wisdom teeth — the four permanent adult teeth located at the back corners of your mouth on the top and bottom.",
+        primary_kind: :SERVICE,
+        short_description: "Wisdom tooth extraction is a surgical procedure to remove one or more wisdom teeth.",
+        status: :ACTIVE
+      }
+    ]
+  },
+  {
+    organization: organization,
+    name: "Filling",
+    long_description: "A filling is a way to restore a tooth damaged by decay back to its normal function and shape.",
+    key: 'key4',
+    short_description: "A filling is a way to restore a tooth damaged by decay back to its normal function and shape.",
+    status: :ACTIVE,
+    items: [
+      {
+        organization: organization,
+        external_price_in_cents: 150*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 65*100,
+        key: "ITEM_11",
+        name: "Filling",
+        long_description: "A filling is a way to restore a tooth damaged by decay back to its normal function and shape.",
+        primary_kind: :SERVICE,
+        short_description: "A filling is a way to restore a tooth damaged by decay back to its normal function and shape.",
+        status: :ACTIVE
+      },
+      {
+        organization: organization,
+        external_price_in_cents: 300*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 150*100,
+        key: "ITEM_12",
+        name: "Restoration",
+        long_description: "A dental restoration or dental filling is a treatment to restore the function, integrity, and morphology of missing tooth structure resulting from caries or external trauma as well as to the replacement of such structure supported by dental implants.",
+        primary_kind: :SERVICE,
+        short_description: "A dental restoration or dental filling is a treatment to restore the function, integrity, and morphology of missing tooth.",
+        status: :ACTIVE
+      }
+    ]
+  },
+  {
+    organization: organization,
+    name: "Root Canal",
+    long_description: "Root canals are needed when there is an infection within the tooth. Without treatment, the infection can become severe enough that the tooth has to be removed",
+    key: 'key5',
+    short_description: "Root canals are needed when there is an infection within the tooth.",
+    status: :ACTIVE,
+    items: [
+      {
+        organization: organization,
+        external_price_in_cents: 150*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 70*100,
+        key: "ITEM_13",
+        name: "Root Canal",
+        long_description: "Root canals are needed when there is an infection within the tooth. Without treatment, the infection can become severe enough that the tooth has to be removed",
+        primary_kind: :SERVICE,
+        short_description: "Root canals are needed when there is an infection within the tooth.",
+        status: :ACTIVE
+      },
+      {
+        organization: organization,
+        external_price_in_cents: 150*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 70*100,
+        key: "ITEM_14",
+        name: "Root Canal Molar",
+        long_description: "Root canals are needed when there is an infection within the tooth. Without treatment, the infection can become severe enough that the tooth has to be removed",
+        primary_kind: :SERVICE,
+        short_description: "Root canals are needed when there is an infection within the tooth.",
+        status: :ACTIVE
+      },
+      {
+        organization: organization,
+        external_price_in_cents: 845*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 350*100,
+        key: "ITEM_15",
+        name: "Retreatment",
+        long_description: "The endodontist will reopen your tooth. Gaining access to the root canal filling material can be more complex than a routine root canal, involving additional steps including the removal of crown, post and core material.",
+        primary_kind: :SERVICE,
+        short_description: "The endodontist will reopen your tooth. Gaining access to the root canal.",
+        status: :ACTIVE
+      }
+    ]
+  },
+  {
+    organization: organization,
+    name: "Dentures",
+    long_description: "Dentures are removable false teeth made of acrylic (plastic), nylon or metal. They fit snugly over the gums to replace missing teeth and eliminate potential problems caused by gaps.",
+    key: 'key6',
+    short_description: "Dentures are removable false teeth made of acrylic, nylon or metal.",
+    status: :ACTIVE,
+    items: [
+      {
+        organization: organization,
+        external_price_in_cents: 1500*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 600*100,
+        key: "ITEM_16",
+        name: "Acrylic Denture",
+        long_description: "Dentures are removable false teeth made of acrylic (plastic), nylon or metal. They fit snugly over the gums to replace missing teeth and eliminate potential problems caused by gaps.",
+        primary_kind: :SERVICE,
+        short_description: "Dentures are removable false teeth made of acrylic, nylon or metal.",
+        status: :ACTIVE
+      },
+      {
+        organization: organization,
+        external_price_in_cents: 1500*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 700*100,
+        key: "ITEM_17",
+        name: "Flexible Denture",
+        long_description: "Flexible Dentures are a kind of partial denture, made up of a softer material than regular dentures. These dentures are made of a thin thermoplastic material such as nylon than thicker more rigid acrylic used in full dentures.",
+        primary_kind: :SERVICE,
+        short_description: "Flexible Dentures are a kind of partial denture, made up of a softer material than regular dentures.",
+        status: :ACTIVE
+      },
+      {
+        organization: organization,
+        external_price_in_cents: 1500*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 900*100,
+        key: "ITEM_18",
+        name: "Comfort Denture",
+        long_description: "Flexible Dentures are a kind of partial denture, made up of a softer material than regular dentures. These dentures are made of a thin thermoplastic material such as nylon than thicker more rigid acrylic used in full dentures.",
+        primary_kind: :SERVICE,
+        short_description: "Flexible Dentures are a kind of partial denture, made up of a softer material than regular dentures.",
+        status: :ACTIVE
+      }
+    ]
+  },
+  {
+    organization: organization,
+    name: "Prosthesis",
+    long_description: "A dental prosthesis is an intraoral prosthesis used to restore intraoral defects such as missing teeth, missing parts of teeth, and missing soft or hard structures of the jaw and palate.",
+    key: 'key7',
+    short_description: "A dental prosthesis is an intraoral prosthesis used to restore intraoral defects such as missing teeth",
+    status: :ACTIVE,
+    items: [
+      {
+        organization: organization,
+        external_price_in_cents: 1500*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 280*100,
+        key: "ITEM_19",
+        name: "Crown (Porcelain Fused to Metal)",
+        long_description: "A crown is a tooth-shaped cover or cap placed over a tooth that is badly damaged by decayed, as a result, a filling can’t replace enough of the tooth or make the tooth strong enough, crowns can be used to improve appearance as well.",
+        primary_kind: :SERVICE,
+        short_description: "Dentures are removable false teeth made of acrylic, nylon or metal.",
+        status: :ACTIVE
+      },
+      {
+        organization: organization,
+        external_price_in_cents: 1600*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 490*100,
+        key: "ITEM_20",
+        name: "Zirconia Crown",
+        long_description: "It is extremely strong, requiring less tooth preparation than other materials. It can be layered with porcelain, further improving its aesthetic appearance.",
+        primary_kind: :SERVICE,
+        short_description: "It is extremely strong, requiring less tooth preparation than other materials.",
+        status: :ACTIVE
+      },
+      {
+        organization: organization,
+        external_price_in_cents: 1800*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 470*100,
+        key: "ITEM_21",
+        name: "Crown on Implant",
+        long_description: "A crown is a tooth-shaped cover or cap placed over a tooth that is badly damaged by decayed, as a result, a filling can’t replace enough of the tooth or make the tooth strong enough, crowns can be used to improve appearance as well.",
+        primary_kind: :SERVICE,
+        short_description: "Dentures are removable false teeth made of acrylic, nylon or metal.",
+        status: :ACTIVE
+      },
+      {
+        organization: organization,
+        external_price_in_cents: 1400*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 480*100,
+        key: "ITEM_22",
+        name: "Veneer",
+        long_description: "A veneer is a layer of material placed over a tooth, veneers improve the aesthetics of a smile and/or protect the tooth's surface from damage.",
+        primary_kind: :SERVICE,
+        short_description: "A veneer is a layer of material placed over a tooth.",
+        status: :ACTIVE
+      },
+      {
+        organization: organization,
+        external_price_in_cents: 1000*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 150*100,
+        key: "ITEM_23",
+        name: "Resin Veneer",
+        long_description: "Resin Veneers involves very little removal of natural tooth. It, often times, can be done in conjunction with a restorative filling or replacement of old fillings.",
+        primary_kind: :SERVICE,
+        short_description: "Resin Veneers involves very little removal of natural tooth. It can be done in conjunction with a restorative filling.",
+        status: :ACTIVE
+      }
+    ]
+  },
+  {
+    organization: organization,
+    name: "Orthodontics",
+    long_description: "Orthodontics is the branch of dentistry that corrects teeth and jaws that are positioned improperly.",
+    key: 'key8',
+    short_description: "Orthodontics is the branch of dentistry that corrects teeth and jaws that are positioned improperly.",
+    status: :ACTIVE,
+    items: [
+      {
+        organization: organization,
+        external_price_in_cents: 8000*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 2500*100,
+        key: "ITEM_24",
+        name: "Ortodonthics Treatment",
+        long_description: "Orthodontics is the branch of dentistry that corrects teeth and jaws that are positioned improperly.",
+        primary_kind: :SERVICE,
+        short_description: "Orthodontics is the branch of dentistry that corrects teeth and jaws that are positioned improperly.",
+        status: :ACTIVE
+      },
+      {
+        organization: organization,
+        external_price_in_cents: 900*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 300*100,
+        key: "ITEM_25",
+        name: "Down Payment",
+        long_description: "Tijuana Smile Dentistry will design your beautiful smile with affordable prices and low down payment for braces.",
+        primary_kind: :SERVICE,
+        short_description: "Tijuana Smile Dentistry will design your beautiful smile with affordable prices and low down payment for braces.",
+        status: :ACTIVE
+      },
+      {
+        organization: organization,
+        external_price_in_cents: 1500*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 60*100,
+        key: "ITEM_26",
+        name: "Monthly Payment",
+        long_description: "Tijuana Smile Dentistry will design your beautiful smile with affordable prices and low down payment for braces.",
+        primary_kind: :SERVICE,
+        short_description: "Tijuana Smile Dentistry will design your beautiful smile with affordable prices and low down payment for braces.",
+        status: :ACTIVE
+      },
+      {
+        organization: organization,
+        external_price_in_cents: 1500*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 250*100,
+        key: "ITEM_27",
+        name: "Palatal Expander",
+        long_description: "Palatal expanders create more space in a child's mouth by gradually widening the upper jaw.",
+        primary_kind: :SERVICE,
+        short_description: "Palatal expanders create more space in a child's mouth by gradually widening the upper jaw.",
+        status: :ACTIVE
+      },
+      {
+        organization: organization,
+        external_price_in_cents: 350*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 200*100,
+        key: "ITEM_28",
+        name: "Retainer (Upper Palate)",
+        long_description: "Orthodontic retainers are custom-made devices, that hold teeth in position after surgery or any method of realigning teeth",
+        primary_kind: :SERVICE,
+        short_description: "Orthodontic retainers are custom-made devices, that hold teeth in position after surgery or any method of realigning teeth",
+        status: :ACTIVE
+      },
+      {
+        organization: organization,
+        external_price_in_cents: 500*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 160*100,
+        key: "ITEM_29",
+        name: "Fixed Retainer",
+        long_description: "Orthodontic retainers are custom-made devices, that hold teeth in position after surgery or any method of realigning teeth",
+        primary_kind: :SERVICE,
+        short_description: "Orthodontic retainers are custom-made devices, that hold teeth in position after surgery or any method of realigning teeth",
+        status: :ACTIVE
+      },
+      {
+        organization: organization,
+        external_price_in_cents: 15*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 150*100,
+        key: "ITEM_30",
+        name: "Lost Bracket",
+        long_description: "A broken braces bracket is the most common inconvenience orthodontic patients face but can easily be fix",
+        primary_kind: :SERVICE,
+        short_description: "A broken braces bracket is the most common inconvenience orthodontic patients face but can easily be fix",
+        status: :ACTIVE
+      }
+    ]
+  },
+
+
+
+].each do |category_attribute_set|
+  category = Category.new(category_attribute_set.except(:items))
+  category.save || binding.pry
+
+  category_attribute_set.fetch(:items).each do |item_attribute_set|
+    item = Item.new(item_attribute_set.merge({category: category}))
     item.save || binding.pry
   end
 end
+
+################################################################################
+
+
+
+
+
 
 # PRODUCERS
 
