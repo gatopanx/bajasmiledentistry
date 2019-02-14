@@ -891,27 +891,12 @@ end
     primary_kind: :PRODUCER,
     status: :ACTIVE,
     biography: %{
-      <h5>Cirujano Dentista, 2005-Present</h5>
-      <h5>Maryland Dental Center, Silver Spring, MD</h5>
-      <hr />
+      <h5>Cirujano Dentista, </h5>
+      <hr/>
       <p>
-        My objetive is to apply my expertise as a dental doctor to the patients in the state of Maryland.
-        To be employed as a senior dental doctor at the respectable Piney Orchard Dental Clinic.
-        There are lots of dental doctors out there who are vying fort he job you want to have as well.
-      </p>
-      <p>
-        Extensive experience in diagnosing dental problems and conditions.
-        Expertise in correcting bite problems with use of Orthodontic devices.
-        Proficiency in reading and interpreting dental X-ray results.
-        Aptitude in creating dental appliances needed for denture fitting.
-        Expertise in giving anesthetics to patients prior to dental procedures.
-        Expertise in teeth whitening using the most recent dental innovations.
-        Expertise in filling teeth cavities and eliminating decay.
-        Proficiency in placing teeth sealants.
-        Expertise in prescribing antibiotics and pain medications to patients who underwent dental procedures.
-        Dedication to teach patients proper dental hygiene.
-        Ability to work under pressure.
-        Superb communication and interpersonal skills.
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
       </p>
     }
   },
@@ -1032,7 +1017,7 @@ end
       short_text: 'Crowns are the best',
       source: :INTERNAL,
       status: :ACCEPTED,
-      url: 'https://www.youtube.com/embed/yrhoz_7qcX4https://www.youtube.com/embed/yrhoz_7qcX4',
+      url: 'https://www.youtube.com/embed/yrhoz_7qcX4',
       item_keys: [
         'crowns'
       ],
@@ -1072,7 +1057,7 @@ end
       short_text: 'I can smile again',
       source: :INTERNAL,
       status: :ACCEPTED,
-      url: 'https://youtu.be/yrhoz_7qcX4',
+      url: 'https://www.youtube.com/embed/yrhoz_7qcX4',
       item_keys: [
         'crowns'
       ],
@@ -1095,17 +1080,17 @@ end
   {
     organization: organization,
     date_of_birth: Date.parse('01/01/2000'),
-    city: 'Long Beach',
+    city: 'San Diego',
     country_code: 'US',
     extension: nil,
-    name: 'Isabel Juarez',
+    name: 'Adela T',
     label: 'Home',
     number: '7602342345',
     line_1: 'Street 423',
     line_2: 'Apt b',
     line_3: nil,
-    address: 'isabeljuarez1@microsoft.com',
-    payload: payload(File.read('./db/seeds/images/isabel-juarez-before.jpg')),
+    address: 'adela@microsoft.com',
+    payload: payload(File.read('./db/seeds/images/adela-t.jpg')),
     primary_kind: :CONSUMER,
     state_province_county: 'California',
     status: :ACTIVE,
@@ -1113,15 +1098,13 @@ end
     testimonial: {
       organization: organization,
       date: Date.parse('01/01/2015'),
-      long_text: 'I can smile again, I have a quality work done here, they’re very clean and very professional.I recommend them a 100% Clean, good work, I’m very happy ',
+      long_text: 'Awesome job, he did a deep cleaning and a composite filling in my molar, it was fast and easy for him to do, I feel comfortable with him, and now I’m feeling great.',
       rating: nil,
-      short_text: 'I can smile again',
+      short_text: 'Awesome job!',
       source: :INTERNAL,
       status: :ACCEPTED,
-      url: 'https://youtu.be/yrhoz_7qcX4',
-      item_keys: [
-        'crowns'
-      ],
+      url: nil,
+      item_keys: [],
       images: [
         {
           organization: organization,
@@ -1283,7 +1266,7 @@ end
       short_text: 'Crowns are the best',
       source: :EXTERNAL,
       status: :ACCEPTED,
-      url: 'https://www.youtube.com/embed/yrhoz_7qcX4https://www.youtube.com/embed/yrhoz_7qcX4',
+      url: 'https://www.youtube.com/embed/yrhoz_7qcX4',
       item_keys: [
         'crowns'
       ],
@@ -1323,7 +1306,7 @@ end
       short_text: 'I can smile again',
       source: :EXTERNAL,
       status: :ACCEPTED,
-      url: 'https://youtu.be/yrhoz_7qcX4',
+      url: 'https://www.youtube.com/embed/yrhoz_7qcX4',
       item_keys: [
         'crowns'
       ],
@@ -1369,7 +1352,7 @@ end
       short_text: 'I can smile again',
       source: :EXTERNAL,
       status: :ACCEPTED,
-      url: 'https://youtu.be/yrhoz_7qcX4',
+      url: 'https://www.youtube.com/embed/yrhoz_7qcX4',
       item_keys: [
         'crowns'
       ],
