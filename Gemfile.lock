@@ -55,6 +55,11 @@ GEM
       momentjs-rails (~> 2.8)
       sass-rails (~> 5.0)
       selectize-rails (~> 0.6)
+    administrate-field-carrierwave (0.3.4)
+      administrate (< 1.0.0)
+      rails (>= 4.2, < 6)
+    administrate-field-image (1.1.0)
+      administrate (>= 0.2.0.rc1)
     arel (9.0.0)
     autoprefixer-rails (9.4.7)
       execjs
@@ -305,6 +310,8 @@ DEPENDENCIES
   activesupport
   acts_as_list
   administrate
+  administrate-field-carrierwave
+  administrate-field-image
   aws-sdk-rails
   aws-sdk-rds (~> 1)
   aws-sdk-s3 (~> 1)

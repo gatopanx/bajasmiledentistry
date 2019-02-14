@@ -8,7 +8,7 @@ class AttachmentDashboard < Administrate::BaseDashboard
     position: Field::Number,
     title: Field::String,
     description: Field::Text,
-    payload: Field::String,
+    payload: Field::Carrierwave,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
