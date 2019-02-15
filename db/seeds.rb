@@ -997,14 +997,14 @@ end
     city: 'Tijuana',
     country_code: 'MX',
     extension: nil,
-    name: 'Juan',
+    name: 'Willey Stanley',
     label: 'Home',
     number: '7602342345',
     line_1: 'Street 123',
     line_2: 'Apt b',
     line_3: nil,
     address: 'bob1@microsoft.com',
-    payload: payload(File.read('./db/seeds/images/irving-cota.jpg')),
+    payload: payload(File.read('./db/seeds/images/willey-stanley.jpg')),
     primary_kind: :CONSUMER,
     state_province_county: 'Baja California',
     status: :ACTIVE,
@@ -1012,9 +1012,9 @@ end
     testimonial: {
       organization: organization,
       date: Date.parse('01/01/2015'),
-      long_text: 'Crowns are the best',
+      long_text: 'I can smile again, I have a quality work done here, they’re very clean and very professional.I recommend them a 100% Clean, good work, I’m very happy',
       rating: nil,
-      short_text: 'Crowns are the best',
+      short_text: 'I can smile again',
       source: :INTERNAL,
       status: :ACCEPTED,
       url: 'https://www.youtube.com/embed/yrhoz_7qcX4',
@@ -1025,7 +1025,7 @@ end
         {
           organization: organization,
           description: 'description image',
-          payload: payload(File.read('./db/seeds/images/irving-cota.jpg')),
+          payload: payload(File.read('./db/seeds/images/willey-stanley.jpg')),
           title: 'titulo imagen'
         }
       ]
@@ -1044,7 +1044,7 @@ end
     line_2: 'Apt b',
     line_3: nil,
     address: 'isabeljuarez0@microsoft.com',
-    payload: payload(File.read('./db/seeds/images/isabel-juarez-before.jpg')),
+    payload: payload(File.read('./db/seeds/images/isabel-juarez.jpg')),
     primary_kind: :CONSUMER,
     state_province_county: 'California',
     status: :ACTIVE,
@@ -1052,12 +1052,13 @@ end
     testimonial: {
       organization: organization,
       date: Date.parse('01/01/2015'),
-      long_text: 'I can smile again, I have a quality work done here, they’re very clean and very professional.I recommend them a 100% Clean, good work, I’m very happy ',
+      long_text: 'I had a discomfort in a molar piece, they did 2 extractions and I’m in the process of putting on crowns and making a new bridge.
+      My experience has been very good, with all the staff. The doctor is very patient, he takes the time to explain what we need, he is very honest and he is very kind and conscientious of us as patients and from our pockets.',
       rating: nil,
-      short_text: 'I can smile again',
+      short_text: 'The doctor is very patient, he takes the time to explain what we need',
       source: :INTERNAL,
       status: :ACCEPTED,
-      url: 'https://www.youtube.com/embed/yrhoz_7qcX4',
+      url: nil,
       item_keys: [
         'crowns'
       ],
@@ -1071,7 +1072,7 @@ end
         {
           organization: organization,
           description: 'description image',
-          payload: payload(File.read('./db/seeds/images/isabel-juarez-before.jpg')),
+          payload: payload(File.read('./db/seeds/images/isabel-juarez.jpg')),
           title: 'titulo imagen'
         }
       ]
@@ -1109,13 +1110,87 @@ end
         {
           organization: organization,
           description: 'description image',
-          payload: payload(File.read('./db/seeds/images/isabel-juarez-before.jpg')),
+          payload: payload(File.read('./db/seeds/images/adela-t.jpg')),
           title: 'titulo imagen'
-        },
+        }
+      ]
+    }
+  },
+  {
+    organization: organization,
+    date_of_birth: Date.parse('01/01/2000'),
+    city: 'San Diego',
+    country_code: 'US',
+    extension: nil,
+    name: 'Paulina Vizcaino',
+    label: 'Home',
+    number: '7602342345',
+    line_1: 'Street 423',
+    line_2: 'Apt b',
+    line_3: nil,
+    address: 'paulina@microsoft.com',
+    payload: payload(File.read('./db/seeds/images/paulina-vizcaino.jpg')),
+    primary_kind: :CONSUMER,
+    state_province_county: 'California',
+    status: :ACTIVE,
+    zip_postal_code: '99000',
+    testimonial: {
+      organization: organization,
+      date: Date.parse('01/01/2015'),
+      long_text: 'Awesome job, he did a deep cleaning and a composite filling in my molar, it was fast and easy for him to do, I feel comfortable with him, and now I’m feeling great.',
+      rating: nil,
+      short_text: 'Awesome job!',
+      source: :INTERNAL,
+      status: :ACCEPTED,
+      url: nil,
+      item_keys: [
+        'orthodontics'
+      ],
+      images: [
         {
           organization: organization,
           description: 'description image',
-          payload: payload(File.read('./db/seeds/images/isabel-juarez-before.jpg')),
+          payload: payload(File.read('./db/seeds/images/paulina-vizcaino.jpg')),
+          title: 'titulo imagen'
+        }
+      ]
+    }
+  },
+  {
+    organization: organization,
+    date_of_birth: Date.parse('01/01/2000'),
+    city: 'Los Angeles',
+    country_code: 'US',
+    extension: nil,
+    name: 'Benjamin Orozco',
+    label: 'Home',
+    number: '7602342345',
+    line_1: 'Street 423',
+    line_2: 'Apt b',
+    line_3: nil,
+    address: 'benjamin@microsoft.com',
+    payload: payload(File.read('./db/seeds/images/benjamin-orozco.jpg')),
+    primary_kind: :CONSUMER,
+    state_province_county: 'California',
+    status: :ACTIVE,
+    zip_postal_code: '99000',
+    testimonial: {
+      organization: organization,
+      date: Date.parse('01/01/2015'),
+      long_text: 'I feel very comfortable with my new dental bridge, they treated my very well and were very kind, I would recommend Tijuana Smile Dentistry to my friends.',
+      rating: nil,
+      short_text: 'I feel very comfortable with my new dental bridge',
+      source: :INTERNAL,
+      status: :ACCEPTED,
+      url: nil,
+      item_keys: [
+        'orthodontics'
+      ],
+      images: [
+        {
+          organization: organization,
+          description: 'description image',
+          payload: payload(File.read('./db/seeds/images/benjamin-orozco.jpg')),
           title: 'titulo imagen'
         }
       ]
@@ -1246,7 +1321,7 @@ end
     city: 'Tijuana',
     country_code: 'MX',
     extension: nil,
-    name: 'Juan',
+    name: 'Willey Stanley',
     label: 'Home',
     number: '7602342345',
     line_1: 'Street 123',
@@ -1306,7 +1381,7 @@ end
       short_text: 'I can smile again',
       source: :EXTERNAL,
       status: :ACCEPTED,
-      url: 'https://www.youtube.com/embed/yrhoz_7qcX4',
+      url: 'https://www.youtube.com/embed/k161HXvnznI',
       item_keys: [
         'crowns'
       ],
