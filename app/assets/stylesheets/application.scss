@@ -111,6 +111,7 @@ body {
 
   .external-testimonial {
     margin-top: $breath-size/2;
+    margin-bottom: $breath-size/2;
 
     .video-wrapper {
       .video {
@@ -511,9 +512,21 @@ body {
   .contact-us {
     background-color: white;
 
-    .picures{
-      margin-top: $breath-size;
-      margin-bottom: $breath-size;
+    // Mad Hack
+    .map {
+      padding: 0px;
+
+      iframe {
+        margin-bottom: -6px;
+      }
+    }
+    .pictures {
+      margin-top: $breath-size/2;
+      margin-bottom: $breath-size/2;
+
+      .picture {
+        width: 100%;
+      }
     }
   }
   .price-list {
@@ -566,18 +579,42 @@ body {
     background-color: white;
   }
   .the-team {
-    .dentist {
+    .primary-dentist {
       margin-top: $breath-size;
+
+      .picture {
+        width: 100%;
+      }
     }
     .attention-helper {
       margin-top: 40px;
       margin-bottom: 40px;
     }
-    .process,
-    .team {
-      margin-top: $breath-size;
+    .steps {
       margin-bottom: $breath-size;
       text-align: center;
+
+      .texts {
+        margin-bottom: 25px;
+      }
+      .step {
+        .picture {
+          width: 100%;
+          margin-top: 25px;
+        }
+      }
+    }
+    .secondary-dentists {
+      text-align: center;
+
+      .texts {
+        margin-bottom: 25px;
+      }
+      .secondary-dentist {
+        .picture {
+          width: 100%;
+        }
+      }
     }
   }
 
@@ -586,9 +623,13 @@ body {
       list-style: none;
       text-align: center;
       }
+    // Mad Hack
     .map {
-      margin-bottom: $breath-size;
-      position: center;
+      padding: 0px;
+
+      iframe {
+        margin-bottom: -6px;
+      }
     }
     .billboard-wrapper {
       background-image: url('tools-5.jpg');
@@ -627,6 +668,26 @@ body {
             box-shadow: none !important;
           }
         }
+      }
+    }
+    .border-pass {
+      .pictures {
+        width: 100%;
+      }
+    }
+    .tijuana {
+      .pictures {
+        width: 100%;
+      }
+    }
+    .hotels {
+      .pictures {
+        width: 100%;
+      }
+    }
+    .places {
+      .pictures {
+        width: 100%;
       }
     }
   }

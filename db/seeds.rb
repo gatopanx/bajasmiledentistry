@@ -885,24 +885,30 @@ end
 [
   {
     organization: organization,
-    date_of_birth: Date.parse("01/01/1991"),
+    date_of_birth: Date.parse("28/02/1991"),
     name: "Irving Cota",
     payload: payload(File.read('./db/seeds/images/irving-cota.jpg')),
     primary_kind: :PRODUCER,
     status: :ACTIVE,
     biography: %{
-      <h5>Cirujano Dentista, </h5>
+      <h5>Autonomous University of Sinaloa</h5>
+      <h6>Doctor of Dental Surgery Degree (2009-2014)</h6>
       <hr/>
       <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+       Doctor Irving Cota was born and raised in the city of Los Mochis,
+      where he went to earn his Doctor of Dental Surgery Degree(2009) at the Autonomous University of Sinaloa.
+      Dr. Cota continued his education with coursework in Orthodontics and Fixed Prosthesis (2014).
+      </p>
+      <p>
+      He continued his career in the city of Tijuana, where he currently resides and practices,
+      helping over 100 people each month to smile again at Tijuana Smile Dentistry, here he takes the time to
+      teach each patient how to care for themselves in order to prevent disease and have the best health possible.
       </p>
     }
   },
   {
     organization: organization,
-    date_of_birth: Date.parse("01/01/1991"),
+    date_of_birth: Date.parse("16/02/1975"),
     name: "Salvador Vizcaino",
     payload: payload(File.read('./db/seeds/images/salvador-vizcaino.jpg')),
     primary_kind: :PRODUCER,
@@ -910,7 +916,7 @@ end
   },
   {
     organization: organization,
-    date_of_birth: Date.parse("08/04/1985"),
+    date_of_birth: Date.parse("04/08/1974"),
     name: "Verenice Orduno",
     payload: payload(File.read('./db/seeds/images/verenice-orduno.jpg')),
     primary_kind: :PRODUCER,
@@ -926,8 +932,8 @@ end
   },
   {
     organization: organization,
-    date_of_birth: Date.parse("01/01/1991"),
-    name: "Jonathan Rodríguez",
+    date_of_birth: Date.parse("30/04/1995"),
+    name: "Jonathan Moncada",
     payload: payload(File.read('./db/seeds/images/jonathan-rodriguez.jpg')),
     primary_kind: :PRODUCER,
     status: :ACTIVE
