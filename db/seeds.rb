@@ -1105,9 +1105,9 @@ end
     testimonial: {
       organization: organization,
       date: Date.parse('01/01/2015'),
-      long_text: 'Awesome job, he did a deep cleaning and a composite filling in my molar, it was fast and easy for him to do, I feel comfortable with him, and now I’m feeling great.',
+      long_text: 'Awesome job, he did a deep cleaning and a composite filling in my molar, it was fast and easy Dr.Irving to do, I feel comfortable with him, and now I’m feeling great.',
       rating: nil,
-      short_text: 'Awesome job!',
+      short_text: 'I feel comfortable with Dr. Irving, and now I’m feeling great.',
       source: :INTERNAL,
       status: :ACCEPTED,
       url: nil,
@@ -1145,7 +1145,7 @@ end
       date: Date.parse('01/01/2015'),
       long_text: 'Awesome job, he did a deep cleaning and a composite filling in my molar, it was fast and easy for him to do, I feel comfortable with him, and now I’m feeling great.',
       rating: nil,
-      short_text: 'Awesome job!',
+      short_text: 'I love my new smile, ',
       source: :INTERNAL,
       status: :ACCEPTED,
       url: nil,
@@ -1215,7 +1215,7 @@ end
     line_2: 'Apt b',
     line_3: nil,
     address: 'marierivera@microsoft.com',
-    payload: payload(File.read('./db/seeds/images/maria-rivera.jpg')),
+    payload: payload(File.read('./db/seeds/images/maria-rivera.JPG')),
     primary_kind: :CONSUMER,
     state_province_county: 'Baja California',
     status: :ACTIVE,
@@ -1236,13 +1236,13 @@ end
         {
           organization: organization,
           description: 'description image',
-          payload: payload(File.read('./db/seeds/images/maria-rivera-before.jpg')),
+          payload: payload(File.read('./db/seeds/images/maria-rivera-before.JPG')),
           title: 'titulo imagen'
         },
         {
           organization: organization,
           description: 'description image',
-          payload: payload(File.read('./db/seeds/images/maria-rivera-after.jpg')),
+          payload: payload(File.read('./db/seeds/images/maria-rivera-after.JPG')),
           title: 'titulo imagen'
         }
       ]
@@ -1282,13 +1282,13 @@ end
         {
           organization: organization,
           description: 'description image',
-          payload: payload(File.read('./db/seeds/images/carlos-trujillo-before.jpg')),
+          payload: payload(File.read('./db/seeds/images/carlos-trujillo-before.JPG')),
           title: 'titulo imagen'
         },
         {
           organization: organization,
           description: 'description image',
-          payload: payload(File.read('./db/seeds/images/carlos-trujillo-after.jpg')),
+          payload: payload(File.read('./db/seeds/images/carlos-trujillo-after.JPG')),
           title: 'titulo imagen'
         }
       ]
