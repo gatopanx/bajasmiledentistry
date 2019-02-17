@@ -166,7 +166,7 @@ organization.save || binding.pry
     primary_kind: :SERVICE,
     short_description: "A crown is a tooth-shaped cover or cap placed over a tooth that is badly damaged by decayed, as a result, a filling can’t replace enough of the tooth or make the tooth strong enough, crowns can be used to improve appearance as well.", # Setear
     status: :ACTIVE,
-    url: 'https://www.youtube.com/embed/Kn7gTevGx6s'
+    url: 'https://www.youtube.com/embed/-0RYKt3lb1k'
   },
   {
     category: nil,
@@ -240,7 +240,7 @@ organization.save || binding.pry
     primary_kind: :SERVICE,
     short_description: "Dental implants are an effective way to replace missing teeth. Dental Implants are small posts, usually made of titanium, that is surgically positioned into the jawbone beneath your gums.", # Setear
     status: :ACTIVE,
-    url: 'https://www.youtube.com/embed/Kn7gTevGx6s'
+    url: 'https://www.youtube.com/embed/-0RYKt3lb1k'
   },
   {
     category: nil,
@@ -287,7 +287,7 @@ organization.save || binding.pry
     primary_kind: :SERVICE,
     short_description: "Dentures are replacements for missing teeth that can be taken out and put back into your mouth, today’s dentures are natural looking and more comfortable than ever.", # Setear
     status: :ACTIVE,
-    url: 'https://www.youtube.com/embed/Kn7gTevGx6s'
+    url: 'https://www.youtube.com/embed/4o_vL8W53vo'
   },
   {
     category: nil,
@@ -343,7 +343,7 @@ organization.save || binding.pry
     primary_kind: :SERVICE,
     short_description: "Orthodontics is the branch of dentistry that corrects teeth and jaws that are positioned improperly. Crooked teeth and bite problems are solved with orthodontic treatment", # Setear
     status: :ACTIVE,
-    url: 'https://www.youtube.com/embed/Kn7gTevGx6s'
+    url: 'https://www.youtube.com/embed/9frFTQREPfc'
   },
   {
     category: nil,
@@ -383,7 +383,7 @@ organization.save || binding.pry
     primary_kind: :SERVICE,
     short_description: "Endodontics is the branch that specializes in the root canal and other endodontic treatments, millions of teeth are treated and save with root canal, relieving pain and making teeth healthy again.", # Setear
     status: :ACTIVE,
-    url: 'https://www.youtube.com/embed/Kn7gTevGx6s'
+    url: 'https://www.youtube.com/embed/Gcxz73fsu0U'
   },
   {
     category: nil,
@@ -416,7 +416,7 @@ organization.save || binding.pry
     primary_kind: :SERVICE,
     short_description: "Endodontics is the branch that specializes in the root canal and other endodontic treatments, millions of teeth are treated and save with root canal, relieving pain and making teeth healthy again.", # Setear
     status: :ACTIVE,
-    url: 'https://www.youtube.com/embed/Kn7gTevGx6s'
+    url: 'https://www.youtube.com/embed/DmCpARP1ygk'
   },
 
 ].each do |attribute_set|
@@ -1145,7 +1145,7 @@ end
       date: Date.parse('01/01/2015'),
       long_text: 'Awesome job, he did a deep cleaning and a composite filling in my molar, it was fast and easy for him to do, I feel comfortable with him, and now I’m feeling great.',
       rating: nil,
-      short_text: 'I love my new smile, ',
+      short_text: 'I love my new smile',
       source: :INTERNAL,
       status: :ACCEPTED,
       url: nil,
