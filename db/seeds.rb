@@ -895,7 +895,7 @@ end
       <h6>Doctor of Dental Surgery Degree (2009-2014)</h6>
       <hr/>
       <p>
-       Doctor Irving Cota was born and raised in the city of Los Mochis,
+      Doctor Irving Cota was born and raised in the city of Los Mochis,
       where he went to earn his Doctor of Dental Surgery Degree(2009) at the Autonomous University of Sinaloa.
       Dr. Cota continued his education with coursework in Orthodontics and Fixed Prosthesis (2014).
       </p>
@@ -1000,8 +1000,8 @@ end
   {
     organization: organization,
     date_of_birth: Date.parse('01/01/2000'),
-    city: 'Tijuana',
-    country_code: 'MX',
+    city: 'San Diego',
+    country_code: 'US',
     extension: nil,
     name: 'Willey Stanley',
     label: 'Home',
@@ -1012,7 +1012,7 @@ end
     address: 'bob1@microsoft.com',
     payload: payload(File.read('./db/seeds/images/willey-stanley.jpg')),
     primary_kind: :CONSUMER,
-    state_province_county: 'Baja California',
+    state_province_county: 'California',
     status: :ACTIVE,
     zip_postal_code: '22045',
     testimonial: {
@@ -1090,7 +1090,7 @@ end
     city: 'San Diego',
     country_code: 'US',
     extension: nil,
-    name: 'Adela T',
+    name: 'Adela Todd',
     label: 'Home',
     number: '7602342345',
     line_1: 'Street 423',
@@ -1125,8 +1125,8 @@ end
   {
     organization: organization,
     date_of_birth: Date.parse('01/01/2000'),
-    city: 'San Diego',
-    country_code: 'US',
+    city: 'Tijuana',
+    country_code: 'MX',
     extension: nil,
     name: 'Paulina Vizcaino',
     label: 'Home',
@@ -1134,10 +1134,10 @@ end
     line_1: 'Street 423',
     line_2: 'Apt b',
     line_3: nil,
-    address: 'paulina@microsoft.com',
+    address: 'mr@microsoft.com',
     payload: payload(File.read('./db/seeds/images/paulina-vizcaino.jpg')),
     primary_kind: :CONSUMER,
-    state_province_county: 'California',
+    state_province_county: 'Baja California',
     status: :ACTIVE,
     zip_postal_code: '99000',
     testimonial: {
@@ -1201,7 +1201,99 @@ end
         }
       ]
     }
-  }
+  },
+  {
+    organization: organization,
+    date_of_birth: Date.parse('01/01/2000'),
+    city: 'Tijuana',
+    country_code: 'MX',
+    extension: nil,
+    name: 'Maria Rivera',
+    label: 'Home',
+    number: '7602342345',
+    line_1: 'Street 423',
+    line_2: 'Apt b',
+    line_3: nil,
+    address: 'marierivera@microsoft.com',
+    payload: payload(File.read('./db/seeds/images/maria-rivera.jpg')),
+    primary_kind: :CONSUMER,
+    state_province_county: 'Baja California',
+    status: :ACTIVE,
+    zip_postal_code: '99000',
+    testimonial: {
+      organization: organization,
+      date: Date.parse('01/01/2015'),
+      long_text: 'Im very grateful with Dr. Irving, I’m happy with my dental work and I would totally recommend Tijuana Smile Dentistry to my family.',
+      rating: nil,
+      short_text: 'I’m happy with my dental work',
+      source: :INTERNAL,
+      status: :ACCEPTED,
+      url: nil,
+      item_keys: [
+        'orthodontics'
+      ],
+      images: [
+        {
+          organization: organization,
+          description: 'description image',
+          payload: payload(File.read('./db/seeds/images/maria-rivera-before.jpg')),
+          title: 'titulo imagen'
+        },
+        {
+          organization: organization,
+          description: 'description image',
+          payload: payload(File.read('./db/seeds/images/maria-rivera-after.jpg')),
+          title: 'titulo imagen'
+        }
+      ]
+    }
+  },
+  {
+    organization: organization,
+    date_of_birth: Date.parse('01/01/2000'),
+    city: 'Los Angeles',
+    country_code: 'US',
+    extension: nil,
+    name: 'Carlos Trujillo',
+    label: 'Home',
+    number: '7602342345',
+    line_1: 'Street 423',
+    line_2: 'Apt b',
+    line_3: nil,
+    address: 'carlost@microsoft.com',
+    payload: payload(File.read('./db/seeds/images/carlos-trujillo-after.JPG')),
+    primary_kind: :CONSUMER,
+    state_province_county: "California",
+    status: :ACTIVE,
+    zip_postal_code: '99000',
+    testimonial: {
+      organization: organization,
+      date: Date.parse('01/01/2015'),
+      long_text: 'My wife came here four months ago and they did great work on her, so I came to Tijuana Smile Dentistry too, they are very professional and treated me very well.',
+      rating: nil,
+      short_text: 'They are very professional and treated me very well',
+      source: :INTERNAL,
+      status: :ACCEPTED,
+      url: nil,
+      item_keys: [
+        'orthodontics'
+      ],
+      images: [
+        {
+          organization: organization,
+          description: 'description image',
+          payload: payload(File.read('./db/seeds/images/carlos-trujillo-before.jpg')),
+          title: 'titulo imagen'
+        },
+        {
+          organization: organization,
+          description: 'description image',
+          payload: payload(File.read('./db/seeds/images/carlos-trujillo-after.jpg')),
+          title: 'titulo imagen'
+        }
+      ]
+    }
+}
 ].each do |attribute_set|
   consumer = Person.new(
     attribute_set.except(
