@@ -37,14 +37,14 @@
                 <tr>
                   <td><%= item.name %></td>
                   <td>
-                    <img src="./assets/info.png" alt="" width="15" height="15">
+                    <img src="./assets/info.png" alt="" />
                     <%# TODO add information popup %>
                   </td>
                   <td>$<%= item.external_price_in_cents / 100 %></td>
                   <td>$<%= item.internal_price_in_cents / 100 %></td>
                   <td><%= (((item.external_price_in_cents.to_f - item.internal_price_in_cents.to_f) / item.external_price_in_cents.to_f)*100).to_i %>%</td>
                   <td>
-                    <img src="./assets/shop.png" alt="" width="15" height="15">
+                    <img src="./assets/shop.png" alt="" />
                     <%# TODO add add to cart behaviour %>
                   </td>
                 </tr>
