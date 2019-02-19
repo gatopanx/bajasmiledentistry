@@ -1,63 +1,57 @@
 module Website
   class PostsController < WebsiteController
+    before_action :load_phones
+    before_action :load_treatments
+    before_action :generate_archive
+
+
     def index
-      @phones = Phone.where(
-        organization: @current_organization,
-        phoneable: @current_organization
-      )
-      @treatments = Item.where(
-        organization: @current_organization,
-        status: :ACTIVE,
-        form: :ABSTRACT,
-        primary_kind: :SERVICE
-      )
-      @social_proofs = SocialProof.where(
-        organization: @current_organization
-      )
-      @external_testimonials = Testimonial.where(
-        organization: @current_organization,
-        status: :ACCEPTED,
-        source: :EXTERNAL
-      ).order(
-        date: :desc
-      ).limit(10)
-      @internal_testimonials = Testimonial.where(
-        organization: @current_organization,
-        status: :ACCEPTED,
-        source: :INTERNAL
-      ).order(
-        date: :desc
-      ).limit(9)
+      # params[:year] ||= DateTime.now.year
+      # params[:month] ||= DateTime.now.month
+
+      @posts = Post.where(
+        organization: current_organization,
+        status: :PUBLISHED
+      ).order(published_at: :desc)
     end
 
     def show
-      @phones = Phone.where(
-        organization: @current_organization,
-        phoneable: @current_organization
+      @post = Post.find_by(
+        organization: current_organization,
+        status: :PUBLISHED,
+        id: params[:id]
       )
-      @treatments = Item.where(
-        organization: @current_organization,
-        status: :ACTIVE,
-        form: :ABSTRACT,
-        primary_kind: :SERVICE
-      )
-      @social_proofs = SocialProof.where(
-        organization: @current_organization
-      )
-      @external_testimonials = Testimonial.where(
-        organization: @current_organization,
-        status: :ACCEPTED,
-        source: :EXTERNAL
-      ).order(
-        date: :desc
-      ).limit(10)
-      @internal_testimonials = Testimonial.where(
-        organization: @current_organization,
-        status: :ACCEPTED,
-        source: :INTERNAL
-      ).order(
-        date: :desc
-      ).limit(9)
+    end
+
+    private
+
+    def generate_archive
+      @archive = {}
+
+      year_groups = Post.where(
+        organization: current_organization,
+        status: :PUBLISHED
+      ).group_by { |p| p.created_at.beginning_of_year }
+
+      year_groups.each do |year_datetime, posts|
+        month_groups = Post.where(
+          id: posts.map(&:id)
+        ).group_by { |p| p.created_at.beginning_of_month }
+
+        @archive[year_datetime.year] = {
+          count: posts.count,
+          objects: posts,
+          months: month_groups.map do |month_datetime, posts|
+            [
+              month_datetime.month,
+              {
+                count: posts.count,
+                objects: posts
+              }
+            ]
+          end.to_h
+        }
+      end
     end
   end
 end

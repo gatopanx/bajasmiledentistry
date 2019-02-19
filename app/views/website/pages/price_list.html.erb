@@ -13,7 +13,7 @@
       <h4>Price List</h4>
       <h5>You Can Save Up To 70% With Our Prices </h5>
     </div>
-    <div class="col-8 item-list">
+    <div class="col-8 items">
         <% @categories.each do |category| %>
           <table class="table">
             <thead>
@@ -34,17 +34,17 @@
             </thead>
             <tbody>
               <% category.items.each do |item| %>
-                <tr>
+                <tr class='item'>
                   <td><%= item.name %></td>
                   <td>
-                    <img src="./assets/info.png" alt="" />
+                    <img class='info' src="./assets/info.png" alt="" />
                     <%# TODO add information popup %>
                   </td>
                   <td>$<%= item.external_price_in_cents / 100 %></td>
                   <td>$<%= item.internal_price_in_cents / 100 %></td>
                   <td><%= (((item.external_price_in_cents.to_f - item.internal_price_in_cents.to_f) / item.external_price_in_cents.to_f)*100).to_i %>%</td>
                   <td>
-                    <img src="./assets/shop.png" alt="" />
+                    <img class='add-to-cart' src="./assets/shop.png" alt="" />
                     <%# TODO add add to cart behaviour %>
                   </td>
                 </tr>

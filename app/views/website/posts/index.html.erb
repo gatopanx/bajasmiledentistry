@@ -12,56 +12,39 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-8">
+    <div class="col-8 posts">
       <div class="row">
-        <div class="col-12">
-          <img data-src="holder.js/600x400" alt="">
-          <h4>10 Tips for Your Next Mexican Dental Vacation</h4>
-          <p>July 9th, 2018</p>
-          <p>
-            High season in Los Algodones it´s about to begin, this means that it´s time to start planning your dental vacation.
-            Today, we would like to share with you some useful tips that every traveler will find extremely necessary, especially if this is their first time traveling to sunny Mexico.
-            Before starting, we would like to give you an extra (and very important advice) don´t be nervous! Traveling outside your city of residence in order to undergo any kind of dental or medical treatment is very popular nowadays, and the results will be better than what you´re expecting, especially if you choose the right place. <a href="/posts/1">Read More</a>
-          </p>
-        </div>
-        <div class="col-12">
-          <img data-src="holder.js/600x400" alt="">
-          <h4>5 Habits That Cause Crooked Teeth</h4>
-          <p>July 04th, 2018</p>
-          <p>
-            Have you ever looked at someone and noticed that their smile is perfect just for the fact that their teeth are perfectly aligned?
-            People with crooked teeth tend to compare their smiles to other people´s, and it´s ok.
-            Who wouldn´t want a perfect smile, right? <a href="/posts/1">Read More</a>
-          </p>
-        </div>
-        <div class="col-12">
-          <img data-src="holder.js/600x400" alt="">
-          <h4>10 Reasons   to Get Dental Work in Tijuana</h4>
-          <p>July 1st, 2018</p>
-          <p>
-            Getting dental work outside of your country of residence can be a little overwhelming sometimes, especially if you don’t know where to go.
-            We’re sure you’ve heard of Los Algodones, Mexico also known as Molar City, the capital of dental tourism.
-            But you might not know why it is the best place to get dental work done, right? We invite you to keep reading, we’ll give you some reasons to visit Los Algodones.<a href="/posts/1">Read More</a>
-          </p>
-        </div>
+        <% @posts.each do |post| %>
+          <div class="col-12 post">
+            <img src="<%= post.primary_image.payload.url%>" alt="<%= post.primary_image.title %>" class='picture'>
+            <h4><%= post.title %></h4>
+            <p><%= post.published_at %></p>
+            <%= raw(post.content) %>
+          </div>
+        <% end %>
       </div>
     </div>
-    <div class="col-4">
+    <div class="col-4 right-bar">
       <div class="row">
-        <div class="col-12">
+        <div class="col-12 talk-with-us">
           <%= render 'website/partials/talk_with_us' %>
         </div>
-        <div class="col-12 blog-archive">
+        <div class="col-12 archive">
           <h5>Blog Archive</h5>
-          <details>
-            <summary>2018(28)</summary>
-            <li>July(6)</li>
-            <li>June(12)</li>
-            <li>May(5)</li>
-            <li>April(5)</li>
-          </details>
+          <ul class='year'>
+            <% @archive.each do |year, properties| %>
+              <li>
+                <%= year %> (<%= properties.fetch(:count) %>)
+                <ul>
+                  <% properties.fetch(:months).each do |month, properties| %>
+                    <li><%= month %> (<%= properties.fetch(:count) %>)</li>
+                  <% end %>
+                </ul>
+              </li>
+            <% end %>
+          </ul>
         </div>
-        <div class="col-12 popular-posts">
+        <div class="col-12 popular">
           <h5>Popular Posts</h5>
           <img data-src="holder.js/300x100" alt="">
           <p>10 Reasons to Get Dental Work in Tijuana</p>
@@ -75,14 +58,6 @@
   </div>
 </div>
 
-<div class="container-fluid schedule-now-wrapper">
-  <div class='row'>
-    <div class='container'>
-      <div class='row'>
-        <%= render 'website/partials/schedule_now' %>
-      </div>
-    </div>
-  </div>
-</div>
+<%= render 'website/partials/schedule_now' %>
 
 <%= render 'website/partials/primary_footer', phones: @phones %>

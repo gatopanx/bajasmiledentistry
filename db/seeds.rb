@@ -1658,3 +1658,122 @@ end
 
   testimonial.save || binding.pry
 end
+
+[
+  {
+    author: Person.where(
+      organization: organization,
+      primary_kind: :PRODUCER
+    ).last,
+    organization: organization,
+    status: :PUBLISHED,
+    title: 'Test Post 1',
+    content: %{
+      High season in Los Algodones it´s about to begin, this means that it´s time to start planning your dental vacation.
+      Today, we would like to share with you some useful tips that every traveler will find extremely necessary, especially if this is their first time traveling to sunny Mexico.
+      Before starting, we would like to give you an extra (and very important advice) don´t be nervous! Traveling outside your city of residence in order to undergo any kind of dental or medical treatment is very popular nowadays, and the results will be better than what you´re expecting, especially if you choose the right place. <a href="/posts/1">Read More</a>
+    },
+    published_at: 1.week.ago,
+    images: [
+      {
+        organization: organization,
+        description: 'Test Image',
+        title: 'Test Image',
+        payload: payload(File.read('./db/seeds/images/irving-cota.jpg'))
+      },
+      {
+        organization: organization,
+        description: 'Test Image',
+        title: 'Test Image',
+        payload: payload(File.read('./db/seeds/images/irving-cota.jpg'))
+      },
+      {
+        organization: organization,
+        description: 'Test Image',
+        title: 'Test Image',
+        payload: payload(File.read('./db/seeds/images/irving-cota.jpg'))
+      }
+    ]
+  },
+  {
+    author: Person.where(
+      organization: organization,
+      primary_kind: :PRODUCER
+    ).last,
+    organization: organization,
+    status: :PUBLISHED,
+    title: 'Test Post 1',
+    content: %{
+      Getting dental work outside of your country of residence can be a little overwhelming sometimes, especially if you don’t know where to go.
+      We’re sure you’ve heard of Los Algodones, Mexico also known as Molar City, the capital of dental tourism.
+      But you might not know why it is the best place to get dental work done, right? We invite you to keep reading, we’ll give you some reasons to visit Los Algodones.<a href="/posts/1">Read More</a>
+    },
+    published_at: 2.week.ago,
+    images: [
+      {
+        organization: organization,
+        description: 'Test Image',
+        title: 'Test Image',
+        payload: payload(File.read('./db/seeds/images/irving-cota.jpg'))
+      },
+      {
+        organization: organization,
+        description: 'Test Image',
+        title: 'Test Image',
+        payload: payload(File.read('./db/seeds/images/irving-cota.jpg'))
+      },
+      {
+        organization: organization,
+        description: 'Test Image',
+        title: 'Test Image',
+        payload: payload(File.read('./db/seeds/images/irving-cota.jpg'))
+      }
+    ]
+  },
+  {
+    author: Person.where(
+      organization: organization,
+      primary_kind: :PRODUCER
+    ).last,
+    organization: organization,
+    status: :PUBLISHED,
+    title: 'Test Post 1',
+    content: %{
+      Have you ever looked at someone and noticed that their smile is perfect just for the fact that their teeth are perfectly aligned?
+      People with crooked teeth tend to compare their smiles to other people´s, and it´s ok.
+      Who wouldn´t want a perfect smile, right? <a href="/posts/1">Read More</a>
+    },
+    published_at: 3.week.ago,
+    images: [
+      {
+        organization: organization,
+        description: 'Test Image',
+        title: 'Test Image',
+        payload: payload(File.read('./db/seeds/images/irving-cota.jpg'))
+      },
+      {
+        organization: organization,
+        description: 'Test Image',
+        title: 'Test Image',
+        payload: payload(File.read('./db/seeds/images/irving-cota.jpg'))
+      },
+      {
+        organization: organization,
+        description: 'Test Image',
+        title: 'Test Image',
+        payload: payload(File.read('./db/seeds/images/irving-cota.jpg'))
+      }
+    ]
+  }
+].each do |post_attribute_set|
+  post = Post.new(post_attribute_set.except(:images))
+  post.save || binding.pry
+
+  post_attribute_set.fetch(:images).each do |image_attribute_set|
+    image = Image.new(image_attribute_set.merge({imageable: post}))
+    image.save || binding.pry
+  end
+
+  post.primary_image = post.images.first
+  post.save || binding.pry
+end

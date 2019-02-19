@@ -26,15 +26,7 @@
   <%= render 'website/partials/external_testimonials', external_testimonials: @external_testimonials %>
 </div>
 
-<div class="container-fluid schedule-now-wrapper">
-  <div class='row'>
-    <div class='container'>
-      <div class='row'>
-        <%= render 'website/partials/schedule_now' %>
-      </div>
-    </div>
-  </div>
-</div>
+<%= render 'website/partials/schedule_now' %>
 
 <div class="container">
   <%= render 'website/partials/internal_testimonials', internal_testimonials: @internal_testimonials %>
@@ -55,8 +47,6 @@
   </div>
 </div>
 
-<div class="container">
-  <%= render 'website/partials/we_are_waiting_for_you' %>
-</div>
+<%= render 'website/partials/we_are_waiting_for_you' %>
 
 <%= render 'website/partials/primary_footer', phones: @phones %>

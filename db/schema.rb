@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_11_011614) do
+ActiveRecord::Schema.define(version: 2019_02_17_001608) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -225,6 +225,21 @@ ActiveRecord::Schema.define(version: 2018_11_11_011614) do
     t.index ["phoneable_type", "phoneable_id"], name: "index_phones_on_phoneable_type_and_phoneable_id"
   end
 
+  create_table "posts", force: :cascade do |t|
+    t.bigint "author_id"
+    t.bigint "organization_id"
+    t.bigint "primary_image_id"
+    t.integer "status"
+    t.string "title"
+    t.text "content"
+    t.datetime "published_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_posts_on_author_id"
+    t.index ["organization_id"], name: "index_posts_on_organization_id"
+    t.index ["primary_image_id"], name: "index_posts_on_primary_image_id"
+  end
+
   create_table "social_proofs", force: :cascade do |t|
     t.bigint "organization_id"
     t.bigint "primary_image_id"
@@ -288,6 +303,9 @@ ActiveRecord::Schema.define(version: 2018_11_11_011614) do
   add_foreign_key "people", "organizations"
   add_foreign_key "people", "phones", column: "primary_phone_id"
   add_foreign_key "phones", "organizations"
+  add_foreign_key "posts", "images", column: "primary_image_id"
+  add_foreign_key "posts", "organizations"
+  add_foreign_key "posts", "people", column: "author_id"
   add_foreign_key "social_proofs", "images", column: "primary_image_id"
   add_foreign_key "social_proofs", "organizations"
   add_foreign_key "testimonials", "images", column: "after_image_id"
