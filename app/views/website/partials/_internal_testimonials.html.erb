@@ -8,6 +8,7 @@
 
     <% internal_testimonials.each_with_index do |internal_testimonial, index| %>
       <% next unless index == 0 %>
+      <% next unless (internal_testimonial.before_image && internal_testimonial.after_image) || internal_testimonial.url %>
 
       <div class='col-12 primary-internal-testimonial'>
         <img class='image' src='<%= internal_testimonial.before_image.payload.url  %>' alt="<%= internal_testimonial.short_text %>" />
