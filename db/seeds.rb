@@ -1190,7 +1190,7 @@ end
       status: :ACCEPTED,
       url: nil,
       item_keys: [
-        'orthodontics'
+        'dental_implants'
       ],
       images: [
         {
@@ -1230,7 +1230,7 @@ end
       status: :ACCEPTED,
       url: nil,
       item_keys: [
-        'orthodontics'
+        'dental_implants'
       ],
       images: [
         {
@@ -1276,7 +1276,7 @@ end
       status: :ACCEPTED,
       url: nil,
       item_keys: [
-        'orthodontics'
+        'dental_implants'
       ],
       images: [
         {
@@ -1517,8 +1517,8 @@ end
     zip_postal_code: '22045',
     testimonial: {
       organization: organization,
-      date: Date.parse('01/01/2015'),
-      long_text: 'I can smile again, I have a quality work done here, they’re very clean and very professional.I recommend them a 100% Clean, good work, I’m very happy',
+      date: Date.parse('02/10/2018'),
+      long_text: 'I can smile again, I have a quality work done here, they’re very clean and very professional. I recommend them a 100% Clean, good work, I’m very happy',
       rating: 5,
       short_text: 'I can smile again',
       source: :EXTERNAL,
@@ -1557,9 +1557,9 @@ end
     zip_postal_code: '99000',
     testimonial: {
       organization: organization,
-      date: Date.parse('01/01/2015'),
+      date: Date.parse('02/02/2019'),
       long_text: 'I had a discomfort in a molar piece, they did 2 extractions and I’m in the process of putting on crowns and making a new bridge.
-      My experience has been very good, with all the staff. The doctor is very patient, he takes the time to explain what we need, he is very honest and he is very kind and conscientious of us as patients and from our pockets.',
+      My experience has been very good, with all the staff. The doctor is very patient, he takes the time to explain what we need, he is very honest and he is very kind and conscious of us as patients and from our pockets.',
       rating: 5,
       short_text: 'The doctor is very patient, he takes the time to explain what we need',
       source: :EXTERNAL,
@@ -1586,7 +1586,7 @@ end
   },
   {
     organization: organization,
-    date_of_birth: Date.parse('01/01/2000'),
+    date_of_birth: Date.parse('15/02/2010'),
     city: 'Tijuana',
     country_code: 'MX',
     extension: nil,
@@ -1604,7 +1604,7 @@ end
     zip_postal_code: '22034',
     testimonial: {
       organization: organization,
-      date: Date.parse('01/01/2015'),
+      date: Date.parse('15/02/2019'),
       long_text: 'I got a root canal done, the job was fast, I got a root canal done before in another clinic and that time I felt stress, but here I felt relaxed.
       The customer service is formidable, I was attended by a very nice lady, and the doctor is incredibly patient, he explained to me every detail of the treatment, and that for me, as a patient is very important,
       so I can know what he’s going to do, he gave me a lot of peace and I really felt comfortable and in really professional hands. I recommend you to come here, the attention is totally personalized,
@@ -1629,7 +1629,7 @@ end
   },
   {
     organization: organization,
-    date_of_birth: Date.parse('01/01/2000'),
+    date_of_birth: Date.parse('11/03/1964'),
     city: 'Los Angeles',
     country_code: 'US',
     extension: nil,
@@ -1647,7 +1647,7 @@ end
     zip_postal_code: '22034',
     testimonial: {
       organization: organization,
-      date: Date.parse('01/01/2015'),
+      date: Date.parse('16/02/2019'),
       long_text: 'I am doing brackets they’re fixing to get implants. My experience in the clinic is they do a very good job, It’s a good clinic, I like how they work and the experience with my brackets.
       The doctor are nice here, they do a very good job and I like how they work. I would definitely recommend this clinic for other patients, good being here, and really good.',
       rating: 5,
