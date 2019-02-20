@@ -1143,9 +1143,9 @@ end
     testimonial: {
       organization: organization,
       date: Date.parse('01/01/2015'),
-      long_text: 'Awesome job, he did a deep cleaning and a composite filling in my molar, it was fast and easy for him to do, I feel comfortable with him, and now I’m feeling great.',
+      long_text: 'Great Orthodontist! Everyone is so pleasant and professional, they care about you and make you feel safe. I recommend 100% Tijuana Smile Dentistry',
       rating: nil,
-      short_text: 'I love my new smile',
+      short_text: 'Great Orthodontist! Everyone is so pleasant and professional, I am loving my new smile',
       source: :INTERNAL,
       status: :ACCEPTED,
       url: nil,
@@ -1293,6 +1293,90 @@ end
         }
       ]
     }
+},
+{
+  organization: organization,
+  date_of_birth: Date.parse('01/01/2000'),
+  city: 'Los Angeles',
+  country_code: 'US',
+  extension: nil,
+  name: 'Christian Leon',
+  label: 'Home',
+  number: '6197854545',
+  line_1: 'Street 78',
+  line_2: 'Apt b',
+  line_3: nil,
+  address: 'christianleon@microsoft.com',
+  payload: payload(File.read('./db/seeds/images/christian-leon.JPG')),
+  primary_kind: :CONSUMER,
+  state_province_county: "California",
+  status: :ACTIVE,
+  zip_postal_code: '99000',
+  testimonial: {
+    organization: organization,
+    date: Date.parse('01/01/2015'),
+    long_text: 'I am doing brackets they’re fixing to get implants. My experience in the clinic is they do a very good job, It’s a good clinic, I like how they work and the experience with my brackets.
+    The doctors are nice here, they do a very good job and I like how they work. I would definitely recommend this clinic for other patients, good being here, and really good.',
+    rating: nil,
+    short_text: 'The doctors are nice here, they do a very good job and I like how they work.',
+    source: :INTERNAL,
+    status: :ACCEPTED,
+    url: nil,
+    item_keys: [
+      'orthodontics'
+    ],
+    images: [
+      {
+        organization: organization,
+        description: 'description image',
+        payload: payload(File.read('./db/seeds/images/christian-leon.JPG')),
+        title: 'titulo imagen'
+      }
+    ]
+  }
+},
+{
+  organization: organization,
+  date_of_birth: Date.parse('01/01/2000'),
+  city: 'Tijuana',
+  country_code: 'MX',
+  extension: nil,
+  name: 'Rosa Maria Rodriguez',
+  label: 'Home',
+  number: '6641514222',
+  line_1: 'Street 718',
+  line_2: 'Apt b',
+  line_3: nil,
+  address: 'rosamaria@microsoft.com',
+  payload: payload(File.read('./db/seeds/images/rosamaria-rodriguez.JPG')),
+  primary_kind: :CONSUMER,
+  state_province_county: "Baja California",
+  status: :ACTIVE,
+  zip_postal_code: '22034',
+  testimonial: {
+    organization: organization,
+    date: Date.parse('01/01/2015'),
+    long_text: 'I got a root canal done, the job was fast, I got a root canal done before in another clinic and that time I felt stress, but here I felt relaxed.
+    The customer service is formidable, I was attended by a very nice lady, and the doctor is incredibly patient, he explained to me every detail of the treatment, and that for me, as a patient is very important,
+    so I can know what he’s going to do, he gave me a lot of peace and I really felt comfortable and in really professional hands. I recommend you to come here, the attention is totally personalized,
+    they give you the time you need to make you feel at home, many times attending your oral health is not easy, but with people like them, that makes you feel comfortable and relaxed it is a lot easier. Thank you very much.',
+    rating: nil,
+    short_text: 'The customer service is formidable, I was attended by a very nice lady, and the doctor is incredibly patient',
+    source: :INTERNAL,
+    status: :ACCEPTED,
+    url: nil,
+    item_keys: [
+      'root_canal'
+    ],
+    images: [
+      {
+        organization: organization,
+        description: 'description image',
+        payload: payload(File.read('./db/seeds/images/rosamaria-rodriguez.JPG')),
+        title: 'titulo imagen'
+      }
+    ]
+  }
 }
 ].each do |attribute_set|
   consumer = Person.new(
@@ -1416,8 +1500,8 @@ end
   {
     organization: organization,
     date_of_birth: Date.parse('01/01/2000'),
-    city: 'Tijuana',
-    country_code: 'MX',
+    city: 'San Diego',
+    country_code: 'US',
     extension: nil,
     name: 'Willey Stanley',
     label: 'Home',
@@ -1425,18 +1509,18 @@ end
     line_1: 'Street 123',
     line_2: 'Apt b',
     line_3: nil,
-    address: 'bob2@microsoft.com',
-    payload: payload(File.read('./db/seeds/images/irving-cota.jpg')),
+    address: 'willeys@microsoft.com',
+    payload: payload(File.read('./db/seeds/images/willey-stanley.jpg')),
     primary_kind: :CONSUMER,
-    state_province_county: 'Baja California',
+    state_province_county: 'California',
     status: :ACTIVE,
     zip_postal_code: '22045',
     testimonial: {
       organization: organization,
       date: Date.parse('01/01/2015'),
-      long_text: 'Crowns are the best',
+      long_text: 'I can smile again, I have a quality work done here, they’re very clean and very professional.I recommend them a 100% Clean, good work, I’m very happy',
       rating: 5,
-      short_text: 'Crowns are the best',
+      short_text: 'I can smile again',
       source: :EXTERNAL,
       status: :ACCEPTED,
       url: 'https://www.youtube.com/embed/yrhoz_7qcX4',
@@ -1447,7 +1531,7 @@ end
         {
           organization: organization,
           description: 'description image',
-          payload: payload(File.read('./db/seeds/images/irving-cota.jpg')),
+          payload: payload(File.read('./db/seeds/images/willey-stanley.jpg')),
           title: 'titulo imagen'
         }
       ]
@@ -1474,9 +1558,10 @@ end
     testimonial: {
       organization: organization,
       date: Date.parse('01/01/2015'),
-      long_text: 'I can smile again, I have a quality work done here, they’re very clean and very professional.I recommend them a 100% Clean, good work, I’m very happy ',
-      rating: 4,
-      short_text: 'I can smile again',
+      long_text: 'I had a discomfort in a molar piece, they did 2 extractions and I’m in the process of putting on crowns and making a new bridge.
+      My experience has been very good, with all the staff. The doctor is very patient, he takes the time to explain what we need, he is very honest and he is very kind and conscientious of us as patients and from our pockets.',
+      rating: 5,
+      short_text: 'The doctor is very patient, he takes the time to explain what we need',
       source: :EXTERNAL,
       status: :ACCEPTED,
       url: 'https://www.youtube.com/embed/k161HXvnznI',
@@ -1502,44 +1587,82 @@ end
   {
     organization: organization,
     date_of_birth: Date.parse('01/01/2000'),
-    city: 'Long Beach',
-    country_code: 'US',
+    city: 'Tijuana',
+    country_code: 'MX',
     extension: nil,
-    name: 'Isabel Juarez',
+    name: 'Rosa Maria Rodriguez',
     label: 'Home',
-    number: '7602342345',
+    number: '6641517249',
     line_1: 'Street 423',
     line_2: 'Apt b',
     line_3: nil,
-    address: 'isabeljuarez3@microsoft.com',
-    payload: payload(File.read('./db/seeds/images/isabel-juarez-before.jpg')),
+    address: 'roxamaria0311@hotmail.com',
+    payload: payload(File.read('./db/seeds/images/rosamaria-rodriguez.jpg')),
     primary_kind: :CONSUMER,
-    state_province_county: 'California',
+    state_province_county: 'Baja California',
     status: :ACTIVE,
-    zip_postal_code: '99000',
+    zip_postal_code: '22034',
     testimonial: {
       organization: organization,
       date: Date.parse('01/01/2015'),
-      long_text: 'I can smile again, I have a quality work done here, they’re very clean and very professional.I recommend them a 100% Clean, good work, I’m very happy ',
-      rating: 4,
-      short_text: 'I can smile again',
+      long_text: 'I got a root canal done, the job was fast, I got a root canal done before in another clinic and that time I felt stress, but here I felt relaxed.
+      The customer service is formidable, I was attended by a very nice lady, and the doctor is incredibly patient, he explained to me every detail of the treatment, and that for me, as a patient is very important,
+      so I can know what he’s going to do, he gave me a lot of peace and I really felt comfortable and in really professional hands. I recommend you to come here, the attention is totally personalized,
+      they give you the time you need to make you feel at home, many times attending your oral health is not easy, but with people like them, that makes you feel comfortable and relaxed it is a lot easier. Thank you very much.',
+      rating: 5,
+      short_text: 'The customer service is formidable, I was attended by a very nice lady, and the doctor is incredibly patient',
       source: :EXTERNAL,
       status: :ACCEPTED,
-      url: 'https://www.youtube.com/embed/yrhoz_7qcX4',
+      url: 'https://www.youtube.com/embed/9-MmPHcK9Jw',
       item_keys: [
-        'crowns'
+        'root_canal'
       ],
       images: [
         {
           organization: organization,
           description: 'description image',
-          payload: payload(File.read('./db/seeds/images/isabel-juarez-before.jpg')),
+          payload: payload(File.read('./db/seeds/images/rosamaria-rodriguez.jpg')),
           title: 'titulo imagen'
-        },
+        }
+      ]
+    }
+  },
+  {
+    organization: organization,
+    date_of_birth: Date.parse('01/01/2000'),
+    city: 'Los Angeles',
+    country_code: 'US',
+    extension: nil,
+    name: 'Christian Leon',
+    label: 'Home',
+    number: '6197854848',
+    line_1: 'Street 423',
+    line_2: 'Apt b',
+    line_3: nil,
+    address: 'chrisitianleon@hotmail.com',
+    payload: payload(File.read('./db/seeds/images/christian-leon.jpg')),
+    primary_kind: :CONSUMER,
+    state_province_county: 'California',
+    status: :ACTIVE,
+    zip_postal_code: '22034',
+    testimonial: {
+      organization: organization,
+      date: Date.parse('01/01/2015'),
+      long_text: 'I am doing brackets they’re fixing to get implants. My experience in the clinic is they do a very good job, It’s a good clinic, I like how they work and the experience with my brackets.
+      The doctor are nice here, they do a very good job and I like how they work. I would definitely recommend this clinic for other patients, good being here, and really good.',
+      rating: 5,
+      short_text: 'My experience in the clinic is they do a very good job, It’s a good clinic, I like how they work and the experience with my brackets',
+      source: :EXTERNAL,
+      status: :ACCEPTED,
+      url: 'https://www.youtube.com/embed/4MhTI15sNow',
+      item_keys: [
+        'root_canal'
+      ],
+      images: [
         {
           organization: organization,
           description: 'description image',
-          payload: payload(File.read('./db/seeds/images/isabel-juarez-before.jpg')),
+          payload: payload(File.read('./db/seeds/images/christian-leon.jpg')),
           title: 'titulo imagen'
         }
       ]
