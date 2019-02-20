@@ -1307,7 +1307,7 @@ end
   line_2: 'Apt b',
   line_3: nil,
   address: 'christianleon@microsoft.com',
-  payload: payload(File.read('./db/seeds/images/christian-leon.JPG')),
+  payload: payload(File.read('./db/seeds/images/christian-leon.jpg')),
   primary_kind: :CONSUMER,
   state_province_county: "California",
   status: :ACTIVE,
