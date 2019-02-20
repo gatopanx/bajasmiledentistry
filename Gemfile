@@ -34,9 +34,9 @@ gem 'rails', '~> 5'
 gem 'sassc'
 gem 'turbolinks'
 gem 'uglifier'
+gem 'pry-rails'
 
 group :development, :test do
   gem 'listen'
-  gem 'pry-rails'
   gem 'rspec-rails'
 end
