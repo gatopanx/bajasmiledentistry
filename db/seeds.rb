@@ -1215,7 +1215,7 @@ end
     line_2: 'Apt b',
     line_3: nil,
     address: 'marierivera@microsoft.com',
-    payload: payload(File.read('./db/seeds/images/maria-rivera.JPG')),
+    payload: payload(File.read('./db/seeds/images/maria-rivera.jpg')),
     primary_kind: :CONSUMER,
     state_province_county: 'Baja California',
     status: :ACTIVE,
@@ -1236,13 +1236,13 @@ end
         {
           organization: organization,
           description: 'description image',
-          payload: payload(File.read('./db/seeds/images/maria-rivera-before.JPG')),
+          payload: payload(File.read('./db/seeds/images/maria-rivera-before.jpg')),
           title: 'titulo imagen'
         },
         {
           organization: organization,
           description: 'description image',
-          payload: payload(File.read('./db/seeds/images/maria-rivera-after.JPG')),
+          payload: payload(File.read('./db/seeds/images/maria-rivera-after.jpg')),
           title: 'titulo imagen'
         }
       ]
@@ -1261,7 +1261,7 @@ end
     line_2: 'Apt b',
     line_3: nil,
     address: 'carlost@microsoft.com',
-    payload: payload(File.read('./db/seeds/images/carlos-trujillo-after.JPG')),
+    payload: payload(File.read('./db/seeds/images/carlos-trujillo-after.jpg')),
     primary_kind: :CONSUMER,
     state_province_county: "California",
     status: :ACTIVE,
@@ -1282,13 +1282,13 @@ end
         {
           organization: organization,
           description: 'description image',
-          payload: payload(File.read('./db/seeds/images/carlos-trujillo-before.JPG')),
+          payload: payload(File.read('./db/seeds/images/carlos-trujillo-before.jpg')),
           title: 'titulo imagen'
         },
         {
           organization: organization,
           description: 'description image',
-          payload: payload(File.read('./db/seeds/images/carlos-trujillo-after.JPG')),
+          payload: payload(File.read('./db/seeds/images/carlos-trujillo-after.jpg')),
           title: 'titulo imagen'
         }
       ]
@@ -1329,7 +1329,7 @@ end
       {
         organization: organization,
         description: 'description image',
-        payload: payload(File.read('./db/seeds/images/christian-leon.JPG')),
+        payload: payload(File.read('./db/seeds/images/christian-leon.jpg')),
         title: 'titulo imagen'
       }
     ]
@@ -1348,7 +1348,7 @@ end
   line_2: 'Apt b',
   line_3: nil,
   address: 'rosamaria@microsoft.com',
-  payload: payload(File.read('./db/seeds/images/rosamaria-rodriguez.JPG')),
+  payload: payload(File.read('./db/seeds/images/rosamaria-rodriguez.jpg')),
   primary_kind: :CONSUMER,
   state_province_county: "Baja California",
   status: :ACTIVE,
@@ -1372,7 +1372,7 @@ end
       {
         organization: organization,
         description: 'description image',
-        payload: payload(File.read('./db/seeds/images/rosamaria-rodriguez.JPG')),
+        payload: payload(File.read('./db/seeds/images/rosamaria-rodriguez.jpg')),
         title: 'titulo imagen'
       }
     ]
