@@ -69,8 +69,9 @@ class Address < ApplicationRecord
       line_2,
       line_3,
       state_province_county,
-      IsoCountryCodes.find(self.country_code).name
-    ].compact.join(' ')
+      IsoCountryCodes.find(self.country_code).name,
+      zip_postal_code
+    ].compact.join(', ')
   end
 
   def calculated_partial_address

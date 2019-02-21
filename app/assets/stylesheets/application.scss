@@ -281,8 +281,8 @@ body {
       }
     }
   }
-  .phone-numbers {
-    .phone-number {
+  .phones {
+    .phone {
       margin: 10px;
       list-style: none;
 
@@ -578,6 +578,15 @@ body {
       }
     }
     .shopping-cart {
+      table {
+        tbody {
+          .quantity {
+            input {
+              width: 30px;
+            }
+          }
+        }
+      }
       button {
         background-color: $dark-orange;
         border-color: $dark-orange;

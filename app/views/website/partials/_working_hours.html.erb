@@ -22,22 +22,20 @@
           <li class='time-range'>9:00AM-6:00PM</li>
           <li class='time-range'>9:00AM-6:00PM</li>
           <li class='time-range'>9:00AM-6:00PM</li>
-          <li class='time-range'>9:00AM-6:00PM</li>
-          <li class='time-range'>9:00AM-6:00PM</li>
+          <li class='time-range'>9:00AM-3:00PM</li>
+          <li class='time-range'>Closed</li>
         </ul>
       </div>
     </div>
   </div>
   <div class="col-12">
-    <ul class='phone-numbers'>
-      <li class='phone-number united-states text-center'>
-        <img class="mb-2 flag" src="/assets/US.svg" alt="">
-        <a class="text-muted" href="tel:+16194673765">+1 (619) 452-2823</a>
-      </li>
-      <li class='phone-number mexico text-center'>
-        <img class="mb-2 flag" src="/assets/MX.svg" alt="">
-        <a class="text-muted" href="tel:+526642071561">+52 (664) 685-3862</a>
-      </li>
+    <ul class='phones text-center'>
+      <% phones.each do |phone| %>
+        <li class='phone'>
+          <img class="flag" src="/assets/<%= phone.country_code %>.svg" alt="<%= phone.country_code %> Flag">
+          <a class="number" href="tel:<%= phone.calculated_full_number %>"><%= phone.calculated_full_number %></a>
+        </li>
+      <% end %>
     </ul>
   </div>
   <div class="col-12">

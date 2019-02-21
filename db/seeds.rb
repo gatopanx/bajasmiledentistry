@@ -39,7 +39,7 @@ organization.save || binding.pry
     label: 'HQ',
     line_1: 'Juventud Oriente #8800',
     line_2: 'Interior 2204',
-    line_3: nil,
+    line_3: 'Zona Rio',
     state_province_county: 'Baja California',
     zip_postal_code: '22010'
   }
@@ -621,9 +621,9 @@ end
     items: [
       {
         organization: organization,
-        external_price_in_cents: 150*100,
+        external_price_in_cents: 1000*100,
         form: :CONCRETE,
-        internal_price_in_cents: 70*100,
+        internal_price_in_cents: 230*100,
         key: "ITEM_13",
         name: "Root Canal",
         long_description: "Root canals are needed when there is an infection within the tooth. Without treatment, the infection can become severe enough that the tooth has to be removed",
@@ -633,9 +633,9 @@ end
       },
       {
         organization: organization,
-        external_price_in_cents: 150*100,
+        external_price_in_cents: 1200*100,
         form: :CONCRETE,
-        internal_price_in_cents: 70*100,
+        internal_price_in_cents: 270*100,
         key: "ITEM_14",
         name: "Root Canal Molar",
         long_description: "Root canals are needed when there is an infection within the tooth. Without treatment, the infection can become severe enough that the tooth has to be removed",

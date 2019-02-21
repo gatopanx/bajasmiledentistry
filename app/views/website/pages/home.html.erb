@@ -40,7 +40,7 @@
           <%= render 'website/partials/talk_with_us' %>
         </div>
         <div class="col-4 offset-1">
-          <%= render 'website/partials/working_hours' %>
+          <%= render 'website/partials/working_hours', phones: @phones %>
         </div>
       </div>
     </div>
@@ -49,4 +49,4 @@
 
 <%= render 'website/partials/we_are_waiting_for_you' %>
 
-<%= render 'website/partials/primary_footer', phones: @phones %>
+<%= render 'website/partials/primary_footer', phones: @phones, current_organization: @current_organization %>
