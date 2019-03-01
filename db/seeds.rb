@@ -1039,7 +1039,7 @@ end
       date: Date.parse('01/01/2015'),
       long_text: 'I can smile again, I have a quality work done here, they’re very clean and very professional.I recommend them a 100% Clean, good work, I’m very happy',
       rating: nil,
-      short_text: 'I can smile again',
+      short_text: 'I can smile again, I have a quality work done here, they’re very clean and very professional',
       source: :INTERNAL,
       status: :ACCEPTED,
       url: 'https://www.youtube.com/embed/yrhoz_7qcX4',
@@ -1333,7 +1333,7 @@ end
   zip_postal_code: '99000',
   testimonial: {
     organization: organization,
-    date: Date.parse('01/01/2015'),
+    date: Date.parse('28/02/2019'),
     long_text: 'I am doing brackets they’re fixing to get implants. My experience in the clinic is they do a very good job, It’s a good clinic, I like how they work and the experience with my brackets.
     The doctors are nice here, they do a very good job and I like how they work. I would definitely recommend this clinic for other patients, good being here, and really good.',
     rating: nil,
@@ -1349,6 +1349,47 @@ end
         organization: organization,
         description: 'description image',
         payload: payload(File.read('./db/seeds/images/christian-leon.jpg')),
+        title: 'titulo imagen'
+      }
+    ]
+  }
+},
+{
+  organization: organization,
+  date_of_birth: Date.parse('01/01/2000'),
+  city: 'Los Angeles',
+  country_code: 'US',
+  extension: nil,
+  name: 'Robin Imel',
+  label: 'Home',
+  number: '6197823545',
+  line_1: 'Street 78',
+  line_2: 'Apt b',
+  line_3: nil,
+  address: 'robinimel@microsoft.com',
+  payload: payload(File.read('./db/seeds/images/robin-imel.jpg')),
+  primary_kind: :CONSUMER,
+  state_province_county: "California",
+  status: :ACTIVE,
+  zip_postal_code: '99000',
+  testimonial: {
+    organization: organization,
+    date: Date.parse('01/01/2015'),
+    long_text: 'Hi I’m robin, I live in california. I just seen Tijuana Smile Dentistry, Irving was my dentist and I’m very please,
+    they gave me a crown and everything went very smooth, I would definitely recommend them, they were really friendly and really helpful.',
+    rating: nil,
+    short_text: 'I’m very please, they gave me a crown and everything went very smooth.',
+    source: :INTERNAL,
+    status: :ACCEPTED,
+    url: nil,
+    item_keys: [
+      'dental_implants'
+    ],
+    images: [
+      {
+        organization: organization,
+        description: 'description image',
+        payload: payload(File.read('./db/seeds/images/robin-imel.jpg')),
         title: 'titulo imagen'
       }
     ]
@@ -1539,7 +1580,7 @@ end
       date: Date.parse('02/10/2018'),
       long_text: 'I can smile again, I have a quality work done here, they’re very clean and very professional. I recommend them a 100% Clean, good work, I’m very happy',
       rating: 5,
-      short_text: 'I can smile again',
+      short_text: 'I can smile again, I have a quality work done here, they’re very clean and very professional',
       source: :EXTERNAL,
       status: :ACCEPTED,
       url: 'https://www.youtube.com/embed/yrhoz_7qcX4',
@@ -1641,6 +1682,47 @@ end
           organization: organization,
           description: 'description image',
           payload: payload(File.read('./db/seeds/images/rosamaria-rodriguez.jpg')),
+          title: 'titulo imagen'
+        }
+      ]
+    }
+  },
+  {
+    organization: organization,
+    date_of_birth: Date.parse('15/02/2010'),
+    city: 'Los Angeles',
+    country_code: 'US',
+    extension: nil,
+    name: 'Robin Imel',
+    label: 'Home',
+    number: '6197854598',
+    line_1: 'Street 423',
+    line_2: 'Apt b',
+    line_3: nil,
+    address: 'robinimel@hotmail.com',
+    payload: payload(File.read('./db/seeds/images/robin-imel.jpg')),
+    primary_kind: :CONSUMER,
+    state_province_county: 'California',
+    status: :ACTIVE,
+    zip_postal_code: '22034',
+    testimonial: {
+      organization: organization,
+      date: Date.parse('28/02/2019'),
+      long_text: 'Hi I’m robin, I live in california. I just visit Tijuana Smile Dentistry, Irving was my dentist and I’m very please,
+      they gave me a crown and everything went very smooth, I would definitely recommend them, they were really friendly and really helpful.',
+      rating: 5,
+      short_text: 'I’m very please, they gave me a crown and everything went very smooth, I would definitely recommend them',
+      source: :EXTERNAL,
+      status: :ACCEPTED,
+      url: 'https://www.youtube.com/embed/JJzZr2X0gWE',
+      item_keys: [
+        'dental_implants'
+      ],
+      images: [
+        {
+          organization: organization,
+          description: 'description image',
+          payload: payload(File.read('./db/seeds/images/robin-imel.jpg')),
           title: 'titulo imagen'
         }
       ]
