@@ -901,9 +901,28 @@ end
       </p>
       <p>
       He continued his career in the city of Tijuana, where he currently resides and practices,
-      helping over 100 people each month to smile again at Tijuana Smile Dentistry, here he takes the time to
+      helping over 350 people to smile again, in Tijuana Smile Dentistry he takes the time to
       teach each patient how to care for themselves in order to prevent disease and have the best health possible.
       </p>
+    }
+  },
+  {
+    organization: organization,
+    date_of_birth: Date.parse("28/02/1991"),
+    name: "Marcia Bustamante",
+    payload: payload(File.read('./db/seeds/images/marcia-bustamante.jpg')),
+    primary_kind: :PRODUCER,
+    status: :ACTIVE,
+    biography: %{
+      <h5>Autonomous University of Baja California</h5>
+      <h6>Doctor of Dental Surgery Degree (2004-2009)</h6>
+      <hr/>
+      <p>
+      Doctor Marcia Bustamante studied at the Autonomous University of Baja California where she earn her Doctor of Dental Surgery Degree,
+      and continued her studies at El Bosque University, Colombia in 2012 and Nova Southeastern University at Fort Lauderdale, Florida in 2013.
+      Then she earn her Master Degree in Endodontics at the Autonomous University of Tlaxcala in 2012.
+      </p>
+
     }
   },
   {

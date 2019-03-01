@@ -47,18 +47,26 @@ module Website
     end
 
     def the_team
-      @primary_producer = Person.find_by!(
+      @primary_producers = Person.where(
         organization: @current_organization,
         status: :ACTIVE,
         primary_kind: :PRODUCER,
-        name: 'Irving Cota'
+      )
+      .where(
+        name: [
+          'Irving Cota',
+          'Marcia Bustamante'
+        ]
       )
       @secondary_producers = Person.where(
         organization: @current_organization,
         status: :ACTIVE,
         primary_kind: :PRODUCER
       ).where.not(
-        name: 'Irving Cota'
+        name: [
+          'Irving Cota',
+          'Marcia Bustamante'
+        ]
       )
       @external_testimonials = Testimonial.where(
         organization: @current_organization,

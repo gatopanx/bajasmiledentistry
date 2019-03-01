@@ -6,16 +6,25 @@
 </div>
 
 
-<div class="container primary-dentist">
-  <div class="row">
-    <div class="col-6 image">
-      <img src="<%= @primary_producer.primary_image.payload.url %>" alt="<%= @primary_producer.name %>" class="picture">
+<div class="container primary-dentists">
+  <% @primary_producers.each_with_index do |producer, index| %>
+    <div class="row primary-dentist">
+      <% if index % 2 == 0 %>
+        <div class="col-6 image">
+          <img src="<%= producer.primary_image.payload.url %>" alt="<%= producer.name %>" class="picture">
+        </div>
+      <% end %>
+      <div class="col-6 texts">
+        <h4><%= producer.name %></h4>
+        <%= raw(producer.biography) %>
+      </div>
+      <% if index % 2 == 1 %>
+        <div class="col-6 image">
+          <img src="<%= producer.primary_image.payload.url %>" alt="<%= producer.name %>" class="picture">
+        </div>
+      <% end %>
     </div>
-    <div class="col-6">
-      <h4><%= @primary_producer.name %></h4>
-      <%= raw(@primary_producer.biography) %>
-    </div>
-  </div>
+  <% end %>
 </div>
 
 <hr class="attention-helper">

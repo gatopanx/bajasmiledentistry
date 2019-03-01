@@ -611,11 +611,18 @@ body {
     background-color: white;
   }
   .the-team {
-    .primary-dentist {
+    .primary-dentists {
       margin-top: $breath-size;
 
-      .picture {
-        width: 100%;
+      .primary-dentist {
+        margin-top: $breath-size;
+
+        .picture {
+          width: 100%;
+        }
+        .texts {
+
+        }
       }
     }
     .attention-helper {
