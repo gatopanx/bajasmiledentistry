@@ -1374,7 +1374,7 @@ end
   zip_postal_code: '99000',
   testimonial: {
     organization: organization,
-    date: Date.parse('01/01/2015'),
+    date: Date.parse('28/02/2019'),
     long_text: 'Hi I’m robin, I live in california. I just seen Tijuana Smile Dentistry, Irving was my dentist and I’m very please,
     they gave me a crown and everything went very smooth, I would definitely recommend them, they were really friendly and really helpful.',
     rating: nil,
@@ -1390,6 +1390,47 @@ end
         organization: organization,
         description: 'description image',
         payload: payload(File.read('./db/seeds/images/robin-imel.jpg')),
+        title: 'titulo imagen'
+      }
+    ]
+  }
+},
+{
+  organization: organization,
+  date_of_birth: Date.parse('01/01/2000'),
+  city: 'Tijuana',
+  country_code: 'MX',
+  extension: nil,
+  name: 'Ivan Lima',
+  label: 'Home',
+  number: '6647894565',
+  line_1: 'Street 78',
+  line_2: 'Apt b',
+  line_3: nil,
+  address: 'ivanl@microsoft.com',
+  payload: payload(File.read('./db/seeds/images/ivan-lima.jpg')),
+  primary_kind: :CONSUMER,
+  state_province_county: "Baja California",
+  status: :ACTIVE,
+  zip_postal_code: '99000',
+  testimonial: {
+    organization: organization,
+    date: Date.parse('02/03/2019'),
+    long_text: 'Hi, how are you? My name is Ivan I want to recommend you the clinic Tijuana Smile Dentistry, I’ve been doing very well in my Orthodontics Treatment,
+    everything has been really cool, no pain, no troubles, everyone is really helpful, believe me, a pretty smile speaks for you. I really recommend you to come. Thanks.',
+    rating: nil,
+    short_text: 'I’ve been doing very well in my Orthodontics Treatment, everything has been really cool, no pain, no troubles, everyone is really helpful',
+    source: :INTERNAL,
+    status: :ACCEPTED,
+    url: nil,
+    item_keys: [
+      'orthodontics'
+    ],
+    images: [
+      {
+        organization: organization,
+        description: 'description image',
+        payload: payload(File.read('./db/seeds/images/ivan-lima.jpg')),
         title: 'titulo imagen'
       }
     ]
@@ -1723,6 +1764,47 @@ end
           organization: organization,
           description: 'description image',
           payload: payload(File.read('./db/seeds/images/robin-imel.jpg')),
+          title: 'titulo imagen'
+        }
+      ]
+    }
+  },
+  {
+    organization: organization,
+    date_of_birth: Date.parse('15/02/2010'),
+    city: 'Tijuana',
+    country_code: 'MX',
+    extension: nil,
+    name: 'Ivan Lima',
+    label: 'Home',
+    number: '6197854598',
+    line_1: 'Street 423',
+    line_2: 'Apt b',
+    line_3: nil,
+    address: 'ivanlima@hotmail.com',
+    payload: payload(File.read('./db/seeds/images/ivan-lima.jpg')),
+    primary_kind: :CONSUMER,
+    state_province_county: 'Baja California',
+    status: :ACTIVE,
+    zip_postal_code: '22034',
+    testimonial: {
+      organization: organization,
+      date: Date.parse('02/03/2019'),
+      long_text: 'Hi, how are you? My name is Ivan I want to recommend you the clinic Tijuana Smile Dentistry, I’ve been doing very well in my Orthodontics Treatment,
+      everything has been really cool, no pain, no troubles, everyone is really helpful, believe me, a pretty smile speaks for you. I really recommend you to come. Thanks.',
+      rating: 5,
+      short_text: 'I’ve been doing very well in my Orthodontics Treatment, everything has been really cool, no pain, no troubles, everyone is really helpful',
+      source: :EXTERNAL,
+      status: :ACCEPTED,
+      url: 'https://www.youtube.com/embed/z-avjXsE10o',
+      item_keys: [
+        'orthodontics'
+      ],
+      images: [
+        {
+          organization: organization,
+          description: 'description image',
+          payload: payload(File.read('./db/seeds/images/ivan-lima.jpg')),
           title: 'titulo imagen'
         }
       ]
