@@ -22,7 +22,7 @@ end
 
 # ORGANIZATION
 organization = Organization.new(
-  name: 'Tijuana Smile Dentistry',
+  name: 'Baja Smile Dentistry',
   status: :ACTIVE,
   subdomain: 'tijuanasmiledentistry',
   url: 'https://www.youtube.com/embed/Kn7gTevGx6s'
@@ -64,8 +64,8 @@ end
   {
     imageable: organization,
     organization: organization,
-    description: 'Tijuana Smile Dentistry Logo',
-    title: 'Tijuana Smile Dentistry',
+    description: 'Baja Smile Dentistry Logo',
+    title: 'Baja Smile Dentistry',
     payload: payload(logo),
   }
 ].each do |attribute_set|
@@ -800,9 +800,9 @@ end
         internal_price_in_cents: 300*100,
         key: "ITEM_25",
         name: "Down Payment",
-        long_description: "Tijuana Smile Dentistry will design your beautiful smile with affordable prices and low down payment for braces.",
+        long_description: "Baja Smile Dentistry will design your beautiful smile with affordable prices and low down payment for braces.",
         primary_kind: :SERVICE,
-        short_description: "Tijuana Smile Dentistry will design your beautiful smile with affordable prices and low down payment for braces.",
+        short_description: "Baja Smile Dentistry will design your beautiful smile with affordable prices and low down payment for braces.",
         status: :ACTIVE
       },
       {
@@ -812,9 +812,9 @@ end
         internal_price_in_cents: 60*100,
         key: "ITEM_26",
         name: "Monthly Payment",
-        long_description: "Tijuana Smile Dentistry will design your beautiful smile with affordable prices and low down payment for braces.",
+        long_description: "Baja Smile Dentistry will design your beautiful smile with affordable prices and low down payment for braces.",
         primary_kind: :SERVICE,
-        short_description: "Tijuana Smile Dentistry will design your beautiful smile with affordable prices and low down payment for braces.",
+        short_description: "Baja Smile Dentistry will design your beautiful smile with affordable prices and low down payment for braces.",
         status: :ACTIVE
       },
       {
@@ -901,7 +901,7 @@ end
       </p>
       <p>
       He continued his career in the city of Tijuana, where he currently resides and practices,
-      helping over 350 people to smile again, in Tijuana Smile Dentistry he takes the time to
+      helping over 350 people to smile again, in Baja Smile Dentistry he takes the time to
       teach each patient how to care for themselves in order to prevent disease and have the best health possible.
       </p>
     }
@@ -1042,7 +1042,7 @@ end
       short_text: 'I can smile again, I have a quality work done here, they’re very clean and very professional',
       source: :INTERNAL,
       status: :ACCEPTED,
-      url: 'https://www.youtube.com/embed/yrhoz_7qcX4',
+      url: 'https://www.youtube.com/embed/QGYgMjmAbEY',
       item_keys: [
         'crowns'
       ],
@@ -1162,7 +1162,7 @@ end
     testimonial: {
       organization: organization,
       date: Date.parse('01/01/2015'),
-      long_text: 'Great Orthodontist! Everyone is so pleasant and professional, they care about you and make you feel safe. I recommend 100% Tijuana Smile Dentistry',
+      long_text: 'Great Orthodontist! Everyone is so pleasant and professional, they care about you and make you feel safe. I recommend 100% Baja Smile Dentistry',
       rating: nil,
       short_text: 'Great Orthodontist! Everyone is so pleasant and professional, I am loving my new smile',
       source: :INTERNAL,
@@ -1202,7 +1202,7 @@ end
     testimonial: {
       organization: organization,
       date: Date.parse('01/01/2015'),
-      long_text: 'I feel very comfortable with my new dental bridge, they treated my very well and were very kind, I would recommend Tijuana Smile Dentistry to my friends.',
+      long_text: 'I feel very comfortable with my new dental bridge, they treated my very well and were very kind, I would recommend Baja Smile Dentistry to my friends.',
       rating: nil,
       short_text: 'I feel very comfortable with my new dental bridge',
       source: :INTERNAL,
@@ -1242,7 +1242,7 @@ end
     testimonial: {
       organization: organization,
       date: Date.parse('01/01/2015'),
-      long_text: 'Im very grateful with Dr. Irving, I’m happy with my dental work and I would totally recommend Tijuana Smile Dentistry to my family.',
+      long_text: 'Im very grateful with Dr. Irving, I’m happy with my dental work and I would totally recommend Baja Smile Dentistry to my family.',
       rating: nil,
       short_text: 'I’m happy with my dental work',
       source: :INTERNAL,
@@ -1288,7 +1288,7 @@ end
     testimonial: {
       organization: organization,
       date: Date.parse('01/01/2015'),
-      long_text: 'My wife came here four months ago and they did great work on her, so I came to Tijuana Smile Dentistry too, they are very professional and treated me very well.',
+      long_text: 'My wife came here four months ago and they did great work on her, so I came to Baja Smile Dentistry too, they are very professional and treated me very well.',
       rating: nil,
       short_text: 'They are very professional and treated me very well',
       source: :INTERNAL,
@@ -1375,7 +1375,7 @@ end
   testimonial: {
     organization: organization,
     date: Date.parse('28/02/2019'),
-    long_text: 'Hi I’m robin, I live in california. I just seen Tijuana Smile Dentistry, Irving was my dentist and I’m very please,
+    long_text: 'Hi I’m Robin, I live in california. I just seen Baja Smile Dentistry, Irving was my dentist and I’m very please,
     they gave me a crown and everything went very smooth, I would definitely recommend them, they were really friendly and really helpful.',
     rating: nil,
     short_text: 'I’m very please, they gave me a crown and everything went very smooth.',
@@ -1416,7 +1416,7 @@ end
   testimonial: {
     organization: organization,
     date: Date.parse('02/03/2019'),
-    long_text: 'Hi, how are you? My name is Ivan I want to recommend you the clinic Tijuana Smile Dentistry, I’ve been doing very well in my Orthodontics Treatment,
+    long_text: 'Hi, how are you? My name is Ivan I want to recommend you the clinic Baja Smile Dentistry, I’ve been doing very well in my Orthodontics Treatment,
     everything has been really cool, no pain, no troubles, everyone is really helpful, believe me, a pretty smile speaks for you. I really recommend you to come. Thanks.',
     rating: nil,
     short_text: 'I’ve been doing very well in my Orthodontics Treatment, everything has been really cool, no pain, no troubles, everyone is really helpful',
@@ -1624,7 +1624,7 @@ end
       short_text: 'I can smile again, I have a quality work done here, they’re very clean and very professional',
       source: :EXTERNAL,
       status: :ACCEPTED,
-      url: 'https://www.youtube.com/embed/yrhoz_7qcX4',
+      url: 'https://www.youtube.com/embed/QGYgMjmAbEY',
       item_keys: [
         'crowns'
       ],
@@ -1665,7 +1665,7 @@ end
       short_text: 'The doctor is very patient, he takes the time to explain what we need',
       source: :EXTERNAL,
       status: :ACCEPTED,
-      url: 'https://www.youtube.com/embed/k161HXvnznI',
+      url: 'https://www.youtube.com/embed/v_ZCyUDAxgg',
       item_keys: [
         'crowns'
       ],
@@ -1714,7 +1714,7 @@ end
       short_text: 'The customer service is formidable, I was attended by a very nice lady, and the doctor is incredibly patient',
       source: :EXTERNAL,
       status: :ACCEPTED,
-      url: 'https://www.youtube.com/embed/9-MmPHcK9Jw',
+      url: 'https://www.youtube.com/embed/e3sRCgKJnNY',
       item_keys: [
         'root_canal'
       ],
@@ -1749,13 +1749,13 @@ end
     testimonial: {
       organization: organization,
       date: Date.parse('28/02/2019'),
-      long_text: 'Hi I’m robin, I live in california. I just visit Tijuana Smile Dentistry, Irving was my dentist and I’m very please,
+      long_text: 'Hi I’m Robin, I live in california. I just visited Baja Smile Dentistry, Irving was my dentist and I’m very please,
       they gave me a crown and everything went very smooth, I would definitely recommend them, they were really friendly and really helpful.',
       rating: 5,
       short_text: 'I’m very please, they gave me a crown and everything went very smooth, I would definitely recommend them',
       source: :EXTERNAL,
       status: :ACCEPTED,
-      url: 'https://www.youtube.com/embed/JJzZr2X0gWE',
+      url: 'https://www.youtube.com/embed/byUOdMxwVGo',
       item_keys: [
         'dental_implants'
       ],
@@ -1784,19 +1784,19 @@ end
     address: 'ivanlima@hotmail.com',
     payload: payload(File.read('./db/seeds/images/ivan-lima.jpg')),
     primary_kind: :CONSUMER,
-    state_province_county: 'Baja California',
+    state_province_county: 'Baja  California',
     status: :ACTIVE,
     zip_postal_code: '22034',
     testimonial: {
       organization: organization,
       date: Date.parse('02/03/2019'),
-      long_text: 'Hi, how are you? My name is Ivan I want to recommend you the clinic Tijuana Smile Dentistry, I’ve been doing very well in my Orthodontics Treatment,
+      long_text: 'Hi, how are you? My name is Ivan I want to recommend you the clinic Baja Smile Dentistry, I’ve been doing very well in my Orthodontics Treatment,
       everything has been really cool, no pain, no troubles, everyone is really helpful, believe me, a pretty smile speaks for you. I really recommend you to come. Thanks.',
       rating: 5,
       short_text: 'I’ve been doing very well in my Orthodontics Treatment, everything has been really cool, no pain, no troubles, everyone is really helpful',
       source: :EXTERNAL,
       status: :ACCEPTED,
-      url: 'https://www.youtube.com/embed/z-avjXsE10o',
+      url: 'https://www.youtube.com/embed/L14krgC0ztI',
       item_keys: [
         'orthodontics'
       ],
@@ -1837,7 +1837,7 @@ end
       short_text: 'My experience in the clinic is they do a very good job, It’s a good clinic, I like how they work and the experience with my brackets',
       source: :EXTERNAL,
       status: :ACCEPTED,
-      url: 'https://www.youtube.com/embed/4MhTI15sNow',
+      url: 'https://www.youtube.com/embed/PJf6zuX3ApY',
       item_keys: [
         'root_canal'
       ],
