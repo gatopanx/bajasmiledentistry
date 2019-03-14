@@ -1042,7 +1042,7 @@ end
       short_text: 'I can smile again, I have a quality work done here, they’re very clean and very professional',
       source: :INTERNAL,
       status: :ACCEPTED,
-      url: 'https://www.youtube.com/embed/QGYgMjmAbEY',
+      url: 'https://www.youtube.com/embed/oGvSov_LFLc',
       item_keys: [
         'crowns'
       ],
@@ -1624,7 +1624,7 @@ end
       short_text: 'I can smile again, I have a quality work done here, they’re very clean and very professional',
       source: :EXTERNAL,
       status: :ACCEPTED,
-      url: 'https://www.youtube.com/embed/QGYgMjmAbEY',
+      url: 'https://www.youtube.com/embed/oGvSov_LFLc',
       item_keys: [
         'crowns'
       ],
@@ -1665,7 +1665,7 @@ end
       short_text: 'The doctor is very patient, he takes the time to explain what we need',
       source: :EXTERNAL,
       status: :ACCEPTED,
-      url: 'https://www.youtube.com/embed/v_ZCyUDAxgg',
+      url: 'https://www.youtube.com/embed/4NsfsRun4_c',
       item_keys: [
         'crowns'
       ],
@@ -1714,7 +1714,7 @@ end
       short_text: 'The customer service is formidable, I was attended by a very nice lady, and the doctor is incredibly patient',
       source: :EXTERNAL,
       status: :ACCEPTED,
-      url: 'https://www.youtube.com/embed/e3sRCgKJnNY',
+      url: 'https://www.youtube.com/embed/WMsq9J3ICMY',
       item_keys: [
         'root_canal'
       ],
@@ -1755,7 +1755,7 @@ end
       short_text: 'I’m very please, they gave me a crown and everything went very smooth, I would definitely recommend them',
       source: :EXTERNAL,
       status: :ACCEPTED,
-      url: 'https://www.youtube.com/embed/byUOdMxwVGo',
+      url: 'https://www.youtube.com/embed/F261O5P0JTE',
       item_keys: [
         'dental_implants'
       ],
@@ -1796,7 +1796,7 @@ end
       short_text: 'I’ve been doing very well in my Orthodontics Treatment, everything has been really cool, no pain, no troubles, everyone is really helpful',
       source: :EXTERNAL,
       status: :ACCEPTED,
-      url: 'https://www.youtube.com/embed/L14krgC0ztI',
+      url: 'https://www.youtube.com/embed/gw8G6ssQHMw',
       item_keys: [
         'orthodontics'
       ],
@@ -1837,7 +1837,7 @@ end
       short_text: 'My experience in the clinic is they do a very good job, It’s a good clinic, I like how they work and the experience with my brackets',
       source: :EXTERNAL,
       status: :ACCEPTED,
-      url: 'https://www.youtube.com/embed/PJf6zuX3ApY',
+      url: 'https://www.youtube.com/embed/j8KR0JL6BWY',
       item_keys: [
         'root_canal'
       ],
