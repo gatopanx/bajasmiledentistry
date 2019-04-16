@@ -240,7 +240,7 @@ organization.save || binding.pry
     primary_kind: :SERVICE,
     short_description: "Dental implants are an effective way to replace missing teeth. Dental Implants are small posts, usually made of titanium, that is surgically positioned into the jawbone beneath your gums.", # Setear
     status: :ACTIVE,
-    url: 'https://www.youtube.com/embed/ai3NnJnbfoo'
+    url: 'https://www.youtube.com/embed/2ceoTpHXDWQ'
   },
   {
     category: nil,
@@ -343,7 +343,7 @@ organization.save || binding.pry
     primary_kind: :SERVICE,
     short_description: "Orthodontics is the branch of dentistry that corrects teeth and jaws that are positioned improperly. Crooked teeth and bite problems are solved with orthodontic treatment", # Setear
     status: :ACTIVE,
-    url: 'https://www.youtube.com/embed/SUQO3zXoV90'
+    url: 'https://www.youtube.com/embed/vWevPnieia8'
   },
   {
     category: nil,
@@ -383,7 +383,7 @@ organization.save || binding.pry
     primary_kind: :SERVICE,
     short_description: "Endodontics is the branch that specializes in the root canal and other endodontic treatments, millions of teeth are treated and save with root canal, relieving pain and making teeth healthy again.", # Setear
     status: :ACTIVE,
-    url: 'https://www.youtube.com/embed/liH3bvmmwAs'
+    url: 'https://www.youtube.com/embed/WojDxKZCcXQ'
   },
   {
     category: nil,
