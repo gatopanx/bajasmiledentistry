@@ -66,7 +66,7 @@ module Website
       ).where.not(
         name: [
           'Irving Cota',
-          'Marcia Bustamante'
+          'Marcia Bustamante',
           'Aldo Sanchez'
         ]
       )
