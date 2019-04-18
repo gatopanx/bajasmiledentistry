@@ -55,7 +55,8 @@ module Website
       .where(
         name: [
           'Irving Cota',
-          'Marcia Bustamante'
+          'Marcia Bustamante',
+          'Aldo Sanchez'
         ]
       )
       @secondary_producers = Person.where(
@@ -66,6 +67,7 @@ module Website
         name: [
           'Irving Cota',
           'Marcia Bustamante'
+          'Aldo Sanchez'
         ]
       )
       @external_testimonials = Testimonial.where(

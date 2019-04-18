@@ -922,7 +922,26 @@ end
       and continued her studies at El Bosque University, Colombia in 2012 and Nova Southeastern University at Fort Lauderdale, Florida in 2013.
       Then she earn her Master Degree in Endodontics at the Autonomous University of Tlaxcala in 2012.
       </p>
-
+    }
+  },
+  {
+    organization: organization,
+    date_of_birth: Date.parse("01/01/1984"),
+    name: "Aldo Sanchez",
+    payload: payload(File.read('./db/seeds/images/aldo-sanchez.jpg')),
+    primary_kind: :PRODUCER,
+    status: :ACTIVE,
+    biography: %{
+      <h5>Autonomous University of Guadalajara</h5>
+      <h6>Doctor of Dental Surgery Degree (1997-2002)</h6>
+      <hr/>
+      <p>
+      Doctor Aldo Sanchez was born in Culiacán, Sinaloa, he studied at the Autonomous University of Guadalajara where he earn his Doctor of Dental Surgery Degree in 2002,
+      Dr. Sanchez continued his education in 2005 getting his Master Degree in Periodontics and Oral Implantology in 2006. He is founder of the Periodontics Association of Sinaloa since 2006.
+      </p>
+      <p>
+      Nowadays he resides and practices in the city of Tijuana where he can help hundreds of people to get back their smile.
+      </p>
     }
   },
   {
