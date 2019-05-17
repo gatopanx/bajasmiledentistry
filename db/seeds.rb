@@ -118,53 +118,55 @@ organization.save || binding.pry
     long_description: %{
     <h5>What is a Dental Crown?</h5>
     <p>
-      A crown is a tooth-shaped cover or cap placed over a tooth that is badly damaged by decayed,
-      as a result, a filling can’t replace enough of the tooth or make the tooth strong enough, crowns can be used to improve appearance as well. The crown restores the tooth to its normal shape and function.
+      A dental crown is a tooth-shaped cover or cap placed over a tooth that is too damaged by decayed for a dental filling
+      to adequately support or replace the mission portion; crowns can be used to improve appearance, as well. A crown restores
+      the tooth to its normal shape and function.
     </p>
 
     <p>
-      Crowns are made to blend the color of your teeth and are made from different materials:
+      Crowns are made to blend with the color of your teeth and are made from different materials:
     </p>
 
     <ul>
       <li>Metal</li>
       <li>Zirconia</li>
-      <li>Porcelain (fuse to metal or zirconia)</li>
-      <li>Ceramic.</li>
+      <li>Porcelain (fused to metal or zirconia)</li>
+      <li>Ceramic</li>
     </ul>
     <p>
-      To decide on the material for your crown you may consider the location of your tooth,
-      the position of the gum, the function of the tooth,  the patient budget and preference.
+      In order to determine the material that fits your crown needs, it is best to consider the location of the damaged tooth,
+      the relative position of the gum, the function of the tooth, and your personal budget and preference.
     </p>
 
     <h5>How does Dental Crowns Work?</h5>
     <ol>
       <li>
-        Your tooth has to be prepared by removing its outer portion and any decay part so the crown will fit.
+        Your tooth needs to be prepared by removing its outer portion and any decayed parts to ensure the crown will fit.
       </li>
       <li>
-        An impression is made to get an exact model for the crown.
+        A dental impression is made to get an exact model for the crown.
       </li>
       <li>
-        You will get a temporary crown while you get your permanent crown ready, this takes less than two weeks.
+        You will be provided with a temporary crown while your permanent crown is elaborated; the process takes less than two weeks.
       </li>
       <li>
-        When your permanent crown is ready, the dentist places it in your mouth and makes the necessary adjustments.
+        When your permanent crown is ready, the dentist installs it in your tooth and makes the necessary adjustments.
       </li>
       <li>
-        When you and your dentist are satisfied with how it looks and feels, the crown is cemented in place.
+        When you and your dentist are satisfied with how it looks, feels, and functions, the crown is cemented in place.
       </li>
     </ol>
 
     <h5>How Long does Crown Last?</h5>
     <p>
-      Crowns usually last at least 7 years. In many cases, they last much longer, up to 40 years.
-      In many cases the crown is fine, but the tooth underneath it has developed a cavity.
-      Therefore, maintaining good oral hygiene will help your crown last longer.
+      Crowns usually last at least 7 years. In many cases, they last much longer, up to 40 years. In some cases, the crown itself
+      remains in prime state, but the tooth underneath it develops a cavity. Therefore, maintaining proper oral hygiene will help
+      your dental crown work last longer.
     </p>
     }, # Setear
     primary_kind: :SERVICE,
-    short_description: "A crown is a tooth-shaped cover or cap placed over a tooth that is badly damaged by decayed, as a result, a filling can’t replace enough of the tooth or make the tooth strong enough, crowns can be used to improve appearance as well.", # Setear
+    short_description: "A dental crown is a tooth-shaped cover or cap placed over a tooth that is too damaged by decayed for a dental filling
+    to adequately support or replace the mission portion.", # Setear
     status: :ACTIVE,
     url: 'https://www.youtube.com/embed/4iWVLeIn9Qg'
   },
@@ -179,9 +181,9 @@ organization.save || binding.pry
     long_description: %{
     <h5>What is a Dental Implant?</h5>
     <p>
-      Dental implants are an effective way to replace missing teeth. Dental Implants are small posts,
-      usually made of titanium, that is surgically positioned into the jawbone beneath your gums.
-      Once in place, they become a sturdy base for supporting one or more artificial teeth, called crowns.
+      Dental implants are an effective way to replace missing teeth. Dental implants are small posts—usually made
+      of titanium—that are surgically inserted into the jawbone beneath the gum. Once in place, they become a sturdy
+      base for supporting artificial teeth, called crowns.
     </p>
 
     <p>
@@ -190,42 +192,40 @@ organization.save || binding.pry
 
     <dl>
       <dt>Endosteal Implants:</dt>
-      <dd>These are surgically implanted directly into the jawbone. Once the gum tissue is healed,
-      a second surgery is needed to connect a post to the original implants. Finally,
-      an artificial tooth is attached.
+      <dd>
+        These are surgically implanted directly into the jawbone. Once the gum tissue is healed, a second surgery
+        is needed to connect a post to the original implants. Finally, an artificial tooth is attached.
       </dd>
       <dt>Subperiosteal Implants:</dt>
-      <dd>These consist of a metal frame that is fitted onto the jawbone just below
-      the gum tissue. When the gum is healed the frame becomes fixed to the jawbone.
-      Posts are attached to the frame, and finally, teeth are mounted to the posts.
+      <dd>
+        These consist of a metal frame that is fitted onto the jawbone below the gum tissue. When the gum is healed
+        the frame becomes fixed to the jawbone. Posts are attached to the frame, and finally, teeth are mounted onto the posts.
       </dd>
     </dl>
 
     <h5>Why Dental Implants?</h5>
     <p>
-      Dental Implants improve your quality of life, they will help you to
-      live your life the way you’re used to by replacing missing teeth.
+      Dental Implants improve your quality of life: they help you to live your life the way you are used to by replacing missing teeth.
     </p>
     <ul>
       <li>
-        Dental Implants can restore almost 100% of your chewing power.
+        Dental implants can restore almost 100% of your chewing strength.
       </li>
       <li>
-        Dental Implants will be a permanent part of your life.
+        Dental implants become a permanent part of your life.
       </li>
       <li>
-        Dental Implants will keep your good oral health
+        Dental implants help maintain good oral health.
       </li>
       <li>
-        Dental Implants are designed to get you a boost of self-confidence
+        Dental implants are aesthetically designed to boost yourself-confidence.
       </li>
     </ul>
 
     <h5>How do Dental Implants work?</h5>
     <ol>
       <li>
-        Dental implants are placed in your jawbone to bond with your natural bone
-        and become a sturdy base for supporting one or more artificial teeth.
+        Dental implants are placed in your jawbone to bond with your natural bone and become a sturdy base for supporting artificial teeth.
       </li>
       <li>
         A connector is placed on top of the dental implant to hold and support your crowns.
@@ -233,12 +233,11 @@ organization.save || binding.pry
     </ol>
 
     <p>
-      Implants are more expensive than other methods of tooth replacement,
-      but they are more closely simulate the appearance and function of natural teeth.
+      Implants are more expensive than other methods of tooth replacement, but they better emulate the appearance and function of natural teeth.
     </p>
     }, # Setear
     primary_kind: :SERVICE,
-    short_description: "Dental implants are an effective way to replace missing teeth. Dental Implants are small posts, usually made of titanium, that is surgically positioned into the jawbone beneath your gums.", # Setear
+    short_description: "Dental implants are small posts—usually made of titanium—that are surgically inserted into the jawbone beneath the gum.", # Setear
     status: :ACTIVE,
     url: 'https://www.youtube.com/embed/DoI97MAlnXs'
   },
@@ -253,12 +252,13 @@ organization.save || binding.pry
     long_description: %{
     <h5>What are Dentures?</h5>
     <p>
-      If you have lost some or all of your natural teeth, dentures can replace it and improve your quality of life.
-      Dentures are replacements for missing teeth that can be taken out and put back into your mouth,
-      today’s dentures are natural looking and more comfortable than ever.
+      If you have lost some or all of your natural teeth, dentures can replace them and improve your quality of life.
+      Dentures are replacements for missing teeth; they can be removed and reinserted at leisure. Today’s dentures are
+      natural-looking and more comfortable than ever.
     </p>
+
     <p>
-      Dentures can be full and partial, this depends on how many of your teeth are going to be replaced.
+      Dentures can be full or partial depending on how many teeth they are replacing.
     </p>
 
     <h5>How do Dentures Work?</h5>
@@ -266,26 +266,28 @@ organization.save || binding.pry
       With full dentures, a flesh-colored acrylic base fits over your gums. The base of the upper denture covers the palate,
       while that of the lower denture is shaped like a horseshoe to accommodate your tongue.
     </p>
+
     <p>
       Dentures are custom-made in a dental laboratory from impressions taken of your mouth.
     </p>
 
     <h5>How Long do Dentures Last?</h5>
     <p>
-      The normal lifetime of dentures is about 5 to 10 years, but this depends on the patient,
-      our mouth changes naturally with age, your jawline up differently as bones and gums ridges recede and shrink.
+      The average lifespan of dentures ranges between 5 and 10 years depending on the patient:
+      the mouth changes naturally with age, and so do jawlines, as bones and gum ridges recede and shrink.
     </p>
 
     <h5>Tips to get used to your dentures</h5>
     <ol>
-      <li>Begin by eating soft foods in small pieces.</li>
-      <li>Give yourself time to get used to your dentures.</li>
-      <li>Practice eating and speaking your denture.</li>
+      <li>Begin by eating soft foods in small pieces, initially.</li>
+      <li>Give yourself time to adapt to the feeling of your dentures.</li>
+      <li>Practice eating and speaking with your dentures.</li>
       <li>Visit your dentist regularly.</li>
     </ol>
     }, # Setear
     primary_kind: :SERVICE,
-    short_description: "Dentures are replacements for missing teeth that can be taken out and put back into your mouth, today’s dentures are natural looking and more comfortable than ever.", # Setear
+    short_description: "Dentures are replacements for missing teeth; they can be removed and reinserted at leisure.
+    Today’s dentures are natural-looking and more comfortable than ever.", # Setear
     status: :ACTIVE,
     url: 'https://www.youtube.com/embed/4iWVLeIn9Qg'
   },
@@ -300,48 +302,50 @@ organization.save || binding.pry
     long_description: %{
     <h5>What is Orthodontics?</h5>
     <p>
-      Orthodontics is the branch of dentistry that corrects teeth and jaws that are positioned improperly.
-      Crooked teeth and bite problems are solved with orthodontic treatment, the most common one is braces.
+      Orthodontics is the branch of dentistry that corrects teeth and jaws that are inadequately positioned.
+      Crooked teeth and bite problems are solved with orthodontic procedures—the most common one is braces.
     </p>
+
     <p>
-      Braces move teeth by applying pressure. This treatment consists of small brackets cemented to your teeth,
-      connected by a wire or rubber bands. The brackets may be metal or tooth colored.
-      Braces are available for patients of all ages.
+    Braces reposition teeth by applying pressure. The procedure consists of small brackets cemented between your teeth,
+    connected by wire or rubber bands. Brackets can have metallic or tooth coloring. Braces are available for patients of all ages.
     </p>
+
     <p>
-      Aligners are made of plastic or acrylic material and are worn over your teeth to straighten them.
-      Aligners are worn only for a few weeks then you need to get a new set for the next stage of your treatment.
-      Aligners are available for teens and adults.
+    Aligners are made of plastic or acrylic materials and are worn over teeth to straighten them.
+    Aligners are worn only for a few weeks, after which it is necessary to progress to a new, updated set for the next stage of the treatment.
+    Aligners are available for teens and adults.
     </p>
+
     <h5>What are the benefits of orthodontics?</h5>
     <p>
-      The benefits of this treatment is a healthier mouth, a beautiful smile, and teeth
-      that are more likely to last a lifetime. Orthodontic treatment can be used to correct a bad bite.
-      Your teeth, jaws, gums and facial muscles work together to help you chew, speak and smile.
+    The benefits of orthodontic treatment are an improved oral health, a beautiful smile, and teeth with improved longevity.
+    Orthodontic treatment can be used to correct a bad bite pattern.
+    Your teeth, jaws, gums and facial muscles work together when you chew, speak and smile.
     </p>
 
     <h5>Tips for Orthodontics</h5>
     <ul>
       <li>
-        Keep your teeth clean when wearing braces
+        Keep your teeth clean throughout the day while wearing braces.
       </li>
       <li>
-        Don’t eat foods that could get stuck in your braces or bend the wires, don’t eat too many sugary foods this can lead to decay around the brackets that could stain or damage your teeth.
+        Do not eat foods that could get stuck in your braces or bend their wires; do not eat too many sugary foods,
+        as this can lead to decay around the brackets that could stain or damage your teeth.
       </li>
       <li>
-        Go to all your orthodontics appointments, so your treatment won’t take long.
+        Attend all your regular dentist appointments, so your treatment progresses at an adequate pace.
       </li>
     </ul>
 
     <h5>Orthodontics AR4</h5>
     <p>
-      This system offers you a short term treatment, so you can save money and time.
-      It doesn’t hurt in root level, AR4 combines the best of 4 orthodontics systems:
-      Roth, Damon, Andrews, and MBT.
+      This system offers you a short term treatment in order for you to save money and time.
+      It does generate any damage at root level. AR4 combines the best of four orthodontics systems: Roth, Damon, Andrews, and MBT.
     </p>
     }, # Setear
     primary_kind: :SERVICE,
-    short_description: "Orthodontics is the branch of dentistry that corrects teeth and jaws that are positioned improperly. Crooked teeth and bite problems are solved with orthodontic treatment", # Setear
+    short_description: "Orthodontics is the branch of dentistry that corrects teeth and jaws that are inadequately positioned.", # Setear
     status: :ACTIVE,
     url: 'https://www.youtube.com/embed/FIIMu6rqlDQ'
   },
@@ -356,32 +360,32 @@ organization.save || binding.pry
     long_description: %{
     <h5>What is a Root Canal?</h5>
     <p>
-      Endodontics deals with treating diseases or injuries to the dental pulp. Endodontics is the branch that specializes
-      in the root canal and other endodontic treatments, millions of teeth are treated and save with root canal, relieving
-      pain and making teeth healthy again.
+    Endodontics deals with treating diseases or injuries in the dental pulp. Endodontics is the branch that specializes
+    in the root canals among other treatments; millions of teeth are treated and saved with root canals, relieving pain
+    and making teeth healthy again.
     </p>
 
     <h5>How Does Root Canal Work?</h5>
     <p>
-      Root canals are needed when there is an infection within the tooth. Without treatment,
-      the infection can become severe enough that the tooth has to be removed.
+    Root canals are needed when there is an infection within the tooth. Without treatment, the infection can become severe
+    enough that the tooth has to be removed.
     </p>
     <ol>
-      <li>The endodontist administers local anesthesia to numb the tooth.</li>
-      <li>Next, the dentist will drill creating an opening to access the inside of the tooth.</li>
-      <li>Clear away the damaged and diseased pulp.</li>
-      <li>Once the tooth is cleaned and dried, the opening will be closed with a temporary filling. </li>
-      <li>When the treatment is finished the filling will be replaced by a permanent crown.</li>
+      <li>The endodontist administers local anesthesia to numb the tooth’s region.</li>
+      <li>The dentist performs drilling to create a small opening to access the inside of the tooth.</li>
+      <li>The damaged and diseased pulp tissue is removed.</li>
+      <li>Once the tooth is cleaned and dried, the opening is closed with a temporary filling.</li>
+      <li>When the treatment is finished, the filling is replaced by a permanent crown.</li>
     </ol>
 
     <h5>How long will the restored tooth last?</h5>
     <p>
     With proper care, most teeth that have had root canal treatment can last a lifetime.
-    You have to keep good dental health and regular dental exams.
+    You do need, however, to keep good dental health and follow up regular dental exams.
     </p>
     }, # Setear
     primary_kind: :SERVICE,
-    short_description: "Endodontics is the branch that specializes in the root canal and other endodontic treatments, millions of teeth are treated and save with root canal, relieving pain and making teeth healthy again.", # Setear
+    short_description: "Endodontics is the branch that specializes in the root canals among other treatments; millions of teeth are treated and saved with root canals", # Setear
     status: :ACTIVE,
     url: 'https://www.youtube.com/embed/WojDxKZCcXQ'
   },
@@ -396,8 +400,9 @@ organization.save || binding.pry
     long_description: %{
     <h5>What Is Teeth Whitening?</h5>
     <p>
-      Tooth whitening lightens teeth and helps to remove stains and discoloration. Whitening is among the most popular cosmetic dental procedures.
-      This treatment is ideal for people who have healthy teeth and gums and want the restoration of a natural tooth shade.
+      Tooth whitening is a procedure that whitens teeth coloration and helps to remove stains and discoloration.
+      Whitening is among the most popular cosmetic dental procedures. This treatment is ideal for people who have healthy
+      teeth and gums and want to restore a natural shade of white to their teeth.
     </p>
     <p>
       There are many teeth whitening systems and products including whitening toothpaste, over-the-counter gels, rinses, strips,
@@ -406,15 +411,15 @@ organization.save || binding.pry
 
     <h5>Benefits and Risks of Teeth Whitening</h5>
     <p>
-      This treatment has a few side effects like tooth sensitivity and gum irrigation,
-      but this discomfort typically lasts no more than a few days.
+      This treatment has a few side effects like tooth sensitivity and gum irritation,
+      but said discomfort typically lasts a few days at most.
     </p>
     <p>
-      Whitening is not a one-time procedure. It will need to be repeated from time to time if you want to maintain a brighter color.
+      Whitening is not a one-time procedure: it will need to be repeated from time to time if you want to maintain a brighter color.
     </p>
     }, # Setear
     primary_kind: :SERVICE,
-    short_description: "Endodontics is the branch that specializes in the root canal and other endodontic treatments, millions of teeth are treated and save with root canal, relieving pain and making teeth healthy again.", # Setear
+    short_description: "Tooth whitening is a procedure that whitens teeth coloration and helps to remove stains and discoloration.", # Setear
     status: :ACTIVE,
     url: 'https://www.youtube.com/embed/Q1FdspIYMXE'
   },
@@ -895,14 +900,14 @@ end
       <h6>Doctor of Dental Surgery Degree (2009-2014)</h6>
       <hr/>
       <p>
-      Doctor Irving Cota was born and raised in the city of Los Mochis,
-      where he went to earn his Doctor of Dental Surgery Degree(2009) at the Autonomous University of Sinaloa.
-      Dr. Cota continued his education with coursework in Orthodontics and Fixed Prosthesis (2014).
+      Doctor Irving Cota was born and raised in the city of Los Mochis, where he earned his
+      Doctor of Dental Surgery degree (2009) at the Autonomous University of Sinaloa. Dr. Cota
+      continued his education with coursework in Orthodontics and Fixed Prosthesis (2014).
       </p>
       <p>
-      He continued his career in the city of Tijuana, where he currently resides and practices,
-      helping over 350 people to smile again, in Baja Smile Dentistry he takes the time to
-      teach each patient how to care for themselves in order to prevent disease and have the best health possible.
+      He now continues his career in the city of Tijuana, where he currently resides and practices,
+      having helped over 350 people smile again; in Baja Smile Dentistry, he takes the time to teach
+      each patient how to care for themselves in order to prevent disease and have the best health possible.
       </p>
     }
   },
@@ -918,9 +923,10 @@ end
       <h6>Doctor of Dental Surgery Degree (2004-2009)</h6>
       <hr/>
       <p>
-      Doctor Marcia Bustamante studied at the Autonomous University of Baja California where she earn her Doctor of Dental Surgery Degree,
-      and continued her studies at El Bosque University, Colombia in 2012 and Nova Southeastern University at Fort Lauderdale, Florida in 2013.
-      Then she earn her Master Degree in Endodontics at the Autonomous University of Tlaxcala in 2012.
+      Doctor Marcia Bustamante studied at the Autonomous University of Baja California where she earned her
+      Doctor of Dental Surgery Degree, and then continued her studies at El Bosque University, Colombia, in 2012,
+      and in Nova Southeastern University, Fort Lauderdale, Florida, in 2013. Then she earned her Master’s Degree
+      in Endodontics at the Autonomous University of Tlaxcala in 2012.
       </p>
     }
   },
@@ -936,11 +942,13 @@ end
       <h6>Doctor of Dental Surgery Degree (1997-2002)</h6>
       <hr/>
       <p>
-      Doctor Aldo Sanchez was born in Culiacán, Sinaloa, he studied at the Autonomous University of Guadalajara where he earn his Doctor of Dental Surgery Degree in 2002,
-      Dr. Sanchez continued his education in 2005 getting his Master Degree in Periodontics and Oral Implantology in 2006. He is founder of the Periodontics Association of Sinaloa since 2006.
+      Doctor Aldo Sanchez was born in Culiacán, Sinaloa. He studied at the Autonomous University of Guadalajara,
+      where he earned his Doctor of Dental Surgery Degree in 2002. Dr. Sanchez continued his education in 2005,
+      achieving his Master’s Degree in Periodontics and Oral Implantology in 2006. He was the founder of the Periodontics
+      Association of Sinaloa in 2006.
       </p>
       <p>
-      Nowadays he resides and practices in the city of Tijuana where he can help hundreds of people to get back their smile.
+      Nowadays, he resides and practices in the city of Tijuana, where he has helped hundreds of people to get back their smile.
       </p>
     }
   },
@@ -1056,9 +1064,9 @@ end
     testimonial: {
       organization: organization,
       date: Date.parse('01/01/2015'),
-      long_text: 'I can smile again, I have a quality work done here, they’re very clean and very professional.I recommend them a 100% Clean, good work, I’m very happy',
+      long_text: 'I can smile again. I had a quality work done here; they’re very clean and very professional. I recommend them a 100% Clean, good work, I’m very happy.',
       rating: nil,
-      short_text: 'I can smile again, I have a quality work done here, they’re very clean and very professional',
+      short_text: 'I can smile again. I had a quality work done here; they’re very clean and very professional.',
       source: :INTERNAL,
       status: :ACCEPTED,
       url: 'https://www.youtube.com/embed/oGvSov_LFLc',
@@ -1096,8 +1104,8 @@ end
     testimonial: {
       organization: organization,
       date: Date.parse('01/01/2015'),
-      long_text: 'I had a discomfort in a molar piece, they did 2 extractions and I’m in the process of putting on crowns and making a new bridge.
-      My experience has been very good, with all the staff. The doctor is very patient, he takes the time to explain what we need, he is very honest and he is very kind and conscientious of us as patients and from our pockets.',
+      long_text: 'I felt discomfort in a molar piece, they did 2 extractions and I’m in the process of putting on crowns and making a new bridge.
+      My experience has been very good, with all the staff. The doctor is very patient, he takes the time to explain what we need, he is very honest and he is very kind and conscious of us as patients and from our pockets.',
       rating: nil,
       short_text: 'The doctor is very patient, he takes the time to explain what we need',
       source: :INTERNAL,
@@ -1353,8 +1361,8 @@ end
   testimonial: {
     organization: organization,
     date: Date.parse('28/02/2019'),
-    long_text: 'I am doing brackets they’re fixing to get implants. My experience in the clinic is they do a very good job, It’s a good clinic, I like how they work and the experience with my brackets.
-    The doctors are nice here, they do a very good job and I like how they work. I would definitely recommend this clinic for other patients, good being here, and really good.',
+    long_text: 'I am doing brackets; they’re fixing to get implants. My experience in the clinic is that they do a very good job. It’s a good clinic. I like how they work and the experience with my brackets.
+    The doctors are nice here, they do a very good job and I like how they work. I would definitely recommend this clinic for other patients. Good being here, and really good.',
     rating: nil,
     short_text: 'The doctors are nice here, they do a very good job and I like how they work.',
     source: :INTERNAL,
@@ -1394,10 +1402,10 @@ end
   testimonial: {
     organization: organization,
     date: Date.parse('28/02/2019'),
-    long_text: 'Hi I’m Robin, I live in california. I just seen Baja Smile Dentistry, Irving was my dentist and I’m very please,
-    they gave me a crown and everything went very smooth, I would definitely recommend them, they were really friendly and really helpful.',
+    long_text: 'Hi I’m Robin, I live in california. I just visited Baja Smile Dentistry, Irving was my dentist and I’m very pleased.
+    They gave me a crown and everything went very smooth; I would definitely recommend them. They were really friendly and really helpful.',
     rating: nil,
-    short_text: 'I’m very please, they gave me a crown and everything went very smooth.',
+    short_text: 'I’m very pleased. They gave me a crown and everything went very smooth.',
     source: :INTERNAL,
     status: :ACCEPTED,
     url: nil,
@@ -1435,10 +1443,10 @@ end
   testimonial: {
     organization: organization,
     date: Date.parse('02/03/2019'),
-    long_text: 'Hi, how are you? My name is Ivan I want to recommend you the clinic Baja Smile Dentistry, I’ve been doing very well in my Orthodontics Treatment,
-    everything has been really cool, no pain, no troubles, everyone is really helpful, believe me, a pretty smile speaks for you. I really recommend you to come. Thanks.',
+    long_text: 'Hi, how are you? My name is Ivan. I want to recommend to you the clinic Baja Smile Dentistry. I’ve been doing very well in my Orthodontics Treatment, everything has been really cool, no pain, no trouble.
+    Everyone is really helpful, believe me. A beautiful smile speaks for you. I really recommend you to come. Thanks.',
     rating: nil,
-    short_text: 'I’ve been doing very well in my Orthodontics Treatment, everything has been really cool, no pain, no troubles, everyone is really helpful',
+    short_text: 'I’ve been doing very well in my Orthodontics Treatment, everything has been really cool, no pain, no trouble',
     source: :INTERNAL,
     status: :ACCEPTED,
     url: nil,
@@ -1476,12 +1484,13 @@ end
   testimonial: {
     organization: organization,
     date: Date.parse('01/01/2015'),
-    long_text: 'I got a root canal done, the job was fast, I got a root canal done before in another clinic and that time I felt stress, but here I felt relaxed.
-    The customer service is formidable, I was attended by a very nice lady, and the doctor is incredibly patient, he explained to me every detail of the treatment, and that for me, as a patient is very important,
-    so I can know what he’s going to do, he gave me a lot of peace and I really felt comfortable and in really professional hands. I recommend you to come here, the attention is totally personalized,
-    they give you the time you need to make you feel at home, many times attending your oral health is not easy, but with people like them, that makes you feel comfortable and relaxed it is a lot easier. Thank you very much.',
+    long_text: 'I got a root canal done. The job was fast. I got a root canal done before in another clinic and that time I felt stressed, but here I felt relaxed.
+    The customer service is formidable: I was attended by a very nice lady, and the doctor is incredibly patient; he explained to me every detail of the treatment,
+    and that for me, as a patient is very important, so I can know what he’s going to do, he gave me a lot of peace and I really felt comfortable and with really professional hands.
+    I recommend you to come here. The attention is totally personalized. They give you the time you need to make you feel at home, many times attending your oral health is not easy,
+    but with people like them, that makes you feel comfortable and relaxed it is a lot easier. Thank you very much.',
     rating: nil,
-    short_text: 'The customer service is formidable, I was attended by a very nice lady, and the doctor is incredibly patient',
+    short_text: 'The customer service is formidable: I was attended by a very nice lady, and the doctor is incredibly patient',
     source: :INTERNAL,
     status: :ACCEPTED,
     url: nil,
