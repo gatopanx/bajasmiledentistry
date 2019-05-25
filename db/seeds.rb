@@ -168,7 +168,7 @@ organization.save || binding.pry
     short_description: "A dental crown is a tooth-shaped cover or cap placed over a tooth that is too damaged by decayed for a dental filling
     to adequately support or replace the mission portion.", # Setear
     status: :ACTIVE,
-    url: 'https://www.youtube.com/embed/4iWVLeIn9Qg'
+    url: 'https://www.youtube.com/embed/hVeYViHcNTk'
   },
   {
     category: nil,
@@ -289,7 +289,7 @@ organization.save || binding.pry
     short_description: "Dentures are replacements for missing teeth; they can be removed and reinserted at leisure.
     Today’s dentures are natural-looking and more comfortable than ever.", # Setear
     status: :ACTIVE,
-    url: 'https://www.youtube.com/embed/4iWVLeIn9Qg'
+    url: 'https://www.youtube.com/embed/hVeYViHcNTk'
   },
   {
     category: nil,
@@ -421,7 +421,7 @@ organization.save || binding.pry
     primary_kind: :SERVICE,
     short_description: "Tooth whitening is a procedure that whitens teeth coloration and helps to remove stains and discoloration.", # Setear
     status: :ACTIVE,
-    url: 'https://www.youtube.com/embed/Q1FdspIYMXE'
+    url: 'https://www.youtube.com/embed/1QkuKCs7gUw'
   },
 
 ].each do |attribute_set|
