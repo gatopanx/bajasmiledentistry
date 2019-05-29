@@ -22,7 +22,6 @@ Rails.application.routes.draw do
       post :schedule
     end
 
-    # resources :pictures, only: [:index]
     resources :posts, only: [:index, :show]
     resources :treatments, only: [:index, :show]
   end
