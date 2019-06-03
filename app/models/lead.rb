@@ -1,12 +1,10 @@
 # TODO Add status change timestamps
-#
-class Lead < ApplicationRecord
+# TODO: Add status dependant validations
+class Lead < OrganizationRecord
   has_many :item_lead_mappings, dependent: :destroy
+  has_many :items, through: :item_lead_mappings
 
-  belongs_to :organization
-  belongs_to :person
-
-  enum desired_time_range: {
+  enum preferred_time_range: {
     ANYTIME: 0,
     MORNING: 10,
     AFTERNOON: 20,
@@ -27,33 +25,9 @@ class Lead < ApplicationRecord
     CANCELLED: 40
   }
 
-  validates :person, {
-    inclusion: {
-      in: proc do |l|
-        if l.person && l.organization
-          Person.where(
-            organization: l.organization,
-            primary_kind: :CONSUMER,
-            id: l.person.id
-          )
-        else
-          Person.none
-        end
-      end
-    }
-  }
-
-  validates :desired_date, {
+  validates :email_address, {
     presence: true,
-    date: {
-      after: proc { Date.today }
-    },
-    on: :create
-  }
-  validates :desired_date, {
-    presence: true,
-    date: true,
-    on: :update
+    email: true
   }
   validates :message, {
     length: {
@@ -61,10 +35,74 @@ class Lead < ApplicationRecord
     },
     allow_nil: true
   }
+  validates :person_name, {
+    presence: true,
+    length: {
+      in: 1..255
+    }
+  }
+  validates :phone_country_code, {
+    presence: true
+  }
+  validates :phone_number, {
+    presence: true,
+    numericality: {
+      only_integer: true
+    },
+    phone: {
+      possible: true,
+      types: [
+        :personal_number,
+        :fixed_or_mobile,
+        :voip
+      ],
+      country_specifier: -> lead { lead.phone_country_code },
+      extensions: false
+    }
+  }
+  validates :preferred_date, {
+    presence: true,
+    date: {
+      after: proc { 1.day.ago }
+    },
+    on: :create
+  }
+  validates :preferred_date, {
+    presence: true,
+    date: true,
+    on: :update
+  }
   validates :source, {
     presence: true
   }
   validates :status, {
     presence: true
   }
+  validates :uuid, {
+    uniqueness: {
+      scope: %i[owning_organization_id]
+    },
+    presence: true,
+  }
+
+  before_validation do
+    self.uuid ||= calculated_uuid
+  end
+
+  def calculated_uuid
+    return unless self.owning_organization
+
+    calculated_uuid = nil
+
+    loop do
+      calculated_uuid = SecureRandom.uuid
+
+      break unless self.class.exists?(
+        owning_organization: self.owning_organization,
+        uuid: calculated_uuid
+      )
+    end
+
+    calculated_uuid
+  end
 end

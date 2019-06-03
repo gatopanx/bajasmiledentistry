@@ -1,10 +1,9 @@
-class Testimonial < ApplicationRecord
+class Testimonial < OrganizationRecord
   has_many :images, as: :imageable, dependent: :destroy
   has_many :item_testimonial_mappings, dependent: :destroy
 
   belongs_to :after_image, class_name: 'Image', optional: true
   belongs_to :before_image, class_name: 'Image', optional: true
-  belongs_to :organization
   belongs_to :person
 
   enum status: {
@@ -22,9 +21,9 @@ class Testimonial < ApplicationRecord
   validates :person, {
     inclusion: {
       in: proc do |t|
-        if t.person && t.organization
+        if t.person && t.owning_organization
           Person.where(
-            organization: t.organization,
+            owning_organization: t.owning_organization,
             primary_kind: :CONSUMER,
             id: t.person.id
           )

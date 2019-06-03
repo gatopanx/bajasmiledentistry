@@ -1,15 +1,14 @@
-class Item < ApplicationRecord
+class Item < OrganizationRecord
   has_many :attachments, as: :attachable, dependent: :destroy
   has_many :images, as: :imageable, dependent: :destroy
   has_many :item_lead_mappings, dependent: :destroy
   has_many :item_testimonial_mappings, dependent: :destroy
 
   belongs_to :category, optional: true
-  belongs_to :organization
   belongs_to :primary_attachment, class_name: 'Attachment', optional: true
   belongs_to :primary_image, class_name: 'Image', optional: true
 
-  acts_as_list(scope: %i[organization_id category_id form])
+  acts_as_list(scope: %i[owning_organization_id category_id form])
 
   enum form: {
     ABSTRACT: 0,
@@ -75,7 +74,7 @@ class Item < ApplicationRecord
       messages: "%{value} must consists numbers, letter or underscores, but cannot begin nor end with underscores."
     },
     uniqueness: {
-      scope: %i[organization_id]
+      scope: %i[owning_organization_id]
     },
     if: proc { |i| i.form == 'ABSTRACT' }
   }
@@ -89,7 +88,7 @@ class Item < ApplicationRecord
       messages: "%{value} must consists numbers, letter or underscores, but cannot begin nor end with underscores."
     },
     uniqueness: {
-      scope: %i[organization_id category_id]
+      scope: %i[owning_organization_id category_id]
     },
     if: proc { |i| i.form == 'CONCRETE' }
   }

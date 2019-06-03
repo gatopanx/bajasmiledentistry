@@ -1,10 +1,9 @@
-class Phone < ApplicationRecord
+class Phone < OrganizationRecord
   include ActionView::Helpers::NumberHelper
 
   belongs_to :phoneable, polymorphic: true
-  belongs_to :organization
 
-  acts_as_list(scope: %i[organization_id phoneable_type phoneable_id])
+  acts_as_list(scope: %i[owning_organization_id phoneable_type phoneable_id])
 
   enum country_code: IsoCountryCodes::Code.descendants.map{|d| [d.alpha2, d.numeric.to_i]}.to_h
 
@@ -27,7 +26,7 @@ class Phone < ApplicationRecord
   }
   validates :label, {
     uniqueness: {
-      scope: %i[organization_id phoneable_type phoneable_id]
+      scope: %i[owning_organization_id phoneable_type phoneable_id]
     },
     length: {
       in: 2..255

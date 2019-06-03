@@ -2,7 +2,7 @@ class CreatePhones < ActiveRecord::Migration[5.2]
   def change
     create_table :phones do |t|
       t.references :phoneable, polymorphic: true
-      t.references :organization, foreign_key: true
+      t.references :owning_organization, foreign_key: { to_table: :organizations }
       t.integer :position
       t.string :label
       t.integer :country_code

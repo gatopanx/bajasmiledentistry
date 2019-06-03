@@ -1,5 +1,4 @@
-class ItemLeadMapping < ApplicationRecord
+class ItemLeadMapping < OrganizationRecord
   belongs_to :item
   belongs_to :lead
-  belongs_to :organization
 end

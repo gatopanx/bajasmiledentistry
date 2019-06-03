@@ -5,18 +5,19 @@
     <h5 class='suggester'>
       Over 100+ Americans Trust Us
     </h5>
-    <%= form_tag(controller: :operations, action: :schedule, method: :post) do %>
+    <%= form_tag(controller: :leads, action: :post_context, method: :post) do %>
       <div class='form-group'>
-        <input name='person_name' type='text' class='form-control name' placeholder='Your Name' required=''>
+        <%= text_field :lead, :person_name, { placeholder: 'Your Name', required: true, class: 'form-control' } %>
       </div>
       <div class='form-group'>
-        <input name='email_address' type='email' class='form-control email' placeholder='Your Email' required=''>
+        <%= email_field :lead, :email_address, { placeholder: 'Your Email', required: true, class: 'form-control' } %>
+      </div>
+      <%= hidden_field :lead, :phone_country_code, value: 'US' %>
+      <div class='form-group'>
+        <%= telephone_field :lead, :phone_number, { placeholder: 'Your Phone Number', required: true, class: 'form-control' } %>
       </div>
       <div class='form-group'>
-        <input name='phone_number' type='phone' class='form-control phone' placeholder='(619) 000-0000' required=''>
-      </div>
-      <div class='form-group'>
-        <input name='lead_desired_date' type='Date' class='form-control date' placeholder='Date' required=''>
+        <%= date_field :lead, :preferred_date, { min: 1.day.ago.strftime('%Y-%m-%d'), required: true, class: 'form-control' } %>
       </div>
       <div class='form-group'>
         <button class='btn btn-primary btn-lg btn-block orange-btn' type='submit'>Book Now</button>

@@ -1,4 +1,4 @@
-class Person < ApplicationRecord
+class Person < OrganizationRecord
   has_many :addresses, as: :addressable, dependent: :destroy
   has_many :authentications, dependent: :destroy
   has_many :emails, as: :emailable, dependent: :destroy
@@ -7,7 +7,6 @@ class Person < ApplicationRecord
   has_many :phones, as: :phoneable, dependent: :destroy
   has_many :testimonials, dependent: :destroy
 
-  belongs_to :organization
   belongs_to :primary_address, class_name: 'Address', optional: true
   belongs_to :primary_email, class_name: 'Email', optional: true
   belongs_to :primary_image, class_name: 'Image', optional: true

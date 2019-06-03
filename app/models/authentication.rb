@@ -1,11 +1,10 @@
-class Authentication < ApplicationRecord
-  belongs_to :organization
+class Authentication < OrganizationRecord
   belongs_to :person
 
   validates :token, {
     presence: true,
     uniqueness: {
-      scope: %i[organization_id]
+      scope: %i[owning_organization_id]
     },
   }
   validates :secret, {
@@ -22,7 +21,7 @@ class Authentication < ApplicationRecord
   }
   validates :uuid, {
     uniqueness: {
-      scope: %i[organization_id]
+      scope: %i[owning_organization_id]
     },
     presence: true,
   }
@@ -35,7 +34,7 @@ class Authentication < ApplicationRecord
   private
 
   def calculated_uuid
-    return unless self.organization
+    return unless self.owning_organization
 
     calculated_uuid = nil
 
@@ -43,7 +42,7 @@ class Authentication < ApplicationRecord
       calculated_uuid = SecureRandom.uuid
 
       break unless self.class.exists?(
-        organization: self.organization,
+        owning_organization: self.owning_organization,
         uuid: calculated_uuid
       )
     end
@@ -52,7 +51,7 @@ class Authentication < ApplicationRecord
   end
 
   def calculated_token
-    return unless self.organization
+    return unless self.owning_organization
 
     calculated_token = nil
 
@@ -60,7 +59,7 @@ class Authentication < ApplicationRecord
       calculated_token = SecureRandom.uuid
 
       break unless self.class.exists?(
-        organization: self.organization,
+        owning_organization: self.owning_organization,
         token: calculated_token
       )
     end

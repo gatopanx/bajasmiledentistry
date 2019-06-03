@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :check_current_organization
+  before_action :set_current_organization
 
   def check_current_organization
     return if current_organization
@@ -8,7 +9,11 @@ class ApplicationController < ActionController::Base
 
   def current_organization
     @current_organization = Organization.find_by(
-      subdomain: 'tijuanasmiledentistry'
+      subdomain: 'bajasmiledentistry'
     )
+  end
+
+  def set_current_organization
+    RequestStore.store[:current_organization] ||= current_organization
   end
 end

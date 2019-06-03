@@ -5,17 +5,17 @@ module Website
 
     def home
       @social_proofs = SocialProof.where(
-        organization: @current_organization
+        owning_organization: @current_organization
       )
       @external_testimonials = Testimonial.where(
-        organization: @current_organization,
+        owning_organization: @current_organization,
         status: :ACCEPTED,
         source: :EXTERNAL
       ).order(
         date: :desc
       ).limit(10)
       @internal_testimonials = Testimonial.where(
-        organization: @current_organization,
+        owning_organization: @current_organization,
         status: :ACCEPTED,
         source: :INTERNAL
       ).order(
@@ -25,7 +25,7 @@ module Website
 
     def about_us
       @external_testimonials = Testimonial.where(
-        organization: @current_organization,
+        owning_organization: @current_organization,
         status: :ACCEPTED,
         source: :EXTERNAL
       ).order(
@@ -40,15 +40,9 @@ module Website
       @categories = Category.includes(:items).all
     end
 
-    def schedule_appointment_primary
-    end
-
-    def schedule_appointment_secondary
-    end
-
     def the_team
       @primary_producers = Person.where(
-        organization: @current_organization,
+        owning_organization: @current_organization,
         status: :ACTIVE,
         primary_kind: :PRODUCER,
       )
@@ -60,7 +54,7 @@ module Website
         ]
       )
       @secondary_producers = Person.where(
-        organization: @current_organization,
+        owning_organization: @current_organization,
         status: :ACTIVE,
         primary_kind: :PRODUCER
       ).where.not(
@@ -71,7 +65,7 @@ module Website
         ]
       )
       @external_testimonials = Testimonial.where(
-        organization: @current_organization,
+        owning_organization: @current_organization,
         status: :ACCEPTED,
         source: :EXTERNAL
       ).order(
@@ -81,17 +75,17 @@ module Website
 
     def virtual_tour
       @social_proofs = SocialProof.where(
-        organization: @current_organization
+        owning_organization: @current_organization
       )
       @external_testimonials = Testimonial.where(
-        organization: @current_organization,
+        owning_organization: @current_organization,
         status: :ACCEPTED,
         source: :EXTERNAL
       ).order(
         date: :desc
       ).limit(10)
       @internal_testimonials = Testimonial.where(
-        organization: @current_organization,
+        owning_organization: @current_organization,
         status: :ACCEPTED,
         source: :INTERNAL
       ).order(

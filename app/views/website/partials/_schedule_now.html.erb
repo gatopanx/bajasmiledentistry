@@ -7,19 +7,20 @@
           <h5 class='suggester text-center'>Get High Quality Dental Care At Affordable Prices</h5>
         </div>
         <div class='col-12'>
-          <%= form_tag(controller: :operations, action: :schedule, method: :post) do %>
+          <%= form_tag(controller: :leads, action: :post_context, method: :post) do %>
             <div class='form-row'>
               <div class='form-group col'>
-                <input name='person_name' type='text' class='form-control name' placeholder='Your Name' required=''>
+                <%= text_field :lead, :person_name, { placeholder: 'Your Name', required: true, class: 'form-control' } %>
               </div>
               <div class='form-group col'>
-                <input name='email_address' type='email' class='form-control email' placeholder='Your Email' required=''>
+                <%= email_field :lead, :email_address, { placeholder: 'Your Email', required: true, class: 'form-control' } %>
+              </div>
+              <%= hidden_field :lead, :phone_country_code, value: 'US' %>
+              <div class='form-group col'>
+                <%= telephone_field :lead, :phone_number, { placeholder: 'Your Phone Number', required: true, class: 'form-control' } %>
               </div>
               <div class='form-group col'>
-                <input name='phone_number' type='phone' class='form-control phone' placeholder='(619) 000-0000' required=''>
-              </div>
-              <div class='form-group col'>
-                <input name='lead_desired_date' type='Date' class='form-control date' placeholder='Desired Date' required=''>
+                <%= date_field :lead, :preferred_date, { min: 1.day.ago.strftime('%Y-%m-%d'), required: true, class: 'form-control' } %>
               </div>
               <div class='form-group col'>
                 <button type='submit' class='btn btn-primary button'>Book Now</button>

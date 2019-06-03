@@ -1,23 +1,24 @@
 class Organization < ApplicationRecord
-  has_many :addressable_addresses, class_name: 'Address', dependent: :destroy
+  has_many :addressable_addresses, class_name: 'Address', dependent: :destroy, foreign_key: 'owning_organization_id'
   has_many :addresses, as: :addressable, dependent: :destroy
-  has_many :attachable_attachments, class_name: 'Attachment', dependent: :destroy
+  has_many :attachable_attachments, class_name: 'Attachment', dependent: :destroy, foreign_key: 'owning_organization_id'
   has_many :attachments, as: :attachable, dependent: :destroy
-  has_many :authentications, dependent: :destroy
-  has_many :categories, dependent: :destroy
-  has_many :emailable_emails, class_name: 'Email', dependent: :destroy
+  has_many :authentications, dependent: :destroy, foreign_key: 'owning_organization_id'
+  has_many :categories, dependent: :destroy, foreign_key: 'owning_organization_id'
+  has_many :emailable_emails, class_name: 'Email', dependent: :destroy, foreign_key: 'owning_organization_id'
   has_many :emails, as: :emailable, dependent: :destroy
-  has_many :imageable_images, class_name: 'Image', dependent: :destroy
+  has_many :imageable_images, class_name: 'Image', dependent: :destroy, foreign_key: 'owning_organization_id'
   has_many :images, as: :imageable, dependent: :destroy
-  has_many :items, dependent: :destroy
-  has_many :item_lead_mappings, dependent: :destroy
-  has_many :item_testimonial_mappings, dependent: :destroy
-  has_many :leads, dependent: :destroy
-  has_many :people, dependent: :destroy
-  has_many :phoneable_phones, class_name: 'Phone', dependent: :destroy
+  has_many :items, dependent: :destroy, foreign_key: 'owning_organization_id'
+  has_many :item_lead_mappings, dependent: :destroy, foreign_key: 'owning_organization_id'
+  has_many :item_testimonial_mappings, dependent: :destroy, foreign_key: 'owning_organization_id'
+  has_many :leads, dependent: :destroy, foreign_key: 'owning_organization_id'
+  has_many :people, dependent: :destroy, foreign_key: 'owning_organization_id'
+  has_many :phoneable_phones, class_name: 'Phone', dependent: :destroy, foreign_key: 'owning_organization_id'
   has_many :phones, as: :phoneable, dependent: :destroy
-  has_many :social_proofs, dependent: :destroy
-  has_many :testimonials, dependent: :destroy
+  has_many :posts, dependent: :destroy, foreign_key: 'owning_organization_id'
+  has_many :social_proofs, dependent: :destroy, foreign_key: 'owning_organization_id'
+  has_many :testimonials, dependent: :destroy, foreign_key: 'owning_organization_id'
 
   belongs_to :primary_address, class_name: 'Address', optional: true
   belongs_to :primary_email, class_name: 'Email', optional: true

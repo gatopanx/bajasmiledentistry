@@ -24,16 +24,17 @@ end
 organization = Organization.new(
   name: 'Baja Smile Dentistry',
   status: :ACTIVE,
-  subdomain: 'tijuanasmiledentistry',
+  subdomain: 'bajasmiledentistry',
   url: 'https://www.youtube.com/embed/Kn7gTevGx6s'
 )
 
 organization.save || binding.pry
 
+RequestStore.store[:current_organization] ||= organization
+
 [
   {
     addressable: organization,
-    organization: organization,
     city: 'Tijuana',
     country_code: 'MX',
     label: 'HQ',
@@ -51,8 +52,7 @@ end
 [
   {
     emailable: organization,
-    organization: organization,
-    address: 'info@tijuanasmiledentistry.com',
+    address: 'info@bajasmiledentistry.com',
     confirmed: true
   }
 ].each do |attribute_set|
@@ -63,7 +63,6 @@ end
 [
   {
     imageable: organization,
-    organization: organization,
     description: 'Baja Smile Dentistry Logo',
     title: 'Baja Smile Dentistry',
     payload: payload(logo),
@@ -76,7 +75,6 @@ end
 [
   {
     phoneable: organization,
-    organization: organization,
     confirmed: true,
     country_code: 'US',
     extension: nil,
@@ -85,7 +83,6 @@ end
   },
   {
     phoneable: organization,
-    organization: organization,
     confirmed: true,
     country_code: 'MX',
     extension: nil,
@@ -109,7 +106,6 @@ organization.save || binding.pry
 [
   {
     category: nil,
-    organization: organization,
     external_price_in_cents: nil,
     form: :ABSTRACT,
     internal_price_in_cents: nil,
@@ -172,7 +168,6 @@ organization.save || binding.pry
   },
   {
     category: nil,
-    organization: organization,
     external_price_in_cents: nil,
     form: :ABSTRACT,
     internal_price_in_cents: nil,
@@ -243,7 +238,6 @@ organization.save || binding.pry
   },
   {
     category: nil,
-    organization: organization,
     external_price_in_cents: nil,
     form: :ABSTRACT,
     internal_price_in_cents: nil,
@@ -293,7 +287,6 @@ organization.save || binding.pry
   },
   {
     category: nil,
-    organization: organization,
     external_price_in_cents: nil,
     form: :ABSTRACT,
     internal_price_in_cents: nil,
@@ -351,7 +344,6 @@ organization.save || binding.pry
   },
   {
     category: nil,
-    organization: organization,
     external_price_in_cents: nil,
     form: :ABSTRACT,
     internal_price_in_cents: nil,
@@ -391,7 +383,6 @@ organization.save || binding.pry
   },
   {
     category: nil,
-    organization: organization,
     external_price_in_cents: nil,
     form: :ABSTRACT,
     internal_price_in_cents: nil,
@@ -433,7 +424,6 @@ end
 
 [
   {
-    organization: organization,
     name: "Cleaning",
     long_description: "Teeth cleaning is part of oral hygiene and involves the removal of dental plaque from teeth with the intention of preventing cavities, gingivitis, and periodontal disease." ,
     key: 'key1',
@@ -441,7 +431,6 @@ end
     status: :ACTIVE,
     items: [
       {
-        organization: organization,
         external_price_in_cents: 150*100,
         form: :CONCRETE,
         internal_price_in_cents: 70*100,
@@ -453,7 +442,6 @@ end
         status: :ACTIVE
       },
       {
-        organization: organization,
         external_price_in_cents: 350*100,
         form: :CONCRETE,
         internal_price_in_cents: 110*100,
@@ -467,7 +455,6 @@ end
     ]
   },
   {
-    organization: organization,
     name: "Whitening",
     long_description: "Tooth whitening lightens teeth and helps to remove stains and discoloration.",
     key: 'key2',
@@ -475,7 +462,6 @@ end
     status: :ACTIVE,
     items: [
       {
-        organization: organization,
         external_price_in_cents: 375*100,
         form: :CONCRETE,
         internal_price_in_cents: 180*100,
@@ -487,7 +473,6 @@ end
         status: :ACTIVE
       },
       {
-        organization: organization,
         external_price_in_cents: 650*100,
         form: :CONCRETE,
         internal_price_in_cents: 230*100,
@@ -499,7 +484,6 @@ end
         status: :ACTIVE
       },
       {
-        organization: organization,
         external_price_in_cents: 400*100,
         form: :CONCRETE,
         internal_price_in_cents: 220*100,
@@ -513,7 +497,6 @@ end
     ]
   },
   {
-    organization: organization,
     name: "Extractions and Surgery",
     long_description: "A dental extraction is the removal of teeth from the dental alveolus in the alveolar bone.",
     key: 'key3',
@@ -521,7 +504,6 @@ end
     status: :ACTIVE,
     items: [
       {
-        organization: organization,
         external_price_in_cents: 170*100,
         form: :CONCRETE,
         internal_price_in_cents: 70*100,
@@ -533,7 +515,6 @@ end
         status: :ACTIVE
       },
       {
-        organization: organization,
         external_price_in_cents: 400*100,
         form: :CONCRETE,
         internal_price_in_cents: 150*100,
@@ -545,7 +526,6 @@ end
         status: :ACTIVE
       },
       {
-        organization: organization,
         external_price_in_cents: 500*100,
         form: :CONCRETE,
         internal_price_in_cents: 230*100,
@@ -557,7 +537,6 @@ end
         status: :ACTIVE
       },
       {
-        organization: organization,
         external_price_in_cents: 640*100,
         form: :CONCRETE,
         internal_price_in_cents: 230*100,
@@ -569,7 +548,6 @@ end
         status: :ACTIVE
       },
       {
-        organization: organization,
         external_price_in_cents: 940*100,
         form: :CONCRETE,
         internal_price_in_cents: 230*100,
@@ -583,7 +561,6 @@ end
     ]
   },
   {
-    organization: organization,
     name: "Filling",
     long_description: "A filling is a way to restore a tooth damaged by decay back to its normal function and shape.",
     key: 'key4',
@@ -591,7 +568,6 @@ end
     status: :ACTIVE,
     items: [
       {
-        organization: organization,
         external_price_in_cents: 150*100,
         form: :CONCRETE,
         internal_price_in_cents: 65*100,
@@ -603,7 +579,6 @@ end
         status: :ACTIVE
       },
       {
-        organization: organization,
         external_price_in_cents: 300*100,
         form: :CONCRETE,
         internal_price_in_cents: 150*100,
@@ -617,7 +592,6 @@ end
     ]
   },
   {
-    organization: organization,
     name: "Root Canal",
     long_description: "Root canals are needed when there is an infection within the tooth. Without treatment, the infection can become severe enough that the tooth has to be removed",
     key: 'key5',
@@ -625,7 +599,6 @@ end
     status: :ACTIVE,
     items: [
       {
-        organization: organization,
         external_price_in_cents: 1000*100,
         form: :CONCRETE,
         internal_price_in_cents: 230*100,
@@ -637,7 +610,6 @@ end
         status: :ACTIVE
       },
       {
-        organization: organization,
         external_price_in_cents: 1200*100,
         form: :CONCRETE,
         internal_price_in_cents: 270*100,
@@ -649,7 +621,6 @@ end
         status: :ACTIVE
       },
       {
-        organization: organization,
         external_price_in_cents: 845*100,
         form: :CONCRETE,
         internal_price_in_cents: 350*100,
@@ -663,7 +634,6 @@ end
     ]
   },
   {
-    organization: organization,
     name: "Dentures",
     long_description: "Dentures are removable false teeth made of acrylic (plastic), nylon or metal. They fit snugly over the gums to replace missing teeth and eliminate potential problems caused by gaps.",
     key: 'key6',
@@ -671,7 +641,6 @@ end
     status: :ACTIVE,
     items: [
       {
-        organization: organization,
         external_price_in_cents: 1500*100,
         form: :CONCRETE,
         internal_price_in_cents: 600*100,
@@ -683,7 +652,6 @@ end
         status: :ACTIVE
       },
       {
-        organization: organization,
         external_price_in_cents: 1500*100,
         form: :CONCRETE,
         internal_price_in_cents: 700*100,
@@ -695,7 +663,6 @@ end
         status: :ACTIVE
       },
       {
-        organization: organization,
         external_price_in_cents: 1500*100,
         form: :CONCRETE,
         internal_price_in_cents: 900*100,
@@ -709,7 +676,6 @@ end
     ]
   },
   {
-    organization: organization,
     name: "Prosthesis",
     long_description: "A dental prosthesis is an intraoral prosthesis used to restore intraoral defects such as missing teeth, missing parts of teeth, and missing soft or hard structures of the jaw and palate.",
     key: 'key7',
@@ -717,7 +683,6 @@ end
     status: :ACTIVE,
     items: [
       {
-        organization: organization,
         external_price_in_cents: 1500*100,
         form: :CONCRETE,
         internal_price_in_cents: 280*100,
@@ -729,7 +694,6 @@ end
         status: :ACTIVE
       },
       {
-        organization: organization,
         external_price_in_cents: 1600*100,
         form: :CONCRETE,
         internal_price_in_cents: 490*100,
@@ -741,7 +705,6 @@ end
         status: :ACTIVE
       },
       {
-        organization: organization,
         external_price_in_cents: 1800*100,
         form: :CONCRETE,
         internal_price_in_cents: 470*100,
@@ -753,7 +716,6 @@ end
         status: :ACTIVE
       },
       {
-        organization: organization,
         external_price_in_cents: 1400*100,
         form: :CONCRETE,
         internal_price_in_cents: 480*100,
@@ -765,7 +727,6 @@ end
         status: :ACTIVE
       },
       {
-        organization: organization,
         external_price_in_cents: 1000*100,
         form: :CONCRETE,
         internal_price_in_cents: 150*100,
@@ -779,7 +740,6 @@ end
     ]
   },
   {
-    organization: organization,
     name: "Orthodontics",
     long_description: "Orthodontics is the branch of dentistry that corrects teeth and jaws that are positioned improperly.",
     key: 'key8',
@@ -787,7 +747,6 @@ end
     status: :ACTIVE,
     items: [
       {
-        organization: organization,
         external_price_in_cents: 8000*100,
         form: :CONCRETE,
         internal_price_in_cents: 2500*100,
@@ -799,7 +758,6 @@ end
         status: :ACTIVE
       },
       {
-        organization: organization,
         external_price_in_cents: 900*100,
         form: :CONCRETE,
         internal_price_in_cents: 300*100,
@@ -811,7 +769,6 @@ end
         status: :ACTIVE
       },
       {
-        organization: organization,
         external_price_in_cents: 1500*100,
         form: :CONCRETE,
         internal_price_in_cents: 60*100,
@@ -823,7 +780,6 @@ end
         status: :ACTIVE
       },
       {
-        organization: organization,
         external_price_in_cents: 1500*100,
         form: :CONCRETE,
         internal_price_in_cents: 250*100,
@@ -835,7 +791,6 @@ end
         status: :ACTIVE
       },
       {
-        organization: organization,
         external_price_in_cents: 350*100,
         form: :CONCRETE,
         internal_price_in_cents: 200*100,
@@ -847,7 +802,6 @@ end
         status: :ACTIVE
       },
       {
-        organization: organization,
         external_price_in_cents: 500*100,
         form: :CONCRETE,
         internal_price_in_cents: 160*100,
@@ -859,7 +813,6 @@ end
         status: :ACTIVE
       },
       {
-        organization: organization,
         external_price_in_cents: 15*100,
         form: :CONCRETE,
         internal_price_in_cents: 15*100,
@@ -889,7 +842,6 @@ end
 
 [
   {
-    organization: organization,
     date_of_birth: Date.parse("28/02/1991"),
     name: "Irving Cota",
     payload: payload(File.read('./db/seeds/images/irving-cota.jpg')),
@@ -912,7 +864,6 @@ end
     }
   },
   {
-    organization: organization,
     date_of_birth: Date.parse("28/02/1991"),
     name: "Marcia Bustamante",
     payload: payload(File.read('./db/seeds/images/marcia-bustamante.jpg')),
@@ -931,7 +882,6 @@ end
     }
   },
   {
-    organization: organization,
     date_of_birth: Date.parse("01/01/1984"),
     name: "Aldo Sanchez",
     payload: payload(File.read('./db/seeds/images/aldo-sanchez.jpg')),
@@ -953,7 +903,6 @@ end
     }
   },
   {
-    organization: organization,
     date_of_birth: Date.parse("16/02/1975"),
     name: "Salvador Vizcaino",
     payload: payload(File.read('./db/seeds/images/salvador-vizcaino.jpg')),
@@ -961,7 +910,6 @@ end
     status: :ACTIVE
   },
   {
-    organization: organization,
     date_of_birth: Date.parse("04/08/1974"),
     name: "Verenice Orduno",
     payload: payload(File.read('./db/seeds/images/verenice-orduno.jpg')),
@@ -969,7 +917,6 @@ end
     status: :ACTIVE
   },
   {
-    organization: organization,
     date_of_birth: Date.parse("16/04/1964"),
     name: "Yván Rodríguez",
     payload: payload(File.read('./db/seeds/images/yvan-rodriguez.jpg')),
@@ -977,7 +924,6 @@ end
     status: :ACTIVE
   },
   {
-    organization: organization,
     date_of_birth: Date.parse("30/04/1995"),
     name: "Jonathan Moncada",
     payload: payload(File.read('./db/seeds/images/jonathan-rodriguez.jpg')),
@@ -990,7 +936,6 @@ end
 
   image = Image.new(
     attribute_set.slice(
-      :organization,
       :payload
     ).merge({
       imageable: producer,
@@ -1044,7 +989,6 @@ end
 
 [
   {
-    organization: organization,
     date_of_birth: Date.parse('01/01/2000'),
     city: 'San Diego',
     country_code: 'US',
@@ -1062,7 +1006,6 @@ end
     status: :ACTIVE,
     zip_postal_code: '22045',
     testimonial: {
-      organization: organization,
       date: Date.parse('01/01/2015'),
       long_text: 'I can smile again. I had a quality work done here; they’re very clean and very professional. I recommend them a 100% Clean, good work, I’m very happy.',
       rating: nil,
@@ -1075,7 +1018,6 @@ end
       ],
       images: [
         {
-          organization: organization,
           description: 'description image',
           payload: payload(File.read('./db/seeds/images/willey-stanley.jpg')),
           title: 'titulo imagen'
@@ -1084,7 +1026,6 @@ end
     }
   },
   {
-    organization: organization,
     date_of_birth: Date.parse('01/01/2000'),
     city: 'Long Beach',
     country_code: 'US',
@@ -1102,7 +1043,6 @@ end
     status: :ACTIVE,
     zip_postal_code: '99000',
     testimonial: {
-      organization: organization,
       date: Date.parse('01/01/2015'),
       long_text: 'I felt discomfort in a molar piece, they did 2 extractions and I’m in the process of putting on crowns and making a new bridge.
       My experience has been very good, with all the staff. The doctor is very patient, he takes the time to explain what we need, he is very honest and he is very kind and conscious of us as patients and from our pockets.',
@@ -1116,13 +1056,11 @@ end
       ],
       images: [
         {
-          organization: organization,
           description: 'description image',
           payload: payload(File.read('./db/seeds/images/isabel-juarez-before.jpg')),
           title: 'titulo imagen'
         },
         {
-          organization: organization,
           description: 'description image',
           payload: payload(File.read('./db/seeds/images/isabel-juarez.jpg')),
           title: 'titulo imagen'
@@ -1131,7 +1069,6 @@ end
     }
   },
   {
-    organization: organization,
     date_of_birth: Date.parse('01/01/2000'),
     city: 'San Diego',
     country_code: 'US',
@@ -1149,7 +1086,6 @@ end
     status: :ACTIVE,
     zip_postal_code: '99000',
     testimonial: {
-      organization: organization,
       date: Date.parse('01/01/2015'),
       long_text: 'Awesome job, he did a deep cleaning and a composite filling in my molar, it was fast and easy Dr.Irving to do, I feel comfortable with him, and now I’m feeling great.',
       rating: nil,
@@ -1160,7 +1096,6 @@ end
       item_keys: [],
       images: [
         {
-          organization: organization,
           description: 'description image',
           payload: payload(File.read('./db/seeds/images/adela-t.jpg')),
           title: 'titulo imagen'
@@ -1169,7 +1104,6 @@ end
     }
   },
   {
-    organization: organization,
     date_of_birth: Date.parse('01/01/2000'),
     city: 'Tijuana',
     country_code: 'MX',
@@ -1187,7 +1121,6 @@ end
     status: :ACTIVE,
     zip_postal_code: '99000',
     testimonial: {
-      organization: organization,
       date: Date.parse('01/01/2015'),
       long_text: 'Great Orthodontist! Everyone is so pleasant and professional, they care about you and make you feel safe. I recommend 100% Baja Smile Dentistry',
       rating: nil,
@@ -1200,7 +1133,6 @@ end
       ],
       images: [
         {
-          organization: organization,
           description: 'description image',
           payload: payload(File.read('./db/seeds/images/paulina-vizcaino.jpg')),
           title: 'titulo imagen'
@@ -1209,7 +1141,6 @@ end
     }
   },
   {
-    organization: organization,
     date_of_birth: Date.parse('01/01/2000'),
     city: 'Los Angeles',
     country_code: 'US',
@@ -1227,7 +1158,6 @@ end
     status: :ACTIVE,
     zip_postal_code: '99000',
     testimonial: {
-      organization: organization,
       date: Date.parse('01/01/2015'),
       long_text: 'I feel very comfortable with my new dental bridge, they treated my very well and were very kind, I would recommend Baja Smile Dentistry to my friends.',
       rating: nil,
@@ -1240,7 +1170,6 @@ end
       ],
       images: [
         {
-          organization: organization,
           description: 'description image',
           payload: payload(File.read('./db/seeds/images/benjamin-orozco.jpg')),
           title: 'titulo imagen'
@@ -1249,7 +1178,6 @@ end
     }
   },
   {
-    organization: organization,
     date_of_birth: Date.parse('01/01/2000'),
     city: 'Tijuana',
     country_code: 'MX',
@@ -1267,7 +1195,6 @@ end
     status: :ACTIVE,
     zip_postal_code: '99000',
     testimonial: {
-      organization: organization,
       date: Date.parse('01/01/2015'),
       long_text: 'Im very grateful with Dr. Irving, I’m happy with my dental work and I would totally recommend Baja Smile Dentistry to my family.',
       rating: nil,
@@ -1280,13 +1207,11 @@ end
       ],
       images: [
         {
-          organization: organization,
           description: 'description image',
           payload: payload(File.read('./db/seeds/images/maria-rivera-before.jpg')),
           title: 'titulo imagen'
         },
         {
-          organization: organization,
           description: 'description image',
           payload: payload(File.read('./db/seeds/images/maria-rivera-after.jpg')),
           title: 'titulo imagen'
@@ -1295,7 +1220,6 @@ end
     }
   },
   {
-    organization: organization,
     date_of_birth: Date.parse('01/01/2000'),
     city: 'Los Angeles',
     country_code: 'US',
@@ -1313,7 +1237,6 @@ end
     status: :ACTIVE,
     zip_postal_code: '99000',
     testimonial: {
-      organization: organization,
       date: Date.parse('01/01/2015'),
       long_text: 'My wife came here four months ago and they did great work on her, so I came to Baja Smile Dentistry too, they are very professional and treated me very well.',
       rating: nil,
@@ -1326,13 +1249,11 @@ end
       ],
       images: [
         {
-          organization: organization,
           description: 'description image',
           payload: payload(File.read('./db/seeds/images/carlos-trujillo-before.jpg')),
           title: 'titulo imagen'
         },
         {
-          organization: organization,
           description: 'description image',
           payload: payload(File.read('./db/seeds/images/carlos-trujillo-after.jpg')),
           title: 'titulo imagen'
@@ -1341,7 +1262,6 @@ end
     }
 },
 {
-  organization: organization,
   date_of_birth: Date.parse('01/01/2000'),
   city: 'Los Angeles',
   country_code: 'US',
@@ -1359,7 +1279,6 @@ end
   status: :ACTIVE,
   zip_postal_code: '99000',
   testimonial: {
-    organization: organization,
     date: Date.parse('28/02/2019'),
     long_text: 'I am doing brackets; they’re fixing to get implants. My experience in the clinic is that they do a very good job. It’s a good clinic. I like how they work and the experience with my brackets.
     The doctors are nice here, they do a very good job and I like how they work. I would definitely recommend this clinic for other patients. Good being here, and really good.',
@@ -1373,7 +1292,6 @@ end
     ],
     images: [
       {
-        organization: organization,
         description: 'description image',
         payload: payload(File.read('./db/seeds/images/christian-leon.jpg')),
         title: 'titulo imagen'
@@ -1382,7 +1300,6 @@ end
   }
 },
 {
-  organization: organization,
   date_of_birth: Date.parse('01/01/2000'),
   city: 'Los Angeles',
   country_code: 'US',
@@ -1400,7 +1317,6 @@ end
   status: :ACTIVE,
   zip_postal_code: '99000',
   testimonial: {
-    organization: organization,
     date: Date.parse('28/02/2019'),
     long_text: 'Hi I’m Robin, I live in california. I just visited Baja Smile Dentistry, Irving was my dentist and I’m very pleased.
     They gave me a crown and everything went very smooth; I would definitely recommend them. They were really friendly and really helpful.',
@@ -1414,7 +1330,6 @@ end
     ],
     images: [
       {
-        organization: organization,
         description: 'description image',
         payload: payload(File.read('./db/seeds/images/robin-imel.jpg')),
         title: 'titulo imagen'
@@ -1423,7 +1338,6 @@ end
   }
 },
 {
-  organization: organization,
   date_of_birth: Date.parse('01/01/2000'),
   city: 'Tijuana',
   country_code: 'MX',
@@ -1441,7 +1355,6 @@ end
   status: :ACTIVE,
   zip_postal_code: '99000',
   testimonial: {
-    organization: organization,
     date: Date.parse('02/03/2019'),
     long_text: 'Hi, how are you? My name is Ivan. I want to recommend to you the clinic Baja Smile Dentistry. I’ve been doing very well in my Orthodontics Treatment, everything has been really cool, no pain, no trouble.
     Everyone is really helpful, believe me. A beautiful smile speaks for you. I really recommend you to come. Thanks.',
@@ -1455,7 +1368,6 @@ end
     ],
     images: [
       {
-        organization: organization,
         description: 'description image',
         payload: payload(File.read('./db/seeds/images/ivan-lima.jpg')),
         title: 'titulo imagen'
@@ -1464,7 +1376,6 @@ end
   }
 },
 {
-  organization: organization,
   date_of_birth: Date.parse('01/01/2000'),
   city: 'Tijuana',
   country_code: 'MX',
@@ -1482,7 +1393,6 @@ end
   status: :ACTIVE,
   zip_postal_code: '22034',
   testimonial: {
-    organization: organization,
     date: Date.parse('01/01/2015'),
     long_text: 'I got a root canal done. The job was fast. I got a root canal done before in another clinic and that time I felt stressed, but here I felt relaxed.
     The customer service is formidable: I was attended by a very nice lady, and the doctor is incredibly patient; he explained to me every detail of the treatment,
@@ -1499,7 +1409,6 @@ end
     ],
     images: [
       {
-        organization: organization,
         description: 'description image',
         payload: payload(File.read('./db/seeds/images/rosamaria-rodriguez.jpg')),
         title: 'titulo imagen'
@@ -1530,7 +1439,6 @@ end
 
   address = Address.new(
     attribute_set.slice(
-      :organization,
       :city,
       :country_code,
       :label,
@@ -1546,7 +1454,6 @@ end
 
   email = Email.new(
     attribute_set.slice(
-      :organization,
       :address
     ).merge({
       emailable: consumer,
@@ -1557,7 +1464,6 @@ end
 
   image = Image.new(
     attribute_set.slice(
-      :organization,
       :payload
     ).merge({
       imageable: consumer,
@@ -1569,7 +1475,6 @@ end
 
   phone = Phone.new(
     attribute_set.slice(
-      :organization,
       :country_code,
       :extension,
       :label,
@@ -1599,7 +1504,6 @@ end
   attribute_set.fetch(:testimonial).fetch(:item_keys).each do |item_key|
     item_testimonial_mapping = ItemTestimonialMapping.new({
       item: Item.find_by!(key: item_key),
-      organization: organization,
       testimonial: testimonial
     })
     item_testimonial_mapping.save || binding.pry
@@ -1627,7 +1531,6 @@ end
 
 [
   {
-    organization: organization,
     date_of_birth: Date.parse('01/01/2000'),
     city: 'San Diego',
     country_code: 'US',
@@ -1645,7 +1548,6 @@ end
     status: :ACTIVE,
     zip_postal_code: '22045',
     testimonial: {
-      organization: organization,
       date: Date.parse('02/10/2018'),
       long_text: 'I can smile again, I have a quality work done here, they’re very clean and very professional. I recommend them a 100% Clean, good work, I’m very happy',
       rating: 5,
@@ -1658,7 +1560,6 @@ end
       ],
       images: [
         {
-          organization: organization,
           description: 'description image',
           payload: payload(File.read('./db/seeds/images/willey-stanley.jpg')),
           title: 'titulo imagen'
@@ -1667,7 +1568,6 @@ end
     }
   },
   {
-    organization: organization,
     date_of_birth: Date.parse('01/01/2000'),
     city: 'Long Beach',
     country_code: 'US',
@@ -1685,7 +1585,6 @@ end
     status: :ACTIVE,
     zip_postal_code: '99000',
     testimonial: {
-      organization: organization,
       date: Date.parse('02/02/2019'),
       long_text: 'I had a discomfort in a molar piece, they did 2 extractions and I’m in the process of putting on crowns and making a new bridge.
       My experience has been very good, with all the staff. The doctor is very patient, he takes the time to explain what we need, he is very honest and he is very kind and conscious of us as patients and from our pockets.',
@@ -1699,13 +1598,11 @@ end
       ],
       images: [
         {
-          organization: organization,
           description: 'description image',
           payload: payload(File.read('./db/seeds/images/isabel-juarez-before.jpg')),
           title: 'titulo imagen'
         },
         {
-          organization: organization,
           description: 'description image',
           payload: payload(File.read('./db/seeds/images/isabel-juarez-before.jpg')),
           title: 'titulo imagen'
@@ -1714,7 +1611,6 @@ end
     }
   },
   {
-    organization: organization,
     date_of_birth: Date.parse('15/02/2010'),
     city: 'Tijuana',
     country_code: 'MX',
@@ -1732,7 +1628,6 @@ end
     status: :ACTIVE,
     zip_postal_code: '22034',
     testimonial: {
-      organization: organization,
       date: Date.parse('15/02/2019'),
       long_text: 'I got a root canal done, the job was fast, I got a root canal done before in another clinic and that time I felt stress, but here I felt relaxed.
       The customer service is formidable, I was attended by a very nice lady, and the doctor is incredibly patient, he explained to me every detail of the treatment, and that for me, as a patient is very important,
@@ -1748,7 +1643,6 @@ end
       ],
       images: [
         {
-          organization: organization,
           description: 'description image',
           payload: payload(File.read('./db/seeds/images/rosamaria-rodriguez.jpg')),
           title: 'titulo imagen'
@@ -1757,7 +1651,6 @@ end
     }
   },
   {
-    organization: organization,
     date_of_birth: Date.parse('15/02/2010'),
     city: 'Los Angeles',
     country_code: 'US',
@@ -1775,7 +1668,6 @@ end
     status: :ACTIVE,
     zip_postal_code: '22034',
     testimonial: {
-      organization: organization,
       date: Date.parse('28/02/2019'),
       long_text: 'Hi I’m Robin, I live in california. I just visited Baja Smile Dentistry, Irving was my dentist and I’m very please,
       they gave me a crown and everything went very smooth, I would definitely recommend them, they were really friendly and really helpful.',
@@ -1789,7 +1681,6 @@ end
       ],
       images: [
         {
-          organization: organization,
           description: 'description image',
           payload: payload(File.read('./db/seeds/images/robin-imel.jpg')),
           title: 'titulo imagen'
@@ -1798,7 +1689,6 @@ end
     }
   },
   {
-    organization: organization,
     date_of_birth: Date.parse('15/02/2010'),
     city: 'Tijuana',
     country_code: 'MX',
@@ -1816,7 +1706,6 @@ end
     status: :ACTIVE,
     zip_postal_code: '22034',
     testimonial: {
-      organization: organization,
       date: Date.parse('02/03/2019'),
       long_text: 'Hi, how are you? My name is Ivan I want to recommend you the clinic Baja Smile Dentistry, I’ve been doing very well in my Orthodontics Treatment,
       everything has been really cool, no pain, no troubles, everyone is really helpful, believe me, a pretty smile speaks for you. I really recommend you to come. Thanks.',
@@ -1830,7 +1719,6 @@ end
       ],
       images: [
         {
-          organization: organization,
           description: 'description image',
           payload: payload(File.read('./db/seeds/images/ivan-lima.jpg')),
           title: 'titulo imagen'
@@ -1839,7 +1727,6 @@ end
     }
   },
   {
-    organization: organization,
     date_of_birth: Date.parse('11/03/1964'),
     city: 'Los Angeles',
     country_code: 'US',
@@ -1857,7 +1744,6 @@ end
     status: :ACTIVE,
     zip_postal_code: '22034',
     testimonial: {
-      organization: organization,
       date: Date.parse('16/02/2019'),
       long_text: 'I am doing brackets they’re fixing to get implants. My experience in the clinic is they do a very good job, It’s a good clinic, I like how they work and the experience with my brackets.
       The doctor are nice here, they do a very good job and I like how they work. I would definitely recommend this clinic for other patients, good being here, and really good.',
@@ -1871,7 +1757,6 @@ end
       ],
       images: [
         {
-          organization: organization,
           description: 'description image',
           payload: payload(File.read('./db/seeds/images/christian-leon.jpg')),
           title: 'titulo imagen'
@@ -1902,7 +1787,6 @@ end
 
   address = Address.new(
     attribute_set.slice(
-      :organization,
       :city,
       :country_code,
       :label,
@@ -1918,7 +1802,6 @@ end
 
   email = Email.new(
     attribute_set.slice(
-      :organization,
       :address
     ).merge({
       emailable: consumer,
@@ -1929,7 +1812,6 @@ end
 
   image = Image.new(
     attribute_set.slice(
-      :organization,
       :payload
     ).merge({
       imageable: consumer,
@@ -1941,7 +1823,6 @@ end
 
   phone = Phone.new(
     attribute_set.slice(
-      :organization,
       :country_code,
       :extension,
       :label,
@@ -1971,7 +1852,6 @@ end
   attribute_set.fetch(:testimonial).fetch(:item_keys).each do |item_key|
     item_testimonial_mapping = ItemTestimonialMapping.new({
       item: Item.find_by!(key: item_key),
-      organization: organization,
       testimonial: testimonial
     })
     item_testimonial_mapping.save || binding.pry
@@ -1996,10 +1876,8 @@ end
 [
   {
     author: Person.where(
-      organization: organization,
       primary_kind: :PRODUCER
     ).last,
-    organization: organization,
     status: :PUBLISHED,
     title: 'Test Post 1',
     content: %{
@@ -2010,19 +1888,16 @@ end
     published_at: 1.week.ago,
     images: [
       {
-        organization: organization,
         description: 'Test Image',
         title: 'Test Image',
         payload: payload(File.read('./db/seeds/images/irving-cota.jpg'))
       },
       {
-        organization: organization,
         description: 'Test Image',
         title: 'Test Image',
         payload: payload(File.read('./db/seeds/images/irving-cota.jpg'))
       },
       {
-        organization: organization,
         description: 'Test Image',
         title: 'Test Image',
         payload: payload(File.read('./db/seeds/images/irving-cota.jpg'))
@@ -2031,10 +1906,8 @@ end
   },
   {
     author: Person.where(
-      organization: organization,
       primary_kind: :PRODUCER
     ).last,
-    organization: organization,
     status: :PUBLISHED,
     title: 'Test Post 1',
     content: %{
@@ -2045,19 +1918,16 @@ end
     published_at: 2.week.ago,
     images: [
       {
-        organization: organization,
         description: 'Test Image',
         title: 'Test Image',
         payload: payload(File.read('./db/seeds/images/irving-cota.jpg'))
       },
       {
-        organization: organization,
         description: 'Test Image',
         title: 'Test Image',
         payload: payload(File.read('./db/seeds/images/irving-cota.jpg'))
       },
       {
-        organization: organization,
         description: 'Test Image',
         title: 'Test Image',
         payload: payload(File.read('./db/seeds/images/irving-cota.jpg'))
@@ -2066,10 +1936,8 @@ end
   },
   {
     author: Person.where(
-      organization: organization,
       primary_kind: :PRODUCER
     ).last,
-    organization: organization,
     status: :PUBLISHED,
     title: 'Test Post 1',
     content: %{
@@ -2080,19 +1948,16 @@ end
     published_at: 3.week.ago,
     images: [
       {
-        organization: organization,
         description: 'Test Image',
         title: 'Test Image',
         payload: payload(File.read('./db/seeds/images/irving-cota.jpg'))
       },
       {
-        organization: organization,
         description: 'Test Image',
         title: 'Test Image',
         payload: payload(File.read('./db/seeds/images/irving-cota.jpg'))
       },
       {
-        organization: organization,
         description: 'Test Image',
         title: 'Test Image',
         payload: payload(File.read('./db/seeds/images/irving-cota.jpg'))

@@ -1,11 +1,10 @@
 # NOTE: Based on USPS address requirements
-class Address < ApplicationRecord
+class Address < OrganizationRecord
   belongs_to :addressable, polymorphic: true
-  belongs_to :organization
 
   enum country_code: IsoCountryCodes::Code.descendants.map{|d| [d.alpha2, d.numeric.to_i]}.to_h
 
-  acts_as_list(scope: %i[organization_id addressable_type addressable_id])
+  acts_as_list(scope: %i[owning_organization_id addressable_type addressable_id])
 
   validates :city, {
     presence: true,
@@ -23,7 +22,7 @@ class Address < ApplicationRecord
   }
   validates :label, {
     uniqueness: {
-      scope: %i[organization_id addressable_type addressable_id]
+      scope: %i[owning_organization_id addressable_type addressable_id]
     },
     length: {
       in: 2..255

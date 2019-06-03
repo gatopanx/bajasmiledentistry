@@ -14,7 +14,7 @@
       </h2>
       <form class="needs-validation" novalidate="">
         <label for="Date">Appointment Date</label>
-        <input type="date" class="form-control" id="date" placeholder="">
+        <input type="date" class="form-control" id="date" placeholder="" required="">
         <div class="invalid-feedback">
           Please enter your Appointment Date.
         </div>
@@ -45,7 +45,7 @@
       </form>
     </div>
     <div class="col-4">
-      <%= render 'website/partials/working_hours', phones: @phones %>
+      <%= render 'website/partials/working_hours', phones: @phones, current_organization: @current_organization %>
     </div>
   </div>
 </div>

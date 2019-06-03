@@ -1,9 +1,8 @@
 # TODO: Add uuid and key?
-class Post < ApplicationRecord
+class Post < OrganizationRecord
   has_many :images, as: :imageable, dependent: :destroy
 
   belongs_to :author, class_name: 'Person'
-  belongs_to :organization
   belongs_to :primary_image, class_name: 'Image', optional: true
 
   validates :author, {
@@ -13,7 +12,7 @@ class Post < ApplicationRecord
         if p.author
           Person
             .where(
-              organization: p.organization,
+              owning_organization: p.owning_organization,
               primary_kind: :PRODUCER,
               id: p.author_id
             )

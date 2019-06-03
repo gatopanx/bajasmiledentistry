@@ -1,5 +1,4 @@
-class ItemTestimonialMapping < ApplicationRecord
+class ItemTestimonialMapping < OrganizationRecord
   belongs_to :item
-  belongs_to :organization
   belongs_to :testimonial
 end

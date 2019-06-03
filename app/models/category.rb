@@ -1,11 +1,10 @@
-class Category < ApplicationRecord
+class Category < OrganizationRecord
   has_many :images, as: :imageable, dependent: :destroy
   has_many :items, dependent: :destroy
 
-  belongs_to :organization
   belongs_to :primary_image, class_name: 'Image', optional: true
 
-  acts_as_list(scope: %i[organization_id])
+  acts_as_list(scope: %i[owning_organization_id])
 
   enum status: {
     ACTIVE: 0,
@@ -22,7 +21,7 @@ class Category < ApplicationRecord
       messages: "%{value} must consists numbers, letter or underscores, but cannot begin nor end with underscores."
     },
     uniqueness: {
-      scope: %i[organization_id]
+      scope: %i[owning_organization_id]
     }
   }
   validates :name, {

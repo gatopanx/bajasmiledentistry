@@ -1,10 +1,9 @@
-class SocialProof < ApplicationRecord
+class SocialProof < OrganizationRecord
   has_many :images, as: :imageable, dependent: :destroy
 
-  belongs_to :organization
   belongs_to :primary_image, class_name: 'Image', optional: true
 
-  acts_as_list(scope: %i[organization_id])
+  acts_as_list(scope: %i[owning_organization_id])
 
   validates :description, {
     length: {

@@ -1,8 +1,7 @@
-class Email < ApplicationRecord
+class Email < OrganizationRecord
   belongs_to :emailable, polymorphic: true
-  belongs_to :organization
 
-  acts_as_list(scope: %i[organization_id emailable_type emailable_id])
+  acts_as_list(scope: %i[owning_organization_id emailable_type emailable_id])
 
   validates :address, {
     presence: true,
@@ -10,13 +9,13 @@ class Email < ApplicationRecord
   }
   validates :address, {
     uniqueness: {
-      scope: %i[organization_id emailable_type emailable_id]
+      scope: %i[owning_organization_id emailable_type emailable_id]
     },
     if: proc { |email| email.address && !(email.confirmed) }
   }
   validates :address, {
     uniqueness: {
-      scope: %i[organization_id emailable_type confirmed]
+      scope: %i[owning_organization_id emailable_type confirmed]
     },
     if: proc { |email| email.address && email.confirmed }
   }

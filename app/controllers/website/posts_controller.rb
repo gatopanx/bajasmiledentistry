@@ -10,14 +10,14 @@ module Website
       # params[:month] ||= DateTime.now.month
 
       @posts = Post.where(
-        organization: current_organization,
+        owning_organization: current_organization,
         status: :PUBLISHED
       ).order(published_at: :desc)
     end
 
     def show
       @post = Post.find_by(
-        organization: current_organization,
+        owning_organization: current_organization,
         status: :PUBLISHED,
         id: params[:id]
       )
@@ -29,7 +29,7 @@ module Website
       @archive = {}
 
       year_groups = Post.where(
-        organization: current_organization,
+        owning_organization: current_organization,
         status: :PUBLISHED
       ).group_by { |p| p.created_at.beginning_of_year }
 

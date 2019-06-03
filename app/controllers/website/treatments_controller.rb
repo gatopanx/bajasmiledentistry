@@ -8,15 +8,15 @@ module Website
 
     def show
       @treatment = Item.find_by!(
-        organization: @current_organization,
+        owning_organization: @current_organization,
         key: params[:id].gsub('-', '_')
       )
       @item_testimonial_mappings = ItemTestimonialMapping.where(
-        organization: @current_organization,
+        owning_organization: @current_organization,
         item: @treatment
       )
       @testimonials = Testimonial.where(
-        organization: @current_organization,
+        owning_organization: @current_organization,
         id: @item_testimonial_mappings.pluck(:id),
         status: :ACCEPTED
       )

@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   namespace :website, {
-      path: '',
-      constraints: {
-        subdomain: ['', 'www']
+    path: '',
+    constraints: {
+      subdomain: ['', 'www']
     }
   } do
 
@@ -12,16 +12,20 @@ Rails.application.routes.draw do
       get 'about-us'
       get 'contact-us'
       get 'price-list'
-      get 'schedule-appointment-primary'
-      get 'schedule-appointment-secondary'
       get 'the-team'
       get 'virtual-tour'
     end
 
-    controller :operations do
-      post :schedule
+    resources :leads, only: [:new, :create] do
+      collection do
+        get   :context,   action: :get_context
+        post  :context,   action: :post_context
+      end
+      member do
+        get   :confirm,   action: :get_confirm
+        post  :confirm,   action: :post_confirm
+      end
     end
-
     resources :posts, only: [:index, :show]
     resources :treatments, only: [:index, :show]
   end

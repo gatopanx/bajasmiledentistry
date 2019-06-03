@@ -2,7 +2,7 @@ class CreateAddresses < ActiveRecord::Migration[5.2]
   def change
     create_table :addresses do |t|
       t.references :addressable, polymorphic: true
-      t.references :organization, foreign_key: true
+      t.references :owning_organization, foreign_key: { to_table: :organizations }
       t.integer :position
       t.string :label
       t.string :line_1

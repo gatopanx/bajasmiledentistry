@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="favicon.ico">
+    <meta name="google-site-verification" content="cjICQOTXXZki3LBKHXVvCld9IIPA_c-lnynViBENXns" />
+    <link rel="icon" href="/favicon.ico">
     <title>Baja Smile Dentistry</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
     <div class='<%= controller_name.gsub('_', '-') %>'>
       <div class='<%= action_name.gsub('_', '-') %>'>
         <%= yield %>
       </div>
     </div>
-
     <script src="/assets/holder.min.js"></script>
     <script>
       Holder.addTheme('thumb', {
@@ -27,6 +25,13 @@
         fg: '#eceeef',
         text: 'Thumbnail'
       });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138130371-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-138130371-1');
     </script>
   </body>
 </html>

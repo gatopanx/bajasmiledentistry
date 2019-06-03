@@ -1,8 +1,7 @@
-class Image < ApplicationRecord
+class Image < OrganizationRecord
   belongs_to :imageable, polymorphic: true
-  belongs_to :organization
 
-  acts_as_list(scope: %i[organization_id imageable_type imageable_id])
+  acts_as_list(scope: %i[owning_organization_id imageable_type imageable_id])
 
   mount_base64_uploader :payload, ImagePayloadUploader
 
