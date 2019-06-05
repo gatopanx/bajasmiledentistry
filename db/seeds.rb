@@ -1007,9 +1007,8 @@ end
     zip_postal_code: '22045',
     testimonial: {
       date: Date.parse('01/01/2015'),
-      long_text: 'I can smile again. I had a quality work done here; they’re very clean and very professional. I recommend them a 100% Clean, good work, I’m very happy.',
+      text: 'I can smile again. I had a quality work done here; they’re very clean and very professional. I recommend them a 100% Clean, good work, I’m very happy.',
       rating: nil,
-      short_text: 'I can smile again. I had a quality work done here; they’re very clean and very professional.',
       source: :INTERNAL,
       status: :ACCEPTED,
       url: 'https://www.youtube.com/embed/oGvSov_LFLc',
@@ -1044,10 +1043,9 @@ end
     zip_postal_code: '99000',
     testimonial: {
       date: Date.parse('01/01/2015'),
-      long_text: 'I felt discomfort in a molar piece, they did 2 extractions and I’m in the process of putting on crowns and making a new bridge.
+      text: 'I felt discomfort in a molar piece, they did 2 extractions and I’m in the process of putting on crowns and making a new bridge.
       My experience has been very good, with all the staff. The doctor is very patient, he takes the time to explain what we need, he is very honest and he is very kind and conscious of us as patients and from our pockets.',
       rating: nil,
-      short_text: 'The doctor is very patient, he takes the time to explain what we need',
       source: :INTERNAL,
       status: :ACCEPTED,
       url: nil,
@@ -1087,9 +1085,8 @@ end
     zip_postal_code: '99000',
     testimonial: {
       date: Date.parse('01/01/2015'),
-      long_text: 'Awesome job, he did a deep cleaning and a composite filling in my molar, it was fast and easy Dr.Irving to do, I feel comfortable with him, and now I’m feeling great.',
+      text: 'Awesome job, he did a deep cleaning and a composite filling in my molar, it was fast and easy Dr.Irving to do, I feel comfortable with him, and now I’m feeling great.',
       rating: nil,
-      short_text: 'I feel comfortable with Dr. Irving, and now I’m feeling great.',
       source: :INTERNAL,
       status: :ACCEPTED,
       url: nil,
@@ -1122,9 +1119,8 @@ end
     zip_postal_code: '99000',
     testimonial: {
       date: Date.parse('01/01/2015'),
-      long_text: 'Great Orthodontist! Everyone is so pleasant and professional, they care about you and make you feel safe. I recommend 100% Baja Smile Dentistry',
+      text: 'Great Orthodontist! Everyone is so pleasant and professional, they care about you and make you feel safe. I recommend 100% Baja Smile Dentistry',
       rating: nil,
-      short_text: 'Great Orthodontist! Everyone is so pleasant and professional, I am loving my new smile',
       source: :INTERNAL,
       status: :ACCEPTED,
       url: nil,
@@ -1159,9 +1155,8 @@ end
     zip_postal_code: '99000',
     testimonial: {
       date: Date.parse('01/01/2015'),
-      long_text: 'I feel very comfortable with my new dental bridge, they treated my very well and were very kind, I would recommend Baja Smile Dentistry to my friends.',
+      text: 'I feel very comfortable with my new dental bridge, they treated my very well and were very kind, I would recommend Baja Smile Dentistry to my friends.',
       rating: nil,
-      short_text: 'I feel very comfortable with my new dental bridge',
       source: :INTERNAL,
       status: :ACCEPTED,
       url: nil,
@@ -1196,9 +1191,8 @@ end
     zip_postal_code: '99000',
     testimonial: {
       date: Date.parse('01/01/2015'),
-      long_text: 'Im very grateful with Dr. Irving, I’m happy with my dental work and I would totally recommend Baja Smile Dentistry to my family.',
+      text: 'Im very grateful with Dr. Irving, I’m happy with my dental work and I would totally recommend Baja Smile Dentistry to my family.',
       rating: nil,
-      short_text: 'I’m happy with my dental work',
       source: :INTERNAL,
       status: :ACCEPTED,
       url: nil,
@@ -1238,9 +1232,8 @@ end
     zip_postal_code: '99000',
     testimonial: {
       date: Date.parse('01/01/2015'),
-      long_text: 'My wife came here four months ago and they did great work on her, so I came to Baja Smile Dentistry too, they are very professional and treated me very well.',
+      text: 'My wife came here four months ago and they did great work on her, so I came to Baja Smile Dentistry too, they are very professional and treated me very well.',
       rating: nil,
-      short_text: 'They are very professional and treated me very well',
       source: :INTERNAL,
       status: :ACCEPTED,
       url: nil,
@@ -1280,10 +1273,9 @@ end
   zip_postal_code: '99000',
   testimonial: {
     date: Date.parse('28/02/2019'),
-    long_text: 'I am doing brackets; they’re fixing to get implants. My experience in the clinic is that they do a very good job. It’s a good clinic. I like how they work and the experience with my brackets.
+    text: 'I am doing brackets; they’re fixing to get implants. My experience in the clinic is that they do a very good job. It’s a good clinic. I like how they work and the experience with my brackets.
     The doctors are nice here, they do a very good job and I like how they work. I would definitely recommend this clinic for other patients. Good being here, and really good.',
     rating: nil,
-    short_text: 'The doctors are nice here, they do a very good job and I like how they work.',
     source: :INTERNAL,
     status: :ACCEPTED,
     url: nil,
@@ -1318,10 +1310,9 @@ end
   zip_postal_code: '99000',
   testimonial: {
     date: Date.parse('28/02/2019'),
-    long_text: 'Hi I’m Robin, I live in california. I just visited Baja Smile Dentistry, Irving was my dentist and I’m very pleased.
+    text: 'Hi I’m Robin, I live in california. I just visited Baja Smile Dentistry, Irving was my dentist and I’m very pleased.
     They gave me a crown and everything went very smooth; I would definitely recommend them. They were really friendly and really helpful.',
     rating: nil,
-    short_text: 'I’m very pleased. They gave me a crown and everything went very smooth.',
     source: :INTERNAL,
     status: :ACCEPTED,
     url: nil,
@@ -1356,10 +1347,9 @@ end
   zip_postal_code: '99000',
   testimonial: {
     date: Date.parse('02/03/2019'),
-    long_text: 'Hi, how are you? My name is Ivan. I want to recommend to you the clinic Baja Smile Dentistry. I’ve been doing very well in my Orthodontics Treatment, everything has been really cool, no pain, no trouble.
+    text: 'Hi, how are you? My name is Ivan. I want to recommend to you the clinic Baja Smile Dentistry. I’ve been doing very well in my Orthodontics Treatment, everything has been really cool, no pain, no trouble.
     Everyone is really helpful, believe me. A beautiful smile speaks for you. I really recommend you to come. Thanks.',
     rating: nil,
-    short_text: 'I’ve been doing very well in my Orthodontics Treatment, everything has been really cool, no pain, no trouble',
     source: :INTERNAL,
     status: :ACCEPTED,
     url: nil,
@@ -1394,13 +1384,12 @@ end
   zip_postal_code: '22034',
   testimonial: {
     date: Date.parse('01/01/2015'),
-    long_text: 'I got a root canal done. The job was fast. I got a root canal done before in another clinic and that time I felt stressed, but here I felt relaxed.
+    text: 'I got a root canal done. The job was fast. I got a root canal done before in another clinic and that time I felt stressed, but here I felt relaxed.
     The customer service is formidable: I was attended by a very nice lady, and the doctor is incredibly patient; he explained to me every detail of the treatment,
     and that for me, as a patient is very important, so I can know what he’s going to do, he gave me a lot of peace and I really felt comfortable and with really professional hands.
     I recommend you to come here. The attention is totally personalized. They give you the time you need to make you feel at home, many times attending your oral health is not easy,
     but with people like them, that makes you feel comfortable and relaxed it is a lot easier. Thank you very much.',
     rating: nil,
-    short_text: 'The customer service is formidable: I was attended by a very nice lady, and the doctor is incredibly patient',
     source: :INTERNAL,
     status: :ACCEPTED,
     url: nil,
@@ -1549,9 +1538,8 @@ end
     zip_postal_code: '22045',
     testimonial: {
       date: Date.parse('02/10/2018'),
-      long_text: 'I can smile again, I have a quality work done here, they’re very clean and very professional. I recommend them a 100% Clean, good work, I’m very happy',
+      text: 'I can smile again, I have a quality work done here, they’re very clean and very professional. I recommend them a 100% Clean, good work, I’m very happy',
       rating: 5,
-      short_text: 'I can smile again, I have a quality work done here, they’re very clean and very professional',
       source: :EXTERNAL,
       status: :ACCEPTED,
       url: 'https://www.youtube.com/embed/oGvSov_LFLc',
@@ -1586,10 +1574,9 @@ end
     zip_postal_code: '99000',
     testimonial: {
       date: Date.parse('02/02/2019'),
-      long_text: 'I had a discomfort in a molar piece, they did 2 extractions and I’m in the process of putting on crowns and making a new bridge.
+      text: 'I had a discomfort in a molar piece, they did 2 extractions and I’m in the process of putting on crowns and making a new bridge.
       My experience has been very good, with all the staff. The doctor is very patient, he takes the time to explain what we need, he is very honest and he is very kind and conscious of us as patients and from our pockets.',
       rating: 5,
-      short_text: 'The doctor is very patient, he takes the time to explain what we need',
       source: :EXTERNAL,
       status: :ACCEPTED,
       url: 'https://www.youtube.com/embed/4NsfsRun4_c',
@@ -1629,12 +1616,11 @@ end
     zip_postal_code: '22034',
     testimonial: {
       date: Date.parse('15/02/2019'),
-      long_text: 'I got a root canal done, the job was fast, I got a root canal done before in another clinic and that time I felt stress, but here I felt relaxed.
+      text: 'I got a root canal done, the job was fast, I got a root canal done before in another clinic and that time I felt stress, but here I felt relaxed.
       The customer service is formidable, I was attended by a very nice lady, and the doctor is incredibly patient, he explained to me every detail of the treatment, and that for me, as a patient is very important,
       so I can know what he’s going to do, he gave me a lot of peace and I really felt comfortable and in really professional hands. I recommend you to come here, the attention is totally personalized,
       they give you the time you need to make you feel at home, many times attending your oral health is not easy, but with people like them, that makes you feel comfortable and relaxed it is a lot easier. Thank you very much.',
       rating: 5,
-      short_text: 'The customer service is formidable, I was attended by a very nice lady, and the doctor is incredibly patient',
       source: :EXTERNAL,
       status: :ACCEPTED,
       url: 'https://www.youtube.com/embed/WMsq9J3ICMY',
@@ -1669,10 +1655,9 @@ end
     zip_postal_code: '22034',
     testimonial: {
       date: Date.parse('28/02/2019'),
-      long_text: 'Hi I’m Robin, I live in california. I just visited Baja Smile Dentistry, Irving was my dentist and I’m very please,
+      text: 'Hi I’m Robin, I live in california. I just visited Baja Smile Dentistry, Irving was my dentist and I’m very please,
       they gave me a crown and everything went very smooth, I would definitely recommend them, they were really friendly and really helpful.',
       rating: 5,
-      short_text: 'I’m very please, they gave me a crown and everything went very smooth, I would definitely recommend them',
       source: :EXTERNAL,
       status: :ACCEPTED,
       url: 'https://www.youtube.com/embed/F261O5P0JTE',
@@ -1707,10 +1692,9 @@ end
     zip_postal_code: '22034',
     testimonial: {
       date: Date.parse('02/03/2019'),
-      long_text: 'Hi, how are you? My name is Ivan I want to recommend you the clinic Baja Smile Dentistry, I’ve been doing very well in my Orthodontics Treatment,
+      text: 'Hi, how are you? My name is Ivan I want to recommend you the clinic Baja Smile Dentistry, I’ve been doing very well in my Orthodontics Treatment,
       everything has been really cool, no pain, no troubles, everyone is really helpful, believe me, a pretty smile speaks for you. I really recommend you to come. Thanks.',
       rating: 5,
-      short_text: 'I’ve been doing very well in my Orthodontics Treatment, everything has been really cool, no pain, no troubles, everyone is really helpful',
       source: :EXTERNAL,
       status: :ACCEPTED,
       url: 'https://www.youtube.com/embed/gw8G6ssQHMw',
@@ -1745,10 +1729,9 @@ end
     zip_postal_code: '22034',
     testimonial: {
       date: Date.parse('16/02/2019'),
-      long_text: 'I am doing brackets they’re fixing to get implants. My experience in the clinic is they do a very good job, It’s a good clinic, I like how they work and the experience with my brackets.
+      text: 'I am doing brackets they’re fixing to get implants. My experience in the clinic is they do a very good job, It’s a good clinic, I like how they work and the experience with my brackets.
       The doctor are nice here, they do a very good job and I like how they work. I would definitely recommend this clinic for other patients, good being here, and really good.',
       rating: 5,
-      short_text: 'My experience in the clinic is they do a very good job, It’s a good clinic, I like how they work and the experience with my brackets',
       source: :EXTERNAL,
       status: :ACCEPTED,
       url: 'https://www.youtube.com/embed/j8KR0JL6BWY',

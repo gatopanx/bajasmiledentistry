@@ -5,22 +5,22 @@
     <h5 class='suggester'>
       Over 100+ Americans Trust Us
     </h5>
-    <%= form_tag(controller: :leads, action: :post_context, method: :post) do %>
+    <%= form_with(model: [:website, Lead.new], local: true) do |form| %>
       <div class='form-group'>
-        <%= text_field :lead, :person_name, { placeholder: 'Your Name', required: true, class: 'form-control' } %>
+        <%= form.text_field :person_name, { placeholder: 'Your Name', required: true, class: 'form-control' } %>
       </div>
       <div class='form-group'>
-        <%= email_field :lead, :email_address, { placeholder: 'Your Email', required: true, class: 'form-control' } %>
+        <%= form.email_field :email_address, { placeholder: 'Your Email', required: true, class: 'form-control' } %>
       </div>
-      <%= hidden_field :lead, :phone_country_code, value: 'US' %>
+      <%= form.hidden_field :phone_country_code, value: 'US' %>
       <div class='form-group'>
-        <%= telephone_field :lead, :phone_number, { placeholder: 'Your Phone Number', required: true, class: 'form-control' } %>
-      </div>
-      <div class='form-group'>
-        <%= date_field :lead, :preferred_date, { min: 1.day.ago.strftime('%Y-%m-%d'), required: true, class: 'form-control' } %>
+        <%= form.telephone_field :phone_number, { placeholder: 'Your Phone Number', required: true, class: 'form-control' } %>
       </div>
       <div class='form-group'>
-        <button class='btn btn-primary btn-lg btn-block orange-btn' type='submit'>Book Now</button>
+        <%= form.date_field :preferred_date, { min: (1.day.ago - 8.hours).strftime('%Y-%m-%d'), required: true, class: 'form-control' } %>
+      </div>
+      <div class='form-group'>
+        <%= form.submit 'Book Now', class: 'btn btn-primary btn-lg btn-block orange-btn' %>
       </div>
     <% end %>
   </div>

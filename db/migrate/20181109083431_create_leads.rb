@@ -12,6 +12,7 @@ class CreateLeads < ActiveRecord::Migration[5.2]
       t.integer :preferred_time_range
       t.integer :source
       t.integer :status
+      t.text :text
       t.uuid :uuid
 
       t.timestamps

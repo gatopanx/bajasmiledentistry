@@ -2,10 +2,10 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <h3>Schedule Appointment</h3>
+      <h2>Schedule Appointment</h2>
     </div>
     <div class="col-8">
-      <%= render 'form', lead: @lead, url: website_leads_path %>
+      <%= render 'form', lead: @lead, url: update_and_confirm_and_send_confirmation_emails_website_lead_path(@lead) %>
     </div>
     <div class="col-4">
       <%= render 'website/partials/working_hours', phones: @phones, current_organization: @current_organization %>

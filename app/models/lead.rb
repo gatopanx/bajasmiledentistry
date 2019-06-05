@@ -1,5 +1,6 @@
-# TODO Add status change timestamps
-# TODO: Add status dependant validations
+# TODO - Add status change timestamps
+# TODO - Add status dependant validations
+# TODO - Remove timezone from date validations
 class Lead < OrganizationRecord
   has_many :item_lead_mappings, dependent: :destroy
   has_many :items, through: :item_lead_mappings
@@ -63,7 +64,7 @@ class Lead < OrganizationRecord
   validates :preferred_date, {
     presence: true,
     date: {
-      after: proc { 1.day.ago }
+      after: proc { 1.day.ago - 8.hours }
     },
     on: :create
   }
@@ -78,6 +79,12 @@ class Lead < OrganizationRecord
   validates :status, {
     presence: true
   }
+  validates :text, {
+    allow_nil: true,
+    length: {
+      in: 1..2048
+    }
+  }
   validates :uuid, {
     uniqueness: {
       scope: %i[owning_organization_id]
@@ -85,8 +92,9 @@ class Lead < OrganizationRecord
     presence: true,
   }
 
-  before_validation do
+  before_validation(on: :create) do
     self.uuid ||= calculated_uuid
+    self.status ||= 'DRAFT'
   end
 
   def calculated_uuid
@@ -104,5 +112,9 @@ class Lead < OrganizationRecord
     end
 
     calculated_uuid
+  end
+
+  def to_param
+    self.uuid
   end
 end

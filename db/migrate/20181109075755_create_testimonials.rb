@@ -7,9 +7,8 @@ class CreateTestimonials < ActiveRecord::Migration[5.2]
       t.references :person, foreign_key: true
 
       t.date :date
-      t.text :long_text
+      t.text :text
       t.integer :rating
-      t.string :short_text
       t.integer :status
       t.integer :source
       t.string :url

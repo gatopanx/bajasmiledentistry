@@ -1,0 +1,10 @@
+<%= render 'website/partials/secondary_header', current_organization: @current_organization %>
+<%= render 'website/partials/we_are_waiting_for_you', primary_text: "Thanks #{@lead.person_name.titleize} for your appointment on #{@lead.preferred_date.strftime("%A, %B %d, %Y")}.", secondary_text: 'One of our patient coordinators will contact you to help you in every step of the process' %>
+<div class='container'>
+  <div class='row'>
+    <div class='col-12'>
+      <p class='text-center disclaimer'>You will be contacted by Tijuana Smile Dentistry within the next 24 hours to confirm the exact time of your appointment. If you require booking flights or need to finalize your travel arrangements, please confirm your travel dates back to us as soon as possible so we may confirm your appointment.</p>
+    </div>
+  </div>
+</div>
+<%= render 'website/partials/secondary_footer', current_organization: @current_organization %>

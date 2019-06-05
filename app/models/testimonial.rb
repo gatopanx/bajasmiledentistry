@@ -38,7 +38,7 @@ class Testimonial < OrganizationRecord
     date: true,
     on: :update
   }
-  validates :long_text, {
+  validates :text, {
     presence: true,
     length: {
       in: 1..2048
@@ -55,12 +55,6 @@ class Testimonial < OrganizationRecord
   validates :rating, {
     absence: true,
     if: proc { |testimonial| testimonial.source == 'INTERNAL' }
-  }
-  validates :short_text, {
-    presence: true,
-    length: {
-      in: 1..255
-    }
   }
   validates :status, {
     presence: true

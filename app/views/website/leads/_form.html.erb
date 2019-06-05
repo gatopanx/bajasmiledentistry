@@ -1,0 +1,52 @@
+<%= form_with(model: [:website, lead], local: true, url: url) do |form| %>
+  <% if lead.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lead.errors.count, "error") %> prohibited this lead from being saved:</h2>
+      <ul>
+      <% lead.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class='form-group'>
+    <%= form.label 'Name' %>
+    <%= form.text_field :person_name, { placeholder: 'Your Name', required: true, class: 'form-control' } %>
+  </div>
+  <div class='form-group'>
+    <%= form.label 'Email address' %>
+    <%= form.email_field :email_address, { placeholder: 'Your Email', required: true, class: 'form-control' } %>
+  </div>
+  <%= form.hidden_field :phone_country_code, value: 'US' %>
+  <div class='form-group'>
+    <%= form.label 'Phone number' %>
+    <%= form.telephone_field :phone_number, { placeholder: 'Your Phone Number', required: true, class: 'form-control' } %>
+  </div>
+  <div class='form-group'>
+    <%= form.label 'Preferred arrival date' %>
+    <%= form.date_field :preferred_date, { min: 1.day.ago.strftime('%Y-%m-%d'), required: true, class: 'form-control' } %>
+  </div>
+  <div class='form-group'>
+    <%= form.label 'Preferred arrival time' %>
+    <%= form.select :preferred_time_range, Lead.preferred_time_ranges.keys.to_a.map{|k| [k.humanize, k]}, { include_blank: 'Please select one' }, { required: true, class: 'form-control' } %>
+  </div>
+  <div class='form-group'>
+    <%= form.label 'Preferred conversation channel' %>
+    <%= form.select :preferred_conversation_channel, Lead.preferred_conversation_channels.keys.to_a.map{|k| [k.humanize, k]}, { include_blank: 'Please select one' }, { required: true, class: 'form-control' } %>
+  </div>
+  <div class='form-group'>
+    <%= form.label 'Interested In' %>
+    <%= form.select :item_ids, @items.map{|i| [i.name, i.id] }, {}, { required: true, multiple: true, size: @items.count, class: 'form-control' } %>
+  </div>
+  <div class='form-group'>
+    <%= form.label 'Optional Message' %>
+    <%= form.text_area :text, { required: false, rows: 5, class: 'form-control' } %>
+  </div>
+  <hr class="mb-4">
+  <div class="actions">
+    <%= form.submit 'Submit', class: 'form-control btn btn-primary' %>
+  </div>
+  <p class='disclaimer text-center'>
+    By submitting this form, you are confirming you have read and agree to our Terms and Privacy Statement.
+  </p>
+<% end %>

@@ -16,14 +16,10 @@ Rails.application.routes.draw do
       get 'virtual-tour'
     end
 
-    resources :leads, only: [:new, :create] do
-      collection do
-        get   :context,   action: :get_context
-        post  :context,   action: :post_context
-      end
+    resources :leads, only: [:new, :create, :edit], param: :uuid do
       member do
-        get   :confirm,   action: :get_confirm
-        post  :confirm,   action: :post_confirm
+        patch :update_and_confirm_and_send_confirmation_emails
+        get :thanks
       end
     end
     resources :posts, only: [:index, :show]

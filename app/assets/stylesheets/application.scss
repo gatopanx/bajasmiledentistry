@@ -257,7 +257,6 @@ body {
   }
 
   .title {
-    font-weight: 800;
   }
   .days-time-ranges-wrapper {
     margin-left: 0px;
@@ -312,7 +311,7 @@ body {
   }
   .orange-btn {
     float: right;
-    width: 33%;
+    width: 33% !important;
   }
 }
 
@@ -414,6 +413,77 @@ body {
   }
 }
 
+.secondary-header {
+  margin: $breath-size/3 0px;
+
+  .brand {
+    .logo {
+      width: 209px;
+      height: 49px;
+
+      // NOTE: desktop only?
+      position: relative;
+      top: 10px;
+    }
+  }
+}
+
+.secondary-footer {
+  margin-top: 10px;
+  padding: 20px 0px 40px;
+  padding-bottom: 100px;
+
+  p {
+    font-size: 16px;
+  }
+}
+
+.leads {
+  .new {
+  }
+  .edit {
+  }
+  .thanks {
+  }
+  .disclaimer {
+    margin-top: 10px;
+    font-size: 14px;
+    color: gray;
+  }
+  .working-hours {
+    padding: 20px;
+    border-width: 2px;
+    border-radius: 10px;;
+    background-color: $primary-blue;
+    color: white;
+
+    .title {
+    }
+    .days {
+      .day {
+        font-weight: 400;
+      }
+    }
+    .time-ranges {
+      .time-range {
+      }
+    }
+    .phones {
+      .phone {
+        .number {
+          color: white;
+        }
+      }
+    }
+    .email-addresses {
+      .email-address {
+        .email {
+          color: white;
+        }
+      }
+    }
+  }
+}
 
 .pages {
   .home {
@@ -433,7 +503,7 @@ body {
           border-radius: 10px;;
           background-color: rgba(255, 255, 255, 1);
         }
-        button {
+        .btn {
           background-color: $dark-orange;
           border-color: $dark-orange;
 

@@ -166,6 +166,7 @@ ActiveRecord::Schema.define(version: 2019_02_17_001608) do
     t.integer "preferred_time_range"
     t.integer "source"
     t.integer "status"
+    t.text "text"
     t.uuid "uuid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -262,9 +263,8 @@ ActiveRecord::Schema.define(version: 2019_02_17_001608) do
     t.bigint "owning_organization_id"
     t.bigint "person_id"
     t.date "date"
-    t.text "long_text"
+    t.text "text"
     t.integer "rating"
-    t.string "short_text"
     t.integer "status"
     t.integer "source"
     t.string "url"
