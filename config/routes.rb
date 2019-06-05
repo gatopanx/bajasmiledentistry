@@ -17,6 +17,9 @@ Rails.application.routes.draw do
     end
 
     resources :leads, only: [:new, :create, :edit], param: :uuid do
+      collection do
+        post :create_and_confirm_and_send_confirmation_emails
+      end
       member do
         patch :update_and_confirm_and_send_confirmation_emails
         get :thanks

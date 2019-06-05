@@ -2,12 +2,8 @@
   <%= render 'website/partials/announcements', phones: @phones %>
 </div>
 
-<div class="container-fluid billboard-wrapper">
-  <div class="row menu">
-    <div class='container'>
-      <%= render 'website/partials/primary_header', current_organization: @current_organization, treatments: @treatments %>
-    </div>
-  </div>
+<div class='container'>
+  <%= render 'website/partials/primary_header', current_organization: @current_organization, treatments: @treatments %>
 </div>
 
 <div class="container">
@@ -45,5 +41,7 @@
 </div>
 
 <%= render 'website/partials/schedule_now' %>
+
+<%= render 'website/partials/we_are_waiting_for_you', primary_text: 'Our Team Of Specialists Can Help You Anytime', secondary_text: 'We Are Here To Take Care Of Your Smile' %>
 
 <%= render 'website/partials/primary_footer', phones: @phones, current_organization: @current_organization %>
