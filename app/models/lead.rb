@@ -79,12 +79,6 @@ class Lead < OrganizationRecord
   validates :status, {
     presence: true
   }
-  validates :text, {
-    allow_nil: true,
-    length: {
-      in: 1..2048
-    }
-  }
   validates :uuid, {
     uniqueness: {
       scope: %i[owning_organization_id]
