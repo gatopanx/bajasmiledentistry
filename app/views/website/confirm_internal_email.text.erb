@@ -6,10 +6,7 @@ Name:
 <%= @lead.person_name %>
 
 Email:
-<%= @lead.person_name %>
-
-Telephone Country:
-<%= @lead.phone_country_code %>
+<%= @lead.email_address %>
 
 Telephone Number:
 <%= @lead.phone_number %>
@@ -21,7 +18,7 @@ Custom Message:
 <%= @lead.message %>
 
 Preferred Appointment Date:
-<%= @lead.preferred_date %>
+<%= @lead.preferred_date.strftime("%A, %B %d, %Y") %>
 
 Preferred Appointment Time Of Day:
 <%= @lead.preferred_time_range %>

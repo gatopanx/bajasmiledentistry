@@ -18,7 +18,7 @@
 <p><%= @lead.message %></p>
 
 <p>Preferred Appointment Date:</p>
-<p><%= @lead.preferred_date %></p>
+<p><%= @lead.preferred_date.strftime("%A, %B %d, %Y") %></p>
 
 <p>Preferred Appointment Time Of Day:</p>
 <p><%= @lead.preferred_time_range %></p>

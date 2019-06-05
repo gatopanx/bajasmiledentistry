@@ -19,6 +19,7 @@ module Website
       redirect_to controller: :leads, action: :edit, uuid: @lead.uuid
     end
 
+    # TODO: DRY
     def create_and_confirm_and_send_confirmation_emails
       @lead = Lead.new(permitted_parameters)
       @lead.source = :WEBSITE
