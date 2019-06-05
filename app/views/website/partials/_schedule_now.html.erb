@@ -9,20 +9,20 @@
         <div class='col-12'>
           <%= form_with(model: [:website, Lead.new], local: true) do |form| %>
             <div class='form-row'>
-              <div class='form-group col'>
+              <div class='form-group col-md-2 col-sm-12'>
                 <%= form.text_field :person_name, { placeholder: 'Your Name', required: true, class: 'form-control' } %>
               </div>
-              <div class='form-group col'>
+              <div class='form-group col-md-3 col-sm-12'>
                 <%= form.email_field :email_address, { placeholder: 'Your Email', required: true, class: 'form-control' } %>
               </div>
               <%= form.hidden_field :phone_country_code, value: 'US' %>
-              <div class='form-group col'>
+              <div class='form-group col-md-3 col-sm-12'>
                 <%= form.telephone_field :phone_number, { placeholder: 'Your Phone Number', required: true, class: 'form-control' } %>
               </div>
-              <div class='form-group col'>
+              <div class='form-group col-md-2 col-sm-12'>
                 <%= form.date_field :preferred_date, { min: (1.day.ago - 8.hours).strftime('%Y-%m-%d'), required: true, class: 'form-control' } %>
               </div>
-              <div class='form-group col'>
+              <div class='form-group col-md-2 col-sm-12'>
                 <%= form.submit value: 'Book Now', class: 'btn btn-primary button' %>
               </div>
             </div>

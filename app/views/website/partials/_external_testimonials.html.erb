@@ -10,7 +10,7 @@
       <div class="col-12 external-testimonial">
         <div class="row">
           <% if external_testimonial.url %>
-            <div class="col-6 video-wrapper">
+            <div class="col-md-6 col-sm-12 video-wrapper">
               <iframe
                 class='video'
                 src="<%= external_testimonial.url %>"
@@ -20,7 +20,7 @@
               ></iframe>
             </div>
           <% elsif external_testimonial.images.any? %>
-            <div class="col-6 carousel-wrapper">
+            <div class="col-md-6 col-sm-12 carousel-wrapper">
               <% uuid = "carousel-#{SecureRandom.uuid}" %>
               <div id="<%= uuid %>" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -56,7 +56,7 @@
               </div>
             </div>
           <% end %>
-          <div class="col-6 texts">
+          <div class="col-md-6 col-sm-12 texts">
             <h5 class='name'>
               <%= external_testimonial.person.name %>
             </h5>

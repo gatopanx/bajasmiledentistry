@@ -21,7 +21,7 @@
         <div class='row'>
           <% internal_testimonials.each_with_index do |internal_testimonial, index| %>
             <% next if index == 0 %>
-            <div class='col-3 secondary-internal-testimonial'>
+            <div class='col-md-3 col-sm-12 secondary-internal-testimonial'>
               <img class='image' src='<%= internal_testimonial.before_image.payload.url  %>' alt="<%= internal_testimonial.text %>" />
               <p class='caption text-center'><%= internal_testimonial.text %></p>
             </div>

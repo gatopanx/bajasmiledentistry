@@ -5,10 +5,10 @@
         <div class='row'>
           <div class="col-12">
             <div class="row">
-              <div class="col-2 text-center brand">
+              <div class="col-md-2 col-sm-12 text-center brand">
                 <img class="mb-2 logo" src="/assets/logo-small-white.png" alt="" />
               </div>
-              <div class="col-2 text-center menu">
+              <div class="col-md-2 col-sm-12 text-center menu">
                 <h6>Menu</h6>
                 <ul class="list-unstyled text-small">
                   <li>
@@ -34,7 +34,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="col-2 text-center phones">
+              <div class="col-md-2 col-sm-12 text-center phones">
                 <h6>Give Us A Call</h6>
                 <ul class="list-unstyled text-small">
                   <% phones.each do |phone| %>
@@ -45,11 +45,11 @@
                   <% end %>
                 </ul>
               </div>
-              <div class="col-3 text-center emails">
+              <div class="col-md-3 col-sm-12 text-center emails">
                 <h6>Write To Us</h6>
                 <a href="mailto:<%= current_organization.primary_email.address %>"><%= current_organization.primary_email.address %></a>
               </div>
-              <div class='col-3 text-left social-networks'>
+              <div class='col-md-3 col-sm-12 text-left social-networks'>
                 <h6>Connect With Us</h6>
                 <ul class="list-unstyled text-small">
                   <li class='social-network'>
@@ -93,7 +93,6 @@
             <p class='text text-center'><%= current_organization.primary_address.calculated_full_address %></p>
           </div>
         </div>
-
 
         <div class="row disclaimer">
           <div class="col-12">

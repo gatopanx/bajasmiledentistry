@@ -1,21 +1,3 @@
-<!-- Facebook Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '2310782072497636');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=2310782072497636&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Facebook Pixel Code -->
-
 <div class="container-fluid">
   <%= render 'website/partials/announcements', phones: @phones %>
 </div>
@@ -31,22 +13,15 @@
 <div class="container">
   <% @treatments.each_with_index do |treatment, index| %>
     <div class="row">
-      <% if index % 2 == 0 %>
-        <div class="col-5">
-          <iframe src="<%= treatment.url %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      <% end %>
-
-      <div class="col-7">
-        <h3><%= treatment.name %></h3>
-        <p><%= treatment.short_description %></p>
+      <div class="col-md-5 col-sm-12 video">
+        <iframe src="<%= treatment.url %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
-
-      <% if index % 2 == 1 %>
-        <div class="col-5">
-          <iframe src="<%= treatment.url %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      <% end %>
+      <div class="col-md-7 col-sm-12 texts">
+        <a href='/treatments/<%= treatment.key %>'>
+          <h3><%= treatment.name %></h3>
+          <p><%= treatment.short_description %></p>
+        </a>
+      </div>
     </div>
   <% end %>
 </div>
