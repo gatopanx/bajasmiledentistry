@@ -73,6 +73,7 @@ module Website
         :preferred_conversation_channel,
         :preferred_date,
         :preferred_time_range,
+        :message,
         item_ids: []
       )
     end
