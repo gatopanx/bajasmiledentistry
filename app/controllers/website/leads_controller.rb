@@ -12,8 +12,17 @@ module Website
       @lead ||= Lead.find_by!(owning_organization: current_organization, uuid: params[:uuid])
     end
 
+    def create
+      @lead = Lead.new(permitted_parameters)
+      @lead.source = :WEBSITE
+      @lead.save!
+      redirect_to controller: :leads, action: :edit, uuid: @lead.uuid
+    end
+
     def create_and_confirm_and_send_confirmation_emails
-      create
+      @lead = Lead.new(permitted_parameters)
+      @lead.source = :WEBSITE
+      @lead.save!
       confirm
       send_confirmation_emails
       redirect_to controller: :leads, action: :thanks, uuid: @lead.uuid
@@ -31,12 +40,6 @@ module Website
     end
 
     private
-
-    def create
-      @lead = Lead.new(permitted_parameters)
-      @lead.source = :WEBSITE
-      @lead.save!
-    end
 
     def update
       @lead ||= Lead.find_by!(owning_organization: current_organization, uuid: params[:uuid])
