@@ -857,10 +857,24 @@ body {
 
 .treatments {
   .index {
-    .video {
-    }
-    .texts a {
-      color: black;
+    .treatments {
+      .treatment {
+        margin: 100px 0px;
+
+        .video {
+          iframe {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .texts {
+          height: 250px;
+
+          a {
+            color: black;
+          }
+        }
+      }
     }
   }
   .show {
