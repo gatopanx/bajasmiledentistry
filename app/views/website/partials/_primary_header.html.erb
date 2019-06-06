@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md primary-header">
+<nav class="navbar navbar-expand-lg navbar-light primary-header">
   <a class="navbar-brand brand" href="/">
     <% if current_organization.primary_image %>
       <img class='logo' src="<%= current_organization.primary_image.payload.url %>" alt="<%= current_organization.name %> Logo">
@@ -7,15 +7,15 @@
     <% end %>
   </a>
 
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse">
+  <div class="navbar-collapse collapse" id="navbars">
     <ul class="navbar-nav mr-auto">
-    </ul>
-    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home</a>
+      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="/treatments" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Treatments</a>
         <div class="dropdown-menu" aria-labelledby="dropdown04">
@@ -36,10 +36,7 @@
       <li class="nav-item">
         <a class="nav-link" href="/about-us">About Us</a>
       </li>
-      <!-- <li class="nav&#45;item"> -->
-      <!--   <a class="nav&#45;link" href="/posts">Blog</a> -->
-      <!-- </li> -->
-      <li class="nav-item last-item">
+      <li class="nav-item">
         <a class="btn btn-primary" href="/leads/new">Contact Us</a>
       </li>
     </ul>
