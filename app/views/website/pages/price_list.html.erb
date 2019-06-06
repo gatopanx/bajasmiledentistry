@@ -18,12 +18,12 @@
         <table class="table">
           <thead>
             <tr>
-              <th scope="col" colspan="6">
-                <h5><%= category.name %> - <%= category.short_description %></h5></th>
+              <th scope="col" colspan="10">
+                <h5><%= category.name %> - <%= category.short_description %></h5>
+              </th>
             </tr>
             <tr>
-              <th scope="col">Item</th>
-              <th scope="col">Info</th>
+              <th scope="col" colspan="5">Item</th>
               <th scope="col">USA</th>
               <th scope="col">TSD</th>
               <th scope="col">You Save</th>
@@ -33,12 +33,7 @@
           <tbody>
             <% category.items.each do |item| %>
               <tr class='item' data-key='<%= item.key %>'>
-                <td class='name' data-name='<%= item.name %>'><%= item.name %></td>
-                <td class='information'>
-                  <a href='#'>
-                    <img class='info' src="./assets/info.png" alt="" />
-                  </a>
-                </td>
+                <td class='name' colspan="5" data-name='<%= item.name %>'><%= item.name %></td>
                 <td class='external-price-in-cents'>$<%= item.external_price_in_cents / 100 %></td>
                 <td class='internal-price-in-cents' data-price="<%= item.internal_price_in_cents / 100 %>">$<%= item.internal_price_in_cents / 100 %></td>
                 <td class='savings-percentage'><%= (((item.external_price_in_cents.to_f - item.internal_price_in_cents.to_f) / item.external_price_in_cents.to_f)*100).to_i %>%</td>
