@@ -26,6 +26,7 @@ module Website
       @lead.save!
       confirm
       send_confirmation_emails
+      create_trello_card
       redirect_to controller: :leads, action: :thanks, uuid: @lead.uuid
     end
 
@@ -33,6 +34,7 @@ module Website
       update
       confirm
       send_confirmation_emails
+      create_trello_card
       redirect_to controller: :leads, action: :thanks, uuid: @lead.uuid
     end
 
@@ -41,6 +43,33 @@ module Website
     end
 
     private
+
+    def create_trello_card
+      return unless ENV.fetch("SUBMIT_LEADS_TO_TRELLO") == "1"
+      @lead ||= Lead.find_by!(owning_organization: current_organization, uuid: params[:uuid])
+
+      description = <<~DESCRIPTION
+        Source: Website
+
+        Name: #{@lead.person_name}
+        Email: #{@lead.email_address}
+        Telephone Number: #{@lead.phone_number}
+        Preferred Conversation Channel: #{@lead.preferred_conversation_channel}
+        Custom Message: #{@lead.message}
+        Preferred Appointment Date: #{@lead.preferred_date.strftime("%A, %B %d, %Y")}
+        Preferred Appointment Time Of Day: #{@lead.preferred_time_range}
+      DESCRIPTION
+
+      Tacokit.create_card(
+        ENV.fetch('TRELLO_LEADS_LIST_ID'),
+        "#{@lead.person_name} - Website",
+        {
+          due: 3.days.from_now.iso8601,
+          desc: description,
+          pos: 'top'
+        }
+      )
+    end
 
     def update
       @lead ||= Lead.find_by!(owning_organization: current_organization, uuid: params[:uuid])
