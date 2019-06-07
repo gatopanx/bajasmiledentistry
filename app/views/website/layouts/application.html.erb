@@ -50,6 +50,15 @@
           a.appendChild(r);
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
       </script>
+      <script>
+        ga(
+          'send',
+          'event',
+          '<%= controller_name %>',
+          'enter',
+          '<%= action_name %>'
+        );
+      </script>
     <% end %>
   </body>
 </html>
