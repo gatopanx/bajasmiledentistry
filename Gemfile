@@ -32,7 +32,6 @@ gem 'request_store'
 gem 'sass-rails'
 gem 'sassc'
 gem 'tacokit'
-gem 'turbolinks'
 gem 'uglifier'
 gem 'pry-rails'
 
