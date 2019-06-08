@@ -489,7 +489,6 @@ body {
   .home {
     .billboard-wrapper {
       background-image: url('tools-5.jpg');
-      height: 720px;
       background-repeat: no-repeat;
       background-position: top;
       background-position: center;
@@ -509,6 +508,8 @@ body {
         }
 
         .talk-with-us-wrapper {
+          margin-top: 30px;
+          margin-bottom: 30px;
           padding: 20px;
           border-width: 2px;
           border-radius: 10px;;
@@ -758,7 +759,6 @@ body {
     }
     .billboard-wrapper {
       background-image: url('tools-5.jpg');
-      height: 720px;
       background-repeat: no-repeat;
       background-position: top;
       background-position: center;
@@ -778,6 +778,8 @@ body {
         }
 
         .talk-with-us-wrapper {
+          margin-top: 30px;
+          margin-bottom: 30px;
           padding: 20px;
           border-width: 2px;
           border-radius: 10px;;
@@ -901,7 +903,6 @@ body {
   .show {
     .billboard-wrapper {
       background-image: url('tools-5.jpg');
-      height: 756px;
       background-repeat: no-repeat;
       // background-position: top;
       // background-position: center;
@@ -919,6 +920,8 @@ body {
           }
         }
         .talk-with-us-wrapper {
+          margin-top: 30px;
+          margin-bottom: 30px;
           padding: 20px;
           border-width: 2px;
           border-radius: 10px;;
