@@ -52,14 +52,11 @@
       </script>
       <script>
         $(document).ready(function() {
-          ga(
-            'send',
-            'event',
-            '<%= controller_name %>',
-            'enter',
-            '<%= action_name %>',
-            '1'
-          );
+          gtag('event', 'enter', {
+            'event_category': '<%= controller_name %>',
+            'event_label': '<%= action_name %>',
+            'value': '1'
+          });
         });
       </script>
       <!-- Facebook Pixel -->
