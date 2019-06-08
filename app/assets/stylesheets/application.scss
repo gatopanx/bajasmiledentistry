@@ -488,19 +488,33 @@ body {
 .pages {
   .home {
     .billboard-wrapper {
-      background-image: url('header.jpg');
-      height: 756px;
+      background-image: url('tools-5.jpg');
+      height: 720px;
       background-repeat: no-repeat;
+      background-position: top;
+      background-position: center;
+      background-color: #f1f4f8;
 
       .billboard {
+        .video iframe {
+          width: 100%;
+          height: 75%;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+
+          @media (max-width: 576px) {
+            min-height: 400px;
+          }
+        }
+
         .talk-with-us-wrapper {
-          margin-top: 60px;
           padding: 20px;
           border-width: 2px;
           border-radius: 10px;;
-          background-color: rgba(255, 255, 255, 1);
+          background-color: rgba(255, 255, 255, 0.75);
         }
-        .btn {
+        button {
           background-color: $dark-orange;
           border-color: $dark-orange;
 
@@ -753,7 +767,14 @@ body {
       .billboard {
         .video iframe {
           width: 100%;
-          height: 100%;
+          height: 75%;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+
+          @media (max-width: 576px) {
+            min-height: 400px;
+          }
         }
 
         .talk-with-us-wrapper {
@@ -888,9 +909,15 @@ body {
       .billboard {
         .video iframe {
           width: 100%;
-          height: 100%;
-        }
+          height: 75%;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
 
+          @media (max-width: 576px) {
+            min-height: 400px;
+          }
+        }
         .talk-with-us-wrapper {
           padding: 20px;
           border-width: 2px;
