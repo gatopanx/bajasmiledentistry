@@ -51,14 +51,16 @@
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
       </script>
       <script>
-        ga(
-          'send',
-          'event',
-          '<%= controller_name %>',
-          'enter',
-          '<%= action_name %>',
-          '1'
-        );
+        $(document).ready(function() {
+          ga(
+            'send',
+            'event',
+            '<%= controller_name %>',
+            'enter',
+            '<%= action_name %>',
+            '1'
+          );
+        });
       </script>
     <% end %>
   </body>
