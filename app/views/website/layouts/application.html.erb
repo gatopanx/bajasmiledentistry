@@ -11,22 +11,6 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-  </head>
-  <body>
-    <div class='<%= controller_name.gsub('_', '-') %>'>
-      <div class='<%= action_name.gsub('_', '-') %>'>
-        <%= yield %>
-      </div>
-    </div>
-    <script src="/assets/holder.min.js"></script>
-    <script>
-      Holder.addTheme('thumb', {
-        bg: '#55595c',
-        fg: '#eceeef',
-        text: 'Thumbnail'
-      });
-    </script>
-
     <% if Rails.env == 'production' %>
       <!-- Google Tag Manager -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138130371-1"></script>
@@ -37,6 +21,11 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'UA-138130371-1');
+        gtag('event', 'enter', {
+          'event_category': '<%= controller_name %>',
+          'event_label': '<%= action_name %>',
+          'value': '1'
+        });
       </script>
 
       <!-- Hotjar -->
@@ -50,16 +39,8 @@
           a.appendChild(r);
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
       </script>
-      <script>
-        $(document).ready(function() {
-          gtag('event', 'enter', {
-            'event_category': '<%= controller_name %>',
-            'event_label': '<%= action_name %>',
-            'value': '1'
-          });
-        });
-      </script>
-      <!-- Facebook Pixel -->
+
+      <!-- Facebook -->
       <script>
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -75,6 +56,49 @@
       <noscript>
         <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2310782072497636&ev=PageView&noscript=1" />
       </noscript>
+
+      <!-- Drift -->
+      <script>
+        "use strict";
+
+        !function() {
+          var t = window.driftt = window.drift = window.driftt || [];
+          if (!t.init) {
+            if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+            t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+            t.factory = function(e) {
+              return function() {
+                var n = Array.prototype.slice.call(arguments);
+                return n.unshift(e), t.push(n), t;
+              };
+            }, t.methods.forEach(function(e) {
+              t[e] = t.factory(e);
+            }), t.load = function(t) {
+              var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+              o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+              var i = document.getElementsByTagName("script")[0];
+              i.parentNode.insertBefore(o, i);
+            };
+          }
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('5y3z7aa97yi9');
+      </script>
     <% end %>
+  </head>
+  <body>
+    <div class='<%= controller_name.gsub('_', '-') %>'>
+      <div class='<%= action_name.gsub('_', '-') %>'>
+        <%= yield %>
+      </div>
+    </div>
+    <script src="/assets/holder.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
   </body>
 </html>
