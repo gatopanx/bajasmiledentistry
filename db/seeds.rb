@@ -825,6 +825,81 @@ end
       }
     ]
   },
+  {
+    name: "Dental Implants",
+    long_description: "Dental implants are small posts that are surgically inserted into the jawbone beneath the gum.",
+    key: 'key9',
+    short_description: "Dental implants are small posts that are surgically inserted into the jawbone beneath the gum.",
+    status: :ACTIVE,
+    items: [
+      {
+        external_price_in_cents: 1500*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 350*100,
+        key: "ITEM_31",
+        name: "Bone Graft (Per tooth)",
+        long_description: "Bone grafting is a surgical procedure done when you need to repair bone fractures or replace bone loss.",
+        primary_kind: :SERVICE,
+        short_description: "Bone grafting is a surgical procedure done when you need to repair bone fractures or replace bone loss.",
+        status: :ACTIVE
+      },
+      {
+        external_price_in_cents: 3700*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 1100*100,
+        key: "ITEM_32",
+        name: "Sinus lift",
+        long_description: "A sinus lift is surgery that adds bone to your upper jaw in the area of your molars and premolars.",
+        primary_kind: :SERVICE,
+        short_description: "A sinus lift is surgery that adds bone to your upper jaw in the area of your molars and premolars.",
+        status: :ACTIVE
+      },
+      {
+        external_price_in_cents: 2500*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 800*100,
+        key: "ITEM_33",
+        name: "Titanium Implant",
+        long_description: "Titanium is a type of metal often used in dental implants because its properties are known to fuse well with human bone.",
+        primary_kind: :SERVICE,
+        short_description: "Titanium is a type of metal often used in dental implants because its properties are known to fuse well with human bone.",
+        status: :ACTIVE
+      },
+      {
+        external_price_in_cents: 2500*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 1050*100,
+        key: "ITEM_34",
+        name: "Implant Nobel",
+        long_description: "Nobel biocare is one of the top implants systems used in USA in replacing missing teeth.",
+        primary_kind: :SERVICE,
+        short_description: "Nobel biocare is one of the top implants systems used in USA in replacing missing teeth.",
+        status: :ACTIVE
+      },
+      {
+        external_price_in_cents: 1500*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 300*100,
+        key: "ITEM_35",
+        name: "Dental Implant Abutment",
+        long_description: "This is used in the context of a fixed bridge, partial removable dentures and in implants.",
+        primary_kind: :SERVICE,
+        short_description: "This is used in the context of a fixed bridge, partial removable dentures and in implants.",
+        status: :ACTIVE
+      },
+      {
+        external_price_in_cents: 1500*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 400*100,
+        key: "ITEM_36",
+        name: "Mini Implants (per implant)",
+        long_description: "The mini implant is a dental implant that is fabricated with a reduced diameter and a shorter length but with the same biocompatible material as compared with standard dental implants.",
+        primary_kind: :SERVICE,
+        short_description: "The mini implant is a dental implant that is fabricated with a reduced diameter and a shorter length but with the same biocompatible material as compared with standard dental implants.",
+        status: :ACTIVE
+      },
+    ]
+  },
 
 
 
