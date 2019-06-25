@@ -572,21 +572,32 @@ end
         form: :CONCRETE,
         internal_price_in_cents: 65*100,
         key: "ITEM_11",
-        name: "White Composite Resin Fillings",
+        name: "One White Composite Resin Fillings",
         long_description: "A filling is a way to restore a tooth damaged by decay back to its normal function and shape.",
         primary_kind: :SERVICE,
         short_description: "A filling is a way to restore a tooth damaged by decay back to its normal function and shape.",
         status: :ACTIVE
       },
       {
-        external_price_in_cents: 300*100,
+        external_price_in_cents: 150*100,
         form: :CONCRETE,
-        internal_price_in_cents: 150*100,
-        key: "ITEM_12",
-        name: "Restoration",
-        long_description: "A dental restoration or dental filling is a treatment to restore the function, integrity, and morphology of missing tooth structure resulting from caries or external trauma as well as to the replacement of such structure supported by dental implants.",
+        internal_price_in_cents: 75*100,
+        key: "ITEM_43",
+        name: "Two White Composite Resin Fillings",
+        long_description: "A filling is a way to restore a tooth damaged by decay back to its normal function and shape.",
         primary_kind: :SERVICE,
-        short_description: "A dental restoration or dental filling is a treatment to restore the function, integrity, and morphology of missing tooth.",
+        short_description: "A filling is a way to restore a tooth damaged by decay back to its normal function and shape.",
+        status: :ACTIVE
+      },
+      {
+        external_price_in_cents: 150*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 85*100,
+        key: "ITEM_44",
+        name: "Three White Composite Resin Fillings",
+        long_description: "A filling is a way to restore a tooth damaged by decay back to its normal function and shape.",
+        primary_kind: :SERVICE,
+        short_description: "A filling is a way to restore a tooth damaged by decay back to its normal function and shape.",
         status: :ACTIVE
       }
     ]
