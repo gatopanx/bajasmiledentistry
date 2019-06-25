@@ -945,7 +945,7 @@ end
       {
         external_price_in_cents: 1500*100,
         form: :CONCRETE,
-        internal_price_in_cents: 75*100,
+        internal_price_in_cents: 475*100,
         key: "ITEM_35",
         name: "Dental Implant Abutment",
         long_description: "This is used in the context of a fixed bridge, partial removable dentures and in implants.",
@@ -956,7 +956,7 @@ end
       {
         external_price_in_cents: 1500*100,
         form: :CONCRETE,
-        internal_price_in_cents: 470*100,
+        internal_price_in_cents: 499*100,
         key: "ITEM_41",
         name: "Crown on Implant (Porcelain)",
         long_description: "This is used in the context of a fixed bridge, partial removable dentures and in implants.",
