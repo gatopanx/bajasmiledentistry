@@ -433,9 +433,9 @@ end
       {
         external_price_in_cents: 150*100,
         form: :CONCRETE,
-        internal_price_in_cents: 70*100,
+        internal_price_in_cents: 40*100,
         key: "ITEM_1",
-        name: "Cleaning",
+        name: "Regular Cleaning",
         long_description: "Teeth cleaning is part of oral hygiene and involves the removal of dental plaque from teeth with the intention of preventing cavities, gingivitis, and periodontal disease.",
         primary_kind: :SERVICE,
         short_description: "Teeth cleaning is part of oral hygiene and involves the removal of dental plaque from teeth.",
@@ -444,12 +444,23 @@ end
       {
         external_price_in_cents: 350*100,
         form: :CONCRETE,
-        internal_price_in_cents: 110*100,
+        internal_price_in_cents: 65*100,
         key: "ITEM_2",
-        name: "Cleaning By Quadrant",
+        name: "Deep Cleaning (Per Quadrant)",
         long_description: "Is a procedure involving removal of dental plaque and calculus and then smoothing, or planing, of the surfaces of the roots, removing cementum or dentine.",
         primary_kind: :SERVICE,
         short_description: "Is a procedure involving removal of dental plaque and calculus and then smoothing.",
+        status: :ACTIVE
+      },
+      {
+        external_price_in_cents: 2000*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 185*100,
+        key: "ITEM_9",
+        name: "Periodontal Maintenance",
+        long_description: "A periodontal maintenance is also a teeth cleaning, however, it is performed on patients who have gum disease.",
+        primary_kind: :SERVICE,
+        short_description: "A periodontal maintenance is also a teeth cleaning, however, it is performed on patients who have gum disease.",
         status: :ACTIVE
       }
     ]
@@ -464,7 +475,7 @@ end
       {
         external_price_in_cents: 375*100,
         form: :CONCRETE,
-        internal_price_in_cents: 180*100,
+        internal_price_in_cents: 245*100,
         key: "ITEM_3",
         name: "Teeth Whitening",
         long_description: "Tooth whitening lightens teeth and helps to remove stains and discoloration.",
@@ -475,7 +486,7 @@ end
       {
         external_price_in_cents: 650*100,
         form: :CONCRETE,
-        internal_price_in_cents: 230*100,
+        internal_price_in_cents: 285*100,
         key: "ITEM_4",
         name: "Whitening and Cleaning",
         long_description: "Dental teeth cleaning before whitening helps to remove tartar, thus making whitening more effective.",
@@ -486,7 +497,7 @@ end
       {
         external_price_in_cents: 400*100,
         form: :CONCRETE,
-        internal_price_in_cents: 220*100,
+        internal_price_in_cents: 250*100,
         key: "ITEM_5",
         name: "Whitening (Home Kit)",
         long_description: "Tooth whitening lightens teeth and helps to remove stains and discoloration.",
@@ -506,9 +517,9 @@ end
       {
         external_price_in_cents: 170*100,
         form: :CONCRETE,
-        internal_price_in_cents: 70*100,
+        internal_price_in_cents: 75*100,
         key: "ITEM_6",
-        name: "Extraction Simple",
+        name: "Simple Dental Extraction",
         long_description: "A dental extraction is the removal of teeth from the dental alveolus in the alveolar bone.",
         primary_kind: :SERVICE,
         short_description: "A dental extraction is the removal of teeth from the dental alveolus in the alveolar bone.",
@@ -517,9 +528,9 @@ end
       {
         external_price_in_cents: 400*100,
         form: :CONCRETE,
-        internal_price_in_cents: 150*100,
+        internal_price_in_cents: 95*100,
         key: "ITEM_7",
-        name: "Surgical Extraction",
+        name: "Surgical Dental Extraction",
         long_description: "Is a relatively quick outpatient procedure with either local, general, intravenous anesthesia, or a combination.",
         primary_kind: :SERVICE,
         short_description: "Is a quick removal of teeth  with either local, general, intravenous anesthesia, or a combination.",
@@ -528,20 +539,9 @@ end
       {
         external_price_in_cents: 500*100,
         form: :CONCRETE,
-        internal_price_in_cents: 230*100,
+        internal_price_in_cents: 195*100,
         key: "ITEM_8",
-        name: "Wisdom Teeth Extraction",
-        long_description: "Wisdom tooth extraction is a surgical procedure to remove one or more wisdom teeth — the four permanent adult teeth located at the back corners of your mouth on the top and bottom.",
-        primary_kind: :SERVICE,
-        short_description: "Wisdom tooth extraction is a surgical procedure to remove one or more wisdom teeth.",
-        status: :ACTIVE
-      },
-      {
-        external_price_in_cents: 640*100,
-        form: :CONCRETE,
-        internal_price_in_cents: 230*100,
-        key: "ITEM_9",
-        name: "Surgical Extraction",
+        name: "Simple Wisdom Tooth Extraction",
         long_description: "Wisdom tooth extraction is a surgical procedure to remove one or more wisdom teeth — the four permanent adult teeth located at the back corners of your mouth on the top and bottom.",
         primary_kind: :SERVICE,
         short_description: "Wisdom tooth extraction is a surgical procedure to remove one or more wisdom teeth.",
@@ -572,7 +572,7 @@ end
         form: :CONCRETE,
         internal_price_in_cents: 65*100,
         key: "ITEM_11",
-        name: "Filling",
+        name: "White Composite Resin Fillings",
         long_description: "A filling is a way to restore a tooth damaged by decay back to its normal function and shape.",
         primary_kind: :SERVICE,
         short_description: "A filling is a way to restore a tooth damaged by decay back to its normal function and shape.",
@@ -601,9 +601,9 @@ end
       {
         external_price_in_cents: 1000*100,
         form: :CONCRETE,
-        internal_price_in_cents: 230*100,
+        internal_price_in_cents: 295*100,
         key: "ITEM_13",
-        name: "Root Canal",
+        name: "Front Tooth Root Canal",
         long_description: "Root canals are needed when there is an infection within the tooth. Without treatment, the infection can become severe enough that the tooth has to be removed",
         primary_kind: :SERVICE,
         short_description: "Root canals are needed when there is an infection within the tooth.",
@@ -612,9 +612,20 @@ end
       {
         external_price_in_cents: 1200*100,
         form: :CONCRETE,
-        internal_price_in_cents: 270*100,
+        internal_price_in_cents: 305*100,
         key: "ITEM_14",
-        name: "Root Canal Molar",
+        name: "Pre Molar Root Canal",
+        long_description: "Root canals are needed when there is an infection within the tooth. Without treatment, the infection can become severe enough that the tooth has to be removed",
+        primary_kind: :SERVICE,
+        short_description: "Root canals are needed when there is an infection within the tooth.",
+        status: :ACTIVE
+      },
+      {
+        external_price_in_cents: 1200*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 315*100,
+        key: "ITEM_37",
+        name: "Molar Root Canal",
         long_description: "Root canals are needed when there is an infection within the tooth. Without treatment, the infection can become severe enough that the tooth has to be removed",
         primary_kind: :SERVICE,
         short_description: "Root canals are needed when there is an infection within the tooth.",
@@ -625,7 +636,7 @@ end
         form: :CONCRETE,
         internal_price_in_cents: 350*100,
         key: "ITEM_15",
-        name: "Retreatment",
+        name: "Root Canal Retreatment",
         long_description: "The endodontist will reopen your tooth. Gaining access to the root canal filling material can be more complex than a routine root canal, involving additional steps including the removal of crown, post and core material.",
         primary_kind: :SERVICE,
         short_description: "The endodontist will reopen your tooth. Gaining access to the root canal.",
@@ -643,7 +654,7 @@ end
       {
         external_price_in_cents: 1500*100,
         form: :CONCRETE,
-        internal_price_in_cents: 600*100,
+        internal_price_in_cents: 699*100,
         key: "ITEM_16",
         name: "Acrylic Denture",
         long_description: "Dentures are removable false teeth made of acrylic (plastic), nylon or metal. They fit snugly over the gums to replace missing teeth and eliminate potential problems caused by gaps.",
@@ -654,7 +665,7 @@ end
       {
         external_price_in_cents: 1500*100,
         form: :CONCRETE,
-        internal_price_in_cents: 700*100,
+        internal_price_in_cents: 750*100,
         key: "ITEM_17",
         name: "Flexible Denture",
         long_description: "Flexible Dentures are a kind of partial denture, made up of a softer material than regular dentures. These dentures are made of a thin thermoplastic material such as nylon than thicker more rigid acrylic used in full dentures.",
@@ -665,7 +676,7 @@ end
       {
         external_price_in_cents: 1500*100,
         form: :CONCRETE,
-        internal_price_in_cents: 900*100,
+        internal_price_in_cents: 899*100,
         key: "ITEM_18",
         name: "Comfort Denture",
         long_description: "Flexible Dentures are a kind of partial denture, made up of a softer material than regular dentures. These dentures are made of a thin thermoplastic material such as nylon than thicker more rigid acrylic used in full dentures.",
@@ -685,9 +696,9 @@ end
       {
         external_price_in_cents: 1500*100,
         form: :CONCRETE,
-        internal_price_in_cents: 280*100,
+        internal_price_in_cents: 299*100,
         key: "ITEM_19",
-        name: "Crown (Porcelain Fused to Metal)",
+        name: "Porcelain Fuse to metal Crown (PFM)",
         long_description: "A crown is a tooth-shaped cover or cap placed over a tooth that is badly damaged by decayed, as a result, a filling can’t replace enough of the tooth or make the tooth strong enough, crowns can be used to improve appearance as well.",
         primary_kind: :SERVICE,
         short_description: "Dentures are removable false teeth made of acrylic, nylon or metal.",
@@ -696,9 +707,9 @@ end
       {
         external_price_in_cents: 1600*100,
         form: :CONCRETE,
-        internal_price_in_cents: 490*100,
+        internal_price_in_cents: 499*100,
         key: "ITEM_20",
-        name: "Zirconia Crown",
+        name: "Lava Zirconia Crown",
         long_description: "It is extremely strong, requiring less tooth preparation than other materials. It can be layered with porcelain, further improving its aesthetic appearance.",
         primary_kind: :SERVICE,
         short_description: "It is extremely strong, requiring less tooth preparation than other materials.",
@@ -707,9 +718,42 @@ end
       {
         external_price_in_cents: 1800*100,
         form: :CONCRETE,
-        internal_price_in_cents: 470*100,
+        internal_price_in_cents: 399*100,
         key: "ITEM_21",
-        name: "Crown on Implant",
+        name: "Porcelain Fuse to Metal Crown (Over Dental Implant)",
+        long_description: "A crown is a tooth-shaped cover or cap placed over a tooth that is badly damaged by decayed, as a result, a filling can’t replace enough of the tooth or make the tooth strong enough, crowns can be used to improve appearance as well.",
+        primary_kind: :SERVICE,
+        short_description: "Dentures are removable false teeth made of acrylic, nylon or metal.",
+        status: :ACTIVE
+      },
+      {
+        external_price_in_cents: 1800*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 420*100,
+        key: "ITEM_38",
+        name: "EMAX Cerec Crown",
+        long_description: "A crown is a tooth-shaped cover or cap placed over a tooth that is badly damaged by decayed, as a result, a filling can’t replace enough of the tooth or make the tooth strong enough, crowns can be used to improve appearance as well.",
+        primary_kind: :SERVICE,
+        short_description: "Dentures are removable false teeth made of acrylic, nylon or metal.",
+        status: :ACTIVE
+      },
+      {
+        external_price_in_cents: 1800*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 599*100,
+        key: "ITEM_39",
+        name: "Lava Zirconia Crown (Over Dental Implant)",
+        long_description: "A crown is a tooth-shaped cover or cap placed over a tooth that is badly damaged by decayed, as a result, a filling can’t replace enough of the tooth or make the tooth strong enough, crowns can be used to improve appearance as well.",
+        primary_kind: :SERVICE,
+        short_description: "Dentures are removable false teeth made of acrylic, nylon or metal.",
+        status: :ACTIVE
+      },
+      {
+        external_price_in_cents: 1800*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 520*100,
+        key: "ITEM_40",
+        name: "EMAX Cerec Crown (Over Dental Implant)",
         long_description: "A crown is a tooth-shaped cover or cap placed over a tooth that is badly damaged by decayed, as a result, a filling can’t replace enough of the tooth or make the tooth strong enough, crowns can be used to improve appearance as well.",
         primary_kind: :SERVICE,
         short_description: "Dentures are removable false teeth made of acrylic, nylon or metal.",
@@ -718,9 +762,9 @@ end
       {
         external_price_in_cents: 1400*100,
         form: :CONCRETE,
-        internal_price_in_cents: 480*100,
+        internal_price_in_cents: 420*100,
         key: "ITEM_22",
-        name: "Veneer",
+        name: "Veneers",
         long_description: "A veneer is a layer of material placed over a tooth, isabel-juarez-before improve the aesthetics of a smile and/or protect the tooth's surface from damage.",
         primary_kind: :SERVICE,
         short_description: "A veneer is a layer of material placed over a tooth.",
@@ -729,7 +773,7 @@ end
       {
         external_price_in_cents: 1000*100,
         form: :CONCRETE,
-        internal_price_in_cents: 150*100,
+        internal_price_in_cents: 120*100,
         key: "ITEM_23",
         name: "Resin Veneer",
         long_description: "Resin isabel-juarez-before involves very little removal of natural tooth. It, often times, can be done in conjunction with a restorative filling or replacement of old fillings.",
@@ -822,6 +866,17 @@ end
         primary_kind: :SERVICE,
         short_description: "A broken braces bracket is the most common inconvenience orthodontic patients face but can easily be fix",
         status: :ACTIVE
+      },
+      {
+        external_price_in_cents: 1500*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 400*100,
+        key: "ITEM_36",
+        name: "Mini Implants (per implant)",
+        long_description: "The mini implant is a dental implant that is fabricated with a reduced diameter and a shorter length but with the same biocompatible material as compared with standard dental implants.",
+        primary_kind: :SERVICE,
+        short_description: "The mini implant is a dental implant that is fabricated with a reduced diameter and a shorter length but with the same biocompatible material as compared with standard dental implants.",
+        status: :ACTIVE
       }
     ]
   },
@@ -833,7 +888,7 @@ end
     status: :ACTIVE,
     items: [
       {
-        external_price_in_cents: 1500*100,
+        external_price_in_cents: 2000*100,
         form: :CONCRETE,
         internal_price_in_cents: 350*100,
         key: "ITEM_31",
@@ -846,7 +901,7 @@ end
       {
         external_price_in_cents: 3700*100,
         form: :CONCRETE,
-        internal_price_in_cents: 1100*100,
+        internal_price_in_cents: 1500*100,
         key: "ITEM_32",
         name: "Sinus lift",
         long_description: "A sinus lift is surgery that adds bone to your upper jaw in the area of your molars and premolars.",
@@ -855,9 +910,9 @@ end
         status: :ACTIVE
       },
       {
-        external_price_in_cents: 2500*100,
+        external_price_in_cents: 1500*100,
         form: :CONCRETE,
-        internal_price_in_cents: 800*100,
+        internal_price_in_cents: 899*100,
         key: "ITEM_33",
         name: "Titanium Implant",
         long_description: "Titanium is a type of metal often used in dental implants because its properties are known to fuse well with human bone.",
@@ -868,7 +923,7 @@ end
       {
         external_price_in_cents: 2500*100,
         form: :CONCRETE,
-        internal_price_in_cents: 1050*100,
+        internal_price_in_cents: 1500*100,
         key: "ITEM_34",
         name: "Implant Nobel",
         long_description: "Nobel biocare is one of the top implants systems used in USA in replacing missing teeth.",
@@ -879,7 +934,7 @@ end
       {
         external_price_in_cents: 1500*100,
         form: :CONCRETE,
-        internal_price_in_cents: 300*100,
+        internal_price_in_cents: 75*100,
         key: "ITEM_35",
         name: "Dental Implant Abutment",
         long_description: "This is used in the context of a fixed bridge, partial removable dentures and in implants.",
@@ -890,12 +945,23 @@ end
       {
         external_price_in_cents: 1500*100,
         form: :CONCRETE,
-        internal_price_in_cents: 400*100,
-        key: "ITEM_36",
-        name: "Mini Implants (per implant)",
-        long_description: "The mini implant is a dental implant that is fabricated with a reduced diameter and a shorter length but with the same biocompatible material as compared with standard dental implants.",
+        internal_price_in_cents: 470*100,
+        key: "ITEM_41",
+        name: "Crown on Implant (Porcelain)",
+        long_description: "This is used in the context of a fixed bridge, partial removable dentures and in implants.",
         primary_kind: :SERVICE,
-        short_description: "The mini implant is a dental implant that is fabricated with a reduced diameter and a shorter length but with the same biocompatible material as compared with standard dental implants.",
+        short_description: "This is used in the context of a fixed bridge, partial removable dentures and in implants.",
+        status: :ACTIVE
+      },
+      {
+        external_price_in_cents: 1600*100,
+        form: :CONCRETE,
+        internal_price_in_cents: 599*100,
+        key: "ITEM_42",
+        name: "Crown on Implant (Zirconia)",
+        long_description: "This is used in the context of a fixed bridge, partial removable dentures and in implants.",
+        primary_kind: :SERVICE,
+        short_description: "This is used in the context of a fixed bridge, partial removable dentures and in implants.",
         status: :ACTIVE
       },
     ]
