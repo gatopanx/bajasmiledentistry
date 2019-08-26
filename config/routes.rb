@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   namespace :website, {
     path: '',
     constraints: {
-      subdomain: ['', 'www']
+      subdomain: ['', 'www', 'bajasmiledentistry']
     }
   } do
 
